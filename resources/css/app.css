@@ -9,8 +9,61 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Brand Core Colors (DESIGN.md §2.1) */
+    --color-brand-forest: #084C27;
+    --color-emerald-vibrant: #059669;
+    --color-gold-amber: #D97706;
+    --color-gold-light: #F59E0B;
 
+    /* Surfaces & Backgrounds (DESIGN.md §2.2) */
+    --color-surface-alabaster: #FDFBF7;
+    --color-surface-card: #FFFFFF;
+    --color-surface-slate: #F8FAFC;
+
+    /* Typography Text Colors (DESIGN.md §2.2) */
+    --color-text-primary: #0F291E;
+    --color-text-secondary: #1B3A2B;
+    --color-text-muted: #4B6358;
+    --color-text-inverse: #FFFFFF;
+
+    /* Borders (DESIGN.md §2.3) */
+    --color-border-subtle: rgba(8, 76, 39, 0.10);
+    --color-border-medium: rgba(8, 76, 39, 0.20);
+    --color-border-strong: rgba(8, 76, 39, 0.35);
+
+    /* Semantic Feedback Colors (DESIGN.md §2.4) */
+    --color-success: #059669;
+    --color-warning: #D97706;
+    --color-info: #0284C7;
+    --color-error-semantic: #DC2626;
+
+    /* PSB Admission Status Colors (DESIGN.md §2.5) */
+    --color-status-pending: #6B7280;
+    --color-status-verified: #059669;
+    --color-status-revision: #D97706;
+    --color-status-accepted: #084C27;
+    --color-status-reserve: #6366F1;
+    --color-status-rejected: #DC2626;
+    --color-status-unpaid: #6B7280;
+    --color-status-paid: #059669;
+
+    /* Typography Families (DESIGN.md §3) */
+    --font-arabic: 'Amiri', 'Scheherazade New', serif;
+    --font-editorial: 'Playfair Display', serif;
+    --font-display: 'Playfair Display', serif;
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Custom Radius Tokens (DESIGN.md §6.1, §6.2) */
+    --radius-arch-mobile: 120px 120px 1rem 1rem;
+    --radius-arch-desktop: 240px 240px 1.5rem 1.5rem;
+
+    /* Elevation & Depth Shadows (DESIGN.md §5, §16) */
+    --shadow-card: 0 1px 3px rgba(8, 76, 39, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-card-hover: 0 4px 6px -1px rgba(8, 76, 39, 0.08), 0 2px 4px -1px rgba(8, 76, 39, 0.04);
+    --shadow-elevated: 0 10px 25px -5px rgba(8, 76, 39, 0.10), 0 4px 6px -2px rgba(8, 76, 39, 0.05);
+    --shadow-glow-amber: 0 0 20px rgba(217, 119, 6, 0.25);
+
+    /* Flux UI Support & Palette Defaults */
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;
     --color-zinc-200: #e5e5e5;
@@ -23,27 +76,26 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: var(--color-neutral-800);
-    --color-accent-content: var(--color-neutral-800);
-    --color-accent-foreground: var(--color-white);
+    --color-accent: #084C27;
+    --color-accent-content: #084C27;
+    --color-accent-foreground: #FFFFFF;
 }
 
 @layer theme {
     .dark {
-        --color-accent: var(--color-white);
-        --color-accent-content: var(--color-white);
-        --color-accent-foreground: var(--color-neutral-800);
+        --color-accent: #059669;
+        --color-accent-content: #059669;
+        --color-accent-foreground: #FFFFFF;
     }
 }
 
 @layer base {
-
     *,
     ::after,
     ::before,
     ::backdrop,
     ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
+        border-color: var(--color-border-subtle, currentColor);
     }
 }
 
@@ -52,15 +104,58 @@
 }
 
 [data-flux-label] {
-    @apply  !mb-0 !leading-tight;
+    @apply !mb-0 !leading-tight;
 }
 
 input:focus[data-flux-control],
 textarea:focus[data-flux-control],
 select:focus[data-flux-control] {
-    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+    @apply outline-hidden ring-2 ring-emerald-vibrant ring-offset-2 ring-offset-white;
 }
 
-/* \[:where(&)\]:size-4 {
-    @apply size-4;
-} */
+@layer utilities {
+    /* Responsive Modern Islamic Arch (DESIGN.md §6.2) */
+    .rounded-arch {
+        border-radius: 120px 120px 1rem 1rem;
+    }
+
+    @media (min-width: 1024px) {
+        .rounded-arch {
+            border-radius: 240px 240px 1.5rem 1.5rem;
+        }
+    }
+
+    .arch-mobile {
+        border-radius: 120px 120px 1rem 1rem;
+    }
+
+    .arch-desktop {
+        border-radius: 240px 240px 1.5rem 1.5rem;
+    }
+
+    /* Gold Ring / Hairline Accents (DESIGN.md §6.2) */
+    .border-gold-hairline {
+        border: 1.5px solid #D97706;
+    }
+
+    .ring-gold-hairline {
+        box-shadow: 0 0 0 1.5px #D97706;
+    }
+
+    .ring-gold-double {
+        box-shadow: 0 0 0 1.5px #D97706, 0 0 0 4px rgba(217, 119, 6, 0.15);
+    }
+
+    /* Geometric Kufic Pattern Overlays at 5% Opacity (DESIGN.md §5.2) */
+    .pattern-kufic {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D97706' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .pattern-kufic-emerald {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .pattern-kufic-forest {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23084C27' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+}

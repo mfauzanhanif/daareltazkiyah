@@ -15,6 +15,43 @@
                     <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
+
+                    @can('manage-psb')
+                        <flux:sidebar.item icon="academic-cap" :href="route('admin.psb.dashboard')" :current="request()->routeIs('admin.psb.*')">
+                            {{ __('Portal PSB') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="users" :href="route('admin.psb.applicants.index')" :current="request()->routeIs('admin.psb.applicants.*')">
+                            {{ __('Data Pendaftar') }}
+                        </flux:sidebar.item>
+                    @endcan
+
+                    @can('manage-cms')
+                        <flux:sidebar.item icon="newspaper" :href="route('admin.cms.dashboard')" :current="request()->routeIs('admin.cms.dashboard')">
+                            {{ __('Ringkasan CMS') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="document-text" :href="route('admin.cms.posts.index')" :current="request()->routeIs('admin.cms.posts.*')">
+                            {{ __('Artikel & Berita') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="tag" :href="route('admin.cms.categories.index')" :current="request()->routeIs('admin.cms.categories.*')">
+                            {{ __('Kategori') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="photo" :href="route('admin.cms.galleries.index')" :current="request()->routeIs('admin.cms.galleries.*')">
+                            {{ __('Galeri Foto') }}
+                        </flux:sidebar.item>
+                        <flux:sidebar.item icon="user-group" :href="route('admin.cms.teachers.index')" :current="request()->routeIs('admin.cms.teachers.*')">
+                            {{ __('Dewan Asatidz') }}
+                        </flux:sidebar.item>
+                    @endcan
+
+                    @can('manage-settings')
+                        <flux:sidebar.item icon="cog-6-tooth" :href="route('admin.cms.settings.index')" :current="request()->routeIs('admin.cms.settings.*')">
+                            {{ __('Pengaturan Situs') }}
+                        </flux:sidebar.item>
+                    @endcan
+
+                    <flux:sidebar.item icon="globe-alt" :href="route('home')" target="_blank">
+                        {{ __('Lihat Website Publik') }}
+                    </flux:sidebar.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 
