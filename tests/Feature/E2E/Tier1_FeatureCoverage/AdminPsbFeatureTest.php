@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -12,7 +11,7 @@ test('panitia admin can view dashboard statistics and metrics', function () {
         test()->markTestSkipped('PSB tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_psb',
     ]);
 
@@ -34,7 +33,7 @@ test('applicant management table supports searching by name, NIK, or registratio
         test()->markTestSkipped('PSB tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_psb',
     ]);
 
@@ -91,7 +90,7 @@ test('panitia admin can update applicant verification status and payment status 
         test()->markTestSkipped('PSB tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_psb',
     ]);
 
@@ -156,7 +155,7 @@ test('panitia admin can export applicant data to Excel spreadsheet', function ()
         test()->markTestSkipped('PSB tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_psb',
     ]);
 
@@ -177,7 +176,7 @@ test('unauthorized users without manage-psb gate are forbidden from PSB admin', 
     expect(in_array($guestResponse->status(), [302, 403, 404]))->toBeTrue();
 
     if (Schema::hasTable('users') && Schema::hasColumn('users', 'role')) {
-        $cmsUser = User::factory()->create([
+        $cmsUser = createUser([
             'role' => 'admin_cms',
         ]);
 

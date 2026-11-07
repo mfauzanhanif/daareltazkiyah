@@ -48,7 +48,6 @@
                     <a href="{{ route('home') }}" class="hover:text-[#059669] transition py-1">Beranda</a>
                     <a href="{{ route('home') }}#profil" class="hover:text-[#059669] transition py-1">Profil</a>
                     <a href="{{ route('home') }}#program" class="hover:text-[#059669] transition py-1">Program</a>
-                    <a href="{{ route('home') }}#asatidz" class="hover:text-[#059669] transition py-1">Asatidz</a>
                     <a href="{{ route('news.index') }}" class="hover:text-[#059669] transition py-1">Berita</a>
                     <a href="{{ route('gallery.index') }}" class="hover:text-[#059669] transition py-1">Galeri</a>
                     <a href="{{ route('home') }}#kontak" class="hover:text-[#059669] transition py-1">Kontak</a>

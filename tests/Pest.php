@@ -1,6 +1,10 @@
 <?php
 
+use App\Enums\UserRole;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Tests\TestCase;
 
 /*
@@ -44,7 +48,20 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+/**
+ * @param  array<string, mixed>  $attributes
+ */
+function createUser(array $attributes = []): User
 {
-    // ..
+    $user = new User;
+    $user->forceFill([
+        'name' => $attributes['name'] ?? fake()->name(),
+        'email' => $attributes['email'] ?? fake()->unique()->safeEmail(),
+        'email_verified_at' => array_key_exists('email_verified_at', $attributes) ? $attributes['email_verified_at'] : now(),
+        'password' => $attributes['password'] ?? Hash::make('password'),
+        'role' => $attributes['role'] ?? UserRole::AdminCms,
+        'remember_token' => $attributes['remember_token'] ?? Str::random(10),
+    ])->save();
+
+    return $user;
 }

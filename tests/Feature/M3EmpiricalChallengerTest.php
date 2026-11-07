@@ -18,7 +18,7 @@ use Livewire\Livewire;
 uses(RefreshDatabase::class);
 
 test('empirical challenge 1: Livewire search reactivity, debouncing attribute, and multi-field matching (title, excerpt, content)', function () {
-    $author = User::factory()->create(['role' => UserRole::AdminCms]);
+    $author = createUser(['role' => UserRole::AdminCms]);
     $category = Category::create([
         'name' => 'Warta Utama',
         'slug' => 'warta-utama',
@@ -110,7 +110,7 @@ test('empirical challenge 1: Livewire search reactivity, debouncing attribute, a
 });
 
 test('empirical challenge 2: Category filter switching, toggling off, and draft/scheduled count isolation', function () {
-    $author = User::factory()->create(['role' => UserRole::AdminCms]);
+    $author = createUser(['role' => UserRole::AdminCms]);
 
     $catWarta = Category::create(['name' => 'Warta Pondok', 'slug' => 'warta-pondok']);
     $catPrestasi = Category::create(['name' => 'Prestasi Santri', 'slug' => 'prestasi-santri']);
@@ -203,7 +203,7 @@ test('empirical challenge 2: Category filter switching, toggling off, and draft/
 });
 
 test('empirical challenge 3: News pagination beyond 9 items and page reset on search or category filter change', function () {
-    $author = User::factory()->create(['role' => UserRole::AdminCms]);
+    $author = createUser(['role' => UserRole::AdminCms]);
     $categoryA = Category::create(['name' => 'Kategori Alpha', 'slug' => 'kategori-alpha']);
     $categoryB = Category::create(['name' => 'Kategori Beta', 'slug' => 'kategori-beta']);
 
@@ -273,7 +273,7 @@ test('empirical challenge 3: News pagination beyond 9 items and page reset on se
 });
 
 test('empirical challenge 4: Strict exclusion of drafts, future scheduled posts, null published_at, and soft-deleted articles across search and categories', function () {
-    $author = User::factory()->create(['role' => UserRole::AdminCms]);
+    $author = createUser(['role' => UserRole::AdminCms]);
     $cat = Category::create(['name' => 'Warta Berita', 'slug' => 'warta-berita']);
 
     // 1. Draft post
@@ -359,7 +359,7 @@ test('empirical challenge 4: Strict exclusion of drafts, future scheduled posts,
 });
 
 test('empirical challenge 5: Read time estimation boundary testing and rich text HTML stripping', function () {
-    $author = User::factory()->create();
+    $author = createUser();
 
     // Helper to generate word-counted text
     $generateWords = fn (int $count): string => implode(' ', array_fill(0, $count, 'kata'));

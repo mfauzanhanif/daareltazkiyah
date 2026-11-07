@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -12,7 +11,7 @@ test('updating applicant status generates Spatie Activitylog audit trail with ca
         test()->markTestSkipped('Applicants/Activity_log/Users tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_psb',
     ]);
 

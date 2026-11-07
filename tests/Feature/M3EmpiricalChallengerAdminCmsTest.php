@@ -12,7 +12,6 @@ use App\Models\GalleryPhoto;
 use App\Models\Post;
 use App\Models\SiteSetting;
 use App\Models\Teacher;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Gate;
@@ -22,7 +21,7 @@ uses(RefreshDatabase::class);
 
 test('adversarial challenge 1: Unauthenticated guests are strictly redirected to login across all 24 CMS routes', function () {
     // Provision placeholder models for route parameters
-    $user = User::factory()->create(['role' => UserRole::SuperAdmin]);
+    $user = createUser(['role' => UserRole::SuperAdmin]);
     $category = Category::create(['name' => 'Kategori Dummy', 'slug' => 'kategori-dummy']);
     $post = Post::create([
         'author_id' => $user->id,
@@ -82,11 +81,11 @@ test('adversarial challenge 1: Unauthenticated guests are strictly redirected to
 });
 
 test('adversarial challenge 2: admin_psb receives 403 Forbidden across all 24 CMS routes', function () {
-    $psbAdmin = User::factory()->create(['role' => UserRole::AdminPsb]);
+    $psbAdmin = createUser(['role' => UserRole::AdminPsb]);
     $this->actingAs($psbAdmin);
 
     // Provision dummy models
-    $superAdmin = User::factory()->create(['role' => UserRole::SuperAdmin]);
+    $superAdmin = createUser(['role' => UserRole::SuperAdmin]);
     $category = Category::create(['name' => 'Kategori Dummy PSB', 'slug' => 'kategori-dummy-psb']);
     $post = Post::create([
         'author_id' => $superAdmin->id,
@@ -145,7 +144,7 @@ test('adversarial challenge 2: admin_psb receives 403 Forbidden across all 24 CM
 });
 
 test('adversarial challenge 3: admin_cms authorized access to posts, categories, galleries, teachers vs super_admin settings boundary', function () {
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     // 1. admin_cms can access CMS dashboard, posts, categories, galleries, teachers
@@ -165,7 +164,7 @@ test('adversarial challenge 3: admin_cms authorized access to posts, categories,
     $adminCmsSettingsResponse->assertForbidden();
 
     // 3. Super Admin has full access to settings
-    $superAdmin = User::factory()->create(['role' => UserRole::SuperAdmin]);
+    $superAdmin = createUser(['role' => UserRole::SuperAdmin]);
     $this->actingAs($superAdmin);
 
     expect(Gate::allows('manage-settings'))->toBeTrue();
@@ -183,7 +182,7 @@ test('adversarial challenge 3: admin_cms authorized access to posts, categories,
 test('adversarial challenge 4: Post CRUD integrity with validation errors, unique slug collision, and soft deletion', function () {
     Storage::fake('public');
 
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     $category = Category::create(['name' => 'Pendidikan Islam', 'slug' => 'pendidikan-islam']);
@@ -299,7 +298,7 @@ test('adversarial challenge 4: Post CRUD integrity with validation errors, uniqu
 test('adversarial challenge 5: Teacher photo upload verification on storage/app/public/teachers/ and photo_path column', function () {
     Storage::fake('public');
 
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     // 1. Validation Failures
@@ -370,7 +369,7 @@ test('adversarial challenge 5: Teacher photo upload verification on storage/app/
 });
 
 test('adversarial challenge 6: Category parent-child hierarchy, root scope isolation, and foreign key constraints', function () {
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     // 1. Validation Failures
@@ -445,7 +444,7 @@ test('adversarial challenge 6: Category parent-child hierarchy, root scope isola
 test('adversarial challenge 7: Gallery multi-photo sequential upload, sort order increments, and single photo deletion', function () {
     Storage::fake('public');
 
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     // 1. Album Creation Validation
@@ -545,7 +544,7 @@ test('adversarial challenge 7: Gallery multi-photo sequential upload, sort order
 });
 
 test('adversarial challenge 8: UTF-8 Arabic calligraphy and rich HTML block storage in Post content', function () {
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     $arabicTitle = 'افتتاح الدورة الصيفية لحفظ القرآن الكريم ١٤٤٨ هـ';
@@ -568,7 +567,7 @@ test('adversarial challenge 8: UTF-8 Arabic calligraphy and rich HTML block stor
 });
 
 test('adversarial challenge 9: Post scheduled status and auto-published_at timestamp assignment', function () {
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
     $this->actingAs($adminCms);
 
     // Case 1: Status published without published_at -> controller auto-assigns now()
@@ -599,8 +598,8 @@ test('adversarial challenge 9: Post scheduled status and auto-published_at times
 });
 
 test('adversarial challenge 10: Forensic empirical analysis of settings RBAC boundary (admin_cms vs super_admin)', function () {
-    $adminCms = User::factory()->create(['role' => UserRole::AdminCms]);
-    $superAdmin = User::factory()->create(['role' => UserRole::SuperAdmin]);
+    $adminCms = createUser(['role' => UserRole::AdminCms]);
+    $superAdmin = createUser(['role' => UserRole::SuperAdmin]);
 
     // 1. AppServiceProvider Gate definition verification
     expect(Gate::forUser($superAdmin)->allows('manage-settings'))->toBeTrue();

@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use App\Models\Gallery;
-use App\Models\User;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +13,7 @@ test('admin with admin_cms role can create, update, and soft-delete articles', f
         test()->markTestSkipped('Posts or Users tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_cms',
     ]);
 
@@ -63,7 +62,7 @@ test('admin can manage categories with slug generation and hierarchy', function 
         test()->markTestSkipped('Categories or Users tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_cms',
     ]);
 
@@ -89,7 +88,7 @@ test('admin can create gallery album and upload photos', function () {
         test()->markTestSkipped('Galleries or Users tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_cms',
     ]);
 
@@ -118,7 +117,7 @@ test('admin can manage teachers and update site settings', function () {
         test()->markTestSkipped('Teachers/Site_settings tables not yet migrated (M1 required).');
     }
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'super_admin',
     ]);
 
@@ -159,7 +158,7 @@ test('unauthorized users without manage-cms gate cannot access CMS administratio
     expect(in_array($guestResponse->status(), [302, 403, 404]))->toBeTrue();
 
     if (Schema::hasTable('users') && Schema::hasColumn('users', 'role')) {
-        $psbUser = User::factory()->create([
+        $psbUser = createUser([
             'role' => 'admin_psb',
         ]);
 
@@ -172,7 +171,7 @@ test('unauthorized users without manage-cms gate cannot access CMS administratio
 });
 
 test('admin can access all CMS management views', function () {
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_cms',
     ]);
     $this->actingAs($admin);
@@ -184,7 +183,7 @@ test('admin can access all CMS management views', function () {
 });
 
 test('super admin can access and update settings view', function () {
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'super_admin',
     ]);
     $this->actingAs($admin);
@@ -195,7 +194,7 @@ test('super admin can access and update settings view', function () {
 test('admin can upload photos to gallery album and remove them', function () {
     Storage::fake('public');
 
-    $admin = User::factory()->create([
+    $admin = createUser([
         'role' => 'admin_cms',
     ]);
     $this->actingAs($admin);

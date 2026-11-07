@@ -8,14 +8,13 @@ use App\Enums\PostStatus;
 use App\Livewire\Public\NewsList;
 use App\Models\Category;
 use App\Models\Post;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 
 uses(RefreshDatabase::class);
 
 test('news list component renders published posts and excludes drafts', function () {
-    $author = User::factory()->create();
+    $author = createUser();
     $category = Category::create([
         'name' => 'Warta Pondok',
         'slug' => 'warta-pondok',
@@ -48,7 +47,7 @@ test('news list component renders published posts and excludes drafts', function
 });
 
 test('news list component filters posts reactively by category', function () {
-    $author = User::factory()->create();
+    $author = createUser();
 
     $cat1 = Category::create([
         'name' => 'Prestasi',
@@ -90,7 +89,7 @@ test('news list component filters posts reactively by category', function () {
 });
 
 test('news list component searches posts reactively by keyword and resets filters', function () {
-    $author = User::factory()->create();
+    $author = createUser();
 
     Post::create([
         'title' => 'Peringatan Hari Santri Nasional',

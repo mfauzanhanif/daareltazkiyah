@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use App\Enums\UserRole;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
 use Tests\TestCase;
@@ -15,7 +15,7 @@ class RbacGateTest extends TestCase
 
     public function test_super_admin_has_all_abilities(): void
     {
-        $superAdmin = User::factory()->superAdmin()->create();
+        $superAdmin = $this->createUser(['role' => UserRole::SuperAdmin]);
 
         $this->actingAs($superAdmin);
 
@@ -27,7 +27,7 @@ class RbacGateTest extends TestCase
 
     public function test_admin_cms_can_only_manage_cms(): void
     {
-        $adminCms = User::factory()->adminCms()->create();
+        $adminCms = $this->createUser(['role' => UserRole::AdminCms]);
 
         $this->actingAs($adminCms);
 
@@ -39,7 +39,7 @@ class RbacGateTest extends TestCase
 
     public function test_admin_psb_can_only_manage_psb(): void
     {
-        $adminPsb = User::factory()->adminPsb()->create();
+        $adminPsb = $this->createUser(['role' => UserRole::AdminPsb]);
 
         $this->actingAs($adminPsb);
 

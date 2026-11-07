@@ -2,7 +2,6 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
@@ -23,7 +22,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_verification_screen_can_be_rendered(): void
     {
-        $user = User::factory()->unverified()->create();
+        $user = $this->createUser(['email_verified_at' => null]);
 
         $response = $this->actingAs($user)->get(route('verification.notice'));
 
@@ -32,7 +31,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_unverified_users_are_redirected_to_the_email_verification_prompt(): void
     {
-        $user = User::factory()->unverified()->create();
+        $user = $this->createUser(['email_verified_at' => null]);
 
         $response = $this->actingAs($user)->get(route('appearance.edit'));
 
@@ -41,7 +40,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_can_be_verified(): void
     {
-        $user = User::factory()->unverified()->create();
+        $user = $this->createUser(['email_verified_at' => null]);
 
         Event::fake();
 
@@ -61,7 +60,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_is_not_verified_with_invalid_hash(): void
     {
-        $user = User::factory()->unverified()->create();
+        $user = $this->createUser(['email_verified_at' => null]);
 
         $verificationUrl = URL::temporarySignedRoute(
             'verification.verify',
@@ -76,7 +75,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_already_verified_user_visiting_verification_link_is_redirected_without_firing_event_again(): void
     {
-        $user = User::factory()->create([
+        $user = $this->createUser([
             'email_verified_at' => now(),
         ]);
 

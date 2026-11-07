@@ -8,14 +8,9 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <!-- Hero Left: Typography & CTAs -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                <!-- Institution Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#084C27]/5 border border-[#084C27]/15 text-[#084C27] text-xs md:text-sm font-semibold tracking-wide shadow-2xs">
-                    <span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span>
-                    <span>Lembaga Pendidikan Kader Ulama & Tahfidzul Qur'an</span>
-                </div>
 
                 <!-- Arabic Sacred Calligraphy (Amiri typography, dir="rtl", line-height 1.8) -->
                 <div class="space-y-1">
@@ -49,13 +44,6 @@
                         Pelajari Program
                     </a>
                 </div>
-
-                @if($activeWave)
-                    <div class="pt-2 text-xs text-[#4B6358] flex items-center justify-center lg:justify-start gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span>Gelombang aktif: <strong class="text-[#084C27]">{{ $activeWave->name }} (TA {{ $activeWave->academic_year }})</strong> s.d {{ \Carbon\Carbon::parse($activeWave->end_date)->translatedFormat('d F Y') }}</span>
-                    </div>
-                @endif
             </div>
 
             <!-- Hero Right: Pengasuh Portrait in Architectural Arch Frame -->

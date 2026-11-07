@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -13,7 +12,7 @@ test('complete admin verification journey: login -> review applicant -> request 
     }
 
     // Step 1: Panitia Admin Authentication
-    $admin = User::factory()->create([
+    $admin = createUser([
         'name' => 'Ustadz Panitia PSB',
         'email' => 'panitia@daareltazkiyah.com',
         'role' => 'admin_psb',

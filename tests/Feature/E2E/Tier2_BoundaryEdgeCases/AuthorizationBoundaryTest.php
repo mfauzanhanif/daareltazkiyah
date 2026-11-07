@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 
@@ -11,9 +10,9 @@ test('authorization gates enforce strict RBAC boundaries across super_admin, adm
         test()->markTestSkipped('Users table role column not yet migrated (M1 required).');
     }
 
-    $superAdmin = User::factory()->create(['role' => 'super_admin']);
-    $adminCms = User::factory()->create(['role' => 'admin_cms']);
-    $adminPsb = User::factory()->create(['role' => 'admin_psb']);
+    $superAdmin = createUser(['role' => 'super_admin']);
+    $adminCms = createUser(['role' => 'admin_cms']);
+    $adminPsb = createUser(['role' => 'admin_psb']);
 
     // Test Gate manage-cms
     if (Gate::has('manage-cms')) {

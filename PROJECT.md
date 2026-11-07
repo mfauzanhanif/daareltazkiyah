@@ -133,7 +133,7 @@
   - `app/Livewire/Admin/`: `PsbDashboard`, `ApplicantList`, `ApplicantDetail`, `PostManager`, `CategoryManager`, `GalleryManager`, `TeacherManager`, `SettingManager`
 - `app/Rules/`: Custom Validation Rules (`UniqueNikPerAcademicYear`)
 - `database/migrations/`: ULID-based database migrations
-- `database/seeders/`: Database seeders (`SuperAdminSeeder`, `AdmissionWaveSeeder`, `SiteSettingSeeder`, `CategorySeeder`, `TeacherSeeder`, `SampleContentSeeder`)
+- `database/seeders/`: Database seeders (`UserSeeder`, `AdmissionWaveSeeder`, `SiteSettingSeeder`, `CategorySeeder`, `TeacherSeeder`, `SampleContentSeeder`)
 - `resources/css/app.css`: Tailwind v4 theme configuration and custom styling
 - `resources/views/`:
   - `layouts/`: `public.blade.php`, `admin.blade.php`, `pdf/`
