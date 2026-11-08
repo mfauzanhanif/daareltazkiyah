@@ -4,7 +4,7 @@
 FROM composer:latest AS vendor
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-scripts --ignore-platform-req=php
+RUN composer install --no-dev --optimize-autoloader --no-scripts --ignore-platform-reqs
 
 # ===================================================
 # Stage 2: Node + pnpm (Compile Frontend with Vite & Flux)
