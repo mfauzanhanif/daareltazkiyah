@@ -16,6 +16,8 @@
                 <a href="{{ route('home') }}" class="flex items-center gap-3 sm:gap-3.5 group shrink-0 py-2">
                     <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}"
                         alt="Logo PPMTQ Daar El Tazkiyah Sumardi"
+                        width="56" height="56"
+                        style="max-width: 56px; max-height: 56px;"
                         class="w-12 h-12 sm:w-14 sm:h-14 object-contain transition-transform group-hover:scale-105"
                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
 

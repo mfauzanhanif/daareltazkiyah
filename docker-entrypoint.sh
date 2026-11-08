@@ -18,8 +18,9 @@ php artisan view:cache
 # Ensure single MPM active
 a2dismod mpm_event mpm_worker 2>/dev/null || true
 
-# Auto run migrations
+# Auto run migrations and essential seeds
 php artisan migrate --force
+php artisan db:seed --force
 
 exec "$@"
 

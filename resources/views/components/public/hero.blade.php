@@ -116,7 +116,7 @@
                             <div class="w-full h-80 sm:h-96 rounded-arch overflow-hidden bg-gradient-to-b from-[#084C27] to-[#042816] relative flex flex-col justify-end border border-gold-hairline/60">
                                 <!-- Islamic Calligraphy / Motif -->
                                 <div class="absolute inset-0 flex flex-col items-center justify-center text-white/20 pb-16 pointer-events-none">
-                                    <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo" class="w-28 h-28 object-contain opacity-25"
+                                    <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo" width="112" height="112" style="max-width: 112px; max-height: 112px;" class="w-28 h-28 object-contain opacity-25"
                                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
                                     <span class="font-arabic text-sm text-amber-200/50 mt-2" dir="rtl" style="line-height: 1.8;">فضيلة الشيخ Pengasuh</span>
                                 </div>
