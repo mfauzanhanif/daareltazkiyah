@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="pt-8">
-                    <a href="{{ route('psb.index') }}?program=MTS" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition shadow-sm">
+                    <a href="{{ route('psb.index') }}?program=MTS" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition shadow-sm">
                         <span>Daftar MTS Sekarang</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
@@ -146,7 +146,7 @@
                 </div>
 
                 <div class="pt-8">
-                    <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border-2 border-[#084C27] text-[#084C27] hover:bg-[#084C27] hover:text-white font-semibold text-sm transition">
+                    <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border-2 border-[#084C27] text-[#084C27] hover:bg-[#084C27] hover:text-white font-semibold text-sm transition">
                         <span>Daftar MDTA Sekarang</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>

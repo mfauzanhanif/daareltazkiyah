@@ -24,7 +24,7 @@ class ContactController extends Controller
         $sitePhone = (string) SiteSetting::get('school_phone', SiteSetting::get('site_phone', '0812-3456-7890'));
         $siteEmail = (string) SiteSetting::get('school_email', SiteSetting::get('site_email', 'info@daareltazkiyah.sch.id'));
 
-        return view('pages.public.contact', compact(
+        return view('public.contact', compact(
             'activeWave',
             'waNumber',
             'siteAddress',

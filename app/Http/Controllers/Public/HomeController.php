@@ -51,7 +51,7 @@ class HomeController extends Controller
         $sitePhone = (string) SiteSetting::get('school_phone', SiteSetting::get('site_phone', '0812-3456-7890'));
         $siteEmail = (string) SiteSetting::get('school_email', SiteSetting::get('site_email', 'info@daareltazkiyah.sch.id'));
 
-        return view('pages.public.home', compact(
+        return view('public.home', compact(
             'activeWave',
             'teachers',
             'featuredPost',

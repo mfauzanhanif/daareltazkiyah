@@ -77,10 +77,10 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-2"
-                             class="absolute left-0 w-80 bg-white border border-[#E5E0D8] shadow-md p-2 mt-1 z-50 text-left normal-case"
+                             class="absolute left-0 w-80 bg-white border border-[#E5E0D8] rounded-md shadow-md p-2 mt-1 z-50 text-left normal-case"
                              style="display: none;">
                             
-                            <a href="{{ route('profile.sejarah') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
+                            <a href="{{ route('profile.sejarah') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">01. Sejarah & Visi Misi</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -90,7 +90,7 @@
                                 </p>
                             </a>
 
-                            <a href="{{ route('profile.teachers') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
+                            <a href="{{ route('profile.teachers') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">02. Dewan Asatidz</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -100,7 +100,7 @@
                                 </p>
                             </a>
 
-                            <a href="{{ route('profile.facilities') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
+                            <a href="{{ route('profile.facilities') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">03. Sarana & Fasilitas</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -131,10 +131,10 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-2"
-                             class="absolute left-0 w-80 bg-white border border-[#E5E0D8] shadow-md p-2 mt-1 z-50 text-left normal-case"
+                             class="absolute left-0 w-80 bg-white border border-[#E5E0D8] rounded-md shadow-md p-2 mt-1 z-50 text-left normal-case"
                              style="display: none;">
                             
-                            <a href="{{ route('academic.mts') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
+                            <a href="{{ route('academic.mts') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">01. MTS Mukim 24 Jam</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -144,7 +144,7 @@
                                 </p>
                             </a>
 
-                            <a href="{{ route('academic.mdta') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
+                            <a href="{{ route('academic.mdta') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">02. MDTA (Sekolah Sore)</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -154,7 +154,7 @@
                                 </p>
                             </a>
 
-                            <a href="{{ route('academic.tahfidz') }}" class="block p-3 hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
+                            <a href="{{ route('academic.tahfidz') }}" class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
                                 <div class="flex items-center justify-between">
                                     <span class="font-serif font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">03. Kurikulum Tahfidz & Kitab</span>
                                     <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -187,12 +187,12 @@
                     </a>
                 </nav>
 
-                <!-- Desktop CTAs (Sharp/Subtle Edges, Hairline Border, Dignified) -->
+                <!-- Desktop CTAs (Subtly Rounded Edges, Hairline Border, Dignified) -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="{{ route('psb.status') }}" class="text-xs font-semibold uppercase tracking-wider px-4 py-2.5 border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] hover:bg-white transition">
+                    <a href="{{ route('psb.status') }}" class="text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-md border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] hover:bg-white transition">
                         Cek Status PSB
                     </a>
-                    <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 bg-[#0D3B2E] hover:bg-[#059669] text-white border border-[#0D3B2E] transition group">
+                    <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white border border-[#0D3B2E] transition group">
                         <span>Daftar Sekarang</span>
                         <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">&rarr;</span>
                     </a>
@@ -200,12 +200,12 @@
 
                 <!-- Mobile Hamburger Toggle -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <a href="{{ route('psb.index') }}" class="sm:hidden text-xs font-semibold uppercase px-3 py-2 bg-[#0D3B2E] text-white">
+                    <a href="{{ route('psb.index') }}" class="sm:hidden text-xs font-semibold uppercase px-3 py-2 rounded-md bg-[#0D3B2E] text-white">
                         Daftar
                     </a>
                     <button type="button"
                             @click="mobileMenuOpen = !mobileMenuOpen"
-                            class="p-2 border border-[#E5E0D8] text-[#0D3B2E] hover:bg-white transition"
+                            class="p-2 rounded-md border border-[#E5E0D8] text-[#0D3B2E] hover:bg-white transition"
                             aria-label="Buka Menu Navigasi"
                             :aria-expanded="mobileMenuOpen.toString()">
                         <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,10 +282,10 @@
             </nav>
 
             <div class="pt-3 border-t border-[#E5E0D8] space-y-2">
-                <a href="{{ route('psb.status') }}" class="block w-full text-center px-4 py-2.5 border border-[#E5E0D8] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider bg-white">
+                <a href="{{ route('psb.status') }}" class="block w-full text-center px-4 py-2.5 rounded-md border border-[#E5E0D8] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider bg-white">
                     Cek Status PSB
                 </a>
-                <a href="{{ route('psb.index') }}" class="block w-full text-center px-4 py-3 bg-[#0D3B2E] text-white font-semibold text-xs uppercase tracking-wider">
+                <a href="{{ route('psb.index') }}" class="block w-full text-center px-4 py-3 rounded-md bg-[#0D3B2E] text-white font-semibold text-xs uppercase tracking-wider">
                     Daftar Sekarang (PSB Online) &rarr;
                 </a>
             </div>

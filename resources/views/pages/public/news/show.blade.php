@@ -70,7 +70,7 @@
             </a>
             <div class="flex items-center gap-2 text-xs text-[#4B6358]">
                 <span>Bagikan:</span>
-                <a href="https://wa.me/?text={{ urlencode($post->title . ' - ' . url()->current()) }}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs transition">
+                <a href="https://wa.me/?text={{ urlencode($post->title . ' - ' . url()->current()) }}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-md border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs transition">
                     WhatsApp
                 </a>
             </div>

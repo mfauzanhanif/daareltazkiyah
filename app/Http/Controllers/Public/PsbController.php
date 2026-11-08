@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Public;
 
-use App\Http\Controllers\Controller;
 use App\Enums\ApplicationStatus;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Portal\Psb\CheckStatusRequest;
 use App\Http\Requests\Portal\Psb\StoreApplicantRequest;
 use App\Http\Requests\Portal\Psb\UpdateApplicantRequest;
@@ -28,7 +28,7 @@ final class PsbController extends Controller
         $activeWave = AdmissionWave::currentActive();
         $selectedProgram = $request->query('program', 'MTS');
 
-        return view('pages.public.psb.index', compact('activeWave', 'selectedProgram'));
+        return view('public.psb.index', compact('activeWave', 'selectedProgram'));
     }
 
     public function store(StoreApplicantRequest $request, RegistrationService $registrationService): RedirectResponse
@@ -46,7 +46,7 @@ final class PsbController extends Controller
             ->with(['admissionWave', 'parent', 'documents'])
             ->firstOrFail();
 
-        return view('pages.public.psb.success', compact('applicant'));
+        return view('public.psb.success', compact('applicant'));
     }
 
     public function downloadProof(string $registration_number, PdfService $pdfService): Response
@@ -61,7 +61,7 @@ final class PsbController extends Controller
 
     public function statusForm(): View
     {
-        return view('pages.public.psb.status');
+        return view('public.psb.status');
     }
 
     public function checkStatus(CheckStatusRequest $request): View
@@ -81,7 +81,7 @@ final class PsbController extends Controller
             ]);
         }
 
-        return view('pages.public.psb.status-result', compact('applicant'));
+        return view('public.psb.status-result', compact('applicant'));
     }
 
     public function update(UpdateApplicantRequest $request, string $registration_number): RedirectResponse

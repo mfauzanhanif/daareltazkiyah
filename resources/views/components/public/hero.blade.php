@@ -44,16 +44,16 @@
                     </span>
                 </div>
 
-                <!-- Dual Action CTAs (No generic badges, crisp hairline buttons) -->
+                <!-- Dual Action CTAs (No generic badges, subtly rounded dignified buttons) -->
                 <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <a href="{{ route('psb.index') }}" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition group border border-[#0D3B2E]">
+                    <a href="{{ route('psb.index') }}" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition group border border-[#0D3B2E]">
                         <span>Daftar PSB Online</span>
                         <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </a>
-                    <a href="{{ route('academic.mts') }}" class="inline-flex items-center justify-center px-6 py-3.5 border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider transition">
+                    <a href="{{ route('academic.mts') }}" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider transition">
                         Eksplorasi Kurikulum
                     </a>
-                    <a href="{{ route('psb.status') }}" class="inline-flex items-center justify-center px-5 py-3.5 border border-transparent text-[#4B6358] hover:text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
+                    <a href="{{ route('psb.status') }}" class="inline-flex items-center justify-center px-5 py-3.5 rounded-md border border-transparent text-[#4B6358] hover:text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
                         Cek Status &rarr;
                     </a>
                 </div>
@@ -93,7 +93,7 @@
                     </div>
 
                     <!-- Integrated Real-time PSB Status Bar (Attached Below Arch) -->
-                    <div class="mt-4 bg-white border border-[#E5E0D8] p-4 text-xs">
+                    <div class="mt-4 bg-white border border-[#E5E0D8] rounded-md p-4 text-xs">
                         <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-2 mb-2">
                             <div class="flex items-center gap-2">
                                 <span class="w-2 h-2 bg-[#D97706]"></span>

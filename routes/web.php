@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 use App\Http\Controllers\Portal\PortalCmsController;
 use App\Http\Controllers\Portal\PortalPsbController;
-use App\Http\Controllers\Public\GalleryController;
-use App\Http\Controllers\Public\NewsController;
-use App\Http\Controllers\Public\PsbController;
 use App\Http\Controllers\Public\AcademicController;
 use App\Http\Controllers\Public\ContactController;
+use App\Http\Controllers\Public\GalleryController;
 use App\Http\Controllers\Public\HomeController;
+use App\Http\Controllers\Public\NewsController;
 use App\Http\Controllers\Public\ProfileController;
+use App\Http\Controllers\Public\PsbController;
 use App\Http\Controllers\Public\SystemSetupController;
 use Illuminate\Support\Facades\Route;
 
@@ -58,7 +58,7 @@ Route::match(['GET', 'POST'], '/system-setup', [SystemSetupController::class, 'h
 
 // --- Authenticated Dashboard ---
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'pages.admin.dashboard')->name('dashboard');
+    Route::view('dashboard', 'portal.dashboard')->name('dashboard');
 
     // Admin CMS Routes
     Route::middleware('can:manage-cms')->prefix('admin/cms')->name('admin.cms.')->group(function () {

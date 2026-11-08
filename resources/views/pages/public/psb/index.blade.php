@@ -18,13 +18,13 @@
                     </p>
                 </div>
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="{{ route('home') }}" class="w-full sm:w-auto px-6 py-2.5 border border-[#E5E0D8] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider hover:border-[#0D3B2E] bg-white transition">
+                    <a href="{{ route('home') }}" class="w-full sm:w-auto px-6 py-2.5 rounded-md border border-[#E5E0D8] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider hover:border-[#0D3B2E] bg-white transition">
                         Kembali ke Beranda
                     </a>
                     @php
                         $waNum = \App\Models\SiteSetting::get('psb_whatsapp_number', '6281234567890');
                     @endphp
-                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string)$waNum) }}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-2.5 bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition">
+                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string)$waNum) }}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition">
                         Hubungi Panitia PSB
                     </a>
                 </div>

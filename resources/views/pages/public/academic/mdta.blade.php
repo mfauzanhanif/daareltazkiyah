@@ -64,11 +64,11 @@
 
                         <!-- CTAs -->
                         <div class="pt-4 space-y-3">
-                            <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs tracking-wider uppercase transition">
+                            <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs tracking-wider uppercase transition">
                                 <span>Daftar MDTA Sekolah Sore</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
-                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum, saya ingin konsultasi seputar pendaftaran santri MDTA Sekolah Sore PPMTQ Daar El Tazkiyah.') }}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-[#E5E0D8] hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs tracking-wide transition bg-white">
+                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum, saya ingin konsultasi seputar pendaftaran santri MDTA Sekolah Sore PPMTQ Daar El Tazkiyah.') }}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border border-[#E5E0D8] hover:border-[#0D3B2E] text-[#0D3B2E] font-semibold text-xs tracking-wide transition bg-white">
                                 <span>Tanya Jadwal MDTA via WhatsApp</span>
                             </a>
                         </div>

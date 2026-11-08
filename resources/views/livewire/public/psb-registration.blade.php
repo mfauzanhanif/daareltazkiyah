@@ -11,13 +11,13 @@
                 </p>
             </div>
             <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="{{ route('home') }}" class="w-full sm:w-auto px-6 py-3 rounded-xl border border-gray-300 text-[#084C27] font-semibold text-sm hover:bg-gray-50 transition">
+                <a href="{{ route('home') }}" class="w-full sm:w-auto px-6 py-3 rounded-md border border-gray-300 text-[#084C27] font-semibold text-sm hover:bg-gray-50 transition">
                     Kembali ke Beranda
                 </a>
                 @php
                     $waNum = \App\Models\SiteSetting::get('psb_whatsapp_number', '6281234567890');
                 @endphp
-                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string)$waNum) }}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#059669] hover:bg-[#084C27] text-white font-semibold text-sm transition">
+                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string)$waNum) }}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-md bg-[#059669] hover:bg-[#084C27] text-white font-semibold text-sm transition">
                     Hubungi Panitia PSB
                 </a>
             </div>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="flex justify-end pt-4">
-                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
+                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
                             Lanjut ke Data Santri &rarr;
                         </button>
                     </div>
@@ -187,10 +187,10 @@
                     </div>
 
                     <div class="flex justify-between pt-4">
-                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-xl border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
+                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-md border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
                             &larr; Kembali
                         </button>
-                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
+                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
                             Lanjut ke Data Orang Tua &rarr;
                         </button>
                     </div>
@@ -255,10 +255,10 @@
                     </div>
 
                     <div class="flex justify-between pt-4">
-                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-xl border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
+                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-md border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
                             &larr; Kembali
                         </button>
-                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
+                        <button type="button" wire:click="nextStep" class="px-6 py-3 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition">
                             Lanjut ke Unggah Berkas &rarr;
                         </button>
                     </div>
@@ -325,10 +325,10 @@
                     </div>
 
                     <div class="flex justify-between pt-6 border-t border-gray-100">
-                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-xl border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
+                        <button type="button" wire:click="previousStep" class="px-5 py-2.5 rounded-md border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition">
                             &larr; Kembali
                         </button>
-                        <button type="button" wire:click="submit" wire:loading.attr="disabled" class="px-8 py-3.5 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-bold text-sm shadow-elevated hover:shadow-glow-amber transition disabled:opacity-50">
+                        <button type="button" wire:click="submit" wire:loading.attr="disabled" class="px-8 py-3.5 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-bold text-sm shadow-elevated hover:shadow-glow-amber transition disabled:opacity-50">
                             <span wire:loading.remove wire:target="submit">Kirim Formulir Pendaftaran PSB</span>
                             <span wire:loading wire:target="submit">Memproses Pendaftaran...</span>
                         </button>

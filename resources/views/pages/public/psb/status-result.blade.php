@@ -11,7 +11,7 @@
                 <h1 class="font-serif text-2xl sm:text-3xl font-bold text-[#084C27]">{{ $applicant->full_name }}</h1>
                 <p class="font-mono text-xs text-gray-500 mt-1">No. Registrasi: <strong class="text-black">{{ $applicant->registration_number }}</strong> &bull; Program: {{ $applicant->program_type->value ?? $applicant->program_type }}</p>
             </div>
-            <a href="{{ route('psb.proof', $applicant->registration_number) }}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white text-xs font-semibold shadow-xs transition">
+            <a href="{{ route('psb.proof', $applicant->registration_number) }}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-[#084C27] hover:bg-[#059669] text-white text-xs font-semibold shadow-xs transition">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                 <span>Unduh Bukti PDF</span>
             </a>
@@ -224,7 +224,7 @@
                     </div>
 
                     <div class="pt-4 border-t border-gray-100 flex justify-end">
-                        <button type="submit" class="px-6 py-3 rounded-xl bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition shadow-xs">
+                        <button type="submit" class="px-6 py-3 rounded-md bg-[#084C27] hover:bg-[#059669] text-white font-semibold text-sm transition shadow-xs">
                             Simpan Perubahan & Unggah Ulang Berkas
                         </button>
                     </div>

@@ -20,7 +20,7 @@ class ProfileController extends Controller
         $activeWave = AdmissionWave::currentActive();
         $siteAddress = (string) SiteSetting::get('school_address', SiteSetting::get('site_address', 'Jl. Cibanteng Babengket, RT 02 / RW 02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat 16620'));
 
-        return view('pages.public.profile.sejarah', compact('activeWave', 'siteAddress'));
+        return view('public.profile.sejarah', compact('activeWave', 'siteAddress'));
     }
 
     /**
@@ -34,7 +34,7 @@ class ProfileController extends Controller
             ->orderBy('sort_order')
             ->get();
 
-        return view('pages.public.profile.teachers', compact('activeWave', 'teachers'));
+        return view('public.profile.teachers', compact('activeWave', 'teachers'));
     }
 
     /**
@@ -44,6 +44,6 @@ class ProfileController extends Controller
     {
         $activeWave = AdmissionWave::currentActive();
 
-        return view('pages.public.profile.facilities', compact('activeWave'));
+        return view('public.profile.facilities', compact('activeWave'));
     }
 }

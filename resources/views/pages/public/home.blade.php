@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="pt-6 border-t border-[#E5E0D8]">
-                        <a href="{{ route('psb.index') }}?program=MTS" class="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
+                        <a href="{{ route('psb.index') }}?program=MTS" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
                             <span>Daftar MTS Sekarang</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
@@ -269,7 +269,7 @@
                     </div>
 
                     <div class="pt-6 border-t border-[#E5E0D8]">
-                        <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
+                        <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
                             <span>Daftar MDTA Sekarang</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
@@ -344,19 +344,19 @@
 
                     <!-- Step Navigator Tabs -->
                     <div class="grid grid-cols-4 gap-2">
-                        <button type="button" @click="psbStep = 1" :class="psbStep === 1 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border text-center transition">
+                        <button type="button" @click="psbStep = 1" :class="psbStep === 1 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border rounded-md text-center transition">
                             <span class="font-mono text-xs block font-bold">01</span>
                             <span class="text-[10px] sm:text-xs font-semibold uppercase block truncate">Daftar Akun</span>
                         </button>
-                        <button type="button" @click="psbStep = 2" :class="psbStep === 2 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border text-center transition">
+                        <button type="button" @click="psbStep = 2" :class="psbStep === 2 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border rounded-md text-center transition">
                             <span class="font-mono text-xs block font-bold">02</span>
                             <span class="text-[10px] sm:text-xs font-semibold uppercase block truncate">Unggah Berkas</span>
                         </button>
-                        <button type="button" @click="psbStep = 3" :class="psbStep === 3 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border text-center transition">
+                        <button type="button" @click="psbStep = 3" :class="psbStep === 3 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border rounded-md text-center transition">
                             <span class="font-mono text-xs block font-bold">03</span>
                             <span class="text-[10px] sm:text-xs font-semibold uppercase block truncate">Observasi</span>
                         </button>
-                        <button type="button" @click="psbStep = 4" :class="psbStep === 4 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border text-center transition">
+                        <button type="button" @click="psbStep = 4" :class="psbStep === 4 ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-[#E5E0D8] bg-transparent text-[#4B6358]'" class="p-2 sm:p-3 border rounded-md text-center transition">
                             <span class="font-mono text-xs block font-bold">04</span>
                             <span class="text-[10px] sm:text-xs font-semibold uppercase block truncate">Kelulusan</span>
                         </button>
@@ -409,7 +409,7 @@
                         <a href="{{ route('psb.status') }}" class="text-xs font-semibold text-[#4B6358] hover:text-[#0D3B2E] transition">
                             Sudah Mendaftar? Cek Status &rarr;
                         </a>
-                        <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#0D3B2E] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#059669] transition">
+                        <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-md bg-[#0D3B2E] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#059669] transition">
                             <span>Mulai Isi Formulir PSB</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
@@ -431,10 +431,10 @@
                             Pilih Jenjang Calon Santri:
                         </label>
                         <div class="grid grid-cols-2 gap-2">
-                            <button type="button" @click="simProgram = 'MTS'" :class="simProgram === 'MTS' ? 'border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-[#E5E0D8] text-[#4B6358]'" class="p-2.5 border text-xs text-center transition">
+                            <button type="button" @click="simProgram = 'MTS'" :class="simProgram === 'MTS' ? 'border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-[#E5E0D8] text-[#4B6358]'" class="p-2.5 border rounded-md text-xs text-center transition">
                                 MTS (Mukim 24 Jam)
                             </button>
-                            <button type="button" @click="simProgram = 'MDTA'" :class="simProgram === 'MDTA' ? 'border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-[#E5E0D8] text-[#4B6358]'" class="p-2.5 border text-xs text-center transition">
+                            <button type="button" @click="simProgram = 'MDTA'" :class="simProgram === 'MDTA' ? 'border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-[#E5E0D8] text-[#4B6358]'" class="p-2.5 border rounded-md text-xs text-center transition">
                                 MDTA (Sekolah Sore)
                             </button>
                         </div>
@@ -457,7 +457,7 @@
                     </div>
 
                     <div class="pt-2">
-                        <a :href="'{{ route('psb.index') }}?program=' + simProgram" class="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#B89758] hover:bg-[#96783e] text-white font-semibold text-xs uppercase tracking-wider transition">
+                        <a :href="'{{ route('psb.index') }}?program=' + simProgram" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#B89758] hover:bg-[#96783e] text-white font-semibold text-xs uppercase tracking-wider transition">
                             <span>Lanjutkan Pendaftaran Program Terpilih &rarr;</span>
                         </a>
                     </div>
@@ -653,11 +653,11 @@
                     </div>
                 </div>
                 <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-                    <a href="{{ route('contact.index') }}" class="inline-flex items-center justify-center gap-2 py-3 px-6 bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
+                    <a href="{{ route('contact.index') }}" class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition">
                         <span>Peta & Jadwal Kunjungan</span>
                         <span aria-hidden="true">&rarr;</span>
                     </a>
-                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum Panitia PSB PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pendaftaran santri baru.') }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-3 px-6 border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
+                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum Panitia PSB PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pendaftaran santri baru.') }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
                         <span>Chat WhatsApp ({{ $waNumber }})</span>
                     </a>
                 </div>

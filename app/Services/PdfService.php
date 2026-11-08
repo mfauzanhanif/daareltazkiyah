@@ -29,7 +29,7 @@ final class PdfService
         ];
 
         /** @var \Barryvdh\DomPDF\PDF $pdf */
-        $pdf = Pdf::loadView('pages.public.psb.proof-pdf', compact('applicant', 'settings'))
+        $pdf = Pdf::loadView('public.psb.proof-pdf', compact('applicant', 'settings'))
             ->setPaper('a4', 'portrait')
             ->setOption('isRemoteEnabled', true)
             ->setOption('isHtml5ParserEnabled', true)

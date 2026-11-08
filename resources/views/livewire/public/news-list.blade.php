@@ -1,18 +1,17 @@
 <div>
     <!-- Filter & Search Bar (Editorial Hairline Layout) -->
-    <div class="bg-white p-5 border border-[#E5E0D8] mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
-        
+    <div class="bg-white p-5 border border-stone-hairline mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
+
         <!-- Categories Filter (Editorial Tab/Box) -->
-        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 text-xs font-semibold scrollbar-none">
-            <button type="button"
-                    wire:click="setCategory('')"
-                    class="px-4 py-2 border transition cursor-pointer uppercase tracking-wider {{ $category === '' ? 'border-[#0D3B2E] bg-[#0D3B2E] text-white' : 'border-[#E5E0D8] bg-[#FAF8F5] text-[#4B6358] hover:border-[#0D3B2E]' }}">
+        <div
+            class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 text-xs font-semibold scrollbar-none">
+            <button type="button" wire:click="setCategory('')"
+                class="px-4 py-2 rounded-md border transition cursor-pointer uppercase tracking-wider {{ $category === '' ? 'border-stone-hairline bg-deep-forest text-white' : 'border-[#E5E0D8] bg-[#FAF8F5] text-[#4B6358] hover:border-[#0D3B2E]' }}">
                 Semua Kategori
             </button>
-            @foreach($categories as $cat)
-                <button type="button"
-                        wire:click="setCategory('{{ $cat->slug }}')"
-                        class="px-4 py-2 border transition whitespace-nowrap cursor-pointer uppercase tracking-wider {{ $category === $cat->slug ? 'border-[#0D3B2E] bg-[#0D3B2E] text-white' : 'border-[#E5E0D8] bg-[#FAF8F5] text-[#4B6358] hover:border-[#0D3B2E]' }}">
+            @foreach ($categories as $cat)
+                <button type="button" wire:click="setCategory('{{ $cat->slug }}')"
+                    class="px-4 py-2 rounded-md border transition whitespace-nowrap cursor-pointer uppercase tracking-wider {{ $category === $cat->slug ? 'border-[#0D3B2E] bg-[#0D3B2E] text-white' : 'border-[#E5E0D8] bg-[#FAF8F5] text-[#4B6358] hover:border-[#0D3B2E]' }}">
                     {{ $cat->name }} ({{ $cat->posts_count }})
                 </button>
             @endforeach
@@ -21,19 +20,18 @@
         <!-- Search Input -->
         <div class="w-full md:w-72 flex items-center gap-2">
             <div class="relative w-full">
-                <input type="text"
-                       wire:model.live.debounce.300ms="search"
-                       placeholder="Cari arsip artikel..."
-                       class="w-full pl-9 pr-4 py-2 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
-                <svg class="w-4 h-4 text-[#4B6358] absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                <input type="text" wire:model.live.debounce.300ms="search" placeholder="Cari arsip artikel..."
+                    class="w-full pl-9 pr-4 py-2 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
+                <svg class="w-4 h-4 text-[#4B6358] absolute left-3 top-2.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
             </div>
-            @if($search !== '' || $category !== '')
-                <button type="button"
-                        wire:click="resetFilters"
-                        class="px-3 py-2 border border-[#E5E0D8] bg-[#FAF8F5] hover:bg-white text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition shrink-0 cursor-pointer"
-                        title="Reset pencarian dan filter">
+            @if ($search !== '' || $category !== '')
+                <button type="button" wire:click="resetFilters"
+                    class="px-3 py-2 rounded-md border border-[#E5E0D8] bg-[#FAF8F5] hover:bg-white text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition shrink-0 cursor-pointer"
+                    title="Reset pencarian dan filter">
                     Reset
                 </button>
             @endif
@@ -58,7 +56,7 @@
     </div>
 
     <!-- Pagination -->
-    @if($posts->hasPages())
+    @if ($posts->hasPages())
         <div class="mt-12 bg-white border border-[#E5E0D8] p-4">
             {{ $posts->links() }}
         </div>

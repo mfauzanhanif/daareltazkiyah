@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="pt-2">
-                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum Panitia PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pondok dan PSB.') }}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs tracking-wider uppercase transition">
+                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}?text={{ urlencode('Assalamu\'alaikum Panitia PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pondok dan PSB.') }}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs tracking-wider uppercase transition">
                                 <span>Hubungi Panitia via WhatsApp ({{ $waNumber }})</span>
                             </a>
                         </div>
@@ -90,7 +90,7 @@
                                 <label for="parent_name" class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1">
                                     Nama Lengkap Calon Wali *
                                 </label>
-                                <input type="text" name="parent_name" id="parent_name" required value="{{ old('parent_name') }}" placeholder="Contoh: Bapak H. Abdullah" class="w-full px-3.5 py-2.5 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
+                                <input type="text" name="parent_name" id="parent_name" required value="{{ old('parent_name') }}" placeholder="Contoh: Bapak H. Abdullah" class="w-full px-3.5 py-2.5 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
                                 @error('parent_name')
                                     <span class="text-xs text-red-600 mt-1 block">{{ $message }}</span>
                                 @enderror
@@ -100,7 +100,7 @@
                                 <label for="phone" class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1">
                                     No. WhatsApp Aktif *
                                 </label>
-                                <input type="text" name="phone" id="phone" required value="{{ old('phone') }}" placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2.5 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
+                                <input type="text" name="phone" id="phone" required value="{{ old('phone') }}" placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2.5 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
                                 @error('phone')
                                     <span class="text-xs text-red-600 mt-1 block">{{ $message }}</span>
                                 @enderror
@@ -111,7 +111,7 @@
                                     <label for="program_interest" class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1">
                                         Pilihan Program *
                                     </label>
-                                    <select name="program_interest" id="program_interest" required class="w-full px-3.5 py-2.5 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
+                                    <select name="program_interest" id="program_interest" required class="w-full px-3.5 py-2.5 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
                                         <option value="MTS">MTS Mukim 24 Jam</option>
                                         <option value="MDTA">MDTA Sekolah Sore</option>
                                         <option value="UMUM">Konsultasi Umum</option>
@@ -121,7 +121,7 @@
                                     <label for="visit_date" class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1">
                                         Rencana Tanggal
                                     </label>
-                                    <input type="date" name="visit_date" id="visit_date" value="{{ old('visit_date') }}" class="w-full px-3.5 py-2.5 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
+                                    <input type="date" name="visit_date" id="visit_date" value="{{ old('visit_date') }}" class="w-full px-3.5 py-2.5 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">
                                 </div>
                             </div>
 
@@ -129,10 +129,10 @@
                                 <label for="notes" class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1">
                                     Catatan Tambahan
                                 </label>
-                                <textarea name="notes" id="notes" rows="3" placeholder="Informasi pertanyaan awal atau jumlah rombongan keluarga..." class="w-full px-3.5 py-2.5 text-xs border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">{{ old('notes') }}</textarea>
+                                <textarea name="notes" id="notes" rows="3" placeholder="Informasi pertanyaan awal atau jumlah rombongan keluarga..." class="w-full px-3.5 py-2.5 text-xs rounded-md border border-[#E5E0D8] focus:border-[#0D3B2E] focus:outline-none bg-[#FAF8F5]">{{ old('notes') }}</textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-3 bg-[#B89758] hover:bg-[#96783e] text-white font-semibold text-xs tracking-wider uppercase transition">
+                            <button type="submit" class="w-full py-3 rounded-md bg-[#B89758] hover:bg-[#96783e] text-white font-semibold text-xs tracking-wider uppercase transition">
                                 Kirim Konfirmasi Reservasi Silaturahmi &rarr;
                             </button>
                         </form>

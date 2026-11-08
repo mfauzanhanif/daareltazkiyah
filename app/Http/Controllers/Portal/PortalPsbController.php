@@ -31,7 +31,7 @@ final class PortalPsbController extends Controller
         $recentApplicants = Applicant::with(['admissionWave', 'parent'])->latest()->take(10)->get();
         $activeWave = AdmissionWave::currentActive();
 
-        return view('pages.portal.psb.dashboard', compact(
+        return view('portal.psb.dashboard', compact(
             'totalApplicants',
             'mtsCount',
             'mdtaCount',
@@ -73,14 +73,14 @@ final class PortalPsbController extends Controller
         $applicants = $query->paginate(15)->withQueryString();
         $waves = AdmissionWave::latest()->get();
 
-        return view('pages.portal.psb.applicants.index', compact('applicants', 'waves'));
+        return view('portal.psb.applicants.index', compact('applicants', 'waves'));
     }
 
     public function showApplicant(string $id): View
     {
         $applicant = Applicant::with(['admissionWave', 'parent', 'documents', 'activities'])->findOrFail($id);
 
-        return view('pages.portal.psb.applicants.show', compact('applicant'));
+        return view('portal.psb.applicants.show', compact('applicant'));
     }
 
     public function updateStatus(Request $request, string $id): RedirectResponse

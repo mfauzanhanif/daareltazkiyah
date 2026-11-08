@@ -37,7 +37,7 @@ final class PortalCmsController extends Controller
 
         $recentPosts = Post::with('category')->latest()->take(5)->get();
 
-        return view('pages.portal.cms.dashboard', compact(
+        return view('portal.cms.dashboard', compact(
             'postsCount',
             'galleriesCount',
             'teachersCount',
@@ -51,14 +51,14 @@ final class PortalCmsController extends Controller
     {
         $posts = Post::with(['category', 'author'])->latest()->paginate(15);
 
-        return view('pages.portal.cms.posts.index', compact('posts'));
+        return view('portal.cms.posts.index', compact('posts'));
     }
 
     public function createPost(): View
     {
         $categories = Category::all();
 
-        return view('pages.portal.cms.posts.create', compact('categories'));
+        return view('portal.cms.posts.create', compact('categories'));
     }
 
     public function storePost(StorePostRequest $request): RedirectResponse
@@ -85,7 +85,7 @@ final class PortalCmsController extends Controller
         $post = Post::findOrFail($id);
         $categories = Category::all();
 
-        return view('pages.portal.cms.posts.edit', compact('post', 'categories'));
+        return view('portal.cms.posts.edit', compact('post', 'categories'));
     }
 
     public function updatePost(UpdatePostRequest $request, string $id): RedirectResponse
@@ -119,7 +119,7 @@ final class PortalCmsController extends Controller
     {
         $categories = Category::with('parent')->withCount('posts')->get();
 
-        return view('pages.portal.cms.categories.index', compact('categories'));
+        return view('portal.cms.categories.index', compact('categories'));
     }
 
     public function storeCategory(StoreCategoryRequest $request): RedirectResponse
@@ -159,7 +159,7 @@ final class PortalCmsController extends Controller
     {
         $galleries = Gallery::withCount('photos')->latest('event_date')->paginate(12);
 
-        return view('pages.portal.cms.galleries.index', compact('galleries'));
+        return view('portal.cms.galleries.index', compact('galleries'));
     }
 
     public function storeGallery(StoreGalleryRequest $request): RedirectResponse
@@ -181,7 +181,7 @@ final class PortalCmsController extends Controller
     {
         $gallery = Gallery::with('photos')->findOrFail($id);
 
-        return view('pages.portal.cms.galleries.show', compact('gallery'));
+        return view('portal.cms.galleries.show', compact('gallery'));
     }
 
     public function updateGallery(UpdateGalleryRequest $request, string $id): RedirectResponse
@@ -246,7 +246,7 @@ final class PortalCmsController extends Controller
     {
         $teachers = Teacher::orderBy('sort_order')->paginate(20);
 
-        return view('pages.portal.cms.teachers.index', compact('teachers'));
+        return view('portal.cms.teachers.index', compact('teachers'));
     }
 
     public function storeTeacher(StoreTeacherRequest $request): RedirectResponse
@@ -293,7 +293,7 @@ final class PortalCmsController extends Controller
     {
         $settings = SiteSetting::all()->keyBy('key');
 
-        return view('pages.portal.cms.settings.index', compact('settings'));
+        return view('portal.cms.settings.index', compact('settings'));
     }
 
     public function updateSettings(UpdateSettingsRequest $request): RedirectResponse

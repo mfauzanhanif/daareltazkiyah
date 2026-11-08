@@ -20,7 +20,7 @@ class AcademicController extends Controller
         $feeMts = $activeWave ? number_format($activeWave->fee_mts, 0, ',', '.') : '100.000';
         $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
 
-        return view('pages.public.academic.mts', compact('activeWave', 'feeMts', 'waNumber'));
+        return view('public.academic.mts', compact('activeWave', 'feeMts', 'waNumber'));
     }
 
     /**
@@ -32,7 +32,7 @@ class AcademicController extends Controller
         $feeMdta = $activeWave ? number_format($activeWave->fee_mdta, 0, ',', '.') : '25.000';
         $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
 
-        return view('pages.public.academic.mdta', compact('activeWave', 'feeMdta', 'waNumber'));
+        return view('public.academic.mdta', compact('activeWave', 'feeMdta', 'waNumber'));
     }
 
     /**
@@ -43,6 +43,6 @@ class AcademicController extends Controller
         $activeWave = AdmissionWave::currentActive();
         $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
 
-        return view('pages.public.academic.tahfidz', compact('activeWave', 'waNumber'));
+        return view('public.academic.tahfidz', compact('activeWave', 'waNumber'));
     }
 }

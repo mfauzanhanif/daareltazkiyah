@@ -147,7 +147,7 @@
                                     @foreach ($gallery->photos as $photoIndex => $photo)
                                         <button type="button"
                                             @click="openLightbox({{ Js::from($albumPhotos) }}, {{ $photoIndex }})"
-                                            class="w-11 h-11 shrink-0 border border-[#E5E0D8] hover:border-[#0D3B2E] transition cursor-pointer overflow-hidden"
+                                            class="w-11 h-11 shrink-0 rounded border border-[#E5E0D8] hover:border-[#0D3B2E] transition cursor-pointer overflow-hidden"
                                             title="{{ $photo->caption ?? 'Perbesar Foto' }}">
                                             <img src="{{ asset('storage/' . $photo->file_path) }}"
                                                 alt="{{ $photo->caption ?? 'Foto' }}" loading="lazy"
@@ -181,7 +181,7 @@
                         Foto <span x-text="currentIndex + 1"></span> dari <span x-text="photos.length"></span>
                     </div>
                     <button type="button" @click="closeLightbox()"
-                        class="p-1.5 border border-white/30 text-white hover:bg-white/10 transition cursor-pointer"
+                        class="p-1.5 border border-white/30 rounded-md text-white hover:bg-white/10 transition cursor-pointer"
                         aria-label="Tutup Galeri">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -191,7 +191,7 @@
 
                 <!-- Previous Navigation Button -->
                 <button type="button" x-show="photos.length > 1" @click="prev()"
-                    class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 border border-white/30 bg-[#0D3B2E]/80 hover:bg-white/20 text-white transition z-10 cursor-pointer"
+                    class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 border border-white/30 rounded-md bg-[#0D3B2E]/80 hover:bg-white/20 text-white transition z-10 cursor-pointer"
                     aria-label="Foto Sebelumnya">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -201,14 +201,14 @@
                 <!-- Main Image & Caption Container -->
                 <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center"
                     @click.outside="closeLightbox()">
-                    <div class="relative overflow-hidden border border-white/20 flex items-center justify-center bg-black/40">
+                    <div class="relative overflow-hidden border border-white/20 rounded-md flex items-center justify-center bg-black/40">
                         <template x-if="photos.length > 0 && photos[currentIndex]">
                             <img :src="photos[currentIndex].src" :alt="photos[currentIndex].alt"
                                 class="max-w-full max-h-[75vh] object-contain">
                         </template>
                     </div>
                     <template x-if="photos.length > 0 && photos[currentIndex] && photos[currentIndex].caption">
-                        <div class="mt-3 px-4 py-2 bg-black/60 border border-white/15 max-w-2xl text-center">
+                        <div class="mt-3 px-4 py-2 bg-black/60 border border-white/15 rounded-md max-w-2xl text-center">
                             <p x-text="photos[currentIndex].caption" class="text-white text-xs font-sans leading-relaxed"></p>
                         </div>
                     </template>
@@ -216,7 +216,7 @@
 
                 <!-- Next Navigation Button -->
                 <button type="button" x-show="photos.length > 1" @click="next()"
-                    class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 border border-white/30 bg-[#0D3B2E]/80 hover:bg-white/20 text-white transition z-10 cursor-pointer"
+                    class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 border border-white/30 rounded-md bg-[#0D3B2E]/80 hover:bg-white/20 text-white transition z-10 cursor-pointer"
                     aria-label="Foto Berikutnya">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

@@ -225,7 +225,7 @@
                         <div class="text-xs text-[#4B6358]">
                             Tertarik menyekolahkan putra-putri Anda di PPMTQ Daar El Tazkiyah?
                         </div>
-                        <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0D3B2E] text-white font-semibold text-xs tracking-wide uppercase hover:bg-[#059669] transition">
+                        <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-[#0D3B2E] text-white font-semibold text-xs tracking-wide uppercase hover:bg-[#059669] transition">
                             <span>Informasi Pendaftaran PSB Online</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
