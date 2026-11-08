@@ -54,11 +54,12 @@
     --color-status-unpaid: #6B7280;
     --color-status-paid: #059669;
 
-    /* Typography Families (DESIGN.md §3) */
+    /* Typography Families - Modern Clean Sans-Serif (Calibri / Arial / Plus Jakarta Sans) */
     --font-arabic: 'Amiri', 'Scheherazade New', serif;
-    --font-editorial: 'Playfair Display', serif;
-    --font-display: 'Playfair Display', serif;
-    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-editorial: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     /* Custom Radius Tokens (DESIGN.md §6.1, §6.2) */
     --radius-arch-mobile: 120px 120px 1rem 1rem;

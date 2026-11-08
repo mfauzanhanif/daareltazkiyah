@@ -20,7 +20,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Galeri Visual</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Potret Rutinitas & Dokumentasi Santri
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -82,6 +82,7 @@
                                     'src' => asset('storage/' . $p->file_path),
                                     'caption' => $p->caption ?: $gallery->title,
                                     'alt' => $p->caption ?: $gallery->title,
+                                    'time' => $p->created_at ? $p->created_at->format('d M Y') : null,
                                 ];
                             }
                         } elseif ($gallery->cover_image) {
@@ -89,12 +90,13 @@
                                 'src' => asset('storage/' . $gallery->cover_image),
                                 'caption' => $gallery->title,
                                 'alt' => $gallery->title,
+                                'time' => $gallery->created_at ? $gallery->created_at->format('d M Y') : null,
                             ];
                         }
                         $photoCount = $gallery->photos->count();
                     @endphp
 
-                    <div class="bg-white border border-[#E5E0D8] overflow-hidden hover:border-[#0D3B2E] transition flex flex-col justify-between group">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md overflow-hidden hover:border-[#0D3B2E] transition flex flex-col justify-between group">
                         <div>
                             <!-- Album Cover (Clickable) -->
                             <div class="aspect-4/3 bg-[#FAF8F5] relative overflow-hidden cursor-pointer border-b border-[#E5E0D8]"
@@ -104,27 +106,27 @@
                                         loading="lazy"
                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                                 @else
-                                    <div class="w-full h-full bg-[#FAF8F5] flex items-center justify-center text-[#B89758] font-serif text-2xl font-bold">
+                                    <div class="w-full h-full bg-[#FAF8F5] flex items-center justify-center text-[#B89758] font-sans text-2xl font-bold">
                                         DT
                                     </div>
                                 @endif
 
                                 <!-- Event Date Marker (Top-Left) -->
                                 @if ($gallery->event_date)
-                                    <span class="absolute top-2 left-2 px-2 py-0.5 bg-[#0D3B2E] text-white text-[10px] font-mono border border-white/20">
+                                    <span class="absolute top-2 left-2 px-2 py-0.5 bg-[#0D3B2E] text-white text-[10px] font-mono rounded">
                                         {{ \Carbon\Carbon::parse($gallery->event_date)->translatedFormat('d M Y') }}
                                     </span>
                                 @endif
 
                                 <!-- Photo Count Marker (Top-Right) -->
-                                <span class="absolute top-2 right-2 px-2 py-0.5 bg-black/70 text-white text-[10px] font-mono">
+                                <span class="absolute top-2 right-2 px-2 py-0.5 bg-black/70 text-white text-[10px] font-mono rounded">
                                     {{ $photoCount > 0 ? $photoCount : 1 }} Foto
                                 </span>
                             </div>
 
                             <!-- Album Details -->
                             <div class="p-5 space-y-2">
-                                <h3 class="font-serif font-bold text-base md:text-lg text-[#0D3B2E] leading-snug group-hover:text-[#059669] transition cursor-pointer"
+                                <h3 class="font-sans font-bold text-base md:text-lg text-[#0D3B2E] leading-snug group-hover:text-[#059669] transition cursor-pointer"
                                     @click="openLightbox({{ Js::from($albumPhotos) }}, 0)">
                                     {{ $gallery->title }}
                                 </h3>
@@ -159,9 +161,9 @@
                         @endif
                     </div>
                 @empty
-                    <div class="col-span-full text-center py-16 px-4 bg-white border border-[#E5E0D8] space-y-3">
+                    <div class="col-span-full text-center py-16 px-4 bg-white border border-[#E5E0D8] rounded-md space-y-3">
                         <span class="editorial-label text-[#B89758]">DOKUMENTASI BELUM TERSEDIA</span>
-                        <h3 class="font-serif font-bold text-lg text-[#084C27]">Belum ada album galeri.</h3>
+                        <h3 class="font-sans font-bold text-lg text-[#084C27]">Belum ada album galeri.</h3>
                         <p class="text-[#4B6358] text-sm max-w-md mx-auto">Dokumentasi kegiatan harian, tahfidz, dan prestasi santri akan segera dipublikasikan di sini.</p>
                     </div>
                 @endforelse

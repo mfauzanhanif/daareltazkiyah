@@ -10,7 +10,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Jenjang Formal Mukim</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Madrasah Tsanawiyah (MTS Mukim 24 Jam)
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -28,10 +28,10 @@
                 <!-- Left Column: Sticky Financial & Registration Info Card -->
                 <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
                     <!-- Fee & Admission Card -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 sm:p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 space-y-6">
                         <div class="space-y-1 border-b border-[#E5E0D8] pb-5">
                             <span class="editorial-label">STRUKTUR BIAYA MTS</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Investasi Pendidikan
                             </h2>
                             <p class="text-xs text-[#4B6358]">
@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Program Quick Switcher -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 space-y-3">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3">
                         <span class="editorial-label">JENJANG PENDIDIKAN</span>
                         <ul class="text-sm space-y-2 pt-1 font-medium text-[#18181B]">
                             <li class="border-l-2 border-[#0D3B2E] pl-3 text-[#0D3B2E] font-semibold">
@@ -92,14 +92,14 @@
                 </aside>
 
                 <!-- Right Column: Detail Silabus & Kehidupan Mukim -->
-                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] p-8 sm:p-12">
+                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] rounded-md p-8 sm:p-12">
 
                     <!-- Section: Profil Jenjang -->
                     <article class="space-y-6">
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">PROFIL PROGRAM</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Madrasah Tsanawiyah Terpadu Asrama
                             </h2>
                         </div>
@@ -113,36 +113,36 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">STANDAR KELULUSAN</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Target Capaian Lulusan MTS (3 Tahun)
                             </h2>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">CAPAIAN 01</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Tahfidz 30 Juz Mutqin</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Tahfidz 30 Juz Mutqin</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Menyelesaikan setoran hafalan Al-Qur'an 30 juz dengan standar tahsin bersanad, serta lulus ujian tasmi' kubro di hadapan dewan penguji.
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">CAPAIAN 02</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Ijazah Formal Kemenag RI</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Ijazah Formal Kemenag RI</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Memperoleh ijazah resmi negara Madrasah Tsanawiyah yang diakui penuh untuk melanjutkan ke jenjang Aliyah, SMA, SMK, maupun sekolah internasional.
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">CAPAIAN 03</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Penguasaan Kitab Turats</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Penguasaan Kitab Turats</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Mampu membaca dan memahami kaidah dasar gramatika Arab (Jurumiyah), fiqih ibadah (Safinatun Najah & Taqrib), serta akhlak mulia.
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">CAPAIAN 04</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Kemandirian & Adab Kepemimpinan</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Kemandirian & Adab Kepemimpinan</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Terbiasa mandiri mengelola waktu, sholat berjamaah lima waktu tepat waktu, terampil berpidato dalam 3 bahasa (Indonesia, Arab, Inggris).
                                 </p>
@@ -155,25 +155,25 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">INTEGRASI MAPEL</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Struktur Kurikulum Pembelajaran
                             </h2>
                         </div>
 
                         <div class="space-y-4">
-                            <div class="border border-[#E5E0D8] p-5">
+                            <div class="border border-[#E5E0D8] rounded-md p-5">
                                 <strong class="text-[#0D3B2E] block text-sm font-semibold mb-1">A. Kurikulum Nasional Kemenag:</strong>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Matematika, Ilmu Pengetahuan Alam (IPA Terpadu), Ilmu Pengetahuan Sosial (IPS), Bahasa Indonesia, Bahasa Inggris, Pendidikan Pancasila, Seni Budaya & Prakarya, Penjasorkes.
                                 </p>
                             </div>
-                            <div class="border border-[#E5E0D8] p-5">
+                            <div class="border border-[#E5E0D8] rounded-md p-5">
                                 <strong class="text-[#0D3B2E] block text-sm font-semibold mb-1">B. Kurikulum Kepesantrenan & Diniyah:</strong>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Tahfidz & Tahsin Al-Qur'an, Tajwid (Matan Tuhfatul Athfal & Jazariyah), Fiqih Ibadah & Muamalah, Aqidah Akhlak, Bahasa Arab (Nahwu, Sharaf, Durusul Lughah), Hadits Nabawi (Arba'in Nawawi), Sejarah Kebudayaan Islam (SKI).
                                 </p>
                             </div>
-                            <div class="border border-[#E5E0D8] p-5">
+                            <div class="border border-[#E5E0D8] rounded-md p-5">
                                 <strong class="text-[#0D3B2E] block text-sm font-semibold mb-1">C. Program Pengembangan Diri & Sunnah:</strong>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Olahraga Panahan (Archery), Seni Bela Diri Pencak Silat, Muhadharah (Khitobah 3 Bahasa), Kaligrafi Islam (Khat), Jurnalistik Santri, Kepramukaan.
@@ -187,33 +187,33 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">FASILITAS MUKIM</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Fasilitas Hidup di Lingkungan Pesantren
                             </h2>
                         </div>
 
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#18181B]">
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Kamar asrama mukim dengan lemari & ranjang kokoh</span>
                             </li>
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Makan 3 kali sehari dengan menu gizi seimbang</span>
                             </li>
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Layanan pencucian pakaian (laundry) pakaian seragam santri</span>
                             </li>
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Bimbingan musyrif & asatidz mukim 24 jam</span>
                             </li>
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Akses perpustakaan kitab & sarana olahraga panahan</span>
                             </li>
-                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8]">
+                            <li class="flex items-center gap-2 p-2 border border-[#E5E0D8] rounded-md">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
                                 <span>Lingkungan bebas asap rokok & bebas gawai (gadget-free)</span>
                             </li>

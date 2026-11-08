@@ -10,7 +10,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Sekretariat Pondok</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Kunjungi Kampus Kami di Ciampea, Bogor
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -29,10 +29,10 @@
                 <div class="lg:col-span-5 space-y-8">
                     
                     <!-- Secretariat Card -->
-                    <div class="bg-white border border-[#E5E0D8] p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-6">
                         <div class="space-y-1 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">KANTOR SEKRETARIAT</span>
-                            <h2 class="font-serif text-xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-xl font-bold text-[#0D3B2E]">
                                 PPMTQ Daar El Tazkiyah Sumardi
                             </h2>
                             <p class="text-xs text-[#059669] font-medium">
@@ -73,10 +73,10 @@
                     </div>
 
                     <!-- Campus Visit Reservation Form -->
-                    <div class="bg-white border border-[#E5E0D8] p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-6">
                         <div class="space-y-1 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">JADWALKAN KUNJUNGAN</span>
-                            <h3 class="font-serif text-lg font-bold text-[#0D3B2E]">
+                            <h3 class="font-sans text-lg font-bold text-[#0D3B2E]">
                                 Formulir Reservasi Silaturahmi
                             </h3>
                             <p class="text-xs text-[#4B6358]">
@@ -143,8 +143,8 @@
                 <!-- Right Column: Interactive Google Map & Directions -->
                 <div class="lg:col-span-7 space-y-8">
                     <!-- Google Map Embed Container -->
-                    <div class="bg-white border border-[#E5E0D8] p-3 space-y-4">
-                        <div class="h-96 lg:h-[480px] w-full border border-[#E5E0D8] overflow-hidden bg-gray-100">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-3 space-y-4">
+                        <div class="h-96 lg:h-[480px] w-full border border-[#E5E0D8] rounded-md overflow-hidden bg-gray-100">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15853.535091763717!2d106.6967727!3d-6.5991444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5e52c77df49%3A0xe54ef5aef2f128be!2sCihideung%20Udik%2C%20Kec.%20Ciampea%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -160,23 +160,23 @@
                     </div>
 
                     <!-- Directions & Transportation Guide -->
-                    <div class="bg-white border border-[#E5E0D8] p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-6">
                         <div class="border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">PANDUAN RUTE</span>
-                            <h3 class="font-serif text-xl font-bold text-[#0D3B2E] mt-1">
+                            <h3 class="font-sans text-xl font-bold text-[#0D3B2E] mt-1">
                                 Petunjuk Transportasi Menuju Pesantren
                             </h3>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-[#18181B]">
-                            <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <strong class="text-[#0D3B2E] block font-semibold text-sm">Dari Arah Stasiun Kereta Api Bogor:</strong>
                                 <p class="text-[#4B6358] leading-relaxed">
                                     Dari Stasiun Bogor, gunakan transportasi online atau angkutan kota ke arah Kampus IPB Dramaga / Terminal Laladon, kemudian lanjutkan ke arah Ciampea (Cibanteng Babengket / Cihideung Udik). Estimasi waktu tempuh 35-45 menit.
                                 </p>
                             </div>
 
-                            <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-2">
+                            <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] rounded-md space-y-2">
                                 <strong class="text-[#0D3B2E] block font-semibold text-sm">Dari Arah Tol Jagorawi / Sentul:</strong>
                                 <p class="text-[#4B6358] leading-relaxed">
                                     Keluar Gerbang Tol BORR (Bogor Outer Ring Road), ambil arah Yasmin menuju Bubulak/Dramaga, ikuti Jalan Raya Dramaga - Ciampea hingga simpang Cibanteng. Lokasi kampus berada di lingkungan asri Cihideung Udik.

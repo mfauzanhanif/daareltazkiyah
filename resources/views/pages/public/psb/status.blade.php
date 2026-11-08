@@ -10,7 +10,7 @@
                 <span class="w-8 h-px bg-[#B89758]"></span>
                 <span class="text-xs font-mono text-[#059669] uppercase font-semibold">Layanan Mandiri</span>
             </div>
-            <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+            <h1 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                 Cek Status Kelulusan & Verifikasi Berkas
             </h1>
             <p class="text-xs sm:text-sm text-[#4B6358] max-w-lg mx-auto leading-relaxed">

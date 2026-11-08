@@ -35,7 +35,7 @@
                 <span class="text-xs font-mono text-[#4B6358] uppercase">Publikasi Resmi</span>
             </div>
 
-            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] leading-tight">
+            <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] leading-tight">
                 {{ $post->title }}
             </h1>
 
@@ -52,13 +52,13 @@
 
         <!-- Featured Image -->
         @if($post->featured_image)
-            <div class="border border-[#E5E0D8] overflow-hidden max-h-[480px] bg-white">
+            <div class="border border-[#E5E0D8] rounded-md overflow-hidden max-h-[480px] bg-white">
                 <img src="{{ Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
             </div>
         @endif
 
         <!-- Article Body -->
-        <div class="bg-white border border-[#E5E0D8] p-8 sm:p-12 prose prose-emerald max-w-none text-[#18181B] text-base leading-relaxed">
+        <div class="bg-white border border-[#E5E0D8] rounded-md p-8 sm:p-12 prose prose-emerald max-w-none text-[#18181B] text-base leading-relaxed">
             {!! $post->content !!}
         </div>
 

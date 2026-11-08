@@ -18,7 +18,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Arsip Berita</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Warta & Pengumuman Resmi Pesantren
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">

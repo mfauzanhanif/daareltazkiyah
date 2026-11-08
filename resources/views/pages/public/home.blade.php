@@ -13,15 +13,15 @@
                 <div class="lg:col-span-5 space-y-6">
                     <div class="space-y-2">
                         <span class="editorial-label">01 — PROFIL & NILAI UTAMA</span>
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight leading-snug">
+                        <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight leading-snug">
                             Visi & Haluan Pendidikan Pesantren
                         </h2>
                     </div>
 
                     <!-- Visi Quote Box -->
-                    <div class="bg-[#FAF8F5] border-l-4 border-[#0D3B2E] p-6 space-y-3">
+                    <div class="bg-[#FAF8F5] border-l-4 border-[#0D3B2E] rounded-md p-6 space-y-3">
                         <span class="editorial-label text-[#059669]">VISI UTAMA</span>
-                        <blockquote class="font-serif text-lg sm:text-xl font-bold text-[#0D3B2E] leading-relaxed">
+                        <blockquote class="font-sans text-lg sm:text-xl font-bold text-[#0D3B2E] leading-relaxed">
                             "{{ "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat." }}"
                         </blockquote>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -49,11 +49,11 @@
                     </div>
 
                     <!-- Misi 1 -->
-                    <div class="border border-[#E5E0D8] bg-[#FAF8F5] transition">
+                    <div class="border border-[#E5E0D8] rounded-md bg-[#FAF8F5] overflow-hidden transition">
                         <button type="button" @click="activeMisi = (activeMisi === 1 ? 0 : 1)" class="w-full p-5 text-left flex items-center justify-between gap-4">
                             <div class="flex items-center gap-3">
                                 <span class="font-mono text-xs font-bold text-[#B89758]">01</span>
-                                <h3 class="font-serif font-bold text-base sm:text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-base sm:text-lg text-[#0D3B2E]">
                                     {{ "Menanamkan kecintaan kepada Al-Qur'an" }}
                                 </h3>
                             </div>
@@ -65,11 +65,11 @@
                     </div>
 
                     <!-- Misi 2 -->
-                    <div class="border border-[#E5E0D8] bg-[#FAF8F5] transition">
+                    <div class="border border-[#E5E0D8] rounded-md bg-[#FAF8F5] overflow-hidden transition">
                         <button type="button" @click="activeMisi = (activeMisi === 2 ? 0 : 2)" class="w-full p-5 text-left flex items-center justify-between gap-4">
                             <div class="flex items-center gap-3">
                                 <span class="font-mono text-xs font-bold text-[#B89758]">02</span>
-                                <h3 class="font-serif font-bold text-base sm:text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-base sm:text-lg text-[#0D3B2E]">
                                     {{ "Membentuk akhlak mulia dan disiplin" }}
                                 </h3>
                             </div>
@@ -81,11 +81,11 @@
                     </div>
 
                     <!-- Misi 3 -->
-                    <div class="border border-[#E5E0D8] bg-[#FAF8F5] transition">
+                    <div class="border border-[#E5E0D8] rounded-md bg-[#FAF8F5] overflow-hidden transition">
                         <button type="button" @click="activeMisi = (activeMisi === 3 ? 0 : 3)" class="w-full p-5 text-left flex items-center justify-between gap-4">
                             <div class="flex items-center gap-3">
                                 <span class="font-mono text-xs font-bold text-[#B89758]">03</span>
-                                <h3 class="font-serif font-bold text-base sm:text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-base sm:text-lg text-[#0D3B2E]">
                                     {{ "Memberikan pendidikan berkualitas berbasis Islam" }}
                                 </h3>
                             </div>
@@ -97,11 +97,11 @@
                     </div>
 
                     <!-- Misi 4 -->
-                    <div class="border border-[#E5E0D8] bg-[#FAF8F5] transition">
+                    <div class="border border-[#E5E0D8] rounded-md bg-[#FAF8F5] overflow-hidden transition">
                         <button type="button" @click="activeMisi = (activeMisi === 4 ? 0 : 4)" class="w-full p-5 text-left flex items-center justify-between gap-4">
                             <div class="flex items-center gap-3">
                                 <span class="font-mono text-xs font-bold text-[#B89758]">04</span>
-                                <h3 class="font-serif font-bold text-base sm:text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-base sm:text-lg text-[#0D3B2E]">
                                     {{ "Mempersiapkan santri berprestasi di tingkat nasional" }}
                                 </h3>
                             </div>
@@ -125,7 +125,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label">02 — PROGRAM AKADEMIK & KEHIDUPAN SANTRI</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
                         Pilihan Jenjang & Rutinitas 24 Jam
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
@@ -143,7 +143,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
 
                 <!-- Program 1: MTS (Mukim 24 Jam) -->
-                <div class="bg-white border border-[#E5E0D8] p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition">
                     <div class="space-y-6">
                         <div>
                             <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
@@ -151,7 +151,7 @@
                                 <span class="text-xs font-mono text-[#0D3B2E] font-semibold">Mukim</span>
                             </div>
                             <div class="flex items-center justify-between gap-2">
-                                <h3 class="font-serif font-bold text-2xl text-[#0D3B2E]">MTS (Mukim 24 Jam)</h3>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Mukim 24 Jam)</h3>
                             </div>
                             <p class="text-xs sm:text-sm text-[#4B6358] mt-2 leading-relaxed">
                                 Pendidikan setingkat SMP terpadu asrama penuh 24 jam dengan target mutqin 30 juz Al-Qur'an dan kurikulum formal Kemenag RI.
@@ -159,7 +159,7 @@
                         </div>
 
                         <!-- Price Card -->
-                        <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] space-y-2.5">
+                        <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-md space-y-2.5">
                             <div class="flex items-baseline justify-between">
                                 <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriah):</span>
                                 <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
@@ -210,7 +210,7 @@
                 </div>
 
                 <!-- Program 2: MDTA (Sekolah Sore) -->
-                <div class="bg-white border border-[#E5E0D8] p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition">
                     <div class="space-y-6">
                         <div>
                             <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
@@ -218,7 +218,7 @@
                                 <span class="text-xs font-mono text-[#B89758] font-semibold">Non-Mukim</span>
                             </div>
                             <div class="flex items-center justify-between gap-2">
-                                <h3 class="font-serif font-bold text-2xl text-[#0D3B2E]">MDTA (Sekolah Sore)</h3>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Sekolah Sore)</h3>
                             </div>
                             <p class="text-xs sm:text-sm text-[#4B6358] mt-2 leading-relaxed">
                                 Madrasah Diniyah Takmiliyah Awaliyah sore hari untuk santri non-mukim guna memperkuat hafalan juz 'amma, akidah, akhlak, dan tata cara ibadah harian.
@@ -226,7 +226,7 @@
                         </div>
 
                         <!-- Price Card -->
-                        <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] space-y-2.5">
+                        <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-md space-y-2.5">
                             <div class="flex items-baseline justify-between">
                                 <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriah):</span>
                                 <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
@@ -279,11 +279,11 @@
             </div>
 
             <!-- Interactive 24-Hour Santri Daily Routine Timeline -->
-            <div class="bg-white border border-[#E5E0D8] p-8 space-y-6">
+            <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-6">
                 <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
                     <div class="space-y-1">
                         <span class="editorial-label">LINI MASA 24 JAM</span>
-                        <h4 class="font-serif font-bold text-xl sm:text-2xl text-[#0D3B2E]">
+                        <h4 class="font-sans font-bold text-xl sm:text-2xl text-[#0D3B2E]">
                             Jadwal Rutinitas Harian Santri Mukim
                         </h4>
                     </div>
@@ -291,24 +291,24 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-1.5">
+                    <div class="p-4 border border-[#E5E0D8] rounded-md bg-[#FAF8F5] space-y-1.5">
                         <span class="font-mono text-xs font-bold text-[#B89758]">03.30 – 05.00</span>
-                        <h5 class="font-serif font-bold text-sm text-[#0D3B2E]">Qiyamullail & Subuh</h5>
+                        <h5 class="font-sans font-bold text-sm text-[#0D3B2E]">Qiyamullail & Subuh</h5>
                         <p class="text-[11px] text-[#4B6358] leading-relaxed">Tahajjud, witir, sholat Subuh berjamaah, zikir ma'tsurat, dan persiapan halaqah.</p>
                     </div>
-                    <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-1.5">
+                    <div class="p-4 border border-[#E5E0D8] rounded-md bg-[#FAF8F5] space-y-1.5">
                         <span class="font-mono text-xs font-bold text-[#B89758]">05.00 – 06.30</span>
-                        <h5 class="font-serif font-bold text-sm text-[#0D3B2E]">Halaqah Sabaq Pagi</h5>
+                        <h5 class="font-sans font-bold text-sm text-[#0D3B2E]">Halaqah Sabaq Pagi</h5>
                         <p class="text-[11px] text-[#4B6358] leading-relaxed">Setoran hafalan baru Al-Qur'an di hadapan asatidz pembina kelompok halaqah.</p>
                     </div>
-                    <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-1.5">
+                    <div class="p-4 border border-[#E5E0D8] rounded-md bg-[#FAF8F5] space-y-1.5">
                         <span class="font-mono text-xs font-bold text-[#B89758]">07.00 – 12.30</span>
-                        <h5 class="font-serif font-bold text-sm text-[#0D3B2E]">KBM Formal MTS</h5>
+                        <h5 class="font-sans font-bold text-sm text-[#0D3B2E]">KBM Formal MTS</h5>
                         <p class="text-[11px] text-[#4B6358] leading-relaxed">Pembelajaran kurikulum nasional Kemenag RI (sains, matematika, bahasa, dll).</p>
                     </div>
-                    <div class="p-4 border border-[#E5E0D8] bg-[#FAF8F5] space-y-1.5">
+                    <div class="p-4 border border-[#E5E0D8] rounded-md bg-[#FAF8F5] space-y-1.5">
                         <span class="font-mono text-xs font-bold text-[#B89758]">18.00 – 20.30</span>
-                        <h5 class="font-serif font-bold text-sm text-[#0D3B2E]">Maghrib & Kitab Salaf</h5>
+                        <h5 class="font-sans font-bold text-sm text-[#0D3B2E]">Maghrib & Kitab Salaf</h5>
                         <p class="text-[11px] text-[#4B6358] leading-relaxed">Sholat berjamaah, muraja'ah Al-Qur'an, dan kajian kitab kuning fiqih/tajwid.</p>
                     </div>
                 </div>
@@ -324,7 +324,7 @@
             <!-- Section Title -->
             <div class="max-w-3xl space-y-2">
                 <span class="editorial-label">03 — PENERIMAAN SANTRI BARU (PSB)</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
                     Portal Aktif & Alur Pendaftaran Santri Baru
                 </h2>
                 <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
@@ -336,7 +336,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                 <!-- Left: Clickable 4-Step Stepper -->
-                <div class="lg:col-span-7 bg-[#FAF8F5] border border-[#E5E0D8] p-8 space-y-6">
+                <div class="lg:col-span-7 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-8 space-y-6">
                     <div class="border-b border-[#E5E0D8] pb-3 flex items-center justify-between">
                         <span class="editorial-label">ALUR 4 TAHAP PENDAFTARAN</span>
                         <span class="text-xs font-mono text-[#4B6358]">Klik tiap langkah</span>
@@ -363,10 +363,10 @@
                     </div>
 
                     <!-- Step Content Panes -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 space-y-3">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3">
                         <div x-show="psbStep === 1" class="space-y-2">
                             <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-2">
-                                <h4 class="font-serif font-bold text-base text-[#0D3B2E]">Langkah 1: Pengisian Formulir & Akun Online</h4>
+                                <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Langkah 1: Pengisian Formulir & Akun Online</h4>
                                 <span class="editorial-label text-[#059669]">TAHAP AWAL</span>
                             </div>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -376,7 +376,7 @@
 
                         <div x-show="psbStep === 2" class="space-y-2" style="display: none;">
                             <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-2">
-                                <h4 class="font-serif font-bold text-base text-[#0D3B2E]">Langkah 2: Kelengkapan Dokumen & Persyaratan</h4>
+                                <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Langkah 2: Kelengkapan Dokumen & Persyaratan</h4>
                                 <span class="editorial-label text-[#059669]">BERKAS ADM</span>
                             </div>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -386,7 +386,7 @@
 
                         <div x-show="psbStep === 3" class="space-y-2" style="display: none;">
                             <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-2">
-                                <h4 class="font-serif font-bold text-base text-[#0D3B2E]">Langkah 3: Observasi Al-Qur'an & Wawancara</h4>
+                                <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Langkah 3: Observasi Al-Qur'an & Wawancara</h4>
                                 <span class="editorial-label text-[#059669]">TES SELEKSI</span>
                             </div>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -396,7 +396,7 @@
 
                         <div x-show="psbStep === 4" class="space-y-2" style="display: none;">
                             <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-2">
-                                <h4 class="font-serif font-bold text-base text-[#0D3B2E]">Langkah 4: Pengumuman Kelulusan & Registrasi Ulang</h4>
+                                <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Langkah 4: Pengumuman Kelulusan & Registrasi Ulang</h4>
                                 <span class="editorial-label text-[#059669]">DAFTAR ULANG</span>
                             </div>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -417,10 +417,10 @@
                 </div>
 
                 <!-- Right: Fast Fee Calculator & Wave Info -->
-                <div class="lg:col-span-5 bg-[#FAF8F5] border border-[#E5E0D8] p-8 space-y-6">
+                <div class="lg:col-span-5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-8 space-y-6">
                     <div class="border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label">SIMULASI BIAYA CEPAT</span>
-                        <h3 class="font-serif font-bold text-xl text-[#0D3B2E] mt-1">
+                        <h3 class="font-sans font-bold text-xl text-[#0D3B2E] mt-1">
                             Kalkulasi Biaya Terpadu
                         </h3>
                     </div>
@@ -441,7 +441,7 @@
                     </div>
 
                     <!-- Calculated Breakdown -->
-                    <div class="bg-white border border-[#E5E0D8] p-5 space-y-3 text-xs">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-5 space-y-3 text-xs">
                         <div class="flex justify-between items-baseline py-1 border-b border-[#E5E0D8]">
                             <span class="text-[#4B6358]">Biaya Registrasi Awal:</span>
                             <span class="font-bold text-[#B89758] font-sans text-sm" x-text="simProgram === 'MTS' ? 'Rp {{ $feeMts }}' : 'Rp {{ $feeMdta }}'"></span>
@@ -473,7 +473,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label">DEWAN GURU & ASATIDZ</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
                         Dibimbing Langsung Huffadz Bersanad
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
@@ -487,12 +487,12 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 @forelse($teachers->take(4) as $teacher)
-                    <div class="bg-white border border-[#E5E0D8] p-6 space-y-3 hover:border-[#0D3B2E] transition">
-                        <div class="w-12 h-12 bg-[#FAF8F5] border border-[#E5E0D8] flex items-center justify-center font-serif font-bold text-lg text-[#0D3B2E]">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] transition">
+                        <div class="w-12 h-12 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md flex items-center justify-center font-sans font-bold text-lg text-[#0D3B2E]">
                             {{ Str::substr($teacher->full_name, 0, 1) }}
                         </div>
                         <div>
-                            <h3 class="font-serif font-bold text-base text-[#0D3B2E]">
+                            <h3 class="font-sans font-bold text-base text-[#0D3B2E]">
                                 {{ $teacher->full_name }}
                             </h3>
                             <p class="text-xs text-[#059669] font-medium">
@@ -504,7 +504,7 @@
                         </p>
                     </div>
                 @empty
-                    <div class="col-span-full text-center py-8 bg-white border border-[#E5E0D8] text-xs text-[#4B6358]">
+                    <div class="col-span-full text-center py-8 bg-white border border-[#E5E0D8] rounded-md text-xs text-[#4B6358]">
                         Belum ada data asatidz yang dipublikasikan.
                     </div>
                 @endforelse
@@ -519,7 +519,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label">04 — WARTA & DOKUMENTASI TERKINI</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
                         Warta Pesantren & Agenda Kegiatan
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
@@ -536,14 +536,14 @@
                 
                 <!-- Left: Featured Story -->
                 @if($featuredPost)
-                    <article class="lg:col-span-7 bg-[#FAF8F5] border border-[#E5E0D8] p-8 space-y-5 hover:border-[#0D3B2E] transition">
+                    <article class="lg:col-span-7 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-8 space-y-5 hover:border-[#0D3B2E] transition">
                         <div class="flex items-center justify-between text-xs text-[#4B6358]">
                             <span class="editorial-label text-[#059669]">{{ $featuredPost->category?->name ?? 'Warta Pondok' }}</span>
                             <time datetime="{{ $featuredPost->published_at?->toDateString() }}" class="font-mono">
                                 {{ $featuredPost->published_at?->translatedFormat('d F Y') ?? date('d M Y') }}
                             </time>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-[#0D3B2E] leading-snug">
+                        <h3 class="font-sans font-bold text-2xl sm:text-3xl text-[#0D3B2E] leading-snug">
                             <a href="{{ route('news.show', $featuredPost->slug) }}" class="hover:text-[#059669] transition">
                                 {{ $featuredPost->title }}
                             </a>
@@ -559,7 +559,7 @@
                         </div>
                     </article>
                 @else
-                    <div class="col-span-full bg-[#FAF8F5] border border-[#E5E0D8] p-8 text-center text-xs text-[#4B6358]">
+                    <div class="col-span-full bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-8 text-center text-xs text-[#4B6358]">
                         Belum ada warta berita yang dipublikasikan.
                     </div>
                 @endif
@@ -572,12 +572,12 @@
                         </div>
 
                         @foreach($recentPosts as $post)
-                            <article class="bg-white border border-[#E5E0D8] p-5 space-y-2 hover:border-[#0D3B2E] transition">
+                            <article class="bg-white border border-[#E5E0D8] rounded-md p-5 space-y-2 hover:border-[#0D3B2E] transition">
                                 <div class="flex items-center justify-between text-[11px] text-[#4B6358]">
                                     <span class="text-[#059669] font-medium uppercase tracking-wider">{{ $post->category?->name ?? 'Kegiatan' }}</span>
                                     <time class="font-mono">{{ $post->published_at?->translatedFormat('d M Y') ?? date('d M Y') }}</time>
                                 </div>
-                                <h4 class="font-serif font-bold text-base text-[#0D3B2E] leading-snug">
+                                <h4 class="font-sans font-bold text-base text-[#0D3B2E] leading-snug">
                                     <a href="{{ route('news.show', $post->slug) }}" class="hover:text-[#059669] transition">
                                         {{ $post->title }}
                                     </a>
@@ -600,7 +600,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label">DOKUMENTASI KAMPUS</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
                         Potret Rutinitas & Kehidupan Santri
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
@@ -614,20 +614,20 @@
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                 @forelse($latestGalleries as $gallery)
-                    <div class="bg-white border border-[#E5E0D8] p-2 space-y-2 group">
-                        <div class="aspect-4/3 bg-[#FAF8F5] border border-[#E5E0D8] overflow-hidden flex items-center justify-center">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-2 space-y-2 group">
+                        <div class="aspect-4/3 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md overflow-hidden flex items-center justify-center">
                             @if($gallery->photos->isNotEmpty())
                                 <img src="{{ Storage::url($gallery->photos->first()->photo_path) }}" alt="{{ $gallery->title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
                             @else
-                                <span class="font-serif text-xs text-[#4B6358]">DT Gallery</span>
+                                <span class="font-sans text-xs text-[#4B6358]">DT Gallery</span>
                             @endif
                         </div>
-                        <h4 class="font-serif font-bold text-xs text-[#0D3B2E] truncate">
+                        <h4 class="font-sans font-bold text-xs text-[#0D3B2E] truncate">
                             {{ $gallery->title }}
                         </h4>
                     </div>
                 @empty
-                    <div class="col-span-full text-center py-8 bg-white border border-[#E5E0D8] text-xs text-[#4B6358]">
+                    <div class="col-span-full text-center py-8 bg-white border border-[#E5E0D8] rounded-md text-xs text-[#4B6358]">
                         Belum ada dokumentasi kegiatan yang diunggah.
                     </div>
                 @endforelse
@@ -638,10 +638,10 @@
     <!-- 7. LOKASI & SILATURAHMI CTA -->
     <section class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FAF8F5] border border-[#E5E0D8] p-8 md:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-8 md:p-12">
                 <div class="lg:col-span-8 space-y-3">
                     <span class="editorial-label">KUNJUNGAN & SILATURAHMI</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#0D3B2E]">
+                    <h2 class="font-sans text-2xl sm:text-3xl font-bold text-[#0D3B2E]">
                         Kunjungi Kampus PPMTQ Daar El Tazkiyah Sumardi
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed max-w-2xl">

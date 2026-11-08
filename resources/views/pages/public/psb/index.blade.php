@@ -6,13 +6,13 @@
 
         @if(!$activeWave)
             <!-- CLOSED ADMISSION STATE -->
-            <div class="bg-white p-8 md:p-14 border border-[#E5E0D8] text-center space-y-6">
-                <div class="w-16 h-16 mx-auto border border-[#B89758] bg-[#FAF8F5] text-[#B89758] flex items-center justify-center">
+            <div class="bg-white p-8 md:p-14 border border-[#E5E0D8] rounded-md text-center space-y-6">
+                <div class="w-16 h-16 mx-auto border border-[#B89758] rounded-md bg-[#FAF8F5] text-[#B89758] flex items-center justify-center">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                 </div>
                 <div class="space-y-2">
                     <span class="editorial-label text-[#B89758]">STATUS PENDAFTARAN</span>
-                    <h1 class="font-serif text-2xl md:text-3xl font-bold text-[#0D3B2E]">Pendaftaran Santri Baru Sedang Ditutup</h1>
+                    <h1 class="font-sans text-2xl md:text-3xl font-bold text-[#0D3B2E]">Pendaftaran Santri Baru Sedang Ditutup</h1>
                     <p class="text-xs sm:text-sm text-[#4B6358] max-w-xl mx-auto leading-relaxed">
                         Saat ini belum ada gelombang pendaftaran yang aktif. Silakan pantau pengumuman resmi berkala atau hubungi panitia melalui kontak WhatsApp untuk informasi gelombang berikutnya.
                     </p>
@@ -37,7 +37,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#059669] uppercase font-semibold">Gelombang Aktif</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-tight">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-tight">
                     Penerimaan Santri Baru (PSB Online)
                 </h1>
                 <p class="text-xs sm:text-sm text-[#4B6358]">

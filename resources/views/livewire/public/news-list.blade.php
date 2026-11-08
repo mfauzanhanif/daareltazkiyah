@@ -1,6 +1,6 @@
 <div>
     <!-- Filter & Search Bar (Editorial Hairline Layout) -->
-    <div class="bg-white p-5 border border-stone-hairline mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
+    <div class="bg-white p-5 border border-stone-hairline rounded-md mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
 
         <!-- Categories Filter (Editorial Tab/Box) -->
         <div
@@ -43,9 +43,9 @@
         @forelse($posts as $post)
             <x-public.news-card :post="$post" />
         @empty
-            <div class="col-span-full text-center py-16 bg-white border border-[#E5E0D8] space-y-3 p-8">
+            <div class="col-span-full text-center py-16 bg-white border border-[#E5E0D8] rounded-md space-y-3 p-8">
                 <span class="editorial-label text-[#B89758]">ARSIP TIDAK DITEMUKAN</span>
-                <h3 class="font-serif text-lg text-[#0D3B2E] font-bold">
+                <h3 class="font-sans text-lg text-[#0D3B2E] font-bold">
                     Tidak Ada Artikel Ditemukan
                 </h3>
                 <p class="text-xs text-[#4B6358]">
@@ -57,7 +57,7 @@
 
     <!-- Pagination -->
     @if ($posts->hasPages())
-        <div class="mt-12 bg-white border border-[#E5E0D8] p-4">
+        <div class="mt-12 bg-white border border-[#E5E0D8] rounded-md p-4">
             {{ $posts->links() }}
         </div>
     @endif

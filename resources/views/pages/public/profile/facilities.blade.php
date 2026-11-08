@@ -10,7 +10,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Lingkungan & Prasarana</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Sarana & Lingkungan Kampus Tahfidz
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -28,12 +28,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Facility 1: Masjid -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 01</span>
                         <span class="text-xs font-mono text-[#4B6358]">Pusat Ibadah</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Masjid Jami' Pesantren
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -47,12 +47,12 @@
                 </div>
 
                 <!-- Facility 2: Asrama Mukim -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 02</span>
                         <span class="text-xs font-mono text-[#4B6358]">Hunian Santri</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Gedung Asrama Mukim 24 Jam
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -66,12 +66,12 @@
                 </div>
 
                 <!-- Facility 3: Ruang Kelas Formal -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 03</span>
                         <span class="text-xs font-mono text-[#4B6358]">Ruang Akademik</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Ruang Kelas & Belajar Terpadu
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -85,12 +85,12 @@
                 </div>
 
                 <!-- Facility 4: Dapur & Ruang Makan -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 04</span>
                         <span class="text-xs font-mono text-[#4B6358]">Konsumsi & Nutrisi</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Dapur Pesantren & Ruang Makan
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -104,12 +104,12 @@
                 </div>
 
                 <!-- Facility 5: Perpustakaan Kitab -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 05</span>
                         <span class="text-xs font-mono text-[#4B6358]">Khazanah Pustaka</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Perpustakaan Kitab Kuning & Sains
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -123,12 +123,12 @@
                 </div>
 
                 <!-- Facility 6: Area Olahraga & Panahan -->
-                <div class="bg-white border border-[#E5E0D8] p-8 space-y-4 hover:border-[#0D3B2E] transition">
+                <div class="bg-white border border-[#E5E0D8] rounded-md p-8 space-y-4 hover:border-[#0D3B2E] transition">
                     <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
                         <span class="editorial-label text-[#059669]">SARANA 06</span>
                         <span class="text-xs font-mono text-[#4B6358]">Kebugaran Santri</span>
                     </div>
-                    <h2 class="font-serif font-bold text-xl text-[#0D3B2E]">
+                    <h2 class="font-sans font-bold text-xl text-[#0D3B2E]">
                         Area Olahraga Sunnah & Ekstrakurikuler
                     </h2>
                     <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -144,9 +144,9 @@
             </div>
 
             <!-- Campus Environment & Cleanliness Note -->
-            <div class="bg-white border border-[#E5E0D8] p-8 sm:p-12 space-y-4">
+            <div class="bg-white border border-[#E5E0D8] rounded-md p-8 sm:p-12 space-y-4">
                 <span class="editorial-label">STANDAR KESEHATAN & KEAMANAN</span>
-                <h3 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                <h3 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                     Komitmen Lingkungan Asri, Aman, dan Nyaman
                 </h3>
                 <p class="text-sm text-[#4B6358] leading-relaxed">

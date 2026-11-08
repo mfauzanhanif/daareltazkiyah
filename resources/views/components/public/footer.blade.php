@@ -20,11 +20,11 @@
             <!-- Col 1: About & Arabic Citation -->
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 border border-[#B89758] bg-[#059669] flex items-center justify-center font-serif font-bold text-lg text-white">
+                    <div class="w-10 h-10 border border-[#B89758] rounded-md bg-[#059669] flex items-center justify-center font-sans font-bold text-lg text-white">
                         DT
                     </div>
                     <div>
-                        <span class="font-serif font-bold text-lg text-white block leading-tight">Daar El Tazkiyah</span>
+                        <span class="font-sans font-bold text-lg text-white block leading-tight">Daar El Tazkiyah</span>
                         <span class="text-[11px] text-emerald-200 uppercase font-semibold">PPMTQ Sumardi Bogor</span>
                     </div>
                 </div>

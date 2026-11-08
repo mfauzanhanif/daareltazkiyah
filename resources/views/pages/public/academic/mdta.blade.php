@@ -10,7 +10,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Jenjang Diniyah Non-Mukim</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Madrasah Diniyah Takmiliyah Awaliyah (MDTA Sekolah Sore)
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -28,10 +28,10 @@
                 <!-- Left Column: Sticky Financial & Registration Info Card -->
                 <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
                     <!-- Fee & Admission Card -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 sm:p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 space-y-6">
                         <div class="space-y-1 border-b border-[#E5E0D8] pb-5">
                             <span class="editorial-label">STRUKTUR BIAYA MDTA</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Investasi Pendidikan
                             </h2>
                             <p class="text-xs text-[#4B6358]">
@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Program Quick Switcher -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 space-y-3">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3">
                         <span class="editorial-label">JENJANG PENDIDIKAN</span>
                         <ul class="text-sm space-y-2 pt-1 font-medium text-[#18181B]">
                             <li class="border-l-2 border-transparent pl-3 text-[#4B6358] hover:border-[#E5E0D8] hover:text-[#0D3B2E] transition">
@@ -92,14 +92,14 @@
                 </aside>
 
                 <!-- Right Column: Detail Silabus & Kegiatan MDTA -->
-                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] p-8 sm:p-12">
+                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] rounded-md p-8 sm:p-12">
 
                     <!-- Section: Profil Jenjang -->
                     <article class="space-y-6">
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">PROFIL PROGRAM</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Madrasah Diniyah Takmiliyah Awaliyah
                             </h2>
                         </div>
@@ -113,12 +113,12 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">WAKTU BELAJAR</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Jadwal KBM Sekolah Sore
                             </h2>
                         </div>
 
-                        <div class="border border-[#E5E0D8] p-6 space-y-3 bg-[#FAF8F5]">
+                        <div class="border border-[#E5E0D8] rounded-md p-6 space-y-3 bg-[#FAF8F5]">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#E5E0D8] pb-3">
                                 <span class="font-semibold text-sm text-[#0D3B2E]">Hari Aktif Belajar:</span>
                                 <span class="text-xs font-mono text-[#059669]">Senin s/d Kamis & Sabtu</span>
@@ -138,36 +138,36 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">MATERI KURIKULUM</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Silabus Mata Pelajaran Diniyah
                             </h2>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="p-6 border border-[#E5E0D8] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">MAPEL 01</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Al-Qur'an & Tajwid Praktis</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Al-Qur'an & Tajwid Praktis</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Tahsin makharijul huruf, sifat-sifat huruf, hukum nun sukun, mim sukun, dan mad, serta hafalan surat-surat Juz 30 (Juz 'Amma).
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">MAPEL 02</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Fiqih Ibadah & Praktik Sholat</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Fiqih Ibadah & Praktik Sholat</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Thaharah (wudhu, tayamum, mandi wajib), tata cara sholat fardhu & sunnah yang benar, serta hafalan bacaan sholat dan doa harian.
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">MAPEL 03</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Aqidah Akhlak</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Aqidah Akhlak</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Mengenal Rukun Iman, sifat-sifat Allah dan Rasul-Nya, adab kepada orang tua, guru, teman, serta penghindaran perilaku tercela.
                                 </p>
                             </div>
-                            <div class="p-6 border border-[#E5E0D8] space-y-2">
+                            <div class="p-6 border border-[#E5E0D8] rounded-md space-y-2">
                                 <span class="editorial-label text-[#059669]">MAPEL 04</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">Tarikh Islam & Bahasa Arab Dasar</h3>
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Tarikh Islam & Bahasa Arab Dasar</h3>
                                 <p class="text-xs text-[#4B6358] leading-relaxed">
                                     Kisah keteladanan Nabi Muhammad ﷺ dan sahabat, pengenalan kosa kata bahasa Arab dasar, serta kaidah menulis huruf pegon dan Arab.
                                 </p>

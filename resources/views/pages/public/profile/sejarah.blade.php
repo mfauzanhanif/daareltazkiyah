@@ -10,7 +10,7 @@
                     <span class="w-8 h-px bg-[#B89758]"></span>
                     <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Sejarah & Khazanah</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Menempa Generasi Qur'ani Berintegritas dan Berilmu Amaliah
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
@@ -28,10 +28,10 @@
                 <!-- Left Column: Sticky Editorial Meta & Leadership Card -->
                 <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
                     <!-- Leadership Citation Card -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 sm:p-8 space-y-6">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 space-y-6">
                         <div class="space-y-2 border-b border-[#E5E0D8] pb-5">
                             <span class="editorial-label">PENGASUH PONDOK</span>
-                            <h2 class="font-serif text-xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-xl font-bold text-[#0D3B2E]">
                                 Ust. Ahmad Ashil Fadhil, S.H., M.H.
                             </h2>
                             <p class="text-xs text-[#059669] font-medium">
@@ -70,7 +70,7 @@
                     </div>
 
                     <!-- Quick Navigation Box -->
-                    <div class="bg-white border border-[#E5E0D8] p-6 space-y-3">
+                    <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3">
                         <span class="editorial-label">NAVIGASI PROFIL</span>
                         <ul class="text-sm space-y-2 pt-1 font-medium text-[#18181B]">
                             <li class="border-l-2 border-[#0D3B2E] pl-3 text-[#0D3B2E] font-semibold">
@@ -87,14 +87,14 @@
                 </aside>
 
                 <!-- Right Column: Narrative Sejarah & Visi Misi -->
-                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] p-8 sm:p-12">
+                <div class="lg:col-span-8 space-y-12 bg-white border border-[#E5E0D8] rounded-md p-8 sm:p-12">
 
                     <!-- Section: Latar Belakang & Sejarah -->
                     <article class="space-y-6">
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">BAGIAN 01</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Titik Tolak & Sejarah Pendirian
                             </h2>
                         </div>
@@ -117,14 +117,14 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">BAGIAN 02</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Visi Utama Pesantren
                             </h2>
                         </div>
 
                         <!-- Formal Quote Card -->
-                        <div class="bg-[#FAF8F5] border-l-4 border-[#0D3B2E] p-6 sm:p-8 space-y-3">
-                            <p class="font-serif text-xl sm:text-2xl text-[#0D3B2E] font-bold leading-relaxed">
+                        <div class="bg-[#FAF8F5] border-l-4 border-[#0D3B2E] rounded-r-md p-6 sm:p-8 space-y-3">
+                            <p class="font-sans text-xl sm:text-2xl text-[#0D3B2E] font-bold leading-relaxed">
                                 "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat."
                             </p>
                             <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -138,16 +138,16 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">BAGIAN 03</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Misi & Komitmen Pendidikan
                             </h2>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Misi 1 -->
-                            <div class="border border-[#E5E0D8] p-6 space-y-2.5 bg-white">
+                            <div class="border border-[#E5E0D8] rounded-md p-6 space-y-2.5 bg-white">
                                 <span class="editorial-label text-[#059669]">MISI 01</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">
                                     Menanamkan kecintaan kepada Al-Qur'an
                                 </h3>
                                 <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -156,9 +156,9 @@
                             </div>
 
                             <!-- Misi 2 -->
-                            <div class="border border-[#E5E0D8] p-6 space-y-2.5 bg-white">
+                            <div class="border border-[#E5E0D8] rounded-md p-6 space-y-2.5 bg-white">
                                 <span class="editorial-label text-[#059669]">MISI 02</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">
                                     Membentuk akhlak mulia dan disiplin
                                 </h3>
                                 <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -167,9 +167,9 @@
                             </div>
 
                             <!-- Misi 3 -->
-                            <div class="border border-[#E5E0D8] p-6 space-y-2.5 bg-white">
+                            <div class="border border-[#E5E0D8] rounded-md p-6 space-y-2.5 bg-white">
                                 <span class="editorial-label text-[#059669]">MISI 03</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">
                                     Memberikan pendidikan berkualitas berbasis Islam
                                 </h3>
                                 <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -178,9 +178,9 @@
                             </div>
 
                             <!-- Misi 4 -->
-                            <div class="border border-[#E5E0D8] p-6 space-y-2.5 bg-white">
+                            <div class="border border-[#E5E0D8] rounded-md p-6 space-y-2.5 bg-white">
                                 <span class="editorial-label text-[#059669]">MISI 04</span>
-                                <h3 class="font-serif font-bold text-lg text-[#0D3B2E]">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">
                                     Mempersiapkan santri berprestasi di tingkat nasional
                                 </h3>
                                 <p class="text-sm text-[#4B6358] leading-relaxed">
@@ -195,25 +195,25 @@
                         <div class="flex items-center gap-3 border-b border-[#E5E0D8] pb-4">
                             <span class="editorial-label">BAGIAN 04</span>
                             <span class="text-xs text-[#E5E0D8]">|</span>
-                            <h2 class="font-serif text-2xl font-bold text-[#0D3B2E]">
+                            <h2 class="font-sans text-2xl font-bold text-[#0D3B2E]">
                                 Nilai Luhur & Karakter Pesantren
                             </h2>
                         </div>
 
                         <div class="space-y-4 text-sm text-[#18181B] leading-relaxed">
-                            <div class="p-4 border-l-2 border-[#B89758] bg-[#FAF8F5]">
+                            <div class="p-4 border-l-2 border-[#B89758] rounded-r-md bg-[#FAF8F5]">
                                 <strong class="text-[#0D3B2E] block font-semibold mb-1">1. Keikhlasan (Al-Ikhlas)</strong>
                                 <p class="text-[#4B6358]">Segala amal belajar, mengajar, dan beribadah diniatkan semata-mata mengharap ridha Allah Subhanahu Wa Ta'ala, tanpa pamrih kedudukan atau materi.</p>
                             </div>
-                            <div class="p-4 border-l-2 border-[#B89758] bg-[#FAF8F5]">
+                            <div class="p-4 border-l-2 border-[#B89758] rounded-r-md bg-[#FAF8F5]">
                                 <strong class="text-[#0D3B2E] block font-semibold mb-1">2. Kesederhanaan (Al-Basaathah)</strong>
                                 <p class="text-[#4B6358]">Menumbuhkan keteguhan batin, kepedulian terhadap sesama, dan rasa syukur atas setiap nikmat tanpa bermewah-mewah.</p>
                             </div>
-                            <div class="p-4 border-l-2 border-[#B89758] bg-[#FAF8F5]">
+                            <div class="p-4 border-l-2 border-[#B89758] rounded-r-md bg-[#FAF8F5]">
                                 <strong class="text-[#0D3B2E] block font-semibold mb-1">3. Kemandirian (Al-I'timad 'Alal Nafs)</strong>
                                 <p class="text-[#4B6358]">Melatih santri bertanggung jawab atas kebutuhan diri sendiri, disiplin waktu, kebersihan, dan kesiapan memecahkan persoalan hidup.</p>
                             </div>
-                            <div class="p-4 border-l-2 border-[#B89758] bg-[#FAF8F5]">
+                            <div class="p-4 border-l-2 border-[#B89758] rounded-r-md bg-[#FAF8F5]">
                                 <strong class="text-[#0D3B2E] block font-semibold mb-1">4. Ukhuwah Islamiyah</strong>
                                 <p class="text-[#4B6358]">Menjalin persaudaraan erat antarsesama santri dari berbagai daerah di nusantara dalam naungan mahabbah Al-Qur'an.</p>
                             </div>

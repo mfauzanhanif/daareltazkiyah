@@ -26,7 +26,7 @@
 
                 <!-- Main Institutional Title -->
                 <div class="space-y-2">
-                    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0D3B2E] tracking-tight leading-[1.12]">
+                    <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.12]">
                         Pondok Pesantren Modern Tahfidzul Quran <br class="hidden sm:block" />
                         <span class="text-[#059669]">Daar El Tazkiyah Sumardi</span>
                     </h1>
@@ -37,7 +37,7 @@
                 </p>
 
                 <!-- Brief Pengasuh Quote Citation -->
-                <div class="border-l-2 border-[#B89758] pl-4 py-1 text-xs sm:text-sm text-[#18181B] italic bg-white/60 max-w-xl">
+                <div class="border-l-2 border-[#B89758] rounded-r-md pl-4 py-1.5 text-xs sm:text-sm text-[#18181B] italic bg-white/60 max-w-xl">
                     "Menghafal Al-Qur'an adalah perjalanan penyucian jiwa (tazkiyah), menyandingkan adab di atas ilmu, dan melatih kemandirian santri untuk peradaban Islam."
                     <span class="block text-[11px] font-sans font-semibold text-[#084C27] mt-1 not-italic">
                         — Ust. Ahmad Ashil Fadhil, S.H., M.H. (Pengasuh Pondok)
@@ -78,7 +78,7 @@
                             <!-- Leadership Identity Overlay -->
                             <div class="relative z-10 bg-gradient-to-t from-[#084C27] via-[#084C27]/95 to-transparent p-5 text-center text-white">
                                 <span class="editorial-label text-amber-300 block text-[10px]">PIMPINAN & PENGASUH PONDOK</span>
-                                <h3 class="font-serif font-bold text-lg text-white tracking-tight mt-0.5">
+                                <h3 class="font-sans font-bold text-lg text-white tracking-tight mt-0.5">
                                     Ust. Ahmad Ashil Fadhil, S.H., M.H.
                                 </h3>
                                 <p class="text-[11px] text-emerald-100/90 font-medium">

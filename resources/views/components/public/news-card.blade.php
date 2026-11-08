@@ -2,7 +2,7 @@
     'post',
 ])
 
-<article class="bg-white border border-[#E5E0D8] overflow-hidden hover:border-[#0D3B2E] transition-all flex flex-col justify-between group">
+<article class="bg-white border border-[#E5E0D8] rounded-md overflow-hidden hover:border-[#0D3B2E] transition-all flex flex-col justify-between group">
     <div>
         <!-- 16:9 Thumbnail Frame with Slow Zoom -->
         <div class="aspect-video bg-[#FAF8F5] border-b border-[#E5E0D8] relative overflow-hidden">
@@ -12,7 +12,7 @@
                      loading="lazy"
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
             @else
-                <div class="absolute inset-0 flex items-center justify-center text-[#B89758]/30 font-serif text-3xl font-bold">
+                <div class="absolute inset-0 flex items-center justify-center text-[#B89758]/30 font-sans text-3xl font-bold">
                     DT
                 </div>
             @endif
@@ -33,7 +33,7 @@
                 </time>
             </div>
 
-            <h3 class="font-serif font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug line-clamp-2">
+            <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug line-clamp-2">
                 <a href="{{ route('news.show', $post->slug) }}">{{ $post->title }}</a>
             </h3>
 
