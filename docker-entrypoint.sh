@@ -15,6 +15,9 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
+# Ensure single MPM active
+a2dismod mpm_event mpm_worker 2>/dev/null || true
+
 # Auto run migrations
 php artisan migrate --force
 
