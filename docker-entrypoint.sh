@@ -19,3 +19,4 @@ php artisan view:cache
 php artisan migrate --force
 
 exec "$@"
+
