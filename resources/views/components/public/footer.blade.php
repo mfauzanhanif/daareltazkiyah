@@ -60,7 +60,6 @@
                     <li><a href="{{ route('profile.index') }}#pendidik" class="hover:text-white hover:underline transition">Tenaga Pendidik & Pembimbing</a></li>
                     <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Warta & Berita Pondok</a></li>
                     <li><a href="{{ route('gallery.index') }}" class="hover:text-white hover:underline transition">Galeri Dokumentasi</a></li>
-                    <li><a href="{{ route('psb.status') }}" class="hover:text-white hover:underline transition">Cek Status PSB Online</a></li>
                 </ul>
             </div>
 

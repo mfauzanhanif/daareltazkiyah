@@ -190,10 +190,6 @@
 
                 <!-- Desktop CTAs -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="{{ route('psb.status') }}"
-                        class="text-xs font-semibold uppercase tracking-wider px-3.5 py-2.5 rounded-md border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] hover:bg-white transition">
-                        Cek Status
-                    </a>
                     <a href="{{ route('psb.index') }}"
                         class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white border border-[#0D3B2E] transition group shadow-xs">
                         <span>Daftar Sekarang</span>
@@ -294,10 +290,6 @@
             </nav>
 
             <div class="pt-3 border-t border-[#E5E0D8] space-y-2">
-                <a href="{{ route('psb.status') }}"
-                    class="block w-full text-center px-4 py-2.5 rounded-md border border-[#E5E0D8] text-[#0D3B2E] font-semibold text-xs uppercase tracking-wider bg-white">
-                    Cek Status PSB
-                </a>
                 <a href="{{ route('psb.index') }}"
                     class="block w-full text-center px-4 py-3 rounded-md bg-[#0D3B2E] text-white font-semibold text-xs uppercase tracking-wider">
                     Daftar Sekarang (PSB Online) &rarr;
