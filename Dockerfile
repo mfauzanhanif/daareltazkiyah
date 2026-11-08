@@ -7,16 +7,17 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-scripts --ignore-platform-req=php
 
 # ===================================================
-# Stage 2: Node (Compile Frontend with Vite & Flux)
+# Stage 2: Node + pnpm (Compile Frontend with Vite & Flux)
 # ===================================================
 FROM node:22-alpine AS frontend
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+RUN corepack enable && corepack prepare pnpm@latest --activate
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY . .
 # Copy vendor from Stage 1 so Tailwind can resolve livewire/flux/dist/flux.css
 COPY --from=vendor /app/vendor ./vendor
-RUN npm run build
+RUN pnpm run build
 
 # ===================================================
 # Stage 3: PHP Application Server (PHP 8.4 Apache)
