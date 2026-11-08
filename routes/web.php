@@ -2,17 +2,38 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\Admin\AdminCmsController;
-use App\Http\Controllers\Admin\AdminPsbController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\NewsController;
-use App\Http\Controllers\PsbController;
+use App\Http\Controllers\Portal\PortalCmsController;
+use App\Http\Controllers\Portal\PortalPsbController;
+use App\Http\Controllers\Public\GalleryController;
+use App\Http\Controllers\Public\NewsController;
+use App\Http\Controllers\Public\PsbController;
+use App\Http\Controllers\Public\AcademicController;
+use App\Http\Controllers\Public\ContactController;
 use App\Http\Controllers\Public\HomeController;
-use App\Http\Controllers\SystemSetupController;
+use App\Http\Controllers\Public\ProfileController;
+use App\Http\Controllers\Public\SystemSetupController;
 use Illuminate\Support\Facades\Route;
 
 // --- Public Landing Page ---
 Route::get('/', HomeController::class)->name('home');
+
+// --- Public Profile Pages (Editorial Multi-Page) ---
+Route::prefix('profil')->name('profile.')->group(function () {
+    Route::get('/sejarah-visi-misi', [ProfileController::class, 'sejarah'])->name('sejarah');
+    Route::get('/dewan-asatidz', [ProfileController::class, 'teachers'])->name('teachers');
+    Route::get('/fasilitas', [ProfileController::class, 'facilities'])->name('facilities');
+});
+
+// --- Public Academic Pages (Editorial Multi-Page) ---
+Route::prefix('akademik')->name('academic.')->group(function () {
+    Route::get('/mts-mukim', [AcademicController::class, 'mts'])->name('mts');
+    Route::get('/mdta', [AcademicController::class, 'mdta'])->name('mdta');
+    Route::get('/kurikulum-tahfidz', [AcademicController::class, 'tahfidz'])->name('tahfidz');
+});
+
+// --- Public Contact Page ---
+Route::get('/kontak', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/kontak/konsultasi', [ContactController::class, 'sendConsultation'])->name('contact.consultation');
 
 // --- Public News (CMS) ---
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
@@ -41,51 +62,51 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // Admin CMS Routes
     Route::middleware('can:manage-cms')->prefix('admin/cms')->name('admin.cms.')->group(function () {
-        Route::get('/', [AdminCmsController::class, 'dashboard'])->name('dashboard');
+        Route::get('/', [PortalCmsController::class, 'dashboard'])->name('dashboard');
 
         // Posts
-        Route::get('/posts', [AdminCmsController::class, 'indexPosts'])->name('posts.index');
-        Route::get('/posts/create', [AdminCmsController::class, 'createPost'])->name('posts.create');
-        Route::post('/posts', [AdminCmsController::class, 'storePost'])->name('posts.store');
-        Route::get('/posts/{id}/edit', [AdminCmsController::class, 'editPost'])->name('posts.edit');
-        Route::put('/posts/{id}', [AdminCmsController::class, 'updatePost'])->name('posts.update');
-        Route::delete('/posts/{id}', [AdminCmsController::class, 'destroyPost'])->name('posts.destroy');
+        Route::get('/posts', [PortalCmsController::class, 'indexPosts'])->name('posts.index');
+        Route::get('/posts/create', [PortalCmsController::class, 'createPost'])->name('posts.create');
+        Route::post('/posts', [PortalCmsController::class, 'storePost'])->name('posts.store');
+        Route::get('/posts/{id}/edit', [PortalCmsController::class, 'editPost'])->name('posts.edit');
+        Route::put('/posts/{id}', [PortalCmsController::class, 'updatePost'])->name('posts.update');
+        Route::delete('/posts/{id}', [PortalCmsController::class, 'destroyPost'])->name('posts.destroy');
 
         // Categories
-        Route::get('/categories', [AdminCmsController::class, 'indexCategories'])->name('categories.index');
-        Route::post('/categories', [AdminCmsController::class, 'storeCategory'])->name('categories.store');
-        Route::put('/categories/{id}', [AdminCmsController::class, 'updateCategory'])->name('categories.update');
-        Route::delete('/categories/{id}', [AdminCmsController::class, 'destroyCategory'])->name('categories.destroy');
+        Route::get('/categories', [PortalCmsController::class, 'indexCategories'])->name('categories.index');
+        Route::post('/categories', [PortalCmsController::class, 'storeCategory'])->name('categories.store');
+        Route::put('/categories/{id}', [PortalCmsController::class, 'updateCategory'])->name('categories.update');
+        Route::delete('/categories/{id}', [PortalCmsController::class, 'destroyCategory'])->name('categories.destroy');
 
         // Galleries & Photos
-        Route::get('/galleries', [AdminCmsController::class, 'indexGalleries'])->name('galleries.index');
-        Route::post('/galleries', [AdminCmsController::class, 'storeGallery'])->name('galleries.store');
-        Route::get('/galleries/{id}', [AdminCmsController::class, 'showGallery'])->name('galleries.show');
-        Route::put('/galleries/{id}', [AdminCmsController::class, 'updateGallery'])->name('galleries.update');
-        Route::delete('/galleries/{id}', [AdminCmsController::class, 'destroyGallery'])->name('galleries.destroy');
-        Route::post('/galleries/{id}/photos', [AdminCmsController::class, 'storeGalleryPhoto'])->name('galleries.photos.store');
-        Route::delete('/galleries/photos/{id}', [AdminCmsController::class, 'destroyGalleryPhoto'])->name('galleries.photos.destroy');
+        Route::get('/galleries', [PortalCmsController::class, 'indexGalleries'])->name('galleries.index');
+        Route::post('/galleries', [PortalCmsController::class, 'storeGallery'])->name('galleries.store');
+        Route::get('/galleries/{id}', [PortalCmsController::class, 'showGallery'])->name('galleries.show');
+        Route::put('/galleries/{id}', [PortalCmsController::class, 'updateGallery'])->name('galleries.update');
+        Route::delete('/galleries/{id}', [PortalCmsController::class, 'destroyGallery'])->name('galleries.destroy');
+        Route::post('/galleries/{id}/photos', [PortalCmsController::class, 'storeGalleryPhoto'])->name('galleries.photos.store');
+        Route::delete('/galleries/photos/{id}', [PortalCmsController::class, 'destroyGalleryPhoto'])->name('galleries.photos.destroy');
 
         // Teachers
-        Route::get('/teachers', [AdminCmsController::class, 'indexTeachers'])->name('teachers.index');
-        Route::post('/teachers', [AdminCmsController::class, 'storeTeacher'])->name('teachers.store');
-        Route::put('/teachers/{id}', [AdminCmsController::class, 'updateTeacher'])->name('teachers.update');
-        Route::delete('/teachers/{id}', [AdminCmsController::class, 'destroyTeacher'])->name('teachers.destroy');
+        Route::get('/teachers', [PortalCmsController::class, 'indexTeachers'])->name('teachers.index');
+        Route::post('/teachers', [PortalCmsController::class, 'storeTeacher'])->name('teachers.store');
+        Route::put('/teachers/{id}', [PortalCmsController::class, 'updateTeacher'])->name('teachers.update');
+        Route::delete('/teachers/{id}', [PortalCmsController::class, 'destroyTeacher'])->name('teachers.destroy');
 
         // Settings
         Route::middleware('can:manage-settings')->group(function () {
-            Route::get('/settings', [AdminCmsController::class, 'indexSettings'])->name('settings.index');
-            Route::post('/settings', [AdminCmsController::class, 'updateSettings'])->name('settings.update');
+            Route::get('/settings', [PortalCmsController::class, 'indexSettings'])->name('settings.index');
+            Route::post('/settings', [PortalCmsController::class, 'updateSettings'])->name('settings.update');
         });
     });
 
     // Admin PSB Routes
     Route::middleware('can:manage-psb')->prefix('admin/psb')->name('admin.psb.')->group(function () {
-        Route::get('/', [AdminPsbController::class, 'dashboard'])->name('dashboard');
-        Route::get('/applicants', [AdminPsbController::class, 'indexApplicants'])->name('applicants.index');
-        Route::get('/applicants/{id}', [AdminPsbController::class, 'showApplicant'])->name('applicants.show');
-        Route::patch('/applicants/{id}/status', [AdminPsbController::class, 'updateStatus'])->name('applicants.update-status');
-        Route::get('/export', [AdminPsbController::class, 'export'])->name('export');
+        Route::get('/', [PortalPsbController::class, 'dashboard'])->name('dashboard');
+        Route::get('/applicants', [PortalPsbController::class, 'indexApplicants'])->name('applicants.index');
+        Route::get('/applicants/{id}', [PortalPsbController::class, 'showApplicant'])->name('applicants.show');
+        Route::patch('/applicants/{id}/status', [PortalPsbController::class, 'updateStatus'])->name('applicants.update-status');
+        Route::get('/export', [PortalPsbController::class, 'export'])->name('export');
     });
 });
 

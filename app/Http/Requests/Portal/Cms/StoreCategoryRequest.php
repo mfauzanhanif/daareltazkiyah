@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Portal\Cms;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-final class UpdateCategoryRequest extends FormRequest
+final class StoreCategoryRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -21,12 +20,7 @@ final class UpdateCategoryRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:100'],
-            'slug' => [
-                'nullable',
-                'string',
-                'max:100',
-                Rule::unique('categories', 'slug')->ignore($this->route('id')),
-            ],
+            'slug' => ['nullable', 'string', 'max:100', 'unique:categories,slug'],
             'parent_id' => ['nullable', 'exists:categories,id'],
         ];
     }

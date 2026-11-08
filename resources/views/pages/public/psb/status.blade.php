@@ -1,20 +1,27 @@
-@extends('layouts.public')
+@extends('layouts.public', ['title' => 'Cek Status Pendaftaran PSB - PPMTQ Daar El Tazkiyah Sumardi'])
 
 @section('content')
-<section class="py-12 md:py-20 bg-[#FDFBF7]">
+<section class="py-12 md:py-20 bg-[#FAF8F5]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div class="text-center space-y-3">
-            <span class="text-xs md:text-sm font-semibold uppercase tracking-wider text-[#059669]">Layanan Mandiri</span>
-            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#084C27]">Cek Status Pendaftaran PSB</h1>
-            <p class="text-sm text-[#4B6358]">Masukkan nomor registrasi dan token akses rahasia yang tertera pada bukti pendaftaran Anda.</p>
-            <div class="w-16 h-1 bg-[#D97706] mx-auto rounded-full"></div>
+            <div class="flex items-center justify-center gap-3">
+                <span class="editorial-label">03 — PENERIMAAN SANTRI BARU (PSB)</span>
+                <span class="w-8 h-px bg-[#B89758]"></span>
+                <span class="text-xs font-mono text-[#059669] uppercase font-semibold">Layanan Mandiri</span>
+            </div>
+            <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[#0D3B2E] tracking-tight">
+                Cek Status Kelulusan & Verifikasi Berkas
+            </h1>
+            <p class="text-xs sm:text-sm text-[#4B6358] max-w-lg mx-auto leading-relaxed">
+                Masukkan nomor registrasi resmi (format: PSB-202X-PROG-XXX) dan kode akses token rahasia yang tertera pada lembar bukti pendaftaran Anda.
+            </p>
         </div>
 
         <livewire:public.psb-check-status />
 
-        <div class="text-center text-xs text-gray-400">
-            Lupa nomor registrasi atau token akses? Silakan hubungi sekretariat panitia via WhatsApp.
+        <div class="text-center text-xs text-[#4B6358] border-t border-[#E5E0D8] pt-4">
+            Kendala teknis atau lupa nomor registrasi / token akses? <a href="{{ route('contact.index') }}" class="text-[#0D3B2E] font-semibold hover:underline">Hubungi Sekretariat Panitia PSB</a>.
         </div>
 
     </div>

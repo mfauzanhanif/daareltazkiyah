@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Portal;
 
 use App\Exports\ApplicantsExport;
 use App\Http\Controllers\Controller;
@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
-final class AdminPsbController extends Controller
+final class PortalPsbController extends Controller
 {
     public function dashboard(): View
     {
@@ -31,7 +31,7 @@ final class AdminPsbController extends Controller
         $recentApplicants = Applicant::with(['admissionWave', 'parent'])->latest()->take(10)->get();
         $activeWave = AdmissionWave::currentActive();
 
-        return view('pages.admin.psb.dashboard', compact(
+        return view('pages.portal.psb.dashboard', compact(
             'totalApplicants',
             'mtsCount',
             'mdtaCount',
@@ -73,14 +73,14 @@ final class AdminPsbController extends Controller
         $applicants = $query->paginate(15)->withQueryString();
         $waves = AdmissionWave::latest()->get();
 
-        return view('pages.admin.psb.applicants.index', compact('applicants', 'waves'));
+        return view('pages.portal.psb.applicants.index', compact('applicants', 'waves'));
     }
 
     public function showApplicant(string $id): View
     {
         $applicant = Applicant::with(['admissionWave', 'parent', 'documents', 'activities'])->findOrFail($id);
 
-        return view('pages.admin.psb.applicants.show', compact('applicant'));
+        return view('pages.portal.psb.applicants.show', compact('applicant'));
     }
 
     public function updateStatus(Request $request, string $id): RedirectResponse

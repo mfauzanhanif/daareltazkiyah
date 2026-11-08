@@ -15,6 +15,13 @@
     --color-gold-amber: #D97706;
     --color-gold-light: #F59E0B;
 
+    /* Editorial Academic & Prestigious Islamic Heritage Tokens */
+    --color-deep-forest: #0D3B2E;
+    --color-muted-gold: #B89758;
+    --color-warm-alabaster: #FAF8F5;
+    --color-stone-hairline: #E5E0D8;
+    --color-charcoal-ink: #18181B;
+
     /* Surfaces & Backgrounds (DESIGN.md §2.2) */
     --color-surface-alabaster: #FDFBF7;
     --color-surface-card: #FFFFFF;
@@ -114,6 +121,34 @@ select:focus[data-flux-control] {
 }
 
 @layer utilities {
+    /* Editorial Hairline Grid & Border System (1px #E5E0D8) */
+    .border-hairline {
+        border: 1px solid #E5E0D8;
+    }
+    .border-hairline-t {
+        border-top: 1px solid #E5E0D8;
+    }
+    .border-hairline-b {
+        border-bottom: 1px solid #E5E0D8;
+    }
+    .border-hairline-l {
+        border-left: 1px solid #E5E0D8;
+    }
+    .border-hairline-r {
+        border-right: 1px solid #E5E0D8;
+    }
+
+    /* Editorial Section Index Label (No pill badge, wide letter spacing) */
+    .editorial-label {
+        font-family: var(--font-sans);
+        font-size: 0.6875rem;
+        line-height: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #B89758;
+    }
+
     /* Responsive Modern Islamic Arch (DESIGN.md §6.2) */
     .rounded-arch {
         border-radius: 120px 120px 1rem 1rem;

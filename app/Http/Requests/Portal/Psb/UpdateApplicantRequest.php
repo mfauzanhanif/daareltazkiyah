@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Requests\Psb;
+namespace App\Http\Requests\Portal\Psb;
 
 use App\Models\Applicant;
 use Illuminate\Foundation\Http\FormRequest;

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Portal\Cms;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-final class UpdateTeacherRequest extends FormRequest
+final class StoreTeacherRequest extends FormRequest
 {
     public function authorize(): bool
     {

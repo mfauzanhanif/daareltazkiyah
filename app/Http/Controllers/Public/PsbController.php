@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Public;
 
+use App\Http\Controllers\Controller;
 use App\Enums\ApplicationStatus;
-use App\Http\Requests\Psb\CheckStatusRequest;
-use App\Http\Requests\Psb\StoreApplicantRequest;
-use App\Http\Requests\Psb\UpdateApplicantRequest;
+use App\Http\Requests\Portal\Psb\CheckStatusRequest;
+use App\Http\Requests\Portal\Psb\StoreApplicantRequest;
+use App\Http\Requests\Portal\Psb\UpdateApplicantRequest;
 use App\Models\AdmissionWave;
 use App\Models\Applicant;
 use App\Models\ApplicantDocument;
