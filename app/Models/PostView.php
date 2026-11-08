@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Carbon;
 
 /**
@@ -65,14 +66,25 @@ class PostView extends Model
     {
         $viewDate = ($date ?? now())->toDateString();
 
-        /** @var self $record */
-        $record = static::firstOrCreate(
-            ['post_id' => $postId, 'viewed_at' => $viewDate],
-            ['count' => 0]
-        );
+        try {
+            /** @var self $record */
+            $record = static::firstOrCreate(
+                ['post_id' => $postId, 'viewed_at' => $viewDate],
+                ['count' => 0]
+            );
 
-        $record->increment('count');
+            $record->increment('count');
 
-        return $record;
+            return $record;
+        } catch (QueryException) {
+            /** @var self $record */
+            $record = static::where('post_id', $postId)
+                ->where('viewed_at', $viewDate)
+                ->firstOrFail();
+
+            $record->increment('count');
+
+            return $record;
+        }
     }
 }

@@ -27,7 +27,7 @@ final class PsbController extends Controller
         $activeWave = AdmissionWave::currentActive();
         $selectedProgram = $request->query('program', 'MTS');
 
-        return view('psb.index', compact('activeWave', 'selectedProgram'));
+        return view('pages.public.psb.index', compact('activeWave', 'selectedProgram'));
     }
 
     public function store(StoreApplicantRequest $request, RegistrationService $registrationService): RedirectResponse
@@ -45,7 +45,7 @@ final class PsbController extends Controller
             ->with(['admissionWave', 'parent', 'documents'])
             ->firstOrFail();
 
-        return view('psb.success', compact('applicant'));
+        return view('pages.public.psb.success', compact('applicant'));
     }
 
     public function downloadProof(string $registration_number, PdfService $pdfService): Response
@@ -60,7 +60,7 @@ final class PsbController extends Controller
 
     public function statusForm(): View
     {
-        return view('psb.status');
+        return view('pages.public.psb.status');
     }
 
     public function checkStatus(CheckStatusRequest $request): View
@@ -80,7 +80,7 @@ final class PsbController extends Controller
             ]);
         }
 
-        return view('psb.status-result', compact('applicant'));
+        return view('pages.public.psb.status-result', compact('applicant'));
     }
 
     public function update(UpdateApplicantRequest $request, string $registration_number): RedirectResponse

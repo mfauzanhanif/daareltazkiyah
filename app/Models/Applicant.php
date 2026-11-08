@@ -17,7 +17,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
-use Spatie\Activitylog\Models\Concerns\LogsActivity;
+use Illuminate\Support\Collection;
+use Spatie\Activitylog\Models\Concerns\HasActivity;
 use Spatie\Activitylog\Support\LogOptions;
 
 /**
@@ -45,7 +46,7 @@ use Spatie\Activitylog\Support\LogOptions;
  */
 class Applicant extends Model
 {
-    use HasUlids, LogsActivity, SoftDeletes;
+    use HasActivity, HasUlids, SoftDeletes;
 
     /**
      * @var list<string>
@@ -105,24 +106,24 @@ class Applicant extends Model
 
     public function beforeActivityLogged(mixed $activity, string $event = ''): void
     {
-        $properties = $activity->properties ? $activity->properties->toArray() : [];
-        $statusVal = $this->application_status instanceof ApplicationStatus
-            ? $this->application_status->value
-            : (string) $this->application_status;
-        $paymentVal = $this->payment_status instanceof PaymentStatus
-            ? $this->payment_status->value
-            : (string) $this->payment_status;
+        /** @var array<string, mixed> $properties */
+        $properties = $activity->properties instanceof Collection ? $activity->properties->toArray() : [];
+        $statusVal = $this->application_status->value;
+        $paymentVal = $this->payment_status->value;
 
         $properties['application_status'] = $statusVal;
         $properties['payment_status'] = $paymentVal;
         $properties['admin_notes'] = $this->admin_notes;
-        $properties['attributes'] = array_merge($properties['attributes'] ?? [], [
-            'application_status' => $statusVal,
-            'payment_status' => $paymentVal,
-            'admin_notes' => $this->admin_notes,
-        ]);
+        $properties['attributes'] = array_merge(
+            is_array($properties['attributes'] ?? null) ? $properties['attributes'] : [],
+            [
+                'application_status' => $statusVal,
+                'payment_status' => $paymentVal,
+                'admin_notes' => $this->admin_notes,
+            ]
+        );
 
-        $activity->properties = collect($properties);
+        $activity->properties = new Collection($properties);
     }
 
     /**

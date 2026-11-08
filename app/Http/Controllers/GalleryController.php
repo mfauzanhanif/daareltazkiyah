@@ -17,6 +17,6 @@ final class GalleryController extends Controller
             ->with('photos')
             ->paginate(12);
 
-        return view('gallery.index', compact('galleries'));
+        return view('pages.public.gallery.index', compact('galleries'));
     }
 }

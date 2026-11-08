@@ -12,7 +12,7 @@ final class NewsController extends Controller
 {
     public function index(): View
     {
-        return view('news.index');
+        return view('pages.public.news.index');
     }
 
     public function show(string $slug): View
@@ -35,6 +35,6 @@ final class NewsController extends Controller
             ->take(3)
             ->get();
 
-        return view('news.show', compact('post', 'relatedPosts'));
+        return view('pages.public.news.show', compact('post', 'relatedPosts'));
     }
 }

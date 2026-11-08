@@ -173,8 +173,7 @@
                             </svg>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-[#084C27]">Belum ada album galeri.</h3>
-                        <p class="text-[#4B6358] text-sm max-w-md mx-auto">Dokumentasi kegiatan harian, tahfidz, dan
-                            prestasi santri akan segera dipublikasikan di sini.</p>
+                        <p class="text-[#4B6358] text-sm max-w-md mx-auto">Dokumentasi kegiatan harian, tahfidz, dan prestasi santri akan segera dipublikasikan di sini.</p>
                     </div>
                 @endforelse
             </div>

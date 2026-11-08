@@ -37,7 +37,7 @@ Route::match(['GET', 'POST'], '/system-setup', [SystemSetupController::class, 'h
 
 // --- Authenticated Dashboard ---
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::view('dashboard', 'pages.admin.dashboard')->name('dashboard');
 
     // Admin CMS Routes
     Route::middleware('can:manage-cms')->prefix('admin/cms')->name('admin.cms.')->group(function () {

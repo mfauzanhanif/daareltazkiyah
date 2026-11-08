@@ -14,6 +14,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Testing\TestResponse;
 use Illuminate\Validation\Rules\Password;
 use Livewire\Blaze\Blaze;
+use Symfony\Component\HttpFoundation\Response;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -36,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
 
         if (class_exists(TestResponse::class)) {
             TestResponse::macro('status', function () {
-                /** @var TestResponse $this */
+                /** @var TestResponse<Response> $this */
                 return $this->getStatusCode();
             });
         }

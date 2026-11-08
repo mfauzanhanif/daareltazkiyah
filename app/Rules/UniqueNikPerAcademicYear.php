@@ -30,7 +30,7 @@ final class UniqueNikPerAcademicYear implements ValidationRule
 
         $academicYear = $wave->academic_year;
 
-        $exists = Applicant::query()
+        $applicant = Applicant::withTrashed()
             ->where('nik', $nik)
             ->whereHas('admissionWave', function ($query) use ($academicYear): void {
                 $query->where('academic_year', $academicYear);
@@ -38,10 +38,14 @@ final class UniqueNikPerAcademicYear implements ValidationRule
             ->when($this->ignoreApplicantId, function ($query, string $id): void {
                 $query->where('id', '!=', $id);
             })
-            ->exists();
+            ->first();
 
-        if ($exists) {
-            $fail("NIK ini telah terdaftar pada Tahun Ajaran {$academicYear}.");
+        if ($applicant) {
+            if ($applicant->trashed()) {
+                $fail("NIK ini sebelumnya telah terdaftar namun berstatus dihapus/dibatalkan pada Tahun Ajaran {$academicYear}. Silakan hubungi panitia PSB untuk pemulihan data.");
+            } else {
+                $fail("NIK ini telah terdaftar pada Tahun Ajaran {$academicYear}.");
+            }
         }
     }
 }

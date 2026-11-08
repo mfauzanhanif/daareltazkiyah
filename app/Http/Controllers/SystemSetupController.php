@@ -13,7 +13,7 @@ final class SystemSetupController extends Controller
 {
     public function handle(Request $request): JsonResponse
     {
-        $setupToken = env('DEPLOY_TOKEN') ?? config('app.setup_token') ?? env('SETUP_TOKEN', 'daareltazkiyah2027');
+        $setupToken = config('app.setup_token') ?? 'daareltazkiyah2027';
 
         if ($request->isMethod('POST')) {
             $inputToken = (string) ($request->input('token') ?? $request->header('X-Setup-Token'));

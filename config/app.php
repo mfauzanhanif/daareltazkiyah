@@ -41,6 +41,8 @@ return [
 
     'debug' => (bool) env('APP_DEBUG', false),
 
+    'setup_token' => env('SETUP_TOKEN', env('DEPLOY_TOKEN', 'daareltazkiyah2027')),
+
     /*
     |--------------------------------------------------------------------------
     | Application URL

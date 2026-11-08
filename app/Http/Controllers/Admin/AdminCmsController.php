@@ -37,7 +37,7 @@ final class AdminCmsController extends Controller
 
         $recentPosts = Post::with('category')->latest()->take(5)->get();
 
-        return view('admin.cms.dashboard', compact(
+        return view('pages.admin.cms.dashboard', compact(
             'postsCount',
             'galleriesCount',
             'teachersCount',
@@ -51,14 +51,14 @@ final class AdminCmsController extends Controller
     {
         $posts = Post::with(['category', 'author'])->latest()->paginate(15);
 
-        return view('admin.cms.posts.index', compact('posts'));
+        return view('pages.admin.cms.posts.index', compact('posts'));
     }
 
     public function createPost(): View
     {
         $categories = Category::all();
 
-        return view('admin.cms.posts.create', compact('categories'));
+        return view('pages.admin.cms.posts.create', compact('categories'));
     }
 
     public function storePost(StorePostRequest $request): RedirectResponse
@@ -85,7 +85,7 @@ final class AdminCmsController extends Controller
         $post = Post::findOrFail($id);
         $categories = Category::all();
 
-        return view('admin.cms.posts.edit', compact('post', 'categories'));
+        return view('pages.admin.cms.posts.edit', compact('post', 'categories'));
     }
 
     public function updatePost(UpdatePostRequest $request, string $id): RedirectResponse
@@ -119,7 +119,7 @@ final class AdminCmsController extends Controller
     {
         $categories = Category::with('parent')->withCount('posts')->get();
 
-        return view('admin.cms.categories.index', compact('categories'));
+        return view('pages.admin.cms.categories.index', compact('categories'));
     }
 
     public function storeCategory(StoreCategoryRequest $request): RedirectResponse
@@ -159,7 +159,7 @@ final class AdminCmsController extends Controller
     {
         $galleries = Gallery::withCount('photos')->latest('event_date')->paginate(12);
 
-        return view('admin.cms.galleries.index', compact('galleries'));
+        return view('pages.admin.cms.galleries.index', compact('galleries'));
     }
 
     public function storeGallery(StoreGalleryRequest $request): RedirectResponse
@@ -181,7 +181,7 @@ final class AdminCmsController extends Controller
     {
         $gallery = Gallery::with('photos')->findOrFail($id);
 
-        return view('admin.cms.galleries.show', compact('gallery'));
+        return view('pages.admin.cms.galleries.show', compact('gallery'));
     }
 
     public function updateGallery(UpdateGalleryRequest $request, string $id): RedirectResponse
@@ -246,7 +246,7 @@ final class AdminCmsController extends Controller
     {
         $teachers = Teacher::orderBy('sort_order')->paginate(20);
 
-        return view('admin.cms.teachers.index', compact('teachers'));
+        return view('pages.admin.cms.teachers.index', compact('teachers'));
     }
 
     public function storeTeacher(StoreTeacherRequest $request): RedirectResponse
@@ -293,7 +293,7 @@ final class AdminCmsController extends Controller
     {
         $settings = SiteSetting::all()->keyBy('key');
 
-        return view('admin.cms.settings.index', compact('settings'));
+        return view('pages.admin.cms.settings.index', compact('settings'));
     }
 
     public function updateSettings(UpdateSettingsRequest $request): RedirectResponse

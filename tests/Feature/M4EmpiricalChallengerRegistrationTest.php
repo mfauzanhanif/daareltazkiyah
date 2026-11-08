@@ -706,7 +706,7 @@ test('challenge 5.2: proof reflects dynamic SiteSetting updates and adheres to A
     expect($response->headers->get('Content-Type'))->toBe('application/pdf');
 
     // Also assert that the underlying Blade view incorporates dynamic settings and A4 styling
-    $renderedView = view('psb.proof-pdf', [
+    $renderedView = view('pages.public.psb.proof-pdf', [
         'applicant' => $applicant,
         'settings' => [
             'school_name' => SiteSetting::get('school_name'),
