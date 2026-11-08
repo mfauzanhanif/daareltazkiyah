@@ -10,23 +10,12 @@ use App\Models\SiteSetting;
 use App\Models\Teacher;
 use Illuminate\Contracts\View\View;
 
-class ProfileController extends Controller
+final class ProfileController extends Controller
 {
     /**
-     * Display the comprehensive history, vision, mission, and institutional values.
+     * Display the comprehensive Profile page (Selayang Pandang, Visi & Misi, Fasilitas, Pendidik).
      */
-    public function sejarah(): View
-    {
-        $activeWave = AdmissionWave::currentActive();
-        $siteAddress = (string) SiteSetting::get('school_address', SiteSetting::get('site_address', 'Jl. Cibanteng Babengket, RT 02 / RW 02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat 16620'));
-
-        return view('public.profile.sejarah', compact('activeWave', 'siteAddress'));
-    }
-
-    /**
-     * Display the full council of Asatidz, scholars, and educators with their credentials.
-     */
-    public function teachers(): View
+    public function index(): View
     {
         $activeWave = AdmissionWave::currentActive();
         $teachers = Teacher::query()
@@ -34,16 +23,18 @@ class ProfileController extends Controller
             ->orderBy('sort_order')
             ->get();
 
-        return view('public.profile.teachers', compact('activeWave', 'teachers'));
-    }
+        $pengasuh = $teachers->firstWhere('sort_order', 2)
+            ?? $teachers->firstWhere('role_title', 'Pengasuh Pondok Pesantren');
 
-    /**
-     * Display the facilities, infrastructure, mosque, dorms, and learning environment.
-     */
-    public function facilities(): View
-    {
-        $activeWave = AdmissionWave::currentActive();
+        $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
+        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
 
-        return view('public.profile.facilities', compact('activeWave'));
+        return view('public.profile.index', compact(
+            'activeWave',
+            'teachers',
+            'pengasuh',
+            'siteAddress',
+            'waNumber'
+        ));
     }
 }

@@ -19,100 +19,116 @@ test('homepage loads successfully with 200 OK and executive hub sections', funct
     $response->assertSeeText('Daar El Tazkiyah Sumardi')
         ->assertSeeText('Ust. Ahmad Ashil Fadhil, S.H., M.H.')
         ->assertSeeText('01 — PROFIL & NILAI UTAMA')
-        ->assertSeeText('02 — PROGRAM AKADEMIK & KEHIDUPAN SANTRI')
-        ->assertSeeText('03 — PENERIMAAN SANTRI BARU (PSB)')
-        ->assertSeeText('04 — WARTA & DOKUMENTASI TERKINI');
+        ->assertSeeText('02 — PROGRAM UNGGULAN PESANTREN')
+        ->assertSeeText('03 — WARTA & BERITA TERKINI')
+        ->assertSeeText('04 — DOKUMENTASI KEGIATAN SANTRI')
+        ->assertSeeText('05 — PENERIMAAN SANTRI BARU (PSB) 2027/2028');
 });
 
-test('profile sejarah page loads with comprehensive history and vision mission', function () {
-    $response = $this->get('/profil/sejarah-visi-misi');
+test('profile page loads with comprehensive history and vision mission anchors', function () {
+    $response = $this->get('/profil');
     $response->assertOk();
 
-    $response->assertSeeText('Menempa Generasi Qur\'ani Berintegritas dan Berilmu Amaliah')
-        ->assertSeeText('Titik Tolak & Sejarah Pendirian')
-        ->assertSeeText('Melahirkan generasi Qur\'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat.')
+    $response->assertSeeText('Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi')
+        ->assertSeeText('Melahirkan generasi Qur\'ani yang berilmu, berakhlak mulia, berprestasi, dan siap mengabdi untuk umat.')
         ->assertSeeText('Menanamkan kecintaan kepada Al-Qur\'an')
         ->assertSeeText('Membentuk akhlak mulia dan disiplin')
         ->assertSeeText('Memberikan pendidikan berkualitas berbasis Islam')
-        ->assertSeeText('Mempersiapkan santri berprestasi di tingkat nasional');
+        ->assertSeeText('Mempersiapkan santri berprestasi di tingkat nasional')
+        ->assertSee('id="selayang-pandang"', false)
+        ->assertSee('id="visi-misi"', false)
+        ->assertSee('id="fasilitas"', false)
+        ->assertSee('id="pendidik"', false);
 });
 
-test('profile teachers page displays dewan asatidz roster', function () {
+test('profile page displays dewan asatidz roster and pengasuh', function () {
     Teacher::create([
         'id' => (string) Str::ulid(),
         'full_name' => 'Ust. Muhammad Rizki, S.Pd.I., Al-Hafizh',
         'role_title' => 'Musyrif Tahfidz',
         'bio' => 'Hafizh 30 Juz Bersanad Qira\'at Ashim',
-        'sort_order' => 1,
+        'sort_order' => 10,
         'is_active' => true,
     ]);
 
-    $response = $this->get('/profil/dewan-asatidz');
+    $response = $this->get('/profil');
     $response->assertOk();
 
-    $response->assertSeeText('Dewan Asatidz & Tenaga Pendidik')
-        ->assertSeeText('Ust. Ahmad Ashil Fadhil, S.H., M.H.')
+    $response->assertSeeText('Ust. Ahmad Ashil Fadhil, S.H., M.H.')
         ->assertSeeText('Ust. Muhammad Rizki, S.Pd.I., Al-Hafizh');
 });
 
-test('profile facilities page displays campus infrastructure and amenities', function () {
-    $response = $this->get('/profil/fasilitas');
+test('profile page displays facilities infrastructure and amenities', function () {
+    $response = $this->get('/profil');
     $response->assertOk();
 
-    $response->assertSeeText('Sarana & Lingkungan Kampus Tahfidz')
+    $response->assertSeeText('Ruang Kelas yang Nyaman')
         ->assertSeeText('Masjid Jami\' Pesantren')
-        ->assertSeeText('Gedung Asrama Mukim 24 Jam')
-        ->assertSeeText('Ruang Kelas & Belajar Terpadu')
-        ->assertSeeText('Area Olahraga Sunnah & Ekstrakurikuler');
+        ->assertSeeText('Gedung Asrama Santri')
+        ->assertSeeText('Perpustakaan & Ruang Baca')
+        ->assertSeeText('Unit Kesehatan Santri (UKS)')
+        ->assertSeeText('Dapur Umum Higienis')
+        ->assertSeeText('Kantin & Koperasi Santri');
 });
 
-test('academic mts page displays full boarding syllabus and fee structure', function () {
-    $response = $this->get('/akademik/mts-mukim');
+test('program page displays 6 program unggulan and extracurriculars', function () {
+    $response = $this->get('/program');
     $response->assertOk();
 
-    $response->assertSeeText('Madrasah Tsanawiyah (MTS Mukim 24 Jam)')
+    $response->assertSeeText('Tahfidz Al-Qur\'an')
+        ->assertSeeText('Tahfidz Hadits')
+        ->assertSeeText('Kajian Kitab Kuning')
+        ->assertSeeText('Bahasa Arab & Inggris')
+        ->assertSeeText('Public Speaking & Da\'wah')
+        ->assertSeeText('Pembinaan Akhlak & Kedisiplinan')
+        ->assertSeeText('Pencak Silat')
+        ->assertSeeText('Hadroh & Rebana')
+        ->assertSeeText('Kaligrafi (Khattil Qur\'an)')
+        ->assertSeeText('Seni Baca Al-Qur\'an (Tilawah)')
+        ->assertSeeText('Futsal & Olahraga')
+        ->assertSeeText('Pramuka Santri')
+        ->assertSee('id="program-unggulan"', false)
+        ->assertSee('id="program-pendidikan"', false)
+        ->assertSee('id="ekstrakurikuler"', false);
+});
+
+test('program page displays full boarding syllabus and fee structure for MTs and MDTA', function () {
+    $response = $this->get('/program');
+    $response->assertOk();
+
+    $response->assertSeeText('MTs (Madrasah Tsanawiyah)')
         ->assertSeeText('500.000')
-        ->assertSeeText('Target Capaian Lulusan MTS (3 Tahun)')
-        ->assertSeeText('Tahfidz 30 Juz Mutqin');
+        ->assertSeeText('MDTA (Madrasah Diniyah Takmiliyah Awaliyah)')
+        ->assertSeeText('12.000');
 });
 
-test('academic mdta page displays afternoon syllabus and schedule', function () {
-    $response = $this->get('/akademik/mdta');
+test('gallery page loads with pinterest masonry layout and category filter tabs', function () {
+    $response = $this->get('/galeri');
     $response->assertOk();
 
-    $response->assertSeeText('Madrasah Diniyah Takmiliyah Awaliyah (MDTA Sekolah Sore)')
-        ->assertSeeText('12.000')
-        ->assertSeeText('Al-Qur\'an & Tajwid Praktis');
+    $response->assertSeeText('Potret Rutinitas & Dokumentasi Santri')
+        ->assertSeeText('Pinterest Masonry Grid')
+        ->assertSeeText('Semua Galeri')
+        ->assertSeeText('Tahfidz & Tasmi\'')
+        ->assertSeeText('Kegiatan Santri')
+        ->assertSeeText('Prestasi & Lomba');
 });
 
-test('academic tahfidz page displays sabaq manzil methodology and matan tajwid', function () {
-    $response = $this->get('/akademik/kurikulum-tahfidz');
-    $response->assertOk();
-
-    $response->assertSeeText('Kurikulum Tahfidz 30 Juz & Kitab Kuning Salaf')
-        ->assertSeeText('Sabaq (Setoran Baru)')
-        ->assertSeeText('Sabqi (Muraja\'ah Dekat)')
-        ->assertSeeText('Manzil (Muraja\'ah Total)')
-        ->assertSeeText('Matan Tuhfatul Athfal')
-        ->assertSeeText('Mandzumah Al-Jazariyah')
-        ->assertSeeText('At-Tibyan fi Adabi Hamalatil Quran');
-});
-
-test('contact page loads campus address and reservation form', function () {
-    SiteSetting::set('school_address', 'Jl. Cibanteng Babengket, Desa Cihideung Udik, Ciampea Bogor');
-    SiteSetting::set('school_phone', '0812-9999-8888');
+test('contact page loads Serang Banten campus address and dual hotlines', function () {
+    SiteSetting::set('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
+    SiteSetting::set('school_phone', '0895-0718-4811');
+    SiteSetting::set('psb_whatsapp_mdta_number', '0858-8276-7078');
 
     $response = $this->get('/kontak');
     $response->assertOk();
 
-    $response->assertSeeText('Kunjungi Kampus Kami di Ciampea, Bogor')
-        ->assertSeeText('Formulir Reservasi Silaturahmi')
-        ->assertSeeText('0812-9999-8888')
-        ->assertSeeText('Cihideung Udik, Ciampea Bogor');
+    $response->assertSeeText('0895-0718-4811')
+        ->assertSeeText('0858-8276-7078')
+        ->assertSeeText('Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
 });
 
 test('contact consultation form validates and redirects to WhatsApp hotline', function () {
-    SiteSetting::set('psb_whatsapp_number', '6281234567890');
+    SiteSetting::set('psb_whatsapp_number', '089507184811');
 
     $response = $this->post('/kontak/konsultasi', [
         'parent_name' => 'Bapak Ahmad Fauzi',
@@ -124,6 +140,6 @@ test('contact consultation form validates and redirects to WhatsApp hotline', fu
 
     $response->assertRedirect();
     $targetUrl = $response->headers->get('Location');
-    expect($targetUrl)->toContain('wa.me/6281234567890')
+    expect($targetUrl)->toContain('wa.me/6289507184811')
         ->and($targetUrl)->toContain(urlencode('Bapak Ahmad Fauzi'));
 });

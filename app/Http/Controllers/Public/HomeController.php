@@ -12,7 +12,7 @@ use App\Models\SiteSetting;
 use App\Models\Teacher;
 use Illuminate\Contracts\View\View;
 
-class HomeController extends Controller
+final class HomeController extends Controller
 {
     public function __invoke(): View
     {
@@ -22,6 +22,9 @@ class HomeController extends Controller
             ->where('is_active', true)
             ->orderBy('sort_order')
             ->get();
+
+        $pengasuh = $teachers->firstWhere('sort_order', 2)
+            ?? $teachers->firstWhere('role_title', 'Pengasuh Pondok Pesantren');
 
         $latestPosts = Post::query()
             ->where('status', 'published')
@@ -46,14 +49,16 @@ class HomeController extends Controller
         $feeMts = $activeWave ? number_format($activeWave->fee_mts, 0, ',', '.') : '100.000';
         $feeMdta = $activeWave ? number_format($activeWave->fee_mdta, 0, ',', '.') : '25.000';
 
-        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
-        $siteAddress = (string) SiteSetting::get('school_address', SiteSetting::get('site_address', 'Jl. Cibanteng Babengket, RT 02 / RW 02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat 16620'));
-        $sitePhone = (string) SiteSetting::get('school_phone', SiteSetting::get('site_phone', '0812-3456-7890'));
-        $siteEmail = (string) SiteSetting::get('school_email', SiteSetting::get('site_email', 'info@daareltazkiyah.sch.id'));
+        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
+        $waMdtaNumber = (string) SiteSetting::get('psb_whatsapp_mdta_number', '0858-8276-7078');
+        $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
+        $sitePhone = (string) SiteSetting::get('school_phone', '0895-0718-4811');
+        $siteEmail = (string) SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
 
         return view('public.home', compact(
             'activeWave',
             'teachers',
+            'pengasuh',
             'featuredPost',
             'recentPosts',
             'latestPosts',
@@ -61,6 +66,7 @@ class HomeController extends Controller
             'feeMts',
             'feeMdta',
             'waNumber',
+            'waMdtaNumber',
             'siteAddress',
             'sitePhone',
             'siteEmail'

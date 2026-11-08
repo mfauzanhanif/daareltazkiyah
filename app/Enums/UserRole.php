@@ -13,8 +13,8 @@ enum UserRole: string
     public function label(): string
     {
         return match ($this) {
-            self::SuperAdmin => 'Super Administrator',
-            self::AdminCms => 'Admin CMS & Berita',
+            self::SuperAdmin => 'Super Admin',
+            self::AdminCms => 'Admin CMS',
             self::AdminPsb => 'Panitia PSB',
         };
     }

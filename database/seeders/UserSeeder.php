@@ -16,11 +16,11 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // 1. Super Administrator (Akses Penuh Seluruh Modul)
+        // 1. Super Admin (Akses Penuh Seluruh Modul)
         User::updateOrCreate(
             ['email' => 'admin@daareltazkiyah.sch.id'],
             [
-                'name' => 'Super Administrator',
+                'name' => 'Super Admin',
                 'password' => Hash::make('password123'),
                 'role' => UserRole::SuperAdmin,
                 'email_verified_at' => now(),
@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'cms@daareltazkiyah.sch.id'],
             [
-                'name' => 'Admin CMS & Humas',
+                'name' => 'Admin CMS',
                 'password' => Hash::make('password123'),
                 'role' => UserRole::AdminCms,
                 'email_verified_at' => now(),

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 use App\Http\Controllers\Portal\PortalCmsController;
 use App\Http\Controllers\Portal\PortalPsbController;
-use App\Http\Controllers\Public\AcademicController;
 use App\Http\Controllers\Public\ContactController;
 use App\Http\Controllers\Public\GalleryController;
 use App\Http\Controllers\Public\HomeController;
 use App\Http\Controllers\Public\NewsController;
 use App\Http\Controllers\Public\ProfileController;
+use App\Http\Controllers\Public\ProgramController;
 use App\Http\Controllers\Public\PsbController;
 use App\Http\Controllers\Public\SystemSetupController;
 use Illuminate\Support\Facades\Route;
@@ -17,19 +17,9 @@ use Illuminate\Support\Facades\Route;
 // --- Public Landing Page ---
 Route::get('/', HomeController::class)->name('home');
 
-// --- Public Profile Pages (Editorial Multi-Page) ---
-Route::prefix('profil')->name('profile.')->group(function () {
-    Route::get('/sejarah-visi-misi', [ProfileController::class, 'sejarah'])->name('sejarah');
-    Route::get('/dewan-asatidz', [ProfileController::class, 'teachers'])->name('teachers');
-    Route::get('/fasilitas', [ProfileController::class, 'facilities'])->name('facilities');
-});
-
-// --- Public Academic Pages (Editorial Multi-Page) ---
-Route::prefix('akademik')->name('academic.')->group(function () {
-    Route::get('/mts-mukim', [AcademicController::class, 'mts'])->name('mts');
-    Route::get('/mdta', [AcademicController::class, 'mdta'])->name('mdta');
-    Route::get('/kurikulum-tahfidz', [AcademicController::class, 'tahfidz'])->name('tahfidz');
-});
+// --- Public Profil & Program (Unified Interactive Pages) ---
+Route::get('/profil', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/program', [ProgramController::class, 'index'])->name('program.index');
 
 // --- Public Contact Page ---
 Route::get('/kontak', [ContactController::class, 'index'])->name('contact.index');
@@ -39,7 +29,7 @@ Route::post('/kontak/konsultasi', [ContactController::class, 'sendConsultation']
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
 Route::get('/berita/{slug}', [NewsController::class, 'show'])->name('news.show');
 
-// --- Public Gallery (CMS) ---
+// --- Public Gallery (CMS - Pinterest Masonry Grid) ---
 Route::get('/galeri', [GalleryController::class, 'index'])->name('gallery.index');
 
 // --- Public PSB Online Portal ---

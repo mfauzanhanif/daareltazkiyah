@@ -5,46 +5,48 @@
 ])
 
 @php
-    $siteAddress = $siteAddress ?? \App\Models\SiteSetting::get('school_address', \App\Models\SiteSetting::get('site_address', 'Jl. Cibanteng Babengket, RT 02 / RW 02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat 16620'));
-    $sitePhone = $sitePhone ?? \App\Models\SiteSetting::get('school_phone', \App\Models\SiteSetting::get('site_phone', '0812-3456-7890'));
-    $siteEmail = $siteEmail ?? \App\Models\SiteSetting::get('school_email', \App\Models\SiteSetting::get('site_email', 'info@daareltazkiyah.sch.id'));
-    $facebookUrl = \App\Models\SiteSetting::get('facebook_url', 'https://facebook.com');
-    $instagramUrl = \App\Models\SiteSetting::get('instagram_url', 'https://instagram.com');
-    $youtubeUrl = \App\Models\SiteSetting::get('youtube_url', 'https://youtube.com');
+    $siteAddress = $siteAddress ?? \App\Models\SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
+    $sitePhone = $sitePhone ?? \App\Models\SiteSetting::get('school_phone', '0895-0718-4811');
+    $siteEmail = $siteEmail ?? \App\Models\SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
+    $facebookUrl = \App\Models\SiteSetting::get('facebook_url', 'https://facebook.com/media_daar_eltazkiyah');
+    $instagramUrl = \App\Models\SiteSetting::get('instagram_url', 'https://instagram.com/media_daar_eltazkiyah');
+    $youtubeUrl = \App\Models\SiteSetting::get('youtube_url', 'https://youtube.com/@media_daar_eltazkiyah');
+    $tiktokUrl = \App\Models\SiteSetting::get('tiktok_url', 'https://tiktok.com/@media_daar_eltazkiyah');
 @endphp
 
 <footer class="bg-[#084C27] text-white pt-16 pb-8 border-t border-[#B89758]/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
 
-            <!-- Col 1: About & Arabic Citation -->
+            <!-- Col 1: About & Logo -->
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 border border-[#B89758] rounded-md bg-[#059669] flex items-center justify-center font-sans font-bold text-lg text-white">
-                        DT
-                    </div>
+                    <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}"
+                        alt="Logo PPMTQ Daar El Tazkiyah"
+                        class="w-12 h-12 object-contain bg-white rounded-md p-1 border border-[#B89758]"
+                        onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
                     <div>
-                        <span class="font-sans font-bold text-lg text-white block leading-tight">Daar El Tazkiyah</span>
-                        <span class="text-[11px] text-emerald-200 uppercase font-semibold">PPMTQ Sumardi Bogor</span>
+                        <span class="font-sans font-extrabold text-base text-white block leading-tight">Daar El Tazkiyah Sumardi</span>
+                        <span class="text-[10px] text-emerald-200 uppercase font-semibold">PPMTQ Petir, Serang - Banten</span>
                     </div>
                 </div>
                 <p class="text-xs text-emerald-100/80 leading-relaxed">
-                    Pondok Pesantren Modern Tahfidzul Quran Daar El Tazkiyah Sumardi mendidik generasi huffadz 30 juz mutqin, berakhlak mulia, cerdas, berprestasi, dan siap mengabdi untuk umat.
+                    Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi mendidik generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi, dan siap mengabdi untuk umat.
                 </p>
                 <div class="text-xs text-amber-300 font-medium font-arabic text-base sm:text-lg leading-relaxed pt-1" dir="rtl" style="line-height: 1.8;">
                     مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
                 </div>
             </div>
 
-            <!-- Col 2: Educational Programs (Multi-Page Dedicated Links) -->
+            <!-- Col 2: Educational Programs -->
             <div class="space-y-3">
-                <span class="editorial-label text-amber-300">PROGRAM AKADEMIK</span>
+                <span class="editorial-label text-amber-300">PROGRAM PENDIDIKAN</span>
                 <ul class="text-xs space-y-2 text-emerald-100/80 pt-1">
-                    <li><a href="{{ route('academic.mts') }}" class="hover:text-white hover:underline transition">MTS (Mukim 24 Jam)</a></li>
-                    <li><a href="{{ route('academic.mdta') }}" class="hover:text-white hover:underline transition">MDTA (Sekolah Sore)</a></li>
-                    <li><a href="{{ route('academic.tahfidz') }}" class="hover:text-white hover:underline transition">Tahfidzul Qur'an 30 Juz Bersanad</a></li>
-                    <li><a href="{{ route('academic.tahfidz') }}" class="hover:text-white hover:underline transition">Kajian Kitab Kuning Salaf</a></li>
-                    <li><a href="{{ route('academic.mts') }}" class="hover:text-white hover:underline transition">Kurikulum Terpadu Kemenag RI</a></li>
+                    <li><a href="{{ route('program.index') }}#program-unggulan" class="hover:text-white hover:underline transition">6 Program Unggulan</a></li>
+                    <li><a href="{{ route('program.index') }}#program-pendidikan" class="hover:text-white hover:underline transition">MTs Mukim (Asrama 24 Jam)</a></li>
+                    <li><a href="{{ route('program.index') }}#program-pendidikan" class="hover:text-white hover:underline transition">MDTA (Sekolah Sore Non-Mukim)</a></li>
+                    <li><a href="{{ route('program.index') }}#ekstrakurikuler" class="hover:text-white hover:underline transition">Ekstrakurikuler Santri</a></li>
+                    <li><a href="{{ route('psb.index') }}" class="hover:text-white hover:underline transition">Penerimaan Santri Baru (PSB)</a></li>
                 </ul>
             </div>
 
@@ -52,26 +54,27 @@
             <div class="space-y-3">
                 <span class="editorial-label text-amber-300">PROFIL & INFORMASI</span>
                 <ul class="text-xs space-y-2 text-emerald-100/80 pt-1">
-                    <li><a href="{{ route('profile.sejarah') }}" class="hover:text-white hover:underline transition">Sejarah & Visi Misi Lembaga</a></li>
-                    <li><a href="{{ route('profile.teachers') }}" class="hover:text-white hover:underline transition">Dewan Asatidz & Tenaga Pendidik</a></li>
-                    <li><a href="{{ route('profile.facilities') }}" class="hover:text-white hover:underline transition">Sarana & Prasarana Kampus</a></li>
-                    <li><a href="{{ route('psb.index') }}" class="hover:text-white hover:underline transition">Pendaftaran PSB Online</a></li>
-                    <li><a href="{{ route('psb.status') }}" class="hover:text-white hover:underline transition">Cek Status Penerimaan Santri</a></li>
+                    <li><a href="{{ route('profile.index') }}#selayang-pandang" class="hover:text-white hover:underline transition">Selayang Pandang</a></li>
+                    <li><a href="{{ route('profile.index') }}#visi-misi" class="hover:text-white hover:underline transition">Visi & 4 Pilar Misi</a></li>
+                    <li><a href="{{ route('profile.index') }}#fasilitas" class="hover:text-white hover:underline transition">Sarana & Fasilitas</a></li>
+                    <li><a href="{{ route('profile.index') }}#pendidik" class="hover:text-white hover:underline transition">Tenaga Pendidik & Pembimbing</a></li>
                     <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Warta & Berita Pondok</a></li>
-                    <li><a href="{{ route('gallery.index') }}" class="hover:text-white hover:underline transition">Galeri Dokumentasi Kegiatan</a></li>
-                    <li><a href="{{ route('contact.index') }}" class="hover:text-white hover:underline transition">Kontak & Lokasi Kampus</a></li>
+                    <li><a href="{{ route('gallery.index') }}" class="hover:text-white hover:underline transition">Galeri Dokumentasi</a></li>
+                    <li><a href="{{ route('psb.status') }}" class="hover:text-white hover:underline transition">Cek Status PSB Online</a></li>
                 </ul>
             </div>
 
             <!-- Col 4: Secretariat & Socials -->
             <div class="space-y-4">
-                <span class="editorial-label text-amber-300">SEKRETARIAT PONDOK</span>
+                <span class="editorial-label text-amber-300">SEKRETARIAT PESANTREN</span>
                 <p class="text-xs text-emerald-100/80 leading-relaxed">
                     {{ $siteAddress }}
                 </p>
                 <div class="text-xs text-emerald-100/80 space-y-1.5">
-                    <p><span class="text-amber-300 font-medium">Telepon / WhatsApp:</span> {{ $sitePhone }}</p>
+                    <p><span class="text-amber-300 font-medium">WhatsApp MTs:</span> 0895-0718-4811</p>
+                    <p><span class="text-amber-300 font-medium">WhatsApp MDTA:</span> 0858-8276-7078</p>
                     <p><span class="text-amber-300 font-medium">Email Resmi:</span> {{ $siteEmail }}</p>
+                    <p><span class="text-amber-300 font-medium">Media Sosial:</span> @media_daar_eltazkiyah</p>
                 </div>
 
                 <!-- Social Icons -->
@@ -91,6 +94,11 @@
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         </a>
                     @endif
+                    @if($tiktokUrl)
+                        <a href="{{ $tiktokUrl }}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-white/20 hover:border-amber-300 text-white flex items-center justify-center transition" aria-label="TikTok">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.35 2.27.7.13 1.43.05 2.09-.22.95-.39 1.64-1.24 1.84-2.24.11-.6.13-1.21.13-1.82.01-4.28 0-8.56 0-12.84z"/></svg>
+                        </a>
+                    @endif
                 </div>
             </div>
 
@@ -98,9 +106,9 @@
 
         <!-- Bottom Copyright Bar -->
         <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-emerald-200/70 gap-4">
-            <p>&copy; {{ date('Y') }} Pondok Pesantren Modern Tahfidzul Quran Daar El Tazkiyah Sumardi. Seluruh hak cipta dilindungi.</p>
+            <p>&copy; {{ date('Y') }} Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi. Seluruh hak cipta dilindungi.</p>
             <div class="flex items-center gap-6">
-                <a href="{{ route('profile.sejarah') }}" class="hover:text-emerald-100 transition">Tentang Kami</a>
+                <a href="{{ route('profile.index') }}" class="hover:text-emerald-100 transition">Profil Pondok</a>
                 <a href="{{ route('contact.index') }}" class="hover:text-emerald-100 transition">Hubungi Kami</a>
                 <a href="{{ route('login') }}" class="hover:text-amber-300 transition font-semibold">Admin Panel</a>
             </div>

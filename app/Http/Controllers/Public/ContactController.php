@@ -11,7 +11,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+final class ContactController extends Controller
 {
     /**
      * Display the contact page with interactive map, secretariat hours, and visit scheduling.
@@ -19,14 +19,16 @@ class ContactController extends Controller
     public function index(): View
     {
         $activeWave = AdmissionWave::currentActive();
-        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
-        $siteAddress = (string) SiteSetting::get('school_address', SiteSetting::get('site_address', 'Jl. Cibanteng Babengket, RT 02 / RW 02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat 16620'));
-        $sitePhone = (string) SiteSetting::get('school_phone', SiteSetting::get('site_phone', '0812-3456-7890'));
-        $siteEmail = (string) SiteSetting::get('school_email', SiteSetting::get('site_email', 'info@daareltazkiyah.sch.id'));
+        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
+        $waMdtaNumber = (string) SiteSetting::get('psb_whatsapp_mdta_number', '0858-8276-7078');
+        $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
+        $sitePhone = (string) SiteSetting::get('school_phone', '0895-0718-4811');
+        $siteEmail = (string) SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
 
         return view('public.contact', compact(
             'activeWave',
             'waNumber',
+            'waMdtaNumber',
             'siteAddress',
             'sitePhone',
             'siteEmail'
@@ -46,14 +48,26 @@ class ContactController extends Controller
             'notes' => ['nullable', 'string', 'max:500'],
         ]);
 
-        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '6281234567890');
-        $cleanWa = preg_replace('/[^0-9]/', '', $waNumber);
+        $targetWa = $validated['program_interest'] === 'MDTA'
+            ? (string) SiteSetting::get('psb_whatsapp_mdta_number', '0858-8276-7078')
+            : (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
+
+        $cleanWa = preg_replace('/[^0-9]/', '', $targetWa);
+        if (str_starts_with($cleanWa, '0')) {
+            $cleanWa = '62'.substr($cleanWa, 1);
+        }
+
+        $programLabel = match ($validated['program_interest']) {
+            'MTS' => 'MTs (Madrasah Tsanawiyah Mukim 24 Jam)',
+            'MDTA' => 'MDTA (Sekolah Sore Non-Mukim)',
+            default => 'Konsultasi Umum Pesantren',
+        };
 
         $message = "Assalamu'alaikum Warahmatullahi Wabarakatuh.\n";
         $message .= "Saya ingin menjadwalkan silaturahmi / konsultasi pondok:\n";
         $message .= "Nama Wali: {$validated['parent_name']}\n";
         $message .= "No. WhatsApp: {$validated['phone']}\n";
-        $message .= "Minat Program: {$validated['program_interest']}\n";
+        $message .= "Minat Program: {$programLabel}\n";
         if (! empty($validated['visit_date'])) {
             $message .= "Rencana Kunjungan: {$validated['visit_date']}\n";
         }

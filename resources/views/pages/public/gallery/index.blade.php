@@ -1,10 +1,8 @@
-@extends('layouts.public')
-
-@section('title', 'Galeri Dokumentasi Kegiatan - PPMTQ Daar El Tazkiyah Sumardi')
+@extends('layouts.public', ['title' => 'Galeri Foto Kegiatan Santri - PPMTQ Daar El Tazkiyah Sumardi'])
 
 @section('meta')
     <meta name="description"
-        content="Potret dinamika kehidupan, pembelajaran Al-Qur'an, dan dokumentasi kegiatan harian santri PPMTQ Daar El Tazkiyah Sumardi.">
+        content="Potret dinamika kehidupan, pembelajaran Al-Qur'an, dan dokumentasi kegiatan harian santri PPMTQ Daar El Tazkiyah Sumardi di Serang, Banten.">
     <meta property="og:title" content="Galeri Foto Kegiatan - PPMTQ Daar El Tazkiyah Sumardi">
     <meta property="og:description"
         content="Dokumentasi visual kegiatan santri, tahfidz Al-Qur'an, dan pembelajaran di PPMTQ Daar El Tazkiyah.">
@@ -16,22 +14,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl space-y-4">
                 <div class="flex items-center gap-3">
-                    <span class="editorial-label">04 — WARTA & DOKUMENTASI</span>
+                    <span class="editorial-label text-[#059669]">04 — DOKUMENTASI VISUAL</span>
                     <span class="w-8 h-px bg-[#B89758]"></span>
-                    <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Galeri Visual</span>
+                    <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Pinterest Masonry Gallery</span>
                 </div>
-                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0D3B2E] tracking-tight leading-[1.15]">
+                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Potret Rutinitas & Dokumentasi Santri
                 </h1>
                 <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
-                    Dokumentasi visual kegiatan harian santri, halaqah Al-Qur'an, ujian tasmi', ekstrakurikuler, dan keasrian kampus PPMTQ Daar El Tazkiyah Sumardi di Ciampea, Bogor.
+                    Dokumentasi visual kegiatan harian santri, halaqah Al-Qur'an, tasmi' akbar, ekstrakurikuler, dan lingkungan asri kampus PPMTQ Daar El Tazkiyah Sumardi di Serang, Banten.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Main Gallery Grid with Lightbox -->
-    <section class="py-16 md:py-24 bg-[#FAF8F5]" x-data="{
+    <!-- Main Gallery Section with Pinterest Masonry & Lightbox -->
+    <section class="py-12 md:py-20 bg-[#FAF8F5]" x-data="{
+        activeFilter: 'semua',
         isOpen: false,
         photos: [],
         currentIndex: 0,
@@ -68,11 +67,43 @@
             }
         }
     }" @keydown.escape.window="closeLightbox()"
-        @keydown.arrow-right.window="if (isOpen) next()" @keydown.arrow-left.window="if (isOpen) prev()">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        @keydown.arrow-right.window="if (isOpen) next()"
+        @keydown.arrow-left.window="if (isOpen) prev()">
 
-            <!-- Albums Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+            <!-- Interactive Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E0D8] pb-4">
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" @click="activeFilter = 'semua'"
+                        class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition"
+                        :class="activeFilter === 'semua' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'bg-white border border-[#E5E0D8] text-[#4B6358] hover:border-[#0D3B2E]'">
+                        Semua Galeri
+                    </button>
+                    <button type="button" @click="activeFilter = 'tahfidz'"
+                        class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition"
+                        :class="activeFilter === 'tahfidz' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'bg-white border border-[#E5E0D8] text-[#4B6358] hover:border-[#0D3B2E]'">
+                        Tahfidz & Tasmi'
+                    </button>
+                    <button type="button" @click="activeFilter = 'kegiatan'"
+                        class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition"
+                        :class="activeFilter === 'kegiatan' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'bg-white border border-[#E5E0D8] text-[#4B6358] hover:border-[#0D3B2E]'">
+                        Kegiatan Santri
+                    </button>
+                    <button type="button" @click="activeFilter = 'prestasi'"
+                        class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition"
+                        :class="activeFilter === 'prestasi' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'bg-white border border-[#E5E0D8] text-[#4B6358] hover:border-[#0D3B2E]'">
+                        Prestasi & Lomba
+                    </button>
+                </div>
+
+                <div class="text-xs font-mono text-[#4B6358]">
+                    Format: <span class="text-[#059669] font-bold">Pinterest Masonry Grid</span>
+                </div>
+            </div>
+
+            <!-- Pinterest Masonry Grid Container -->
+            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                 @forelse($galleries as $gallery)
                     @php
                         $albumPhotos = [];
@@ -94,39 +125,54 @@
                             ];
                         }
                         $photoCount = $gallery->photos->count();
+
+                        $titleLower = strtolower($gallery->title . ' ' . $gallery->description);
+                        $tag = 'kegiatan';
+                        if (str_contains($titleLower, 'tahfidz') || str_contains($titleLower, 'tasmi') || str_contains($titleLower, 'qur')) {
+                            $tag = 'tahfidz';
+                        } elseif (str_contains($titleLower, 'prestasi') || str_contains($titleLower, 'juara') || str_contains($titleLower, 'lomba')) {
+                            $tag = 'prestasi';
+                        }
                     @endphp
 
-                    <div class="bg-white border border-[#E5E0D8] rounded-md overflow-hidden hover:border-[#0D3B2E] transition flex flex-col justify-between group">
+                    <!-- Pinterest Pin Card -->
+                    <div class="break-inside-avoid bg-white border border-[#E5E0D8] rounded-md overflow-hidden hover:border-[#0D3B2E] hover:shadow-lg transition duration-300 group flex flex-col justify-between"
+                        x-show="activeFilter === 'semua' || activeFilter === '{{ $tag }}'">
+
                         <div>
-                            <!-- Album Cover (Clickable) -->
-                            <div class="aspect-4/3 bg-[#FAF8F5] relative overflow-hidden cursor-pointer border-b border-[#E5E0D8]"
+                            <!-- Image Pin (Clickable to Lightbox index 0) -->
+                            <div class="relative overflow-hidden bg-gray-100 cursor-pointer"
                                 @click="openLightbox({{ Js::from($albumPhotos) }}, 0)">
                                 @if ($gallery->cover_image)
                                     <img src="{{ asset('storage/' . $gallery->cover_image) }}" alt="{{ $gallery->title }}"
                                         loading="lazy"
-                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                                        class="w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                                @elseif ($gallery->photos->isNotEmpty())
+                                    <img src="{{ asset('storage/' . $gallery->photos->first()->file_path) }}" alt="{{ $gallery->title }}"
+                                        loading="lazy"
+                                        class="w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
                                 @else
-                                    <div class="w-full h-full bg-[#FAF8F5] flex items-center justify-center text-[#B89758] font-sans text-2xl font-bold">
-                                        DT
-                                    </div>
-                                @endif
-
-                                <!-- Event Date Marker (Top-Left) -->
-                                @if ($gallery->event_date)
-                                    <span class="absolute top-2 left-2 px-2 py-0.5 bg-[#0D3B2E] text-white text-[10px] font-mono rounded">
-                                        {{ \Carbon\Carbon::parse($gallery->event_date)->translatedFormat('d M Y') }}
-                                    </span>
+                                    <x-public.image-placeholder :title="$gallery->title" aspect="aspect-4/3" />
                                 @endif
 
                                 <!-- Photo Count Marker (Top-Right) -->
                                 <span class="absolute top-2 right-2 px-2 py-0.5 bg-black/70 text-white text-[10px] font-mono rounded">
                                     {{ $photoCount > 0 ? $photoCount : 1 }} Foto
                                 </span>
+
+                                @if ($gallery->event_date)
+                                    <span class="absolute top-2 left-2 px-2 py-0.5 bg-[#0D3B2E] text-white text-[10px] font-mono rounded">
+                                        {{ \Carbon\Carbon::parse($gallery->event_date)->translatedFormat('d M Y') }}
+                                    </span>
+                                @endif
                             </div>
 
-                            <!-- Album Details -->
-                            <div class="p-5 space-y-2">
-                                <h3 class="font-sans font-bold text-base md:text-lg text-[#0D3B2E] leading-snug group-hover:text-[#059669] transition cursor-pointer"
+                            <!-- Pin Details -->
+                            <div class="p-4 space-y-1.5">
+                                <div class="flex items-center justify-between text-[10px] font-mono text-[#B89758] uppercase">
+                                    <span>{{ $tag === 'tahfidz' ? 'Tahfidz & Tasmi' : ($tag === 'prestasi' ? 'Prestasi Santri' : 'Dinamika Santri') }}</span>
+                                </div>
+                                <h3 class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug cursor-pointer"
                                     @click="openLightbox({{ Js::from($albumPhotos) }}, 0)">
                                     {{ $gallery->title }}
                                 </h3>
@@ -138,18 +184,18 @@
                             </div>
                         </div>
 
-                        <!-- Mini Thumbnails -->
+                        <!-- Mini Thumbnails Carousel Strip -->
                         @if ($gallery->photos->isNotEmpty())
-                            <div class="p-5 pt-0 border-t border-[#E5E0D8] mt-2">
-                                <div class="text-[10px] font-mono uppercase text-[#4B6358] mb-2 flex items-center justify-between">
-                                    <span>Koleksi Foto ({{ $photoCount }}):</span>
+                            <div class="p-4 pt-0 border-t border-[#E5E0D8]/60 mt-2">
+                                <div class="text-[10px] font-mono uppercase text-[#4B6358] mb-1.5 flex items-center justify-between">
+                                    <span>Koleksi Foto:</span>
                                     <span class="text-[#059669]">Klik Perbesar</span>
                                 </div>
-                                <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
+                                <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-thin">
                                     @foreach ($gallery->photos as $photoIndex => $photo)
                                         <button type="button"
                                             @click="openLightbox({{ Js::from($albumPhotos) }}, {{ $photoIndex }})"
-                                            class="w-11 h-11 shrink-0 rounded border border-[#E5E0D8] hover:border-[#0D3B2E] transition cursor-pointer overflow-hidden"
+                                            class="w-10 h-10 shrink-0 rounded border border-[#E5E0D8] hover:border-[#0D3B2E] transition cursor-pointer overflow-hidden"
                                             title="{{ $photo->caption ?? 'Perbesar Foto' }}">
                                             <img src="{{ asset('storage/' . $photo->file_path) }}"
                                                 alt="{{ $photo->caption ?? 'Foto' }}" loading="lazy"
@@ -170,11 +216,16 @@
             </div>
 
             <!-- Lightbox Modal -->
-            <div x-show="isOpen" x-cloak x-transition:enter="transition ease-out duration-200"
-                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-                x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0" role="dialog" aria-modal="true" aria-label="Penampil Foto Galeri"
-                @touchstart="handleTouchStart($event)" @touchend="handleTouchEnd($event)"
+            <div x-show="isOpen" x-cloak
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                role="dialog" aria-modal="true" aria-label="Penampil Foto Galeri"
+                @touchstart="handleTouchStart($event)"
+                @touchend="handleTouchEnd($event)"
                 class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 md:p-8 select-none">
 
                 <!-- Top Action Bar -->
@@ -183,7 +234,7 @@
                         Foto <span x-text="currentIndex + 1"></span> dari <span x-text="photos.length"></span>
                     </div>
                     <button type="button" @click="closeLightbox()"
-                        class="p-1.5 border border-white/30 rounded-md text-white hover:bg-white/10 transition cursor-pointer"
+                        class="p-2 border border-white/30 rounded-md text-white hover:bg-white/10 transition cursor-pointer"
                         aria-label="Tutup Galeri">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -201,8 +252,7 @@
                 </button>
 
                 <!-- Main Image & Caption Container -->
-                <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center"
-                    @click.outside="closeLightbox()">
+                <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center" @click.outside="closeLightbox()">
                     <div class="relative overflow-hidden border border-white/20 rounded-md flex items-center justify-center bg-black/40">
                         <template x-if="photos.length > 0 && photos[currentIndex]">
                             <img :src="photos[currentIndex].src" :alt="photos[currentIndex].alt"

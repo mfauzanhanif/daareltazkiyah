@@ -21,17 +21,17 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'school_tagline',
-                'value' => 'Mencetak Generasi Qur\'ani, Berakhlak Mulia, dan Berwawasan Global',
+                'value' => 'Bersama Al-Qur\'an Meraih Masa Depan Gemilang',
                 'group' => SettingGroup::General,
             ],
             [
                 'key' => 'school_address',
-                'value' => 'Jl. Pangeran Drajat No. 45, Kesambi, Kota Cirebon, Jawa Barat 45134',
+                'value' => 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten',
                 'group' => SettingGroup::General,
             ],
             [
                 'key' => 'school_phone',
-                'value' => '(0231) 882233',
+                'value' => '0895-0718-4811',
                 'group' => SettingGroup::General,
             ],
             [
@@ -41,14 +41,19 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'maps_embed_url',
-                'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.339234839212!2d108.5523!3d-6.7321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDMnNTUuNiJTIDEwOMKwMzMnMDguMyJF!5e0!3m2!1sen!2sid!4v1680000000000!5m2!1sen!2sid',
+                'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.578647895476!2d106.2163931!3d-6.2081547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e423d24e1011867%3A0x6b2e3895e7b514ab!2sMekarbaru%2C%20Kec.%20Petir%2C%20Kabupaten%20Serang%2C%20Banten!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid',
                 'group' => SettingGroup::General,
             ],
 
             // PSB Information
             [
                 'key' => 'psb_whatsapp_number',
-                'value' => '6281234567890',
+                'value' => '0895-0718-4811',
+                'group' => SettingGroup::Psb,
+            ],
+            [
+                'key' => 'psb_whatsapp_mdta_number',
+                'value' => '0858-8276-7078',
                 'group' => SettingGroup::Psb,
             ],
             [
@@ -58,7 +63,7 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'psb_contact_person',
-                'value' => 'Ustadzah Fatimah, S.Pd.I',
+                'value' => 'Panitia PSB Daar El Tazkiyah',
                 'group' => SettingGroup::Psb,
             ],
 
@@ -92,22 +97,22 @@ class SiteSettingSeeder extends Seeder
             // Social Media
             [
                 'key' => 'facebook_url',
-                'value' => 'https://facebook.com/daareltazkiyah',
+                'value' => 'https://facebook.com/media_daar_eltazkiyah',
                 'group' => SettingGroup::SocialMedia,
             ],
             [
                 'key' => 'instagram_url',
-                'value' => 'https://instagram.com/daareltazkiyah',
+                'value' => 'https://instagram.com/media_daar_eltazkiyah',
                 'group' => SettingGroup::SocialMedia,
             ],
             [
                 'key' => 'youtube_url',
-                'value' => 'https://youtube.com/@daareltazkiyah',
+                'value' => 'https://youtube.com/@media_daar_eltazkiyah',
                 'group' => SettingGroup::SocialMedia,
             ],
             [
                 'key' => 'tiktok_url',
-                'value' => 'https://tiktok.com/@daareltazkiyah',
+                'value' => 'https://tiktok.com/@media_daar_eltazkiyah',
                 'group' => SettingGroup::SocialMedia,
             ],
         ];
