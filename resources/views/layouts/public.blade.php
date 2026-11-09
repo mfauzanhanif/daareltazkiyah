@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fluxAppearance
 </head>
-<body class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between">
+<body class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between overflow-x-hidden">
 
     @php
         $activeWave = \App\Models\AdmissionWave::currentActive();

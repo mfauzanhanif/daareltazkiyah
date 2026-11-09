@@ -280,12 +280,12 @@ The aesthetic blends **Modern Editorial** and **Islamic Architectural Minimalism
 
 All fonts are **self-hosted** in `public/fonts/` to eliminate external network dependencies and maximize performance on shared hosting. No Google Fonts CDN calls.
 
-| Font Family | Weights Loaded | Usage | Format |
-| :--- | :--- | :--- | :--- |
-| **Amiri** | 400, 700 | Arabic institutional text, Quranic citations | WOFF2 |
-| **Scheherazade New** | 400 (fallback) | Fallback Arabic when Amiri unavailable | WOFF2 |
-| **Playfair Display** | 600, 700 | Hero titles, vision quotes, editorial headings | WOFF2 |
-| **Plus Jakarta Sans** | 400, 500, 600, 700, 800 | UI text, body, labels, forms, navigation | WOFF2 |
+| Font Family           | Weights Loaded          | Usage                                          | Format |
+| :-------------------- | :---------------------- | :--------------------------------------------- | :----- |
+| **Amiri**             | 400, 700                | Arabic institutional text, Quranic citations   | WOFF2  |
+| **Scheherazade New**  | 400 (fallback)          | Fallback Arabic when Amiri unavailable         | WOFF2  |
+| **Playfair Display**  | 600, 700                | Hero titles, vision quotes, editorial headings | WOFF2  |
+| **Plus Jakarta Sans** | 400, 500, 600, 700, 800 | UI text, body, labels, forms, navigation       | WOFF2  |
 
 > **Subsetting:** Arabic fonts include only Arabic script + basic Latin. Latin fonts include Latin Extended-A for Indonesian diacritics (ā, ī, ū in transliterations).
 
@@ -297,60 +297,60 @@ The palette balances authoritative institution greens with inviting gold accents
 
 ### 2.1. Brand Core
 
-| Token | Hex | Role | WCAG on White |
-| :--- | :--- | :--- | :--- |
-| `brand-forest` | `#084C27` | Navbar, footer, hero backgrounds, headings | **8.9:1** ✅ AAA |
-| `emerald-vibrant` | `#059669` | Progress indicators, badges, check icons, links | **3.5:1** ⚠️ AA Large only |
-| `gold-amber` | `#D97706` | CTA buttons, active wave markers, arch borders | **3.2:1** ⚠️ AA Large only |
-| `gold-light` | `#F59E0B` | Hover states, subtle highlights | **2.1:1** ❌ decorative only |
+| Token             | Hex       | Role                                            | WCAG on White               |
+| :---------------- | :-------- | :---------------------------------------------- | :-------------------------- |
+| `brand-forest`    | `#084C27` | Navbar, footer, hero backgrounds, headings      | **8.9:1** ✅ AAA             |
+| `emerald-vibrant` | `#059669` | Progress indicators, badges, check icons, links | **3.5:1** ⚠️ AA Large only   |
+| `gold-amber`      | `#D97706` | CTA buttons, active wave markers, arch borders  | **3.2:1** ⚠️ AA Large only   |
+| `gold-light`      | `#F59E0B` | Hover states, subtle highlights                 | **2.1:1** ❌ decorative only |
 
 > **Contrast note:** `emerald-vibrant` and `gold-amber` must only be used as text color on large text (≥18px bold / ≥24px regular) or paired with a dark background. For body text on white, always use `brand-forest` or `text-primary`.
 
 ### 2.2. Surfaces & Neutrals
 
-| Token | Hex | Role |
-| :--- | :--- | :--- |
+| Token               | Hex       | Role                                  |
+| :------------------ | :-------- | :------------------------------------ |
 | `surface-alabaster` | `#FDFBF7` | Main page background (warm off-white) |
-| `surface-card` | `#FFFFFF` | Card backgrounds, form fields |
-| `surface-slate` | `#F8FAFC` | Alternate section backgrounds |
-| `text-primary` | `#0F291E` | Primary body text, headings |
-| `text-secondary` | `#1B3A2B` | Sub-headings, secondary content |
-| `text-muted` | `#4B6358` | Captions, hints, timestamps |
-| `text-inverse` | `#FFFFFF` | Text on dark/brand backgrounds |
+| `surface-card`      | `#FFFFFF` | Card backgrounds, form fields         |
+| `surface-slate`     | `#F8FAFC` | Alternate section backgrounds         |
+| `text-primary`      | `#0F291E` | Primary body text, headings           |
+| `text-secondary`    | `#1B3A2B` | Sub-headings, secondary content       |
+| `text-muted`        | `#4B6358` | Captions, hints, timestamps           |
+| `text-inverse`      | `#FFFFFF` | Text on dark/brand backgrounds        |
 
 ### 2.3. Borders
 
-| Token | Value | Usage |
-| :--- | :--- | :--- |
-| `border-subtle` | `rgba(8, 76, 39, 0.10)` | Card borders, dividers |
+| Token           | Value                   | Usage                         |
+| :-------------- | :---------------------- | :---------------------------- |
+| `border-subtle` | `rgba(8, 76, 39, 0.10)` | Card borders, dividers        |
 | `border-medium` | `rgba(8, 76, 39, 0.20)` | Input borders (default state) |
-| `border-strong` | `rgba(8, 76, 39, 0.35)` | Input borders (hover state) |
+| `border-strong` | `rgba(8, 76, 39, 0.35)` | Input borders (hover state)   |
 
 ### 2.4. Semantic Colors
 
-| Token | Hex | Background | Usage |
-| :--- | :--- | :--- | :--- |
-| `success` | `#059669` | `rgba(5,150,105,0.12)` | Success messages, verified status |
-| `warning` | `#D97706` | `rgba(217,119,6,0.12)` | Warnings, revision needed |
-| `info` | `#0284C7` | `rgba(2,132,199,0.12)` | Informational alerts |
-| `error` | `#DC2626` | `rgba(220,38,38,0.10)` | Validation errors, rejected status |
+| Token     | Hex       | Background             | Usage                              |
+| :-------- | :-------- | :--------------------- | :--------------------------------- |
+| `success` | `#059669` | `rgba(5,150,105,0.12)` | Success messages, verified status  |
+| `warning` | `#D97706` | `rgba(217,119,6,0.12)` | Warnings, revision needed          |
+| `info`    | `#0284C7` | `rgba(2,132,199,0.12)` | Informational alerts               |
+| `error`   | `#DC2626` | `rgba(220,38,38,0.10)` | Validation errors, rejected status |
 
 ### 2.5. PSB Status Color Mapping
 
 Each `application_status` and `payment_status` enum maps to a specific color pair for badges and indicators:
 
-| Status Enum | Label (ID) | Text Color | Background |
-| :--- | :--- | :--- | :--- |
-| `pending` | Menunggu Verifikasi | `#6B7280` | `rgba(107,114,128,0.12)` |
-| `verified` | Terverifikasi | `#059669` | `rgba(5,150,105,0.12)` |
-| `revision_needed` | Perlu Perbaikan | `#D97706` | `rgba(217,119,6,0.12)` |
-| `accepted` | Diterima | `#084C27` | `rgba(8,76,39,0.12)` |
-| `reserve` | Cadangan | `#6366F1` | `rgba(99,102,241,0.12)` |
-| `rejected` | Ditolak | `#DC2626` | `rgba(220,38,38,0.10)` |
-| `unpaid` | Belum Bayar | `#6B7280` | `rgba(107,114,128,0.12)` |
-| `pending_verification` | Menunggu Verifikasi Bayar | `#D97706` | `rgba(217,119,6,0.12)` |
-| `paid` | Lunas | `#059669` | `rgba(5,150,105,0.12)` |
-| `rejected` (payment) | Pembayaran Ditolak | `#DC2626` | `rgba(220,38,38,0.10)` |
+| Status Enum            | Label (ID)                | Text Color | Background               |
+| :--------------------- | :------------------------ | :--------- | :----------------------- |
+| `pending`              | Menunggu Verifikasi       | `#6B7280`  | `rgba(107,114,128,0.12)` |
+| `verified`             | Terverifikasi             | `#059669`  | `rgba(5,150,105,0.12)`   |
+| `revision_needed`      | Perlu Perbaikan           | `#D97706`  | `rgba(217,119,6,0.12)`   |
+| `accepted`             | Diterima                  | `#084C27`  | `rgba(8,76,39,0.12)`     |
+| `reserve`              | Cadangan                  | `#6366F1`  | `rgba(99,102,241,0.12)`  |
+| `rejected`             | Ditolak                   | `#DC2626`  | `rgba(220,38,38,0.10)`   |
+| `unpaid`               | Belum Bayar               | `#6B7280`  | `rgba(107,114,128,0.12)` |
+| `pending_verification` | Menunggu Verifikasi Bayar | `#D97706`  | `rgba(217,119,6,0.12)`   |
+| `paid`                 | Lunas                     | `#059669`  | `rgba(5,150,105,0.12)`   |
+| `rejected` (payment)   | Pembayaran Ditolak        | `#DC2626`  | `rgba(220,38,38,0.10)`   |
 
 ---
 
@@ -403,11 +403,11 @@ The layout is built around a mobile-first philosophy that transitions into a dyn
 
 ### 4.1. Breakpoints
 
-| Name | Range | Tailwind Class | Max Container |
-| :--- | :--- | :--- | :--- |
-| Mobile | < 640px | default | 100% (with 1rem margin) |
-| Tablet | 640px – 1024px | `sm:` / `md:` | 100% (with 1.5rem margin) |
-| Desktop | > 1024px | `lg:` / `xl:` | 1280px (centered, 3rem margin) |
+| Name    | Range          | Tailwind Class | Max Container                  |
+| :------ | :------------- | :------------- | :----------------------------- |
+| Mobile  | < 640px        | default        | 100% (with 1rem margin)        |
+| Tablet  | 640px – 1024px | `sm:` / `md:`  | 100% (with 1.5rem margin)      |
+| Desktop | > 1024px       | `lg:` / `xl:`  | 1280px (centered, 3rem margin) |
 
 ### 4.2. Grid System
 
@@ -417,27 +417,27 @@ The layout is built around a mobile-first philosophy that transitions into a dyn
 
 ### 4.3. Section Spacing
 
-| Context | Mobile | Desktop |
-| :--- | :--- | :--- |
-| Between major sections | `space-2xl` (3rem) | `space-3xl` (4.5rem) |
-| Between cards within section | `space-md` (1rem) | `space-lg` (1.5rem) |
-| Card internal padding | `space-md` (1rem) | `space-xl` (2rem) |
-| Form field vertical gap | `space-md` (1rem) | `space-lg` (1.5rem) |
-| Inline element spacing | `space-sm` (0.5rem) | `space-sm` (0.5rem) |
+| Context                      | Mobile              | Desktop              |
+| :--------------------------- | :------------------ | :------------------- |
+| Between major sections       | `space-2xl` (3rem)  | `space-3xl` (4.5rem) |
+| Between cards within section | `space-md` (1rem)   | `space-lg` (1.5rem)  |
+| Card internal padding        | `space-md` (1rem)   | `space-xl` (2rem)    |
+| Form field vertical gap      | `space-md` (1rem)   | `space-lg` (1.5rem)  |
+| Inline element spacing       | `space-sm` (0.5rem) | `space-sm` (0.5rem)  |
 
 ### 4.4. Responsive Behavior Summary
 
-| Component | Mobile (< 640px) | Tablet (640–1024px) | Desktop (> 1024px) |
-| :--- | :--- | :--- | :--- |
-| Navbar | Hamburger → slide-in drawer | Hamburger → slide-in drawer | Horizontal links |
-| Hero section | Stacked (text above photo) | Side-by-side | Side-by-side (8:4 ratio) |
-| MTS vs MDTA cards | Stacked vertically | 2-column grid | 2-column bento |
-| Teacher cards | Horizontal scroll (swipeable) | 2-column grid | 3–4 column grid |
-| News grid | Single column list | 2-column grid | 3-column grid |
-| Gallery grid | 2-column masonry | 3-column masonry | 4-column masonry |
-| PSB form | Full-width, single column | Centered card (max-w-2xl) | Centered card (max-w-2xl) |
-| Admin dashboard | Stacked metric cards | 2-column metric grid | 4-column metric grid |
-| Footer | Stacked sections | 2-column | 4-column |
+| Component         | Mobile (< 640px)              | Tablet (640–1024px)         | Desktop (> 1024px)        |
+| :---------------- | :---------------------------- | :-------------------------- | :------------------------ |
+| Navbar            | Hamburger → slide-in drawer   | Hamburger → slide-in drawer | Horizontal links          |
+| Hero section      | Stacked (text above photo)    | Side-by-side                | Side-by-side (8:4 ratio)  |
+| MTS vs MDTA cards | Stacked vertically            | 2-column grid               | 2-column bento            |
+| Teacher cards     | Horizontal scroll (swipeable) | 2-column grid               | 3–4 column grid           |
+| News grid         | Single column list            | 2-column grid               | 3-column grid             |
+| Gallery grid      | 2-column masonry              | 3-column masonry            | 4-column masonry          |
+| PSB form          | Full-width, single column     | Centered card (max-w-2xl)   | Centered card (max-w-2xl) |
+| Admin dashboard   | Stacked metric cards          | 2-column metric grid        | 4-column metric grid      |
+| Footer            | Stacked sections              | 2-column                    | 4-column                  |
 
 ---
 
@@ -447,12 +447,12 @@ Visual depth follows a restrained, low-elevation philosophy rooted in crisp surf
 
 ### 5.1. Surface Tiers
 
-| Level | Background | Border | Shadow | Usage |
-| :--- | :--- | :--- | :--- | :--- |
-| **Level 0 (Canvas)** | `#FDFBF7` | — | — | Page background |
-| **Level 1 (Cards)** | `#FFFFFF` | `border-subtle` | `shadow-sm` | Default cards, bento modules |
-| **Level 2 (Interactive)** | `#FFFFFF` | `border-medium` | `shadow-lg` | Hovered cards, sticky bars, dropdowns |
-| **Level 3 (Overlay)** | `rgba(253,251,247,0.88)` | — | — | Modals, drawers (with `backdrop-blur-md`) |
+| Level                     | Background               | Border          | Shadow      | Usage                                     |
+| :------------------------ | :----------------------- | :-------------- | :---------- | :---------------------------------------- |
+| **Level 0 (Canvas)**      | `#FDFBF7`                | —               | —           | Page background                           |
+| **Level 1 (Cards)**       | `#FFFFFF`                | `border-subtle` | `shadow-sm` | Default cards, bento modules              |
+| **Level 2 (Interactive)** | `#FFFFFF`                | `border-medium` | `shadow-lg` | Hovered cards, sticky bars, dropdowns     |
+| **Level 3 (Overlay)**     | `rgba(253,251,247,0.88)` | —               | —           | Modals, drawers (with `backdrop-blur-md`) |
 
 ### 5.2. Architectural Overlays
 
@@ -474,15 +474,15 @@ The design system incorporates geometric curves balanced with signature architec
 
 ### 6.1. Border Radius Scale
 
-| Token | Value | Usage |
-| :--- | :--- | :--- |
-| `rounded-sm` | 0.25rem (4px) | Small inline elements, tags |
-| `rounded` | 0.5rem (8px) | Buttons, input fields |
-| `rounded-md` | 0.75rem (12px) | Dropdowns, tooltips |
-| `rounded-lg` | 1rem (16px) | Small cards, badges |
-| `rounded-xl` | 1.5rem (24px) | Form containers, medium cards |
-| `rounded-2xl` | — | Main content cards, bento modules (use `1rem` base, `1.5rem` on desktop) |
-| `rounded-full` | 9999px | Avatars, status dots, pills |
+| Token          | Value          | Usage                                                                    |
+| :------------- | :------------- | :----------------------------------------------------------------------- |
+| `rounded-sm`   | 0.25rem (4px)  | Small inline elements, tags                                              |
+| `rounded`      | 0.5rem (8px)   | Buttons, input fields                                                    |
+| `rounded-md`   | 0.75rem (12px) | Dropdowns, tooltips                                                      |
+| `rounded-lg`   | 1rem (16px)    | Small cards, badges                                                      |
+| `rounded-xl`   | 1.5rem (24px)  | Form containers, medium cards                                            |
+| `rounded-2xl`  | —              | Main content cards, bento modules (use `1rem` base, `1.5rem` on desktop) |
+| `rounded-full` | 9999px         | Avatars, status dots, pills                                              |
 
 ### 6.2. The Modern Islamic Arch (Qubbah Silhouettes)
 
@@ -499,35 +499,35 @@ High-prominence visual anchors (such as portraits of the Pondok leadership or fe
 
 ### 7.1. Icon System
 
-| Property | Value |
-| :--- | :--- |
-| **Library** | Heroicons (Outline variant as primary, Solid for active/selected states) |
-| **Default Size** | 20×20px (`w-5 h-5`) for inline/body, 24×24px (`w-6 h-6`) for navigation |
-| **Stroke Width** | 1.5 (default Heroicons), 2.0 for emphasis (checklist icons) |
-| **Color** | Inherits parent text color via `currentColor` |
+| Property         | Value                                                                    |
+| :--------------- | :----------------------------------------------------------------------- |
+| **Library**      | Heroicons (Outline variant as primary, Solid for active/selected states) |
+| **Default Size** | 20×20px (`w-5 h-5`) for inline/body, 24×24px (`w-6 h-6`) for navigation  |
+| **Stroke Width** | 1.5 (default Heroicons), 2.0 for emphasis (checklist icons)              |
+| **Color**        | Inherits parent text color via `currentColor`                            |
 
 ### 7.2. Common Icon Mapping
 
-| Context | Icon | Variant |
-| :--- | :--- | :--- |
-| WhatsApp floating button | Custom WhatsApp SVG | Solid |
-| Checklist (Misi items) | `check-circle` | Solid, `emerald-vibrant` |
-| Navigation menu (mobile) | `bars-3` / `x-mark` | Outline |
-| Search | `magnifying-glass` | Outline |
-| Download PDF | `arrow-down-tray` | Outline |
-| Upload file | `cloud-arrow-up` | Outline |
-| Status: Pending | `clock` | Outline, `status-pending` |
-| Status: Verified | `check-badge` | Solid, `status-verified` |
-| Status: Revision | `exclamation-triangle` | Solid, `status-revision` |
-| Status: Accepted | `check-circle` | Solid, `status-accepted` |
-| Status: Rejected | `x-circle` | Solid, `status-rejected` |
-| External link | `arrow-top-right-on-square` | Outline |
-| Share WhatsApp | Custom WhatsApp SVG | Solid |
-| Share Facebook | Custom Facebook SVG | Solid |
-| Calendar/date | `calendar-days` | Outline |
-| Location | `map-pin` | Outline |
-| Phone | `phone` | Outline |
-| Mail | `envelope` | Outline |
+| Context                  | Icon                        | Variant                   |
+| :----------------------- | :-------------------------- | :------------------------ |
+| WhatsApp floating button | Custom WhatsApp SVG         | Solid                     |
+| Checklist (Misi items)   | `check-circle`              | Solid, `emerald-vibrant`  |
+| Navigation menu (mobile) | `bars-3` / `x-mark`         | Outline                   |
+| Search                   | `magnifying-glass`          | Outline                   |
+| Download PDF             | `arrow-down-tray`           | Outline                   |
+| Upload file              | `cloud-arrow-up`            | Outline                   |
+| Status: Pending          | `clock`                     | Outline, `status-pending` |
+| Status: Verified         | `check-badge`               | Solid, `status-verified`  |
+| Status: Revision         | `exclamation-triangle`      | Solid, `status-revision`  |
+| Status: Accepted         | `check-circle`              | Solid, `status-accepted`  |
+| Status: Rejected         | `x-circle`                  | Solid, `status-rejected`  |
+| External link            | `arrow-top-right-on-square` | Outline                   |
+| Share WhatsApp           | Custom WhatsApp SVG         | Solid                     |
+| Share Facebook           | Custom Facebook SVG         | Solid                     |
+| Calendar/date            | `calendar-days`             | Outline                   |
+| Location                 | `map-pin`                   | Outline                   |
+| Phone                    | `phone`                     | Outline                   |
+| Mail                     | `envelope`                  | Outline                   |
 
 ---
 
@@ -535,17 +535,17 @@ High-prominence visual anchors (such as portraits of the Pondok leadership or fe
 
 ### 8.1. Aspect Ratios
 
-| Context | Ratio | Max Dimensions | Format |
-| :--- | :--- | :--- | :--- |
-| Hero background | 16:9 | 1920×1080px | WebP, JPEG fallback |
-| Featured image (berita) | 16:9 | 1200×675px | WebP 85% |
-| News thumbnail (card) | 4:3 | 600×450px | WebP 85% |
-| Gallery thumbnail | 1:1 (square crop) | 400×400px | WebP 85% |
-| Gallery full view (lightbox) | Original ratio | 1600px max-width | WebP 85% |
-| Teacher photo | 3:4 (portrait) | 400×533px | JPEG 80% |
-| Pengasuh photo (arch frame) | 3:4 (portrait) | 600×800px | JPEG 85% |
-| Pas foto (PSB upload) | 3:4 | 400×533px | JPEG 80% |
-| Document scan (KK, Akta) | Original | Max 2MB | JPEG/PNG/PDF |
+| Context                      | Ratio             | Max Dimensions   | Format              |
+| :--------------------------- | :---------------- | :--------------- | :------------------ |
+| Hero background              | 16:9              | 1920×1080px      | WebP, JPEG fallback |
+| Featured image (berita)      | 16:9              | 1200×675px       | WebP 85%            |
+| News thumbnail (card)        | 4:3               | 600×450px        | WebP 85%            |
+| Gallery thumbnail            | 1:1 (square crop) | 400×400px        | WebP 85%            |
+| Gallery full view (lightbox) | Original ratio    | 1600px max-width | WebP 85%            |
+| Teacher photo                | 3:4 (portrait)    | 400×533px        | JPEG 80%            |
+| Pengasuh photo (arch frame)  | 3:4 (portrait)    | 600×800px        | JPEG 85%            |
+| Pas foto (PSB upload)        | 3:4               | 400×533px        | JPEG 80%            |
+| Document scan (KK, Akta)     | Original          | Max 2MB          | JPEG/PNG/PDF        |
 
 ### 8.2. Loading Strategy
 
@@ -569,28 +569,28 @@ All animations respect `prefers-reduced-motion: reduce` — reduced to instant t
 
 ### 9.1. Transition Durations
 
-| Token | Duration | Easing | Usage |
-| :--- | :--- | :--- | :--- |
-| `fast` | 150ms | ease-out | Hover states, focus rings, toggle switches |
-| `normal` | 200ms | ease-in-out | Dropdown open/close, accordion expand |
-| `slow` | 300ms | ease-in-out | Modal enter/exit, drawer slide, page transitions |
-| `spring` | 400ms | cubic-bezier(0.34, 1.56, 0.64, 1) | Button press feedback, notification pop-in |
+| Token    | Duration | Easing                            | Usage                                            |
+| :------- | :------- | :-------------------------------- | :----------------------------------------------- |
+| `fast`   | 150ms    | ease-out                          | Hover states, focus rings, toggle switches       |
+| `normal` | 200ms    | ease-in-out                       | Dropdown open/close, accordion expand            |
+| `slow`   | 300ms    | ease-in-out                       | Modal enter/exit, drawer slide, page transitions |
+| `spring` | 400ms    | cubic-bezier(0.34, 1.56, 0.64, 1) | Button press feedback, notification pop-in       |
 
 ### 9.2. Common Animations
 
-| Element | Animation | Trigger |
-| :--- | :--- | :--- |
-| Cards on scroll | Fade-up (`translateY(16px) → 0`, `opacity: 0 → 1`) | Intersection Observer, `slow` |
-| Button hover | Background darken + subtle lift (`translateY(-1px)`) | `:hover`, `fast` |
-| Button press | Scale down (`scale(0.97)`) | `:active`, `fast` |
-| Mobile nav drawer | Slide from left (`translateX(-100%) → 0`) | Toggle, `slow` |
-| Modal | Fade + scale up (`scale(0.95) → 1`, `opacity: 0 → 1`) | Toggle, `slow` |
-| Toast notification | Slide from top + spring bounce | Auto, `spring` |
-| Multi-step form progress | Step node fill + connector line extend | Step change, `normal` |
-| WhatsApp floating button | Pulse glow every 5s | `@keyframes`, infinite |
-| Image placeholder | Subtle pulse (`opacity: 0.6 → 1.0`) | While loading, `normal`, infinite |
-| Accordion content | Height expand (`max-height: 0 → auto`) | Toggle, `normal` |
-| Skeleton loader | Shimmer sweep (left to right gradient) | While loading, infinite |
+| Element                  | Animation                                             | Trigger                           |
+| :----------------------- | :---------------------------------------------------- | :-------------------------------- |
+| Cards on scroll          | Fade-up (`translateY(16px) → 0`, `opacity: 0 → 1`)    | Intersection Observer, `slow`     |
+| Button hover             | Background darken + subtle lift (`translateY(-1px)`)  | `:hover`, `fast`                  |
+| Button press             | Scale down (`scale(0.97)`)                            | `:active`, `fast`                 |
+| Mobile nav drawer        | Slide from left (`translateX(-100%) → 0`)             | Toggle, `slow`                    |
+| Modal                    | Fade + scale up (`scale(0.95) → 1`, `opacity: 0 → 1`) | Toggle, `slow`                    |
+| Toast notification       | Slide from top + spring bounce                        | Auto, `spring`                    |
+| Multi-step form progress | Step node fill + connector line extend                | Step change, `normal`             |
+| WhatsApp floating button | Pulse glow every 5s                                   | `@keyframes`, infinite            |
+| Image placeholder        | Subtle pulse (`opacity: 0.6 → 1.0`)                   | While loading, `normal`, infinite |
+| Accordion content        | Height expand (`max-height: 0 → auto`)                | Toggle, `normal`                  |
+| Skeleton loader          | Shimmer sweep (left to right gradient)                | While loading, infinite           |
 
 ### 9.3. Page Transitions (Livewire)
 
@@ -606,22 +606,22 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 
 ### 10.1. Buttons
 
-| Variant | Background | Text | Border | Radius | Usage |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Primary CTA** | `gold-amber` → `#B45309` hover | White, bold | — | `rounded-xl` | "Daftar Sekarang", submit forms |
-| **Secondary** | `brand-forest` → darken hover | White | — | `rounded-xl` | "Lihat Selengkapnya", secondary actions |
-| **Ghost** | Transparent → `brand-forest/5` hover | `brand-forest` | `border-subtle` | `rounded-xl` | "Batal", tertiary actions |
-| **Outline** | Transparent → `brand-forest/5` hover | `brand-forest` | `border-medium` | `rounded-xl` | "Download PDF", "Export Excel" |
-| **Danger** | `error` → darken hover | White | — | `rounded-xl` | Delete/reject actions (admin only) |
-| **Icon-only** | Transparent → `surface-container` hover | `text-muted` | — | `rounded-full` | Close, menu toggle |
+| Variant         | Background                              | Text           | Border          | Radius         | Usage                                   |
+| :-------------- | :-------------------------------------- | :------------- | :-------------- | :------------- | :-------------------------------------- |
+| **Primary CTA** | `gold-amber` → `#B45309` hover          | White, bold    | —               | `rounded-xl`   | "Daftar", submit forms                  |
+| **Secondary**   | `brand-forest` → darken hover           | White          | —               | `rounded-xl`   | "Lihat Selengkapnya", secondary actions |
+| **Ghost**       | Transparent → `brand-forest/5` hover    | `brand-forest` | `border-subtle` | `rounded-xl`   | "Batal", tertiary actions               |
+| **Outline**     | Transparent → `brand-forest/5` hover    | `brand-forest` | `border-medium` | `rounded-xl`   | "Download PDF", "Export Excel"          |
+| **Danger**      | `error` → darken hover                  | White          | —               | `rounded-xl`   | Delete/reject actions (admin only)      |
+| **Icon-only**   | Transparent → `surface-container` hover | `text-muted`   | —               | `rounded-full` | Close, menu toggle                      |
 
 **Button sizes:**
 
-| Size | Height | Padding | Font |
-| :--- | :--- | :--- | :--- |
-| SM | 32px | `0.5rem 1rem` | `label-sm` |
-| MD | 40px | `0.625rem 1.25rem` | `label-md` |
-| LG | 48px | `0.75rem 1.5rem` | `body-md` semibold |
+| Size | Height | Padding            | Font               |
+| :--- | :----- | :----------------- | :----------------- |
+| SM   | 32px   | `0.5rem 1rem`      | `label-sm`         |
+| MD   | 40px   | `0.625rem 1.25rem` | `label-md`         |
+| LG   | 48px   | `0.75rem 1.5rem`   | `body-md` semibold |
 
 **WhatsApp Floating Button:**
 - Persistent circular button, bottom-right corner (`bottom: 1.25rem`, `right: 1.25rem`).
@@ -653,14 +653,14 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 
 **Shape:** Pill (`rounded-full`), padding `0.25rem 0.75rem`.
 
-| Variant | Background | Text | Usage |
-| :--- | :--- | :--- | :--- |
-| Program (MTS) | `success-bg` | `emerald-vibrant` | Program type badges |
-| Program (MDTA) | `warning-bg` | `gold-amber` | Program type badges |
-| Wave Active | `warning-bg` | `gold-amber` | Gelombang aktif indicator |
-| Status * | See Section 2.5 | See Section 2.5 | All PSB status badges |
-| Category | `surface-container` | `text-secondary` | News category tags |
-| Featured | `tertiary-container` → `#663500` | `on-tertiary-container` | Featured post badge |
+| Variant        | Background                       | Text                    | Usage                     |
+| :------------- | :------------------------------- | :---------------------- | :------------------------ |
+| Program (MTS)  | `success-bg`                     | `emerald-vibrant`       | Program type badges       |
+| Program (MDTA) | `warning-bg`                     | `gold-amber`            | Program type badges       |
+| Wave Active    | `warning-bg`                     | `gold-amber`            | Gelombang aktif indicator |
+| Status *       | See Section 2.5                  | See Section 2.5         | All PSB status badges     |
+| Category       | `surface-container`              | `text-secondary`        | News category tags        |
+| Featured       | `tertiary-container` → `#663500` | `on-tertiary-container` | Featured post badge       |
 
 ### 10.4. Navigation
 
@@ -670,7 +670,7 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 - Logo left-aligned (max-height 40px).
 - Links: `text-inverse` (white), `body-md` semibold.
 - Active link: underline (2px `gold-amber` bottom border).
-- CTA button (right): "Daftar Sekarang" in `gold-amber` filled pill.
+- CTA button (right): "Daftar" in `gold-amber` filled pill.
 - Sticky on scroll with `backdrop-blur-md` + slight transparency (`rgba(8,76,39,0.95)`).
 
 **Mobile Navigation Drawer:**
@@ -679,7 +679,7 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 - Frosted overlay backdrop.
 - Links stacked vertically, `headline-sm` size, padded `space-lg`.
 - Close button (`x-mark`) at top-right of drawer.
-- CTA "Daftar Sekarang" as full-width button at bottom of drawer.
+- CTA "Daftar" as full-width button at bottom of drawer.
 
 **Footer:**
 - Background: `brand-forest` (`#084C27`).
@@ -741,12 +741,12 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 
 **Inline Alerts (within page):**
 
-| Variant | Left Border | Background | Icon |
-| :--- | :--- | :--- | :--- |
-| Success | `success` (4px) | `success-bg` | `check-circle` solid |
-| Warning | `warning` (4px) | `warning-bg` | `exclamation-triangle` solid |
-| Info | `info` (4px) | `info-bg` | `information-circle` solid |
-| Error | `error-semantic` (4px) | `error-bg` | `x-circle` solid |
+| Variant | Left Border            | Background   | Icon                         |
+| :------ | :--------------------- | :----------- | :--------------------------- |
+| Success | `success` (4px)        | `success-bg` | `check-circle` solid         |
+| Warning | `warning` (4px)        | `warning-bg` | `exclamation-triangle` solid |
+| Info    | `info` (4px)           | `info-bg`    | `information-circle` solid   |
+| Error   | `error-semantic` (4px) | `error-bg`   | `x-circle` solid             |
 
 - Radius: `rounded-lg`.
 - Padding: `space-md`.
@@ -841,45 +841,45 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 
 ### 12.1. Loading States
 
-| Context | Pattern |
-| :--- | :--- |
-| **Page load** | Top progress bar (emerald, 3px) via Livewire `wire:navigate` |
+| Context            | Pattern                                                               |
+| :----------------- | :-------------------------------------------------------------------- |
+| **Page load**      | Top progress bar (emerald, 3px) via Livewire `wire:navigate`          |
 | **Button loading** | Spinner icon replacing button text, button disabled with `opacity-75` |
-| **Table loading** | Skeleton rows (shimmer animation, 5 rows) |
-| **Card loading** | Skeleton card (shimmer on image + text blocks) |
-| **Image loading** | `surface-container` pulse placeholder |
-| **File uploading** | Progress bar (emerald fill) with percentage text |
+| **Table loading**  | Skeleton rows (shimmer animation, 5 rows)                             |
+| **Card loading**   | Skeleton card (shimmer on image + text blocks)                        |
+| **Image loading**  | `surface-container` pulse placeholder                                 |
+| **File uploading** | Progress bar (emerald fill) with percentage text                      |
 
 ### 12.2. Empty States
 
-| Context | Content |
-| :--- | :--- |
-| **No search results** | Illustration icon + "Tidak ada hasil untuk '[query]'" + suggestion |
-| **No news articles** | "Belum ada berita yang dipublikasikan." |
-| **No applicants (admin)** | "Belum ada pendaftar pada gelombang ini." |
-| **Gallery empty** | "Belum ada album galeri." |
-| **PSB closed** | Branded card: "Pendaftaran Belum/Sudah Ditutup" + WhatsApp CTA |
+| Context                   | Content                                                            |
+| :------------------------ | :----------------------------------------------------------------- |
+| **No search results**     | Illustration icon + "Tidak ada hasil untuk '[query]'" + suggestion |
+| **No news articles**      | "Belum ada berita yang dipublikasikan."                            |
+| **No applicants (admin)** | "Belum ada pendaftar pada gelombang ini."                          |
+| **Gallery empty**         | "Belum ada album galeri."                                          |
+| **PSB closed**            | Branded card: "Pendaftaran Belum/Sudah Ditutup" + WhatsApp CTA     |
 
 ### 12.3. Error States
 
-| Context | Pattern |
-| :--- | :--- |
-| **Form validation** | Red ring on field + error message below in `body-sm` red |
-| **File too large** | Inline error below upload zone: "Ukuran file melebihi 2MB" |
-| **Invalid file type** | Inline error: "Format file tidak didukung. Gunakan JPG, PNG, atau PDF." |
-| **Duplicate NIK** | Alert banner (error variant) at top of form |
-| **Network error** | Toast notification (error): "Koneksi terputus. Silakan coba lagi." |
-| **404 page** | Branded page with arch illustration + "Halaman tidak ditemukan" + back button |
-| **500 page** | Branded page: "Terjadi kesalahan" + contact admin info |
+| Context               | Pattern                                                                       |
+| :-------------------- | :---------------------------------------------------------------------------- |
+| **Form validation**   | Red ring on field + error message below in `body-sm` red                      |
+| **File too large**    | Inline error below upload zone: "Ukuran file melebihi 2MB"                    |
+| **Invalid file type** | Inline error: "Format file tidak didukung. Gunakan JPG, PNG, atau PDF."       |
+| **Duplicate NIK**     | Alert banner (error variant) at top of form                                   |
+| **Network error**     | Toast notification (error): "Koneksi terputus. Silakan coba lagi."            |
+| **404 page**          | Branded page with arch illustration + "Halaman tidak ditemukan" + back button |
+| **500 page**          | Branded page: "Terjadi kesalahan" + contact admin info                        |
 
 ### 12.4. Success States
 
-| Context | Pattern |
-| :--- | :--- |
-| **Form submitted** | Redirect to success page with confetti-free, dignified success illustration |
-| **Status updated (admin)** | Toast notification (success): "Status pendaftar berhasil diubah." |
-| **File uploaded** | Inline success: checkmark + filename + "Berhasil diunggah" |
-| **Data saved** | Toast notification (success): "Perubahan berhasil disimpan." |
+| Context                    | Pattern                                                                     |
+| :------------------------- | :-------------------------------------------------------------------------- |
+| **Form submitted**         | Redirect to success page with confetti-free, dignified success illustration |
+| **Status updated (admin)** | Toast notification (success): "Status pendaftar berhasil diubah."           |
+| **File uploaded**          | Inline success: checkmark + filename + "Berhasil diunggah"                  |
+| **Data saved**             | Toast notification (success): "Perubahan berhasil disimpan."                |
 
 ---
 
@@ -894,15 +894,15 @@ Livewire page navigation uses `wire:navigate` with a minimal top progress bar:
 
 ### 13.2. Color Contrast
 
-| Combination | Ratio | Compliance |
-| :--- | :--- | :--- |
-| `text-primary` on `surface-alabaster` | **13.8:1** | ✅ AAA |
-| `brand-forest` on `surface-card` | **8.9:1** | ✅ AAA |
-| `text-inverse` on `brand-forest` | **8.9:1** | ✅ AAA |
-| `text-muted` on `surface-card` | **5.2:1** | ✅ AA |
-| `emerald-vibrant` on `surface-card` | **3.5:1** | ⚠️ AA Large text only |
-| `gold-amber` on `surface-card` | **3.2:1** | ⚠️ AA Large text only |
-| `gold-amber` on `brand-forest` | **4.6:1** | ✅ AA |
+| Combination                           | Ratio      | Compliance           |
+| :------------------------------------ | :--------- | :------------------- |
+| `text-primary` on `surface-alabaster` | **13.8:1** | ✅ AAA                |
+| `brand-forest` on `surface-card`      | **8.9:1**  | ✅ AAA                |
+| `text-inverse` on `brand-forest`      | **8.9:1**  | ✅ AAA                |
+| `text-muted` on `surface-card`        | **5.2:1**  | ✅ AA                 |
+| `emerald-vibrant` on `surface-card`   | **3.5:1**  | ⚠️ AA Large text only |
+| `gold-amber` on `surface-card`        | **3.2:1**  | ⚠️ AA Large text only |
+| `gold-amber` on `brand-forest`        | **4.6:1**  | ✅ AA                 |
 
 ### 13.3. Form Accessibility
 

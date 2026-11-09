@@ -50,12 +50,12 @@ Mengingat infrastruktur target menggunakan **Shared Hosting standar (tanpa akses
 
 ## 3. Target Pengguna (User Personas)
 
-| Peran Pengguna | Deskripsi & Karakteristik | Kebutuhan Utama |
-| :--- | :--- | :--- |
+| Peran Pengguna                     | Deskripsi & Karakteristik                                                                    | Kebutuhan Utama                                                                                                                                                                                                                                                     |
+| :--------------------------------- | :------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Calon Wali Santri / Pengunjung** | Orang tua/wali murid (mayoritas mengakses via *smartphone* dari grup WhatsApp/Media Sosial). | Membaca profil pesantren, membandingkan program MTS vs MDTA, melihat rincian biaya, mengisi formulir pendaftaran, mengunggah bukti transfer/berkas, mengecek status pendaftaran, mencetak kartu bukti daftar, serta mengedit data pendaftaran sebelum diverifikasi. |
-| **Admin CMS / Humas Pondok** | Pengurus pondok yang bertugas mengelola informasi publik. Memiliki role `admin_cms`. | Menulis dan menerbitkan berita kegiatan, mengatur galeri foto, serta memperbarui daftar tenaga pendidik dan pengumuman. |
-| **Panitia PSB (Admin TU)** | Staf administrasi penerimaan santri baru. Memiliki role `admin_psb`. | Memverifikasi data & bukti pembayaran pendaftar, mengubah status pendaftaran, mencetak kartu santri, serta mengunduh laporan rekapitulasi pendaftar ke dalam format Excel (`.xlsx`). |
-| **Super Admin** | Administrator utama dengan akses penuh ke seluruh modul. Memiliki role `super_admin`. | Mengelola semua fitur Admin CMS dan Panitia PSB, mengelola pengguna admin, mengubah pengaturan situs (`site_settings`). |
+| **Admin CMS / Humas Pondok**       | Pengurus pondok yang bertugas mengelola informasi publik. Memiliki role `admin_cms`.         | Menulis dan menerbitkan berita kegiatan, mengatur galeri foto, serta memperbarui daftar tenaga pendidik dan pengumuman.                                                                                                                                             |
+| **Panitia PSB (Admin TU)**         | Staf administrasi penerimaan santri baru. Memiliki role `admin_psb`.                         | Memverifikasi data & bukti pembayaran pendaftar, mengubah status pendaftaran, mencetak kartu santri, serta mengunduh laporan rekapitulasi pendaftar ke dalam format Excel (`.xlsx`).                                                                                |
+| **Super Admin**                    | Administrator utama dengan akses penuh ke seluruh modul. Memiliki role `super_admin`.        | Mengelola semua fitur Admin CMS dan Panitia PSB, mengelola pengguna admin, mengubah pengaturan situs (`site_settings`).                                                                                                                                             |
 
 ---
 
@@ -69,7 +69,7 @@ Desain mengadaptasi identitas visual dari **Logo Kufi Geometris Daar El Tazkiyah
 
 * **Primary Brand (Deep Forest Green):** `#084C27` / custom `brand-green` (Digunakan untuk Navbar, Footer, dan latar utama Hero).
 * **Secondary Emerald (Vibrant Green):** `#059669` / `emerald-600` (Digunakan untuk *gradient card header*, ikon *checklist* Misi, dan *badge* program).
-* **Accent / Gold (Warm Amber):** `#D97706` hingga `#F59E0B` / `amber-600` s.d. `amber-500` (Digunakan sebagai pengganti pita emas pada brosur untuk tombol CTA **"Daftar Sekarang"**, *border highlight*, dan penanda gelombang aktif).
+* **Accent / Gold (Warm Amber):** `#D97706` hingga `#F59E0B` / `amber-600` s.d. `amber-500` (Digunakan sebagai pengganti pita emas pada brosur untuk tombol CTA **"Daftar"**, *border highlight*, dan penanda gelombang aktif).
 * **Background & Surface:**
   * *Main Background:* `#FDFBF7` (*Warm Off-White / Alabaster*) atau `#F8FAFC` (`slate-50`).
   * *Card Surface:* `#FFFFFF` (`white`) dengan *border* halus `border-emerald-900/10` dan bayangan lembut `shadow-sm`.
@@ -91,12 +91,12 @@ Font di-*self-host* (disimpan di `public/fonts/`) untuk menghindari ketergantung
 
 ### 4.4. Browser & Device Support
 
-| Target | Versi Minimum |
-| :--- | :--- |
-| Chrome (Android & Desktop) | 90+ |
-| Safari (iOS & macOS) | 15+ |
-| Firefox | 100+ |
-| Samsung Internet | 15+ |
+| Target                     | Versi Minimum |
+| :------------------------- | :------------ |
+| Chrome (Android & Desktop) | 90+           |
+| Safari (iOS & macOS)       | 15+           |
+| Firefox                    | 100+          |
+| Samsung Internet           | 15+           |
 
 ---
 
@@ -153,12 +153,12 @@ Font di-*self-host* (disimpan di `public/fonts/`) untuk menghindari ketergantung
 3. **Seksi Program Pendidikan & Rincian Biaya (MTS vs MDTA):**
    * Menampilkan perbandingan berdampingan yang jelas antara dua jenjang:
 
-   | Komponen Informasi | Jenjang MTS | Jenjang MDTA |
-   | :--- | :--- | :--- |
-   | **Sistem Pendidikan** | **Mukim 24 Jam** — Pendidikan Formal setara SMP dengan pembinaan Tahfidz Al-Qur'an. | **Sekolah Sore & Tidak Mukim** — Pendidikan Diniyah untuk anak-anak usia sekolah dasar. |
-   | **Biaya Bulanan (SPP)** | **Rp 500.000,- / bulan** *(Termasuk biaya makan 3x sehari, asrama, dan biaya pendidikan)*. | **Rp 12.000,- / bulan**. |
-   | **Biaya Pendaftaran Gelombang I** *(1 Okt 2026 – 28 Feb 2027)* | **Rp 100.000,-** | **Rp 25.000,-** |
-   | **Biaya Pendaftaran Gelombang II** *(1 Mar 2027 – 30 Mei 2027)* | **Rp 150.000,-** | **Rp 30.000,-** |
+   | Komponen Informasi                                              | Jenjang MTS                                                                                | Jenjang MDTA                                                                            |
+   | :-------------------------------------------------------------- | :----------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
+   | **Sistem Pendidikan**                                           | **Mukim 24 Jam** — Pendidikan Formal setara SMP dengan pembinaan Tahfidz Al-Qur'an.        | **Sekolah Sore & Tidak Mukim** — Pendidikan Diniyah untuk anak-anak usia sekolah dasar. |
+   | **Biaya Bulanan (SPP)**                                         | **Rp 500.000,- / bulan** *(Termasuk biaya makan 3x sehari, asrama, dan biaya pendidikan)*. | **Rp 12.000,- / bulan**.                                                                |
+   | **Biaya Pendaftaran Gelombang I** *(1 Okt 2026 – 28 Feb 2027)*  | **Rp 100.000,-**                                                                           | **Rp 25.000,-**                                                                         |
+   | **Biaya Pendaftaran Gelombang II** *(1 Mar 2027 – 30 Mei 2027)* | **Rp 150.000,-**                                                                           | **Rp 30.000,-**                                                                         |
 
    * **AC:** Biaya pendaftaran ditampilkan secara dinamis berdasarkan gelombang aktif. Nominal diambil dari tabel `admission_waves`.
 
@@ -259,34 +259,34 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 7.1. Tabel `users` (Pengguna Admin)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `name` | `string` | Nama lengkap admin |
-| `email` | `string` (Unique) | Email login |
-| `email_verified_at` | `timestamp` (Nullable) | Waktu verifikasi email |
-| `password` | `string` | Password ter-hash |
-| `role` | `string` | Menggunakan PHP Backed Enum: `super_admin`, `admin_cms`, `admin_psb` |
-| `remember_token` | `string(100)` (Nullable) | Token "Remember Me" |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
+| Nama Kolom          | Tipe Data                | Keterangan                                                           |
+| :------------------ | :----------------------- | :------------------------------------------------------------------- |
+| `id`                | `ulid` (PK)              | Primary Key                                                          |
+| `name`              | `string`                 | Nama lengkap admin                                                   |
+| `email`             | `string` (Unique)        | Email login                                                          |
+| `email_verified_at` | `timestamp` (Nullable)   | Waktu verifikasi email                                               |
+| `password`          | `string`                 | Password ter-hash                                                    |
+| `role`              | `string`                 | Menggunakan PHP Backed Enum: `super_admin`, `admin_cms`, `admin_psb` |
+| `remember_token`    | `string(100)` (Nullable) | Token "Remember Me"                                                  |
+| `timestamps`        | `timestamp`              | `created_at`, `updated_at`                                           |
 
 > **Strategi Auth:** Menggunakan Laravel Fortify (sudah terinstall) dengan guard `web` standar. Otorisasi berbasis `role` column menggunakan Laravel Gate/Policy. Tidak menggunakan package RBAC terpisah karena hanya ada 3 role tetap.
 
 ### 7.2. Tabel `admission_waves` (Gelombang PSB)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `name` | `string` | Contoh: `Gelombang I`, `Gelombang II` |
-| `slug` | `string` (Unique) | URL-friendly identifier, contoh: `gelombang-i-2027-2028` |
-| `academic_year` | `string` | Contoh: `2027/2028` |
-| `start_date` | `date` | Tanggal mulai gelombang |
-| `end_date` | `date` | Tanggal berakhir gelombang |
-| `fee_mts` | `unsignedBigInteger` | Biaya daftar MTS dalam Rupiah (contoh: `100000`) |
-| `fee_mdta` | `unsignedBigInteger` | Biaya daftar MDTA dalam Rupiah (contoh: `25000`) |
-| `max_quota_mts` | `unsignedInteger` (Nullable) | Kuota maksimal pendaftar MTS. Null = tanpa batas. |
-| `max_quota_mdta` | `unsignedInteger` (Nullable) | Kuota maksimal pendaftar MDTA. Null = tanpa batas. |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
+| Nama Kolom       | Tipe Data                    | Keterangan                                               |
+| :--------------- | :--------------------------- | :------------------------------------------------------- |
+| `id`             | `ulid` (PK)                  | Primary Key                                              |
+| `name`           | `string`                     | Contoh: `Gelombang I`, `Gelombang II`                    |
+| `slug`           | `string` (Unique)            | URL-friendly identifier, contoh: `gelombang-i-2027-2028` |
+| `academic_year`  | `string`                     | Contoh: `2027/2028`                                      |
+| `start_date`     | `date`                       | Tanggal mulai gelombang                                  |
+| `end_date`       | `date`                       | Tanggal berakhir gelombang                               |
+| `fee_mts`        | `unsignedBigInteger`         | Biaya daftar MTS dalam Rupiah (contoh: `100000`)         |
+| `fee_mdta`       | `unsignedBigInteger`         | Biaya daftar MDTA dalam Rupiah (contoh: `25000`)         |
+| `max_quota_mts`  | `unsignedInteger` (Nullable) | Kuota maksimal pendaftar MTS. Null = tanpa batas.        |
+| `max_quota_mdta` | `unsignedInteger` (Nullable) | Kuota maksimal pendaftar MDTA. Null = tanpa batas.       |
+| `timestamps`     | `timestamp`                  | `created_at`, `updated_at`                               |
 
 > **Catatan:** Kolom `is_active` dihapus. Gelombang aktif ditentukan secara otomatis berdasarkan `start_date <= today <= end_date`. Ini mencegah konflik 2 gelombang aktif bersamaan (kecuali tanggalnya overlap, yang harus divalidasi saat admin input).
 
@@ -294,57 +294,57 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 7.3. Tabel `applicants` (Data Inti Pendaftar)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `admission_wave_id` | `foreignUlid` | Relasi ke `admission_waves` |
-| `registration_number` | `string` (Unique) | Format: `PSB-2027-MTS-0001` |
-| `access_token` | `string(8)` (Unique) | Token alfanumerik untuk akses cek status |
-| `program_type` | `string` | PHP Backed Enum: `MTS`, `MDTA` |
-| `full_name` | `string` | Nama lengkap calon santri |
-| `nik` | `string(16)` | NIK calon santri |
-| `nisn` | `string(10)` (Nullable) | NISN (wajib untuk MTS, opsional MDTA) |
-| `gender` | `string` | PHP Backed Enum: `L` (Laki-laki), `P` (Perempuan) |
-| `birth_place` | `string` | Tempat lahir |
-| `birth_date` | `date` | Tanggal lahir |
-| `child_order` | `unsignedTinyInteger` | Anak ke- dalam keluarga |
-| `previous_school` | `string` | Sekolah asal (SD/MI) |
-| `address` | `text` | Alamat lengkap santri |
-| `registration_fee` | `unsignedBigInteger` | Nominal biaya daftar saat mendaftar |
-| `payment_status` | `string` | PHP Backed Enum: `unpaid`, `pending_verification`, `paid`, `rejected` |
-| `application_status` | `string` | PHP Backed Enum: `pending`, `verified`, `revision_needed`, `accepted`, `reserve`, `rejected` |
-| `admin_notes` | `text` (Nullable) | Catatan panitia (misal jika berkas kurang jelas) |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
-| `deleted_at` | `timestamp` (Nullable) | Soft Delete |
+| Nama Kolom            | Tipe Data               | Keterangan                                                                                   |
+| :-------------------- | :---------------------- | :------------------------------------------------------------------------------------------- |
+| `id`                  | `ulid` (PK)             | Primary Key                                                                                  |
+| `admission_wave_id`   | `foreignUlid`           | Relasi ke `admission_waves`                                                                  |
+| `registration_number` | `string` (Unique)       | Format: `PSB-2027-MTS-0001`                                                                  |
+| `access_token`        | `string(8)` (Unique)    | Token alfanumerik untuk akses cek status                                                     |
+| `program_type`        | `string`                | PHP Backed Enum: `MTS`, `MDTA`                                                               |
+| `full_name`           | `string`                | Nama lengkap calon santri                                                                    |
+| `nik`                 | `string(16)`            | NIK calon santri                                                                             |
+| `nisn`                | `string(10)` (Nullable) | NISN (wajib untuk MTS, opsional MDTA)                                                        |
+| `gender`              | `string`                | PHP Backed Enum: `L` (Laki-laki), `P` (Perempuan)                                            |
+| `birth_place`         | `string`                | Tempat lahir                                                                                 |
+| `birth_date`          | `date`                  | Tanggal lahir                                                                                |
+| `child_order`         | `unsignedTinyInteger`   | Anak ke- dalam keluarga                                                                      |
+| `previous_school`     | `string`                | Sekolah asal (SD/MI)                                                                         |
+| `address`             | `text`                  | Alamat lengkap santri                                                                        |
+| `registration_fee`    | `unsignedBigInteger`    | Nominal biaya daftar saat mendaftar                                                          |
+| `payment_status`      | `string`                | PHP Backed Enum: `unpaid`, `pending_verification`, `paid`, `rejected`                        |
+| `application_status`  | `string`                | PHP Backed Enum: `pending`, `verified`, `revision_needed`, `accepted`, `reserve`, `rejected` |
+| `admin_notes`         | `text` (Nullable)       | Catatan panitia (misal jika berkas kurang jelas)                                             |
+| `timestamps`          | `timestamp`             | `created_at`, `updated_at`                                                                   |
+| `deleted_at`          | `timestamp` (Nullable)  | Soft Delete                                                                                  |
 
 **Index:** `registration_number`, `nik`, `access_token`, `program_type`, `application_status`, `payment_status`.  
 **Unique Constraint:** `unique(['nik', 'admission_wave_id'])` — mencegah duplikasi NIK per tahun ajaran (lintas gelombang).
 
 ### 7.4. Tabel `applicant_parents` (Data Orang Tua/Wali)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `applicant_id` | `foreignUlid` (Unique) | Relasi one-to-one ke `applicants` |
-| `father_name` | `string` | Nama ayah kandung |
-| `mother_name` | `string` | Nama ibu kandung |
-| `father_job` | `string` (Nullable) | Pekerjaan ayah |
-| `mother_job` | `string` (Nullable) | Pekerjaan ibu |
-| `parent_income` | `string` (Nullable) | Rentang penghasilan keluarga (contoh: `< 1 Juta`, `1-3 Juta`, `3-5 Juta`, `> 5 Juta`) |
-| `parent_phone` | `string(20)` | Nomor WhatsApp aktif orang tua/wali |
-| `parent_address` | `text` | Alamat lengkap orang tua/wali |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
+| Nama Kolom       | Tipe Data              | Keterangan                                                                            |
+| :--------------- | :--------------------- | :------------------------------------------------------------------------------------ |
+| `id`             | `ulid` (PK)            | Primary Key                                                                           |
+| `applicant_id`   | `foreignUlid` (Unique) | Relasi one-to-one ke `applicants`                                                     |
+| `father_name`    | `string`               | Nama ayah kandung                                                                     |
+| `mother_name`    | `string`               | Nama ibu kandung                                                                      |
+| `father_job`     | `string` (Nullable)    | Pekerjaan ayah                                                                        |
+| `mother_job`     | `string` (Nullable)    | Pekerjaan ibu                                                                         |
+| `parent_income`  | `string` (Nullable)    | Rentang penghasilan keluarga (contoh: `< 1 Juta`, `1-3 Juta`, `3-5 Juta`, `> 5 Juta`) |
+| `parent_phone`   | `string(20)`           | Nomor WhatsApp aktif orang tua/wali                                                   |
+| `parent_address` | `text`                 | Alamat lengkap orang tua/wali                                                         |
+| `timestamps`     | `timestamp`            | `created_at`, `updated_at`                                                            |
 
 ### 7.5. Tabel `applicant_documents` (Berkas Pendaftar)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `applicant_id` | `foreignUlid` | Relasi ke `applicants` |
-| `document_type` | `string` | PHP Backed Enum: `photo`, `kk`, `akta`, `payment_proof` |
-| `file_path` | `string` | Path file relatif ke storage disk |
-| `original_name` | `string` | Nama file asli saat diupload |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
+| Nama Kolom      | Tipe Data     | Keterangan                                              |
+| :-------------- | :------------ | :------------------------------------------------------ |
+| `id`            | `ulid` (PK)   | Primary Key                                             |
+| `applicant_id`  | `foreignUlid` | Relasi ke `applicants`                                  |
+| `document_type` | `string`      | PHP Backed Enum: `photo`, `kk`, `akta`, `payment_proof` |
+| `file_path`     | `string`      | Path file relatif ke storage disk                       |
+| `original_name` | `string`      | Nama file asli saat diupload                            |
+| `timestamps`    | `timestamp`   | `created_at`, `updated_at`                              |
 
 **Index:** `applicant_id`, `document_type`.
 
@@ -352,34 +352,34 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 7.6. Tabel `categories` (Kategori Berita)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `name` | `string` | Nama kategori |
-| `slug` | `string` (Unique) | URL-friendly identifier |
-| `parent_id` | `foreignUlid` (Nullable) | Self-referencing FK untuk sub-kategori |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
-| `deleted_at` | `timestamp` (Nullable) | Soft Delete |
+| Nama Kolom   | Tipe Data                | Keterangan                             |
+| :----------- | :----------------------- | :------------------------------------- |
+| `id`         | `ulid` (PK)              | Primary Key                            |
+| `name`       | `string`                 | Nama kategori                          |
+| `slug`       | `string` (Unique)        | URL-friendly identifier                |
+| `parent_id`  | `foreignUlid` (Nullable) | Self-referencing FK untuk sub-kategori |
+| `timestamps` | `timestamp`              | `created_at`, `updated_at`             |
+| `deleted_at` | `timestamp` (Nullable)   | Soft Delete                            |
 
 ### 7.7. Tabel `posts` (Artikel Berita)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `category_id` | `foreignUlid` (Nullable) | Relasi ke `categories` |
-| `author_id` | `foreignUlid` | Relasi ke `users` |
-| `title` | `string` | Judul artikel |
-| `slug` | `string` (Unique) | URL-friendly identifier |
-| `excerpt` | `text` (Nullable) | Ringkasan singkat |
-| `content` | `longText` | Isi artikel (HTML dari rich text editor) |
-| `featured_image` | `string` (Nullable) | Path gambar utama |
-| `status` | `string` | PHP Backed Enum: `draft`, `published`, `scheduled` |
-| `is_featured` | `boolean` | Penanda berita utama. Default `false`. |
-| `published_at` | `timestamp` (Nullable) | Waktu publikasi (untuk scheduled & published) |
-| `meta_title` | `string` (Nullable) | Custom meta title untuk SEO (fallback ke `title`) |
-| `meta_description` | `string` (Nullable) | Custom meta description untuk SEO (fallback ke `excerpt`) |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
-| `deleted_at` | `timestamp` (Nullable) | Soft Delete |
+| Nama Kolom         | Tipe Data                | Keterangan                                                |
+| :----------------- | :----------------------- | :-------------------------------------------------------- |
+| `id`               | `ulid` (PK)              | Primary Key                                               |
+| `category_id`      | `foreignUlid` (Nullable) | Relasi ke `categories`                                    |
+| `author_id`        | `foreignUlid`            | Relasi ke `users`                                         |
+| `title`            | `string`                 | Judul artikel                                             |
+| `slug`             | `string` (Unique)        | URL-friendly identifier                                   |
+| `excerpt`          | `text` (Nullable)        | Ringkasan singkat                                         |
+| `content`          | `longText`               | Isi artikel (HTML dari rich text editor)                  |
+| `featured_image`   | `string` (Nullable)      | Path gambar utama                                         |
+| `status`           | `string`                 | PHP Backed Enum: `draft`, `published`, `scheduled`        |
+| `is_featured`      | `boolean`                | Penanda berita utama. Default `false`.                    |
+| `published_at`     | `timestamp` (Nullable)   | Waktu publikasi (untuk scheduled & published)             |
+| `meta_title`       | `string` (Nullable)      | Custom meta title untuk SEO (fallback ke `title`)         |
+| `meta_description` | `string` (Nullable)      | Custom meta description untuk SEO (fallback ke `excerpt`) |
+| `timestamps`       | `timestamp`              | `created_at`, `updated_at`                                |
+| `deleted_at`       | `timestamp` (Nullable)   | Soft Delete                                               |
 
 **Index:** `slug`, `status`, `published_at`, `is_featured`.
 
@@ -387,12 +387,12 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 7.8. Tabel `post_views` (Statistik View Berita)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `post_id` | `foreignUlid` | Relasi ke `posts` |
-| `viewed_at` | `date` | Tanggal view (agregasi per hari) |
-| `count` | `unsignedInteger` | Jumlah view pada tanggal tersebut |
+| Nama Kolom  | Tipe Data         | Keterangan                        |
+| :---------- | :---------------- | :-------------------------------- |
+| `id`        | `ulid` (PK)       | Primary Key                       |
+| `post_id`   | `foreignUlid`     | Relasi ke `posts`                 |
+| `viewed_at` | `date`            | Tanggal view (agregasi per hari)  |
+| `count`     | `unsignedInteger` | Jumlah view pada tanggal tersebut |
 
 **Unique Constraint:** `unique(['post_id', 'viewed_at'])`.
 
@@ -407,41 +407,41 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 7.11. Tabel `site_settings` (Pengaturan Dinamis)
 
-| Nama Kolom | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `ulid` (PK) | Primary Key |
-| `key` | `string` (Unique) | Identifier setting, contoh: `psb_whatsapp_number` |
-| `value` | `text` (Nullable) | Nilai setting |
-| `group` | `string` (Nullable) | Grup setting: `general`, `psb`, `social_media`, `billing` |
-| `timestamps` | `timestamp` | `created_at`, `updated_at` |
+| Nama Kolom   | Tipe Data           | Keterangan                                                |
+| :----------- | :------------------ | :-------------------------------------------------------- |
+| `id`         | `ulid` (PK)         | Primary Key                                               |
+| `key`        | `string` (Unique)   | Identifier setting, contoh: `psb_whatsapp_number`         |
+| `value`      | `text` (Nullable)   | Nilai setting                                             |
+| `group`      | `string` (Nullable) | Grup setting: `general`, `psb`, `social_media`, `billing` |
+| `timestamps` | `timestamp`         | `created_at`, `updated_at`                                |
 
 **Setting yang harus di-seed:**
 
-| Key | Group | Contoh Value |
-| :--- | :--- | :--- |
-| `school_name` | `general` | Pondok Pesantren Modern Tahfidzul Quran Daar El Tazkiyah Sumardi |
-| `school_address` | `general` | (Alamat lengkap) |
-| `school_phone` | `general` | (Nomor telepon) |
-| `school_email` | `general` | (Email) |
-| `psb_whatsapp_number` | `psb` | 6281234567890 |
-| `bank_account_name` | `billing` | (Nama rekening) |
-| `bank_account_number` | `billing` | (Nomor rekening) |
-| `bank_name` | `billing` | (Nama bank) |
-| `monthly_fee_mts` | `billing` | 500000 |
-| `monthly_fee_mdta` | `billing` | 12000 |
-| `facebook_url` | `social_media` | (URL) |
-| `instagram_url` | `social_media` | (URL) |
-| `youtube_url` | `social_media` | (URL) |
+| Key                   | Group          | Contoh Value                                                     |
+| :-------------------- | :------------- | :--------------------------------------------------------------- |
+| `school_name`         | `general`      | Pondok Pesantren Modern Tahfidzul Quran Daar El Tazkiyah Sumardi |
+| `school_address`      | `general`      | (Alamat lengkap)                                                 |
+| `school_phone`        | `general`      | (Nomor telepon)                                                  |
+| `school_email`        | `general`      | (Email)                                                          |
+| `psb_whatsapp_number` | `psb`          | 6281234567890                                                    |
+| `bank_account_name`   | `billing`      | (Nama rekening)                                                  |
+| `bank_account_number` | `billing`      | (Nomor rekening)                                                 |
+| `bank_name`           | `billing`      | (Nama bank)                                                      |
+| `monthly_fee_mts`     | `billing`      | 500000                                                           |
+| `monthly_fee_mdta`    | `billing`      | 12000                                                            |
+| `facebook_url`        | `social_media` | (URL)                                                            |
+| `instagram_url`       | `social_media` | (URL)                                                            |
+| `youtube_url`         | `social_media` | (URL)                                                            |
 
 ### 7.12. Data Seeder Awal
 
-| Tabel | Data Awal |
-| :--- | :--- |
-| `users` | 1 Super Admin account |
-| `admission_waves` | Gelombang I & II TA 2027/2028 dengan biaya sesuai brosur |
-| `categories` | Kabar Pondok, Prestasi Santri, Pengumuman PSB, Artikel Kajian |
-| `site_settings` | Seluruh key dari tabel di atas |
-| `teachers` | Data awal tenaga pendidik (minimal Pengasuh) |
+| Tabel             | Data Awal                                                     |
+| :---------------- | :------------------------------------------------------------ |
+| `users`           | 1 Super Admin account                                         |
+| `admission_waves` | Gelombang I & II TA 2027/2028 dengan biaya sesuai brosur      |
+| `categories`      | Kabar Pondok, Prestasi Santri, Pengumuman PSB, Artikel Kajian |
+| `site_settings`   | Seluruh key dari tabel di atas                                |
+| `teachers`        | Data awal tenaga pendidik (minimal Pengasuh)                  |
 
 ---
 
@@ -492,14 +492,14 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ## 9. Roadmap Pengembangan
 
-| Fase | Rentang Waktu | Fokus Pengerjaan & Deliverable |
-| :--- | :--- | :--- |
-| **Fase 1: Inisiasi & Fondasi** | Bulan 1 – 2 | Setup proyek Laravel 13 + Livewire di Laragon, konfigurasi Design System Tailwind (custom color `brand-green` & Gold), pembuatan seluruh migrasi database, model Eloquent dengan relasi, PHP Backed Enums, dan *seeder* data awal. Setup Fortify auth + role-based gates. |
-| **Fase 2: Landing Page & Profil** | Bulan 3 – 4 | Pembangunan halaman publik utama (Hero Section, Sambutan Pengasuh, Kartu Perbandingan MTS vs MDTA, Rincian Biaya, Daftar Pengajar, Halaman Kontak, dan Footer). |
-| **Fase 3: CMS Berita & Admin Panel** | Bulan 5 – 6 | Pembangunan Admin Panel (Custom Livewire + Flux UI) untuk manajemen Berita, Kategori, Pengajar, Galeri, dan Site Settings. Pembuatan halaman baca berita publik + galeri publik. |
-| **Fase 4: Modul PSB End-to-End** | Bulan 7 – 8 | Pembangunan form pendaftaran *multi-step*, fitur unggah berkas sequential, generator Nomor Registrasi + Access Token, halaman Cek Status + Edit Data, cetak bukti daftar (DomPDF), Dashboard Panitia dengan search/filter/pagination, fitur Export Excel, dan audit log. |
-| **Fase 5: Pengujian & Optimasi Hosting** | Bulan 9 | *User Acceptance Testing* (UAT) di berbagai ukuran layar HP & browser target. Uji coba upload berkas di shared hosting (timeout handling). Implementasi caching strategy. Pembuatan deployment helper route. Simulasi *build* produksi. Penulisan `DEPLOYMENT.md`. |
-| **Fase 6: Deployment & Go-Live** | Bulan 10 (Agustus 2027) | Upload paket rilis ke cPanel Shared Hosting, konfigurasi `.env` produksi (termasuk `APP_ENV=production`, `APP_DEBUG=false`), setup cron job cPanel, import database MySQL, post-deployment verification checklist, serta pelatihan singkat penggunaan *dashboard* untuk admin/panitia pondok. |
+| Fase                                     | Rentang Waktu           | Fokus Pengerjaan & Deliverable                                                                                                                                                                                                                                                                |
+| :--------------------------------------- | :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fase 1: Inisiasi & Fondasi**           | Bulan 1 – 2             | Setup proyek Laravel 13 + Livewire di Laragon, konfigurasi Design System Tailwind (custom color `brand-green` & Gold), pembuatan seluruh migrasi database, model Eloquent dengan relasi, PHP Backed Enums, dan *seeder* data awal. Setup Fortify auth + role-based gates.                     |
+| **Fase 2: Landing Page & Profil**        | Bulan 3 – 4             | Pembangunan halaman publik utama (Hero Section, Sambutan Pengasuh, Kartu Perbandingan MTS vs MDTA, Rincian Biaya, Daftar Pengajar, Halaman Kontak, dan Footer).                                                                                                                               |
+| **Fase 3: CMS Berita & Admin Panel**     | Bulan 5 – 6             | Pembangunan Admin Panel (Custom Livewire + Flux UI) untuk manajemen Berita, Kategori, Pengajar, Galeri, dan Site Settings. Pembuatan halaman baca berita publik + galeri publik.                                                                                                              |
+| **Fase 4: Modul PSB End-to-End**         | Bulan 7 – 8             | Pembangunan form pendaftaran *multi-step*, fitur unggah berkas sequential, generator Nomor Registrasi + Access Token, halaman Cek Status + Edit Data, cetak bukti daftar (DomPDF), Dashboard Panitia dengan search/filter/pagination, fitur Export Excel, dan audit log.                      |
+| **Fase 5: Pengujian & Optimasi Hosting** | Bulan 9                 | *User Acceptance Testing* (UAT) di berbagai ukuran layar HP & browser target. Uji coba upload berkas di shared hosting (timeout handling). Implementasi caching strategy. Pembuatan deployment helper route. Simulasi *build* produksi. Penulisan `DEPLOYMENT.md`.                            |
+| **Fase 6: Deployment & Go-Live**         | Bulan 10 (Agustus 2027) | Upload paket rilis ke cPanel Shared Hosting, konfigurasi `.env` produksi (termasuk `APP_ENV=production`, `APP_DEBUG=false`), setup cron job cPanel, import database MySQL, post-deployment verification checklist, serta pelatihan singkat penggunaan *dashboard* untuk admin/panitia pondok. |
 
 ---
 
@@ -521,27 +521,27 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 
 ### 10.3. Risiko & Mitigasi
 
-| Risiko | Dampak | Probabilitas | Mitigasi |
-| :--- | :--- | :--- | :--- |
-| Shared hosting tidak support PHP 8.3 | Aplikasi tidak bisa berjalan | Rendah | Konfirmasi versi PHP sebelum beli hosting. Pilih hosting yang sudah support PHP 8.3+. |
-| Upload file timeout di shared hosting | User gagal upload berkas | Sedang | Upload sequential (1 file per request). Kompresi client-side sebelum upload. |
-| `openspout` kehabisan memori saat export ratusan data | Export Excel gagal | Rendah | Gunakan streaming export. Limit export max 1000 baris per request. |
-| Data pendaftar terhapus tidak sengaja | Kehilangan data sensitif | Rendah | SoftDeletes di semua tabel kritis. Backup berkala. |
-| Deployment token bocor | Unauthorized access ke migrate/optimize | Rendah | One-time token + auto-disable. Rate limiting. IP whitelist. |
+| Risiko                                                | Dampak                                  | Probabilitas | Mitigasi                                                                              |
+| :---------------------------------------------------- | :-------------------------------------- | :----------- | :------------------------------------------------------------------------------------ |
+| Shared hosting tidak support PHP 8.3                  | Aplikasi tidak bisa berjalan            | Rendah       | Konfirmasi versi PHP sebelum beli hosting. Pilih hosting yang sudah support PHP 8.3+. |
+| Upload file timeout di shared hosting                 | User gagal upload berkas                | Sedang       | Upload sequential (1 file per request). Kompresi client-side sebelum upload.          |
+| `openspout` kehabisan memori saat export ratusan data | Export Excel gagal                      | Rendah       | Gunakan streaming export. Limit export max 1000 baris per request.                    |
+| Data pendaftar terhapus tidak sengaja                 | Kehilangan data sensitif                | Rendah       | SoftDeletes di semua tabel kritis. Backup berkala.                                    |
+| Deployment token bocor                                | Unauthorized access ke migrate/optimize | Rendah       | One-time token + auto-disable. Rate limiting. IP whitelist.                           |
 
 ---
 
 ## 11. Glosarium
 
-| Istilah | Definisi |
-| :--- | :--- |
-| **MTS** | Madrasah Tsanawiyah — jenjang pendidikan formal setara SMP. |
-| **MDTA** | Madrasah Diniyah Takmiliyah Awaliyah — pendidikan diniyah/keagamaan non-formal. |
-| **PSB** | Penerimaan Santri Baru — proses seleksi dan pendaftaran santri baru. |
-| **NIK** | Nomor Induk Kependudukan — nomor identitas 16 digit pada KTP/KK. |
-| **NISN** | Nomor Induk Siswa Nasional — nomor identitas 10 digit siswa di sistem Kemendikbud. |
-| **Mukim** | Sistem asrama/boarding — santri tinggal di pondok pesantren 24 jam. |
-| **PPMTQ** | Pondok Pesantren Modern Tahfidzul Quran. |
-| **Tahfidz** | Program penghafalan Al-Qur'an. |
-| **Gelombang** | Periode/batch pendaftaran santri baru (umumnya 2 gelombang per tahun ajaran). |
-| **Wali Santri** | Orang tua atau wali yang bertanggung jawab atas santri. |
+| Istilah         | Definisi                                                                           |
+| :-------------- | :--------------------------------------------------------------------------------- |
+| **MTS**         | Madrasah Tsanawiyah — jenjang pendidikan formal setara SMP.                        |
+| **MDTA**        | Madrasah Diniyah Takmiliyah Awaliyah — pendidikan diniyah/keagamaan non-formal.    |
+| **PSB**         | Penerimaan Santri Baru — proses seleksi dan pendaftaran santri baru.               |
+| **NIK**         | Nomor Induk Kependudukan — nomor identitas 16 digit pada KTP/KK.                   |
+| **NISN**        | Nomor Induk Siswa Nasional — nomor identitas 10 digit siswa di sistem Kemendikbud. |
+| **Mukim**       | Sistem asrama/boarding — santri tinggal di pondok pesantren 24 jam.                |
+| **PPMTQ**       | Pondok Pesantren Modern Tahfidzul Quran.                                           |
+| **Tahfidz**     | Program penghafalan Al-Qur'an.                                                     |
+| **Gelombang**   | Periode/batch pendaftaran santri baru (umumnya 2 gelombang per tahun ajaran).      |
+| **Wali Santri** | Orang tua atau wali yang bertanggung jawab atas santri.                            |
