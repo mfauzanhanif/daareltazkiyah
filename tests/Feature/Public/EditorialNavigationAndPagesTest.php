@@ -18,11 +18,11 @@ test('homepage loads successfully with 200 OK and executive hub sections', funct
     // Verify institutional brand and Pengasuh credentials
     $response->assertSeeText('Daar El Tazkiyah Sumardi')
         ->assertSeeText('Ust. Ahmad Ashil Fadhil, S.H., M.H.')
-        ->assertSeeText('01 — PROFIL & NILAI UTAMA')
-        ->assertSeeText('02 — PROGRAM UNGGULAN PESANTREN')
-        ->assertSeeText('03 — WARTA & BERITA TERKINI')
-        ->assertSeeText('04 — DOKUMENTASI KEGIATAN SANTRI')
-        ->assertSeeText('05 — PENERIMAAN SANTRI BARU (PSB) 2027/2028');
+        ->assertSeeText('PROGRAM UNGGULAN')
+        ->assertSeeText('VISI & MISI')
+        ->assertSeeText('Warta Pesantren & Agenda Kegiatan')
+        ->assertSeeText('Potret Rutinitas & Kehidupan Santri')
+        ->assertSeeText('Informasi Biaya & Persyaratan Pendaftaran');
 });
 
 test('profile page loads with comprehensive history and vision mission anchors', function () {

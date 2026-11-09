@@ -13,7 +13,7 @@ class TeacherSeeder extends Seeder
     {
         $teachers = [
             [
-                'full_name' => 'Ibu Hj. Dati Sumiyati, M.Pd.',
+                'full_name' => 'Ibu Hj. Dati Sumiyati',
                 'role_title' => 'Pembina & Pendidik Pesantren',
                 'bio' => 'Pembina senior berdedikasi membimbing kurikulum pendidikan formal, akhlak santri, dan manajemen kepesantrenan.',
                 'specialization' => 'Pendidikan Islam & Manajemen Kurikulum',
@@ -22,7 +22,7 @@ class TeacherSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'full_name' => 'Ust. Ahmad Ashil Fadhil, S.H., M.H.',
+                'full_name' => 'Ust. Ahmad Ashil Fadhil',
                 'role_title' => 'Pengasuh Pondok Pesantren',
                 'bio' => 'Pengasuh Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi, alumni perguruan tinggi syariah & hukum Islam dengan komitmen mencetak generasi Qur\'ani mutqin bersanad.',
                 'specialization' => 'Tafsir, Hadits & Hukum Islam',
@@ -31,7 +31,7 @@ class TeacherSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'full_name' => 'Bapak Dzaki Waliyyuddin, S.T.',
+                'full_name' => 'Bapak Dzaki Waliyyuddin',
                 'role_title' => 'Tenaga Pendidik & Pembina IT',
                 'bio' => 'Pendidik bidang sains terapan, teknologi informasi, dan pengembangan potensi analitis serta kepramukaan santri.',
                 'specialization' => 'Teknologi Informasi & Sains',
@@ -40,7 +40,7 @@ class TeacherSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'full_name' => 'Ustz. Cicih Jubaedah, S.Pd.',
+                'full_name' => 'Ustz. Cicih Jubaedah',
                 'role_title' => 'Tenaga Pendidik & Pembina Santriwati',
                 'bio' => 'Pendidik berpengalaman membina pembelajaran bahasa, adab Islami, dan ketertiban asrama santriwati.',
                 'specialization' => 'Bahasa & Pembinaan Akhlak',
@@ -49,7 +49,7 @@ class TeacherSeeder extends Seeder
                 'is_active' => true,
             ],
             [
-                'full_name' => 'Ustz. Nafa Firdausi Nuzula, S.Pd.',
+                'full_name' => 'Ustz. Nafa Firdausi Nuzula',
                 'role_title' => 'Tenaga Pendidik & Musyrifah Tahfidz',
                 'bio' => 'Pembimbing tahfidz Al-Qur\'an, setoran sabaq-manzil, dan pembelajaran diniyah santriwati.',
                 'specialization' => 'Tahfidzul Qur\'an & Tajwid',

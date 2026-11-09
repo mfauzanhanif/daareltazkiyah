@@ -17,6 +17,9 @@
                         bahasa dan kepemimpinan masa depan.
                     </p>
                 </div>
+                <div class="font-arabic text-base sm:text-lg text-[#084C27] font-semibold" dir="rtl" style="line-height: 1.8;">
+                    خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+                </div>
             </div>
 
             <!-- 6 Flagship Program Cards -->
@@ -103,6 +106,9 @@
                 <!-- Left: Visi Quote -->
                 <div class="lg:col-span-5 space-y-5">
                     <div class="space-y-1">
+                        <div class="font-arabic text-lg sm:text-xl text-[#B89758] font-bold" dir="rtl" style="line-height: 1.8;">
+                            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                        </div>
                         <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E] tracking-tight">
                             VISI & MISI
                         </h2>
@@ -231,6 +237,10 @@
                     class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                     <div class="space-y-6">
                         <div>
+                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM</span>
+                                <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim</span>
+                            </div>
                             <div class="flex items-center justify-between gap-2">
                                 <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS</h3>
                             </div>
@@ -295,6 +305,10 @@
                     class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                     <div class="space-y-6">
                         <div>
+                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                <span class="editorial-label text-[#B89758]">PROGRAM SEKOLAH SORE</span>
+                                <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#B89758] text-white">Non-Mukim</span>
+                            </div>
                             <div class="flex items-center justify-between gap-2">
                                 <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
                             </div>
@@ -363,6 +377,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
+                    <div class="font-arabic text-sm sm:text-base text-[#084C27] font-semibold" dir="rtl" style="line-height: 1.8;">
+                        اقْرَأْ وَارْتَقِ وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا
+                    </div>
                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                         Warta Pesantren & Agenda Kegiatan
                     </h2>

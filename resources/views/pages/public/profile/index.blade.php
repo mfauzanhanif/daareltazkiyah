@@ -52,22 +52,6 @@
                         </p>
                     </div>
 
-                    <!-- Highlight Meta Box -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="bg-white p-4 rounded-md border border-[#E5E0D8] space-y-1">
-                            <span class="editorial-label text-[#B89758]">TAGLINE PESANTREN</span>
-                            <p class="font-sans font-bold text-sm text-[#0D3B2E]">
-                                "Bersama Al-Qur'an Meraih Masa Depan Gemilang."
-                            </p>
-                        </div>
-                        <div class="bg-white p-4 rounded-md border border-[#E5E0D8] space-y-1">
-                            <span class="editorial-label text-[#B89758]">LOKASI KAMPUS</span>
-                            <p class="font-sans font-bold text-sm text-[#0D3B2E]">
-                                Kp. Lembur Sawah, Petir, Serang, Banten
-                            </p>
-                        </div>
-                    </div>
-
                     <div class="pt-2 flex items-center gap-4 text-xs font-bold uppercase tracking-wider">
                         <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white transition shadow-xs">
                             <span>Daftar Santri Baru &rarr;</span>
@@ -81,14 +65,19 @@
                 <!-- Right Column: Foto & Profil Pengasuh -->
                 <div class="lg:col-span-5 flex flex-col items-center">
                     <div class="w-full max-w-md bg-white border border-[#E5E0D8] rounded-md overflow-hidden shadow-md">
-                        <!-- Pengasuh Photo Frame -->
+                        <!-- Pengasuh Photo Frame with Real Photo -->
                         <div class="aspect-4/5 relative overflow-hidden bg-gradient-to-b from-[#0D3B2E] to-[#042816] flex flex-col justify-end border-b border-[#E5E0D8]">
-                            <!-- Silhouette Motif -->
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-white/20 pb-16 pointer-events-none">
-                                <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo" class="w-32 h-32 object-contain opacity-20"
-                                    onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
-                                <span class="font-arabic text-xs text-amber-200/50 mt-2" dir="rtl">فضيلة الشيخ Pengasuh</span>
-                            </div>
+                            @if(file_exists(public_path('images/pengasuh daar el tazkiyah.webp')))
+                                <img src="{{ asset('images/pengasuh daar el tazkiyah.webp') }}"
+                                    alt="Ust. Ahmad Ashil Fadhil, S.H., M.H."
+                                    class="absolute inset-0 w-full h-full object-cover object-top">
+                            @else
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-white/20 pb-16 pointer-events-none">
+                                    <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo" class="w-32 h-32 object-contain opacity-20"
+                                        onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
+                                    <span class="font-arabic text-xs text-amber-200/50 mt-2" dir="rtl">فضيلة الشيخ Pengasuh</span>
+                                </div>
+                            @endif
 
                             <!-- Leadership Identity Overlay -->
                             <div class="relative z-10 bg-gradient-to-t from-[#084C27] via-[#084C27]/90 to-transparent p-6 text-center text-white space-y-1">
@@ -97,22 +86,11 @@
                                     Ust. Ahmad Ashil Fadhil, S.H., M.H.
                                 </h3>
                                 <p class="text-xs text-emerald-100 font-medium">
-                                    Magister Hukum & Pakar Kajian Syariah Islam
+                                    PPMTQ Daar El Tazkiyah Sumardi
                                 </p>
-                                <div class="text-xs text-amber-300/90 font-arabic pt-1" dir="rtl">
+                                <div class="text-xs text-amber-300/90 font-arabic pt-1" dir="rtl" style="line-height: 1.8;">
                                     حفظه الله تعالى ورعاه
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Pengasuh Bio Summary -->
-                        <div class="p-6 space-y-3 bg-white">
-                            <blockquote class="text-xs text-[#4B6358] italic leading-relaxed border-l-2 border-[#B89758] pl-3">
-                                "Menghafal Al-Qur'an adalah perjalanan penyucian jiwa (tazkiyah), menyandingkan adab di atas ilmu, dan melatih kemandirian santri untuk peradaban Islam."
-                            </blockquote>
-                            <div class="pt-2 border-t border-[#E5E0D8] text-[11px] text-[#4B6358] space-y-1">
-                                <p><strong class="text-[#0D3B2E]">Lembaga:</strong> PPMTQ Daar El Tazkiyah Sumardi</p>
-                                <p><strong class="text-[#0D3B2E]">Fokus Bimbingan:</strong> Tahfidzul Qur'an 30 Juz, Tafsir, Hadits, & Adab Santri</p>
                             </div>
                         </div>
                     </div>
@@ -142,9 +120,6 @@
                     <blockquote class="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-white leading-snug">
                         "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi, dan siap mengabdi untuk umat."
                     </blockquote>
-                    <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed pt-2">
-                        Menjadi episentrum pendidikan kader ulama dan cendekiawan muslim yang mutafaqqih fiddin, tangguh membela kebenaran, serta menjadi rahmat bagi semesta alam.
-                    </p>
                 </div>
             </div>
 
