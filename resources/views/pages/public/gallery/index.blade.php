@@ -13,11 +13,6 @@
     <section class="bg-white border-b border-[#E5E0D8] pt-12 pb-14 md:pt-16 md:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl space-y-4">
-                <div class="flex items-center gap-3">
-                    <span class="editorial-label text-[#059669]">04 — DOKUMENTASI VISUAL</span>
-                    <span class="w-8 h-px bg-[#B89758]"></span>
-                    <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">Pinterest Masonry Gallery</span>
-                </div>
                 <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Potret Rutinitas & Dokumentasi Santri
                 </h1>

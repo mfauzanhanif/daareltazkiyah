@@ -120,7 +120,7 @@ Untuk menunjang bakat dan minat santri, tersedia berbagai kegiatan ekstrakurikul
 - **Alamat Lengkap:**
   RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten.
 - **Nomor Telepon / WhatsApp Pendaftaran:**
-  - **Pendaftaran MTs/SMP:** 0895-0718-4811
-  - **Pendaftaran MDTA:** 0858-8276-7078
+  - **Pendaftaran MTs/SMP:** 0896-5332-4339
+  - **Pendaftaran MDTA:** 0895-0718-4811
 - **Media Sosial (Facebook, Instagram, TikTok, YouTube):** `@media_daar_eltazkiyah`
 - **Website Resmi:** `www.daareltazkiyahsumardi.ponpes.id`

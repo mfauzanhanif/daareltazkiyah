@@ -160,7 +160,7 @@ test('adversarial challenge 3: teachers ordering respects sort_order ASC and str
         'is_active' => true,
     ]);
 
-    $response = $this->get('/');
+    $response = $this->get('/profil');
     $response->assertOk();
     $content = $response->getContent();
 
@@ -316,8 +316,11 @@ test('adversarial challenge 5: empty states render cleanly without 500 when data
     $response->assertOk();
     $content = $response->getContent();
 
+    $responseProfile = $this->get('/profil');
+    $responseProfile->assertOk();
+
     expect($content)->toContain('Pondok Pesantren Modern Tahfidzul Quran')
-        ->and($content)->toContain('Belum ada data asatidz yang dipublikasikan.')
+        ->and($responseProfile->getContent())->toContain('Belum ada data asatidz yang dipublikasikan.')
         ->and($content)->toContain('Belum ada warta berita yang dipublikasikan.')
         ->and($content)->toContain('Belum ada dokumentasi kegiatan yang diunggah.')
         ->and($content)->toContain('Rp 100.000') // default fallback

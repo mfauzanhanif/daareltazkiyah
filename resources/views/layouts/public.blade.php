@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ filled($title ?? null) ? $title . ' - ' . config('app.name', 'Daar El Tazkiyah') : 'Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi' }}</title>
+    <title>
+        {{ filled($title ?? null) ? $title . ' - ' . config('app.name', 'Daar El Tazkiyah') : 'Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi' }}
+    </title>
 
     <!-- Open Graph / Meta -->
     @yield('meta')
@@ -20,13 +23,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fluxAppearance
 </head>
-<body class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between overflow-x-hidden">
+
+<body
+    class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between overflow-x-clip">
 
     @php
         $activeWave = \App\Models\AdmissionWave::currentActive();
-        $waNumber = \App\Models\SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
-        $siteAddress = \App\Models\SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
-        $sitePhone = \App\Models\SiteSetting::get('school_phone', '0895-0718-4811');
+        $waNumber = \App\Models\SiteSetting::get('psb_whatsapp_number', '0896-5332-4339');
+        $siteAddress = \App\Models\SiteSetting::get(
+            'school_address',
+            'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten',
+        );
+        $sitePhone = \App\Models\SiteSetting::get('school_phone', '0896-5332-4339');
         $siteEmail = \App\Models\SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
     @endphp
 
@@ -46,4 +54,5 @@
 
     @fluxScripts
 </body>
+
 </html>

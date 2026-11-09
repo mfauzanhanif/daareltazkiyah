@@ -49,10 +49,10 @@ final class HomeController extends Controller
         $feeMts = $activeWave ? number_format($activeWave->fee_mts, 0, ',', '.') : '100.000';
         $feeMdta = $activeWave ? number_format($activeWave->fee_mdta, 0, ',', '.') : '25.000';
 
-        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
-        $waMdtaNumber = (string) SiteSetting::get('psb_whatsapp_mdta_number', '0858-8276-7078');
+        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0896-5332-4339');
+        $waMdtaNumber = (string) SiteSetting::get('psb_whatsapp_mdta_number', '0895-0718-4811');
         $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
-        $sitePhone = (string) SiteSetting::get('school_phone', '0895-0718-4811');
+        $sitePhone = (string) SiteSetting::get('school_phone', '0896-5332-4339');
         $siteEmail = (string) SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
 
         return view('public.home', compact(

@@ -31,7 +31,7 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'school_phone',
-                'value' => '0895-0718-4811',
+                'value' => '0896-5332-4339',
                 'group' => SettingGroup::General,
             ],
             [
@@ -48,12 +48,12 @@ class SiteSettingSeeder extends Seeder
             // PSB Information
             [
                 'key' => 'psb_whatsapp_number',
-                'value' => '0895-0718-4811',
+                'value' => '0896-5332-4339',
                 'group' => SettingGroup::Psb,
             ],
             [
                 'key' => 'psb_whatsapp_mdta_number',
-                'value' => '0858-8276-7078',
+                'value' => '0895-0718-4811',
                 'group' => SettingGroup::Psb,
             ],
             [

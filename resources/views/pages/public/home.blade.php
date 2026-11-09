@@ -9,20 +9,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">02 — PROGRAM UNGGULAN PESANTREN</span>
                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                        6 Pilar Pembinaan Santri Unggul & Berkarakter
+                        PROGRAM UNGGULAN
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
                         Kurikulum terpadu memadukan tahfidzul Qur'an mutqin, kajian khazanah turats Islam, serta keahlian
                         bahasa dan kepemimpinan masa depan.
                     </p>
                 </div>
-                <a href="{{ route('program.index') }}#program-unggulan"
-                    class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0D3B2E] hover:text-[#059669] transition group">
-                    <span>Eksplorasi Rincian Program</span>
-                    <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </a>
             </div>
 
             <!-- 6 Flagship Program Cards -->
@@ -30,12 +24,6 @@
                 <!-- 1. Tahfidz Al-Qur'an -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">01</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-[#084C27] font-semibold">Mutqin
-                            30 Juz</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Tahfidz Al-Qur'an
                     </h3>
@@ -48,12 +36,6 @@
                 <!-- 2. Tahfidz Hadits -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">02</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-[#084C27] font-semibold">Sunnah
-                            Nabawiyah</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Tahfidz Hadits
                     </h3>
@@ -66,12 +48,6 @@
                 <!-- 3. Kajian Kitab Kuning -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">03</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-semibold">Khazanah
-                            Turats</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Kajian Kitab Kuning
                     </h3>
@@ -84,11 +60,6 @@
                 <!-- 4. Bahasa Arab & Inggris -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">04</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-100 text-blue-900 font-semibold">Bilingual</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Bahasa Arab & Inggris
                     </h3>
@@ -101,11 +72,6 @@
                 <!-- 5. Public Speaking -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">05</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-100 text-purple-900 font-semibold">Muhadharah</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Public Speaking & Da'wah
                     </h3>
@@ -118,12 +84,6 @@
                 <!-- 6. Pembinaan Akhlak & Kedisiplinan -->
                 <div
                     class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                    <div class="flex items-center justify-between">
-                        <span class="font-mono text-xs font-bold text-[#B89758]">06</span>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-[#084C27] font-semibold">Karakter
-                            Islami</span>
-                    </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
                         Pembinaan Akhlak & Kedisiplinan
                     </h3>
@@ -143,41 +103,25 @@
                 <!-- Left: Visi Quote -->
                 <div class="lg:col-span-5 space-y-5">
                     <div class="space-y-1">
-                        <span class="editorial-label text-[#059669]">01 — PROFIL & NILAI UTAMA</span>
                         <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            Visi & Haluan Pendidikan
+                            VISI & MISI
                         </h2>
+                        <div class="border-b border-[#E5E0D8] pb-2 flex items-center justify-between">
+                            <span class="editorial-label">VISI</span>
+                        </div>
                     </div>
 
                     <div class="bg-white border-l-4 border-[#0D3B2E] rounded-md p-6 space-y-3 shadow-xs">
-                        <div class="flex items-center justify-between">
-                            <span class="editorial-label text-[#059669]">VISI UTAMA</span>
-                            <div class="font-arabic text-sm text-[#B89758]" dir="rtl" style="line-height: 1.8;">
-                                إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ
-                            </div>
-                        </div>
                         <blockquote class="font-sans text-base sm:text-lg font-bold text-[#0D3B2E] leading-relaxed">
                             "{{ "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat." }}"
                         </blockquote>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Pijakan pembentukan santri mutafaqqih fiddin yang tangguh mental, mandiri, dan berwawasan luas
-                            di Kabupaten Serang, Banten.
-                        </p>
-                    </div>
-
-                    <div class="pt-1">
-                        <a href="{{ route('profile.index') }}#visi-misi"
-                            class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0D3B2E] hover:text-[#059669] transition">
-                            <span>Pelajari Profil & Sejarah Selengkapnya &rarr;</span>
-                        </a>
                     </div>
                 </div>
 
                 <!-- Right: 4 Misi Cards -->
                 <div class="lg:col-span-7 space-y-3" x-data="{ activeMisi: 1 }">
                     <div class="border-b border-[#E5E0D8] pb-2 flex items-center justify-between">
-                        <span class="editorial-label">4 PILAR MISI PENDIDIKAN</span>
-                        <span class="text-xs font-mono text-[#4B6358]">Klik untuk membuka rincian</span>
+                        <span class="editorial-label">Misi</span>
                     </div>
 
                     <!-- Misi 1 -->
@@ -270,19 +214,13 @@
             <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">PILIHAN PROGRAM PENDIDIKAN</span>
                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                        Pilihan Jenjang & Rutinitas Santri
+                        PROGRAM PENDIDIKAN
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
                         Dua program pendidikan terstruktur dirancang khusus untuk membina hafalan Al-Qur'an, adab mulia, dan
                         kecerdasan intelektual santri di Serang, Banten.
                     </p>
-                </div>
-                <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-[#0D3B2E]">
-                    <a href="{{ route('program.index') }}#program-pendidikan" class="hover:text-[#059669] transition">
-                        Detail Silabus & Rutinitas &rarr;
-                    </a>
                 </div>
             </div>
 
@@ -293,23 +231,15 @@
                     class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                     <div class="space-y-6">
                         <div>
-                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM</span>
-                                <span class="text-xs font-mono text-[#0D3B2E] font-semibold">Mukim</span>
-                            </div>
                             <div class="flex items-center justify-between gap-2">
-                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Mukim 24 Jam)</h3>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS</h3>
                             </div>
-                            <p class="text-xs sm:text-sm text-[#4B6358] mt-2 leading-relaxed">
-                                Pendidikan setingkat SMP terpadu asrama penuh 24 jam dengan target mutqin 30 juz Al-Qur'an
-                                dan kurikulum formal Kemenag RI di Serang, Banten.
-                            </p>
                         </div>
 
                         <!-- Price Card -->
                         <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-md space-y-2.5">
                             <div class="flex items-baseline justify-between">
-                                <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriah):</span>
+                                <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan:</span>
                                 <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
                                     Rp 500.000 <span class="text-xs font-normal text-gray-500">/ bln</span>
                                 </span>
@@ -365,23 +295,15 @@
                     class="bg-white border border-[#E5E0D8] rounded-md p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                     <div class="space-y-6">
                         <div>
-                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                <span class="editorial-label text-[#B89758]">PENDIDIKAN DINIYAH SORE</span>
-                                <span class="text-xs font-mono text-[#B89758] font-semibold">Non-Mukim</span>
-                            </div>
                             <div class="flex items-center justify-between gap-2">
-                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Sekolah Sore)</h3>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
                             </div>
-                            <p class="text-xs sm:text-sm text-[#4B6358] mt-2 leading-relaxed">
-                                Madrasah Diniyah Takmiliyah Awaliyah sore hari untuk santri non-mukim guna memperkuat
-                                hafalan juz 'amma, akidah, akhlak, dan tata cara ibadah harian.
-                            </p>
                         </div>
 
                         <!-- Price Card -->
                         <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-md space-y-2.5">
                             <div class="flex items-baseline justify-between">
-                                <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriah):</span>
+                                <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan:</span>
                                 <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
                                     Rp 12.000 <span class="text-xs font-normal text-gray-500">/ bln</span>
                                 </span>
@@ -435,63 +357,12 @@
         </div>
     </section>
 
-    <!-- 5. DEWAN ASATIDZ & PENDIDIK SECTION -->
-    <section class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
-                <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">DEWAN ASATIDZ & PENDIDIK</span>
-                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                        Bimbingan Asatidz Bersanad & Berpengalaman
-                    </h2>
-                    <p class="text-xs sm:text-sm text-[#4B6358]">
-                        Dididik langsung oleh para penghafal Al-Qur'an dan asatidz berpengalaman dengan sanad keilmuan yang
-                        bersambung.
-                    </p>
-                </div>
-                <a href="{{ route('profile.index') }}#pendidik"
-                    class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0D3B2E] hover:text-[#059669] transition group">
-                    <span>Lihat Seluruh Dewan Asatidz</span>
-                    <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                @forelse($teachers->take(4) as $teacher)
-                    <div
-                        class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition">
-                        <div
-                            class="w-12 h-12 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md flex items-center justify-center font-sans font-bold text-lg text-[#0D3B2E]">
-                            {{ Str::substr($teacher->full_name, 0, 1) }}
-                        </div>
-                        <div>
-                            <h3 class="font-sans font-bold text-base text-[#0D3B2E]">
-                                {{ $teacher->full_name }}
-                            </h3>
-                            <p class="text-xs text-[#059669] font-medium">
-                                {{ $teacher->role_title }}
-                            </p>
-                        </div>
-                        <p class="text-xs text-[#4B6358] line-clamp-2 leading-relaxed">
-                            {{ $teacher->bio ?? "Pembimbing tahfidz Al-Qur'an dan asatidz di PPMTQ Daar El Tazkiyah." }}
-                        </p>
-                    </div>
-                @empty
-                    <div
-                        class="col-span-full text-center py-8 bg-white border border-[#E5E0D8] rounded-md text-xs text-[#4B6358]">
-                        Belum ada data asatidz yang dipublikasikan.
-                    </div>
-                @endforelse
-            </div>
-        </div>
-    </section>
 
     <!-- 6. GRID BERITA (FEATURED) -->
     <section class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">03 — WARTA & BERITA TERKINI</span>
                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                         Warta Pesantren & Agenda Kegiatan
                     </h2>
@@ -574,19 +445,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">04 — DOKUMENTASI KEGIATAN SANTRI</span>
-                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                         Potret Rutinitas & Kehidupan Santri
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
                         Dokumentasi visual hafalan Al-Qur'an, belajar mandiri, dan kegiatan asri santri di Serang, Banten.
                     </p>
                 </div>
-                <a href="{{ route('gallery.index') }}"
-                    class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md border border-[#E5E0D8] hover:border-[#0D3B2E] bg-white text-xs font-bold uppercase tracking-wider text-[#0D3B2E] transition shadow-xs group">
-                    <span>Lihat Lebih Banyak Galeri</span>
-                    <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </a>
             </div>
 
             <!-- Gallery Cards Grid -->
@@ -639,7 +504,6 @@
     <section class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]" id="informasi-psb">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="max-w-3xl space-y-2">
-                <span class="editorial-label text-[#059669]">05 — PENERIMAAN SANTRI BARU (PSB) 2027/2028</span>
                 <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                     Informasi Biaya & Persyaratan Pendaftaran
                 </h2>
@@ -792,7 +656,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white border border-[#E5E0D8] rounded-md p-8 md:p-12 space-y-8 shadow-xs">
                 <div class="max-w-2xl mx-auto text-center space-y-3">
-                    <span class="editorial-label text-[#059669]">06 — MEDIA RESMI PESANTREN</span>
                     <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E] tracking-tight">
                         Terhubung dengan Kami di Media Sosial
                     </h2>
@@ -867,7 +730,6 @@
     <section class="py-16 md:py-20 bg-[#084C27] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <div class="max-w-2xl mx-auto space-y-3">
-                <span class="editorial-label text-amber-300">07 — MARI BERGABUNG</span>
                 <h2
                     class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
                     Bersama Al-Qur'an Meraih Masa Depan Gemilang
@@ -881,13 +743,12 @@
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                 <a href="{{ route('psb.index') }}"
                     class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-[#D97706] hover:bg-[#b46304] text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
-                    <span>Daftar Santri Baru (PSB Online)</span>
-                    <span aria-hidden="true">&rarr;</span>
+                    <span>Daftar Santri Baru</span>
                 </a>
                 <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}" target="_blank"
                     rel="noopener noreferrer"
                     class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/30 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider transition">
-                    <span>Konsultasi WhatsApp ({{ $waNumber }})</span>
+                    <span>Konsultasi WhatsApp</span>
                 </a>
             </div>
         </div>

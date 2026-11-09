@@ -116,19 +116,19 @@ test('gallery page loads with pinterest masonry layout and category filter tabs'
 
 test('contact page loads Serang Banten campus address and dual hotlines', function () {
     SiteSetting::set('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
-    SiteSetting::set('school_phone', '0895-0718-4811');
-    SiteSetting::set('psb_whatsapp_mdta_number', '0858-8276-7078');
+    SiteSetting::set('school_phone', '0896-5332-4339');
+    SiteSetting::set('psb_whatsapp_mdta_number', '0895-0718-4811');
 
     $response = $this->get('/kontak');
     $response->assertOk();
 
-    $response->assertSeeText('0895-0718-4811')
-        ->assertSeeText('0858-8276-7078')
+    $response->assertSeeText('0896-5332-4339')
+        ->assertSeeText('0895-0718-4811')
         ->assertSeeText('Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
 });
 
 test('contact consultation form validates and redirects to WhatsApp hotline', function () {
-    SiteSetting::set('psb_whatsapp_number', '089507184811');
+    SiteSetting::set('psb_whatsapp_number', '089653324339');
 
     $response = $this->post('/kontak/konsultasi', [
         'parent_name' => 'Bapak Ahmad Fauzi',
@@ -140,6 +140,6 @@ test('contact consultation form validates and redirects to WhatsApp hotline', fu
 
     $response->assertRedirect();
     $targetUrl = $response->headers->get('Location');
-    expect($targetUrl)->toContain('wa.me/6289507184811')
+    expect($targetUrl)->toContain('wa.me/6289653324339')
         ->and($targetUrl)->toContain(urlencode('Bapak Ahmad Fauzi'));
 });

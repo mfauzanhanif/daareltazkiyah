@@ -6,29 +6,25 @@
     $activeWave = $activeWave ?? \App\Models\AdmissionWave::currentActive();
 @endphp
 
-<div x-data="{ mobileMenuOpen: false }" class="relative z-40">
-    <!-- Main Editorial Navigation Header -->
-    <header class="sticky top-0 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E5E0D8] transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+<!-- Main Editorial Navigation Header -->
+<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E5E0D8] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
 
                 <!-- Institutional Brand & Logo -->
                 <a href="{{ route('home') }}"
-                    class="flex items-center gap-2 sm:gap-3 group min-w-0 py-1.5 mr-2">
+                    class="flex items-center gap-2 sm:gap-3 group shrink-0 py-1.5 mr-2">
                     <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo PPMTQ Daar El Tazkiyah Sumardi"
                         width="56" height="56"
                         class="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 shrink-0 object-contain transition-transform group-hover:scale-105"
                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
 
                     <div class="flex flex-col justify-center min-w-0 w-fit">
-                        <div class="block text-[8px] xs:text-[9.5px] sm:text-[10.5px] md:text-[11px] font-semibold text-[#4B6358] uppercase tracking-wider text-justify [text-align-last:justify] leading-tight select-none">
+                        <div class="block text-[8px] xs:text-[9.5px] sm:text-[10px] md:text-[11px] font-semibold text-[#4B6358] uppercase tracking-wider whitespace-nowrap text-justify [text-align-last:justify] leading-tight select-none">
                             Pondok Pesantren Modern Tahfidzul Qur'an
                         </div>
-                        <div class="block font-sans font-extrabold text-[12px] xs:text-[13.5px] sm:text-[16px] md:text-[17.5px] text-[#0D3B2E] tracking-tight uppercase text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
+                        <div class="block font-sans font-extrabold text-[12.5px] xs:text-[14px] sm:text-[16.5px] md:text-[18.5px] text-[#0D3B2E] tracking-tight uppercase whitespace-nowrap text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
                             DAAR EL TAZKIYAH SUMARDI
-                        </div>
-                        <div class="block font-arabic text-[10px] xs:text-[11px] sm:text-[12px] md:text-[12.5px] text-[#B89758] font-medium text-justify [text-align-last:justify] leading-tight mt-0.5 select-none" dir="rtl">
-                            معهد دار التزكية سوماردي الإسلامي لتحفيظ القرآن
                         </div>
                     </div>
                 </a>
@@ -145,20 +141,15 @@
                 </nav>
 
                 <!-- Desktop CTAs -->
-                <div class="hidden sm:flex items-center gap-3">
+                <div class="hidden lg:flex items-center gap-3">
                     <a href="{{ route('psb.index') }}"
                         class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white border border-[#0D3B2E] transition group shadow-xs">
                         <span>Daftar</span>
-                        <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
 
-                <!-- Mobile Hamburger Toggle & Quick Action -->
-                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 lg:hidden">
-                    <a href="{{ route('psb.index') }}"
-                        class="sm:hidden text-[11px] font-bold uppercase tracking-wider px-2.5 py-1.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white transition shadow-xs shrink-0">
-                        Daftar
-                    </a>
+                <!-- Mobile Hamburger Toggle (Daftar button hidden when hamburger appears) -->
+                <div class="flex items-center shrink-0 lg:hidden">
                     <button type="button" @click="mobileMenuOpen = !mobileMenuOpen"
                         class="p-2 rounded-md border border-[#E5E0D8] text-[#0D3B2E] hover:bg-white hover:border-[#0D3B2E] transition shrink-0"
                         aria-label="Buka Menu Navigasi" :aria-expanded="mobileMenuOpen.toString()">
@@ -259,4 +250,3 @@
             </div>
         </div>
     </header>
-</div>

@@ -225,8 +225,11 @@ test('empty database state displays dignified empty state cards matching design 
     $response->assertOk();
     $content = $response->getContent();
 
+    $responseProfile = $this->get('/profil');
+    $responseProfile->assertOk();
+
     // Verify empty state messages and tokens
-    expect($content)->toContain('Belum ada data asatidz yang dipublikasikan.')
+    expect($responseProfile->getContent())->toContain('Belum ada data asatidz yang dipublikasikan.')
         ->and($content)->toContain('Belum ada warta berita yang dipublikasikan.')
         ->and($content)->toContain('Belum ada dokumentasi kegiatan yang diunggah.')
         ->and($content)->toContain('#FDFBF7')

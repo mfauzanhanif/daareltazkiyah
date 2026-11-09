@@ -27,7 +27,7 @@ final class ProfileController extends Controller
             ?? $teachers->firstWhere('role_title', 'Pengasuh Pondok Pesantren');
 
         $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
-        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0895-0718-4811');
+        $waNumber = (string) SiteSetting::get('psb_whatsapp_number', '0896-5332-4339');
 
         return view('public.profile.index', compact(
             'activeWave',

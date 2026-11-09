@@ -5,11 +5,6 @@
     <section class="bg-white border-b border-[#E5E0D8] pt-12 pb-14 md:pt-16 md:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl space-y-4">
-                <div class="flex items-center gap-3">
-                    <span class="editorial-label text-[#059669]">01 — PROFIL LEMBAGA</span>
-                    <span class="w-8 h-px bg-[#B89758]"></span>
-                    <span class="text-xs font-mono text-[#4B6358] uppercase tracking-wider">PPTMQ DAAR EL TAZKIYAH</span>
-                </div>
                 <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.15]">
                     Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi
                 </h1>
@@ -336,35 +331,23 @@
                 <span class="text-xs font-mono text-[#059669] font-bold">9 Dewan Pendidik</span>
             </div>
 
-            <!-- Teachers Grid (9 Educators from PROFIL_DAAR_EL_TAZKIYAH.md) -->
+            <!-- Teachers Grid (Clean Educator Cards without numbers, descriptions, or fields) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @forelse($teachers as $teacher)
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-6 space-y-4 hover:border-[#0D3B2E] hover:shadow-sm transition group">
+                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-md p-5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 rounded-full bg-[#0D3B2E] border-2 border-[#B89758] flex items-center justify-center text-white font-sans font-bold text-lg shadow-xs shrink-0">
+                            <div class="w-12 h-12 rounded-full bg-[#0D3B2E] border-2 border-[#B89758] flex items-center justify-center text-white font-sans font-bold text-base shadow-xs shrink-0">
                                 {{ Str::substr($teacher->full_name, 0, 1) }}
                             </div>
-                            <div>
-                                <span class="font-mono text-[10px] text-[#B89758] font-bold block">No. 0{{ $loop->iteration }}</span>
+                            <div class="min-w-0">
                                 <h3 class="font-sans font-bold text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
                                     {{ $teacher->full_name }}
                                 </h3>
-                                <p class="text-xs text-[#059669] font-semibold mt-0.5">
+                                <p class="text-xs text-[#059669] font-medium mt-0.5">
                                     {{ $teacher->role_title }}
                                 </p>
                             </div>
                         </div>
-
-                        <p class="text-xs text-[#4B6358] leading-relaxed line-clamp-3">
-                            {{ $teacher->bio ?? 'Tenaga pendidik dan pembimbing berdedikasi membina santri PPMTQ Daar El Tazkiyah.' }}
-                        </p>
-
-                        @if($teacher->specialization)
-                            <div class="pt-2 border-t border-[#E5E0D8] flex items-center justify-between text-[11px]">
-                                <span class="text-[#4B6358]">Bidang:</span>
-                                <span class="font-mono font-medium text-[#0D3B2E]">{{ $teacher->specialization }}</span>
-                            </div>
-                        @endif
                     </div>
                 @empty
                     <div class="col-span-full text-center py-8 bg-[#FAF8F5] border border-[#E5E0D8] rounded-md text-xs text-[#4B6358]">
