@@ -14,26 +14,22 @@
 
                 <!-- Institutional Brand & Logo -->
                 <a href="{{ route('home') }}"
-                    class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0 flex-1 py-1.5 mr-2">
+                    class="flex items-center gap-2 sm:gap-3 group min-w-0 py-1.5 mr-2">
                     <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo PPMTQ Daar El Tazkiyah Sumardi"
                         width="56" height="56"
-                        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 shrink-0 object-contain transition-transform group-hover:scale-105"
+                        class="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 shrink-0 object-contain transition-transform group-hover:scale-105"
                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
 
-                    <div class="flex flex-col min-w-0">
-                        <span
-                            class="text-[9px] sm:text-[10px] md:text-[11px] font-semibold text-[#4B6358] tracking-wider uppercase truncate leading-tight">
+                    <div class="flex flex-col justify-center min-w-0 w-fit">
+                        <div class="block text-[8px] xs:text-[9.5px] sm:text-[10.5px] md:text-[11px] font-semibold text-[#4B6358] uppercase tracking-wider text-justify [text-align-last:justify] leading-tight select-none">
                             Pondok Pesantren Modern Tahfidzul Qur'an
-                        </span>
-                        <span
-                            class="font-sans font-extrabold text-xs sm:text-base md:text-lg text-[#0D3B2E] tracking-tight truncate leading-tight mt-0.5">
+                        </div>
+                        <div class="block font-sans font-extrabold text-[12px] xs:text-[13.5px] sm:text-[16px] md:text-[17.5px] text-[#0D3B2E] tracking-tight uppercase text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
                             DAAR EL TAZKIYAH SUMARDI
-                        </span>
-                        <span
-                            class="hidden sm:block font-arabic text-[11px] sm:text-xs text-[#B89758] font-medium leading-none mt-0.5 truncate"
-                            dir="rtl" style="line-height: 1.8;">
+                        </div>
+                        <div class="block font-arabic text-[10px] xs:text-[11px] sm:text-[12px] md:text-[12.5px] text-[#B89758] font-medium text-justify [text-align-last:justify] leading-tight mt-0.5 select-none" dir="rtl">
                             معهد دار التزكية سوماردي الإسلامي لتحفيظ القرآن
-                        </span>
+                        </div>
                     </div>
                 </a>
 
@@ -61,70 +57,31 @@
                             </svg>
                         </a>
 
-                        <!-- Dropdown Panel -->
+                        <!-- Dropdown Panel: Profil -->
                         <div x-show="openDropdown === 'profil'" x-cloak
                             x-transition:enter="transition ease-out duration-150"
-                            x-transition:enter-start="opacity-0 translate-y-2"
+                            x-transition:enter-start="opacity-0 translate-y-1"
                             x-transition:enter-end="opacity-100 translate-y-0"
                             x-transition:leave="transition ease-in duration-100"
                             x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-2"
-                            class="absolute left-0 w-80 bg-white border border-[#E5E0D8] rounded-md shadow-lg p-2 mt-1 z-50 text-left normal-case">
+                            x-transition:leave-end="opacity-0 translate-y-1"
+                            class="absolute left-0 w-48 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
 
                             <a href="{{ route('profile.index') }}#selayang-pandang"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">01.
-                                        Selayang Pandang</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Mengenal profil pesantren dan kepemimpinan Pengasuh Pondok.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
+                                Selayang Pandang
                             </a>
-
                             <a href="{{ route('profile.index') }}#visi-misi"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">02.
-                                        Visi & Misi</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Visi pembentukan santri Qur'ani dan 4 pilar komitmen lembaga.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Visi & Misi
                             </a>
-
                             <a href="{{ route('profile.index') }}#fasilitas"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">03.
-                                        Fasilitas Pesantren</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Masjid, asrama mukim, ruang kelas, perpustakaan, dan UKS.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Fasilitas Pesantren
                             </a>
-
                             <a href="{{ route('profile.index') }}#pendidik"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">04.
-                                        Dewan Pendidik</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Profil tenaga pendidik dan pembimbing santri berdedikasi.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Dewan Pendidik
                             </a>
                         </div>
                     </div>
@@ -143,56 +100,27 @@
                             </svg>
                         </a>
 
-                        <!-- Dropdown Panel -->
+                        <!-- Dropdown Panel: Program -->
                         <div x-show="openDropdown === 'program'" x-cloak
                             x-transition:enter="transition ease-out duration-150"
-                            x-transition:enter-start="opacity-0 translate-y-2"
+                            x-transition:enter-start="opacity-0 translate-y-1"
                             x-transition:enter-end="opacity-100 translate-y-0"
                             x-transition:leave="transition ease-in duration-100"
                             x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-2"
-                            class="absolute left-0 w-80 bg-white border border-[#E5E0D8] rounded-md shadow-lg p-2 mt-1 z-50 text-left normal-case">
+                            x-transition:leave-end="opacity-0 translate-y-1"
+                            class="absolute left-0 w-48 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
 
                             <a href="{{ route('program.index') }}#program-unggulan"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">01.
-                                        Program Unggulan</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Tahfidz Qur'an & Hadits, Kitab Kuning, Bilingual, & Public Speaking.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
+                                Program Unggulan
                             </a>
-
                             <a href="{{ route('program.index') }}#program-pendidikan"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">02.
-                                        Program Pendidikan</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    MTs Mukim Asrama 24 Jam dan MDTA Sekolah Sore Non-Mukim.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Program Pendidikan
                             </a>
-
                             <a href="{{ route('program.index') }}#ekstrakurikuler"
-                                class="block p-3 rounded-md hover:bg-[#FAF8F5] border border-transparent hover:border-[#E5E0D8] transition group mt-1">
-                                <div class="flex items-center justify-between">
-                                    <span
-                                        class="font-sans font-bold text-sm text-[#0D3B2E] group-hover:text-[#059669]">03.
-                                        Ekstrakurikuler</span>
-                                    <span
-                                        class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
-                                </div>
-                                <p class="text-xs text-[#4B6358] mt-1 leading-relaxed">
-                                    Pencak Silat, Hadroh, Kaligrafi, Tilawah, Futsal, & Pramuka.
-                                </p>
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Ekstrakurikuler
                             </a>
                         </div>
                     </div>
@@ -280,13 +208,13 @@
                     </button>
                     <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
                         <a href="{{ route('profile.index') }}#selayang-pandang" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">01. Selayang Pandang</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Selayang Pandang</a>
                         <a href="{{ route('profile.index') }}#visi-misi" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">02. Visi & Misi</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Visi & Misi</a>
                         <a href="{{ route('profile.index') }}#fasilitas" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">03. Fasilitas</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Fasilitas Pesantren</a>
                         <a href="{{ route('profile.index') }}#pendidik" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">04. Dewan Pendidik</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Dewan Pendidik</a>
                     </div>
                 </div>
 
@@ -303,11 +231,11 @@
                     </button>
                     <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
                         <a href="{{ route('program.index') }}#program-unggulan" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">01. Program Unggulan</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Unggulan</a>
                         <a href="{{ route('program.index') }}#program-pendidikan" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">02. MTs & MDTA</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Pendidikan (MTs & MDTA)</a>
                         <a href="{{ route('program.index') }}#ekstrakurikuler" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">03. Ekstrakurikuler</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Ekstrakurikuler</a>
                     </div>
                 </div>
 
