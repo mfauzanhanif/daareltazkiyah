@@ -239,24 +239,25 @@
                     معهد دار التزكية سوماردي الإسلامي لتحفيظ القرآن
                 </div>
 
-                <nav class="space-y-1 text-sm font-semibold text-[#18181B]">
+                <nav class="space-y-1 text-xs font-semibold uppercase tracking-wider text-[#18181B]">
+                    <!-- Beranda -->
                     <a href="{{ route('home') }}" @click="mobileMenuOpen = false"
-                        class="block px-3 py-2 rounded-md border-l-2 {{ request()->routeIs('home') ? 'border-[#0D3B2E] bg-white text-[#0D3B2E]' : 'border-transparent' }}">
+                        class="block px-3 py-2.5 rounded-md border-l-2 {{ request()->routeIs('home') ? 'border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-transparent text-[#18181B] hover:text-[#059669]' }}">
                         Beranda
                     </a>
 
                     <!-- Profil Accordion -->
-                    <div x-data="{ expanded: false }" class="border-t border-[#E5E0D8]/60 pt-1">
+                    <div x-data="{ expanded: {{ request()->is('profil*') ? 'true' : 'false' }} }" class="border-t border-[#E5E0D8]/60 pt-1">
                         <button type="button" @click="expanded = !expanded"
-                            class="w-full flex items-center justify-between px-3 py-2 text-left">
-                            <span>Profil Pesantren</span>
-                            <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': expanded }" fill="none"
+                            class="w-full flex items-center justify-between px-3 py-2.5 text-left {{ request()->is('profil*') ? 'text-[#0D3B2E] font-bold' : 'text-[#18181B] hover:text-[#059669]' }}">
+                            <span>Profil</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': expanded }" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
+                        <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs normal-case font-medium border-l border-[#E5E0D8] ml-3 mb-2">
                             <a href="{{ route('profile.index') }}#selayang-pandang" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Selayang Pandang</a>
                             <a href="{{ route('profile.index') }}#visi-misi" @click="mobileMenuOpen = false"
@@ -271,17 +272,17 @@
                     </div>
 
                     <!-- Program Accordion -->
-                    <div x-data="{ expanded: false }" class="border-t border-[#E5E0D8]/60 pt-1">
+                    <div x-data="{ expanded: {{ request()->is('program*') ? 'true' : 'false' }} }" class="border-t border-[#E5E0D8]/60 pt-1">
                         <button type="button" @click="expanded = !expanded"
-                            class="w-full flex items-center justify-between px-3 py-2 text-left">
-                            <span>Program &amp; Kurikulum</span>
-                            <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': expanded }" fill="none"
+                            class="w-full flex items-center justify-between px-3 py-2.5 text-left {{ request()->is('program*') ? 'text-[#0D3B2E] font-bold' : 'text-[#18181B] hover:text-[#059669]' }}">
+                            <span>Program</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': expanded }" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
+                        <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs normal-case font-medium border-l border-[#E5E0D8] ml-3 mb-2">
                             <a href="{{ route('program.index') }}#program-unggulan" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Unggulan</a>
                             <a href="{{ route('program.index') }}#program-pendidikan" @click="mobileMenuOpen = false"
@@ -297,19 +298,28 @@
                         </div>
                     </div>
 
+                    <!-- PSB -->
                     <a href="{{ route('psb.index') }}" @click="mobileMenuOpen = false"
-                        class="block px-3 py-2 border-t border-[#E5E0D8]/60 {{ request()->is('psb') ? 'text-[#0D3B2E] font-bold bg-white' : '' }}">
-                        Informasi PSB
+                        class="block px-3 py-2.5 border-t border-[#E5E0D8]/60 {{ request()->is('psb') ? 'border-l-2 border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-l-2 border-transparent text-[#18181B] hover:text-[#059669]' }}">
+                        PSB
                     </a>
+
+                    <!-- Berita -->
                     <a href="{{ route('news.index') }}" @click="mobileMenuOpen = false"
-                        class="block px-3 py-2 border-t border-[#E5E0D8]/60">
-                        Berita &amp; Warta
+                        class="block px-3 py-2.5 border-t border-[#E5E0D8]/60 {{ request()->is('berita*') ? 'border-l-2 border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-l-2 border-transparent text-[#18181B] hover:text-[#059669]' }}">
+                        Berita
                     </a>
-                    <a href="{{ route('gallery.index') }}" @click="mobileMenuOpen = false" class="block px-3 py-2">
-                        Galeri Foto
+
+                    <!-- Galeri -->
+                    <a href="{{ route('gallery.index') }}" @click="mobileMenuOpen = false"
+                        class="block px-3 py-2.5 border-t border-[#E5E0D8]/60 {{ request()->is('galeri*') ? 'border-l-2 border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-l-2 border-transparent text-[#18181B] hover:text-[#059669]' }}">
+                        Galeri
                     </a>
-                    <a href="{{ route('contact.index') }}" @click="mobileMenuOpen = false" class="block px-3 py-2">
-                        Kontak &amp; Lokasi
+
+                    <!-- Kontak -->
+                    <a href="{{ route('contact.index') }}" @click="mobileMenuOpen = false"
+                        class="block px-3 py-2.5 border-t border-[#E5E0D8]/60 {{ request()->is('kontak*') ? 'border-l-2 border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-l-2 border-transparent text-[#18181B] hover:text-[#059669]' }}">
+                        Kontak
                     </a>
                 </nav>
             </div>
@@ -318,7 +328,7 @@
             <div class="p-4 border-t border-[#E5E0D8] bg-white space-y-2 shrink-0">
                 <a href="{{ route('psb.form') }}" @click="mobileMenuOpen = false"
                     class="block w-full text-center px-4 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm">
-                    Daftar (Formulir Online) &rarr;
+                    Daftar &rarr;
                 </a>
             </div>
         </div>

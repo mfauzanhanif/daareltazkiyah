@@ -59,14 +59,14 @@
                             class="hover:text-white hover:underline transition">Profil Pesantren</a></li>
                     <li><a href="{{ route('program.index') }}"
                             class="hover:text-white hover:underline transition">Program Pendidikan</a></li>
+                    <li><a href="{{ route('psb.index') }}"
+                            class="hover:text-white hover:underline transition">Informasi PSB</a></li>
                     <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Berita
                             &amp; Warta</a></li>
                     <li><a href="{{ route('gallery.index') }}"
                             class="hover:text-white hover:underline transition">Galeri Foto</a></li>
                     <li><a href="{{ route('contact.index') }}"
                             class="hover:text-white hover:underline transition">Kontak Kami</a></li>
-                    <li><a href="{{ route('psb.index') }}"
-                            class="hover:text-white hover:underline transition">Informasi PSB</a></li>
                     <li><a href="{{ route('psb.form') }}"
                             class="hover:text-white hover:underline transition text-amber-300 font-semibold">Formulir Pendaftaran Online</a></li>
                 </ul>

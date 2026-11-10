@@ -107,7 +107,7 @@
     <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-2">
+            <div class="text-center max-w-3xl mx-auto">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -115,9 +115,6 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
-                <p class="text-xs sm:text-sm text-[#4B6358]">
-                    Empat tahapan mudah, transparan, dan terarah bagi calon santri dan wali santri
-                </p>
             </div>
 
             <!-- 4 Alur Cards Grid -->
@@ -201,7 +198,7 @@
     <section id="tabel-biaya" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-2">
+            <div class="text-center max-w-3xl mx-auto">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -209,9 +206,6 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
-                <p class="text-xs sm:text-sm text-[#4B6358]">
-                    Struktur biaya resmi yang transparan dan terjangkau bagi calon santri MTs Mukim dan MDTA Sekolah Sore
-                </p>
             </div>
 
             <!-- Two Big Comparison Cards matching home.blade.php -->
@@ -412,7 +406,7 @@
     <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-2">
+            <div class="text-center max-w-3xl mx-auto">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -420,9 +414,6 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
-                <p class="text-xs sm:text-sm text-[#4B6358]">
-                    Dokumen persyaratan administrasi calon santri yang disiapkan dalam bentuk fisik dan unggahan scan
-                </p>
             </div>
 
             <!-- 6 Document Cards -->
@@ -506,7 +497,7 @@
     <section id="perlengkapan-santri" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto space-y-2">
+            <div class="text-center max-w-3xl mx-auto">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -514,9 +505,6 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
-                <p class="text-xs sm:text-sm text-[#4B6358]">
-                    Daftar perlengkapan yang wajib dibawa santri saat masuk asrama pesantren
-                </p>
             </div>
 
             <!-- Tab Buttons -->
@@ -617,7 +605,7 @@
     <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
-            <div class="text-center space-y-2">
+            <div class="text-center max-w-3xl mx-auto">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -625,9 +613,6 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
-                <p class="text-xs sm:text-sm text-[#4B6358]">
-                    Jawaban ringkas dan jelas atas pertanyaan yang kerap diajukan wali santri
-                </p>
             </div>
 
             <!-- FAQ List -->

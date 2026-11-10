@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Public;
 
+use App\Models\AdmissionWave;
 use App\Models\SiteSetting;
 use App\Models\Teacher;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -142,4 +143,41 @@ test('contact consultation form validates and redirects to WhatsApp hotline', fu
     $targetUrl = $response->headers->get('Location');
     expect($targetUrl)->toContain('wa.me/6289653324339')
         ->and($targetUrl)->toContain(urlencode('Bapak Ahmad Fauzi'));
+});
+
+test('psb information landing page loads with wave details and direct cta to form', function () {
+    AdmissionWave::create([
+        'name' => 'Gelombang I 2027',
+        'slug' => 'gelombang-i-2027',
+        'academic_year' => '2027/2028',
+        'start_date' => now()->subDays(2)->toDateString(),
+        'end_date' => now()->addDays(20)->toDateString(),
+        'fee_mts' => 125000,
+        'fee_mdta' => 35000,
+    ]);
+
+    $response = $this->get(route('psb.index'));
+    $response->assertOk()
+        ->assertSeeText('ALUR PENDAFTARAN SANTRI')
+        ->assertSeeText('RINCIAN BIAYA PENDIDIKAN')
+        ->assertSeeText('PERSYARATAN BERKAS PENDAFTARAN')
+        ->assertSeeText('PERLENGKAPAN SANTRI BARU')
+        ->assertSeeText('PERTANYAAN SEPUTAR PSB')
+        ->assertSee(route('psb.form'), false);
+});
+
+test('psb registration form route loads standalone wizard view with breadcrumbs', function () {
+    $response = $this->get(route('psb.form'));
+    $response->assertOk()
+        ->assertSeeText('FORMULIR PENDAFTARAN RESMI')
+        ->assertSee(route('psb.index'), false);
+});
+
+test('navigation header contains PSB menu pointing to psb.index and Daftar CTA pointing to psb.form', function () {
+    $response = $this->get('/');
+    $response->assertOk();
+
+    $content = $response->getContent();
+    expect($content)->toContain('href="'.route('psb.index').'"')
+        ->and($content)->toContain('href="'.route('psb.form').'"');
 });
