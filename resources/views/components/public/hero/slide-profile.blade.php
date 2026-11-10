@@ -9,10 +9,10 @@
      @else
          :inert="currentSlide !== 1" :aria-hidden="currentSlide !== 1"
      @endif>
-    <div class="grid grid-cols-12 gap-x-2.5 sm:gap-x-6 lg:gap-x-8 gap-y-2 sm:gap-y-3 md:gap-y-4 items-center h-[390px] sm:h-[420px] md:h-[450px]">
+    <div class="grid grid-cols-12 grid-rows-[auto_auto] md:grid-rows-none gap-x-2.5 sm:gap-x-6 lg:gap-x-8 gap-y-2 sm:gap-y-3 md:gap-y-4 items-center content-center h-[390px] sm:h-[420px] md:h-[450px]">
 
         <!-- Element 1: Headline (Mobile: Row 1 Full Width Col 1-12 | Desktop: Row 1 Col 1-7) -->
-        <div class="col-span-12 md:col-span-7 col-start-1 row-start-1 flex flex-col justify-center text-left min-w-0">
+        <div class="col-span-12 md:col-span-7 col-start-1 row-start-1 flex flex-col justify-end text-left min-w-0">
             @if(!$isClone)
                 <h1 class="w-full font-sans tracking-tight">
                     <span class="block text-xs min-[360px]:text-sm sm:text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wide text-[#0D3B2E]/90 leading-tight">
@@ -34,9 +34,9 @@
             @endif
         </div>
 
-        <!-- Element 2: Tagline, Description & Badges (Mobile: Row 2 Col 1-7 Sebelah Kiri Foto Pengasuh | Desktop: Row 2 Col 1-7 Under Title) -->
-        <div class="col-span-7 md:col-span-7 col-start-1 row-start-2 flex flex-col justify-center text-left space-y-1.5 sm:space-y-2.5 min-w-0">
-            <!-- Tagline / Motto dipindah ke bawah (sebelah kiri foto pengasuh) -->
+        <!-- Element 2: Tagline & Description (Mobile: Row 2 Col 1-7 Sebelah Kiri Foto Pengasuh | Desktop: Row 2 Col 1-7 Under Title) -->
+        <div class="col-span-7 md:col-span-7 col-start-1 row-start-2 flex flex-col justify-center text-left space-y-1.5 sm:space-y-2 min-w-0">
+            <!-- Tagline / Motto di bawah (sebelah kiri foto pengasuh) -->
             <div class="flex items-center gap-1.5 sm:gap-2.5">
                 <span class="w-2.5 sm:w-6 h-0.5 bg-[#B89758] rounded-full shrink-0" aria-hidden="true"></span>
                 <p class="text-[11px] min-[360px]:text-xs sm:text-sm md:text-base font-serif italic text-[#B89758] tracking-wide leading-tight">
@@ -45,15 +45,9 @@
             </div>
 
             <!-- Deskripsi Singkat -->
-            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm text-[#4B6358] leading-relaxed line-clamp-3 sm:line-clamp-none">
+            <p class="text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm text-[#4B6358] leading-relaxed">
                 Lembaga pendidikan Islam di Petir, Serang yang membina generasi Qur'ani berakhlak mulia, cerdas, dan mandiri dengan perpaduan kurikulum pesantren dan nasional.
             </p>
-
-            <!-- Badges Fitur -->
-            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 text-[8.5px] min-[360px]:text-[9.5px] sm:text-xs font-mono font-semibold">
-                <span class="bg-emerald-50 text-[#059669] border border-emerald-200/60 px-1.5 py-0.5 rounded">&check; MTs Mukim 24 Jam</span>
-                <span class="bg-amber-50 text-[#B89758] border border-amber-200/60 px-1.5 py-0.5 rounded">&check; MDT Ula Sore</span>
-            </div>
         </div>
 
         <!-- Element 3: Foto Pengasuh Arch Frame (Mobile: Row 2 Col 8-12 | Desktop: Rows 1-2 Col 8-12) -->
