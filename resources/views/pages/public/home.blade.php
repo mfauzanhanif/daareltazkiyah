@@ -116,114 +116,108 @@
                     </div>
                 </div>
 
-                <!-- 1 Visi Utama Card -->
-                <div
-                    class="bg-gradient-to-r from-[#0D3B2E] via-[#084C27] to-[#0D3B2E] rounded-xl p-6 sm:p-8 md:p-10 text-white shadow-md relative overflow-hidden">
+                <!-- 2-Column Grid: Left Visi, Right Misi -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+
+                    <!-- Left Column: Visi (5 Cols) -->
                     <div
-                        class="absolute -right-10 -bottom-10 w-48 h-48 bg-[#B89758]/10 rounded-full blur-2xl pointer-events-none">
-                    </div>
-                    <div class="relative z-10 max-w-3xl space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xs font-mono uppercase tracking-widest text-[#B89758] font-bold">VISI</span>
-                        </div>
-                        <blockquote
-                            class="font-sans font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[32px] text-white leading-snug">
-                            "{{ "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat." }}"
-                        </blockquote>
-                    </div>
-                </div>
-
-                <!-- 6 Misi Cards (Grid 2x3 on Mobile, 3x2 on Desktop) -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-2 border-b border-[#E5E0D8] pb-2">
-                        <span class="text-xs font-mono uppercase tracking-wider text-[#0D3B2E] font-bold">MISI</span>
-                    </div>
-
-                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
-                        <!-- Misi 1 -->
+                        class="lg:col-span-5 bg-gradient-to-br from-[#0D3B2E] via-[#084C27] to-[#042816] rounded-2xl p-6 sm:p-8 lg:p-10 text-white shadow-md relative overflow-hidden border border-[#B89758]/30 flex flex-col justify-between">
+                        <!-- Decorative background glow -->
                         <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">01</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Kecintaan Al-Qur'an
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                {{ "Menanamkan kecintaan kepada Al-Qur'an" }}, kefasihan tilawah tajwid, dan hafalan mutqin
-                                sejak dini melalui halaqah intensif.
-                            </p>
+                            class="absolute -right-12 -bottom-12 w-56 h-56 bg-[#B89758]/15 rounded-full blur-3xl pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute -left-10 -top-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none">
                         </div>
 
-                        <!-- Misi 2 -->
-                        <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">02</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Akhlak Mulia &amp; Disiplin
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                Membentuk akhlak mulia dan disiplin, ketertiban shalat berjamaah di masjid, dan kemandirian
-                                hidup asrama santri.
-                            </p>
+                        <div class="relative z-10 space-y-4 sm:space-y-5">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-[1.5px] bg-amber-400"></span>
+                                <span class="text-amber-400 text-xs font-bold tracking-[0.25em] uppercase">
+                                    Visi
+                                </span>
+                            </div>
+
+                            <blockquote
+                                class="font-sans font-extrabold text-xl sm:text-2xl lg:text-[26px] xl:text-[28px] text-white leading-snug">
+                                "{{ "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat." }}"
+                            </blockquote>
                         </div>
 
-                        <!-- Misi 3 -->
-                        <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">03</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Pendidikan Islam Berkualitas
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                Memberikan pendidikan berkualitas berbasis Islam terpadu memadukan kurikulum salafiyah,
-                                kemenag RI, dan sains modern.
-                            </p>
-                        </div>
-
-                        <!-- Misi 4 -->
-                        <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">04</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Prestasi Tingkat Nasional
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                Mempersiapkan santri berprestasi di tingkat nasional dalam ajang Musabaqah Hifdzil Qur'an
-                                (MHQ) dan olimpiade sains.
-                            </p>
-                        </div>
-
-                        <!-- Misi 5 -->
-                        <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">05</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Komunikasi Dwibahasa
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                Membiasakan percakapan aktif Bahasa Arab dan Bahasa Inggris dalam lingkungan asrama dan
-                                madrasah.
-                            </p>
-                        </div>
-
-                        <!-- Misi 6 -->
-                        <div
-                            class="bg-white border border-[#E5E0D8] rounded-xl p-3.5 sm:p-5 space-y-1.5 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                            <span class="font-mono text-xs font-bold text-[#B89758] block">06</span>
-                            <h3
-                                class="font-sans font-bold text-xs sm:text-sm md:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                Khidmah &amp; Pengabdian Umat
-                            </h3>
-                            <p class="text-[10px] min-[360px]:text-[11px] sm:text-xs text-[#4B6358] leading-relaxed">
-                                Membina jiwa kepemimpinan santri, kepedulian sosial, dan kesiapan berkhidmah untuk umat dan
-                                bangsa.
-                            </p>
+                        <div class="relative z-10 pt-6 mt-6 sm:mt-8 border-t border-white/15 space-y-3">
                         </div>
                     </div>
+
+                    <!-- Right Column: 4 Misi (7 Cols) -->
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <!-- Opsi A: Garis & Teks Hijau Tua (Tegas & Formal) -->
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-6 h-[1.5px] bg-emerald-800"></span>
+                            <span class="text-emerald-900 text-xs font-bold tracking-[0.25em] uppercase">
+                                Misi
+                            </span>
+                        </div>
+
+                        <!-- 2x2 Grid of 4 Misi Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4.5 h-full">
+                            <!-- Misi 1 -->
+                            <div
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-xs font-bold text-[#B89758]">01</span>
+                                    </div>
+                                    <h3
+                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                        {{ "Menanamkan kecintaan kepada Al-Qur'an" }}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- Misi 2 -->
+                            <div
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-xs font-bold text-[#B89758]">02</span>
+                                    </div>
+                                    <h3
+                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                        {{ 'Membentuk akhlak mulia dan disiplin' }}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- Misi 3 -->
+                            <div
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-xs font-bold text-[#B89758]">03</span>
+                                    </div>
+                                    <h3
+                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                        {{ 'Memberikan pendidikan berkualitas berbasis Islam' }}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- Misi 4 -->
+                            <div
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-xs font-bold text-[#B89758]">04</span>
+                                    </div>
+                                    <h3
+                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                        {{ 'Mempersiapkan santri berprestasi di tingkat nasional' }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
