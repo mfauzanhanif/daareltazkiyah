@@ -173,11 +173,35 @@ test('psb registration form route loads standalone wizard view with breadcrumbs'
         ->assertSee(route('psb.index'), false);
 });
 
-test('navigation header contains PSB menu pointing to psb.index and Daftar CTA pointing to psb.form', function () {
+test('navigation header contains PSB submenu pointing to psb.index, psb.fee, psb.status and Daftar CTA pointing to psb.form', function () {
     $response = $this->get('/');
     $response->assertOk();
 
     $content = $response->getContent();
     expect($content)->toContain('href="'.route('psb.index').'"')
+        ->and($content)->toContain('href="'.route('psb.fee').'"')
+        ->and($content)->toContain('href="'.route('psb.status').'"')
         ->and($content)->toContain('href="'.route('psb.form').'"');
+});
+
+test('psb fee and equipment route loads successfully with fee tables and equipment breakdown', function () {
+    AdmissionWave::create([
+        'name' => 'Gelombang I 2027',
+        'slug' => 'gelombang-i-2027',
+        'academic_year' => '2027/2028',
+        'start_date' => now()->subDays(2)->toDateString(),
+        'end_date' => now()->addDays(20)->toDateString(),
+        'fee_mts' => 125000,
+        'fee_mdta' => 35000,
+    ]);
+
+    $response = $this->get(route('psb.fee'));
+    $response->assertOk()
+        ->assertSeeText('Rincian Biaya & Perlengkapan Santri')
+        ->assertSeeText('RINCIAN BIAYA PENDIDIKAN')
+        ->assertSeeText('PERLENGKAPAN SANTRI BARU')
+        ->assertSeeText('Perlengkapan Santri Putra')
+        ->assertSeeText('Perlengkapan Santri Putri')
+        ->assertSeeText('Tabel Estimasi Rincian Biaya Masuk Awal (MTs)')
+        ->assertSee(route('psb.form'), false);
 });

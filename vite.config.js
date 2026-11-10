@@ -20,6 +20,7 @@ export default defineConfig({
                 }),
                 bunny('Amiri', {
                     weights: [400, 700],
+                    subsets: ['arabic', 'latin'],
                 }),
             ],
         }),

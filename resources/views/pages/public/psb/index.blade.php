@@ -5,7 +5,6 @@
     showModal: false,
     modalImage: '',
     modalTitle: '',
-    equipmentTab: 'asrama',
     openModal(src, title) {
         this.modalImage = src;
         this.modalTitle = title;
@@ -64,6 +63,10 @@
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
                             <span>Daftar Sekarang &rarr;</span>
                         </a>
+                        <a href="{{ route('psb.fee') }}"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-[#0D3B2E] bg-white text-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-xs font-semibold uppercase tracking-wider transition">
+                            <span>Rincian Biaya</span>
+                        </a>
                         <a href="{{ route('psb.status') }}"
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-[#E5E0D8] bg-white text-[#0D3B2E] hover:border-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
                             <span>Cek Status</span>
@@ -86,16 +89,20 @@
                         </p>
                     </div>
                     <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+                        <a href="{{ route('psb.fee') }}"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-[#0D3B2E] bg-white text-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-xs font-semibold uppercase tracking-wider transition">
+                            <span>Rincian Biaya</span>
+                        </a>
                         @php
                             $waNum = \App\Models\SiteSetting::get('school_phone', '0896-5332-4339');
                         @endphp
                         <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNum) }}" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition">
-                            <span>Hubungi Panitia PSB (WhatsApp)</span>
+                            <span>Hubungi Panitia (WhatsApp)</span>
                         </a>
                         <a href="{{ route('psb.status') }}"
                             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-[#E5E0D8] bg-white text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition">
-                            <span>Cek Status Pendaftaran</span>
+                            <span>Cek Status</span>
                         </a>
                     </div>
                 </div>
@@ -194,11 +201,11 @@
         </div>
     </section>
 
-    <!-- 4. RINCIAN BIAYA PENDIDIKAN (MTS & MDTA) -->
+    <!-- 4. RINCIAN BIAYA PENDIDIKAN & PERLENGKAPAN SANTRI (RINGKASAN & LINK) -->
     <section id="tabel-biaya" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
                 <div class="flex items-center justify-center gap-3 sm:gap-4">
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                     <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -206,198 +213,70 @@
                     </h2>
                     <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                 </div>
+                <p class="text-xs sm:text-sm text-[#4B6358] max-w-2xl mx-auto leading-relaxed">
+                    Informasi transparan mengenai infaq pendaftaran, syahriyah bulanan, estimasi kebutuhan masuk awal, serta daftar lengkap <strong>PERLENGKAPAN SANTRI BARU</strong> kini dirangkum dalam satu halaman terpisah.
+                </p>
             </div>
 
-            <!-- Two Big Comparison Cards matching home.blade.php -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                <!-- Card 1: MTs (Madrasah Tsanawiyah) Mukim 24 Jam -->
-                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] hover:shadow-md transition">
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM 24 JAM</span>
-                                <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim</span>
-                            </div>
-                            <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
-                            <p class="text-xs text-[#4B6358] mt-1">Setingkat SMP terpadu asrama mukim 24 jam dengan bimbingan intensif Al-Qur'an dan kitab kuning.</p>
+            <!-- Highlights Comparison Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
+                <!-- MTS -->
+                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-4 hover:border-[#0D3B2E] transition shadow-xs">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="editorial-label text-[#059669]">MUKIM 24 JAM</span>
+                            <span class="text-xs font-mono font-bold text-[#0D3B2E]">MTS</span>
                         </div>
-
-                        <!-- Price Card -->
-                        <div class="bg-white p-4 border border-[#E5E0D8] rounded-xl flex items-center justify-between shadow-xs">
+                        <h3 class="font-sans font-bold text-xl text-[#0D3B2E]">Madrasah Tsanawiyah</h3>
+                        <p class="text-xs text-[#4B6358] leading-relaxed">Pendidikan formal Kemenag berpadu asrama mukim dan bimbingan tahfidz intensif.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-[#E5E0D8] flex items-center justify-between">
                             <div>
-                                <span class="block text-xs text-[#4B6358]">Syahriyah (Bulanan)</span>
-                                <span class="text-xl sm:text-2xl font-bold text-[#0D3B2E] font-sans">
-                                    Rp 500.000 <span class="text-xs font-normal text-gray-500">/bln</span>
-                                </span>
+                                <span class="text-[11px] text-[#4B6358] block">Syahriyah</span>
+                                <span class="text-lg font-bold text-[#0D3B2E]">Rp 500.000<span class="text-xs font-normal text-gray-500">/bln</span></span>
                             </div>
-                            <div class="text-right border-l border-[#E5E0D8] pl-4">
-                                <span class="block text-xs text-[#4B6358]">Infaq Pendaftaran</span>
-                                <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp {{ $feeMts }}</span>
+                            <div class="text-right border-l border-[#E5E0D8] pl-3">
+                                <span class="text-[11px] text-[#4B6358] block">Infaq Pendaftaran</span>
+                                <span class="text-sm font-bold text-[#B89758]">Rp {{ $feeMts }}</span>
                             </div>
                         </div>
-
-                        <!-- Total Estimation Info -->
-                        <div class="grid grid-cols-2 gap-3 text-xs">
-                            <div class="p-3 bg-white border border-[#E5E0D8] rounded-lg">
-                                <span class="text-[#4B6358] block text-[10px] uppercase font-bold">Total Masuk Putra</span>
-                                <strong class="text-base font-sans text-[#0D3B2E]">Rp 3.250.000</strong>
-                            </div>
-                            <div class="p-3 bg-white border border-[#E5E0D8] rounded-lg">
-                                <span class="text-[#4B6358] block text-[10px] uppercase font-bold">Total Masuk Putri</span>
-                                <strong class="text-base font-sans text-[#0D3B2E]">Rp 3.350.000</strong>
-                            </div>
-                        </div>
-
-                        <ul class="text-xs space-y-2.5 text-[#18181B]">
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
-                                <span>Asrama mukim 24 jam &amp; makan 3x sehari disediakan</span>
-                            </li>
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
-                                <span>Ijazah formal Kementerian Agama RI (Kemenag)</span>
-                            </li>
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
-                                <span>Santri mencuci pakaian secara mandiri (melatih kemandirian)</span>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="pt-4 border-t border-[#E5E0D8]">
-                        <a href="{{ route('psb.form', ['program' => 'MTS']) }}"
-                            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
-                            <span>Daftar MTS Sekarang &rarr;</span>
-                        </a>
+                    <div class="text-xs text-[#059669] font-medium flex items-center gap-1.5 pt-2 border-t border-[#E5E0D8]">
+                        <span>&bull; Makan 3x sehari &bull; Asrama &bull; Ijazah Kemenag</span>
                     </div>
                 </div>
 
-                <!-- Card 2: MDTA (Madrasah Diniyah Takmiliyah Awaliyah) Non-Mukim -->
-                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] hover:shadow-md transition">
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                <span class="editorial-label text-[#B89758]">PENDIDIKAN DINIYAH NON-MUKIM</span>
-                                <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-800">Non-Mukim</span>
-                            </div>
-                            <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah)</h3>
-                            <p class="text-xs text-[#4B6358] mt-1">Sekolah sore hari ba'da Ashar (Senin – Kamis) untuk anak usia SD/MI di wilayah Serang dan sekitarnya.</p>
+                <!-- MDTA -->
+                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-4 hover:border-[#0D3B2E] transition shadow-xs">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="editorial-label text-[#B89758]">NON-MUKIM</span>
+                            <span class="text-xs font-mono font-bold text-[#0D3B2E]">MDTA</span>
                         </div>
-
-                        <!-- Price Card -->
-                        <div class="bg-white p-4 border border-[#E5E0D8] rounded-xl flex items-center justify-between shadow-xs">
+                        <h3 class="font-sans font-bold text-xl text-[#0D3B2E]">Madrasah Diniyah (MDTA)</h3>
+                        <p class="text-xs text-[#4B6358] leading-relaxed">Sekolah sore ba'da Ashar (Senin–Kamis) untuk anak usia SD/MI di wilayah Serang.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-[#E5E0D8] flex items-center justify-between">
                             <div>
-                                <span class="block text-xs text-[#4B6358]">Syahriyah (Bulanan)</span>
-                                <span class="text-xl sm:text-2xl font-bold text-[#0D3B2E] font-sans">
-                                    Rp 12.000 <span class="text-xs font-normal text-gray-500">/bln</span>
-                                </span>
+                                <span class="text-[11px] text-[#4B6358] block">Syahriyah</span>
+                                <span class="text-lg font-bold text-[#0D3B2E]">Rp 12.000<span class="text-xs font-normal text-gray-500">/bln</span></span>
                             </div>
-                            <div class="text-right border-l border-[#E5E0D8] pl-4">
-                                <span class="block text-xs text-[#4B6358]">Infaq Pendaftaran</span>
-                                <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp {{ $feeMdta }}</span>
+                            <div class="text-right border-l border-[#E5E0D8] pl-3">
+                                <span class="text-[11px] text-[#4B6358] block">Infaq Pendaftaran</span>
+                                <span class="text-sm font-bold text-[#B89758]">Rp {{ $feeMdta }}</span>
                             </div>
                         </div>
-
-                        <!-- Total Estimation Info -->
-                        <div class="grid grid-cols-2 gap-3 text-xs">
-                            <div class="p-3 bg-white border border-[#E5E0D8] rounded-lg">
-                                <span class="text-[#4B6358] block text-[10px] uppercase font-bold">No. Izin Operasional</span>
-                                <strong class="text-xs font-mono text-[#0D3B2E]">0355 (Kemenag)</strong>
-                            </div>
-                            <div class="p-3 bg-white border border-[#E5E0D8] rounded-lg">
-                                <span class="text-[#4B6358] block text-[10px] uppercase font-bold">NSMDT Resmi</span>
-                                <strong class="text-xs font-mono text-[#0D3B2E]">311236041251</strong>
-                            </div>
-                        </div>
-
-                        <ul class="text-xs space-y-2.5 text-[#18181B]">
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
-                                <span>Jadwal sekolah: Senin s/d Kamis pukul 13.30 – 16.10 WIB</span>
-                            </li>
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
-                                <span>Tahfidz Juz 30 berjenjang (Kelas 1, 2, dan 3)</span>
-                            </li>
-                            <li class="flex items-center gap-2.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
-                                <span>Pengembangan seni Kamis (Hadroh, Kaligrafi, Drama, Tadabbur Alam)</span>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="pt-4 border-t border-[#E5E0D8]">
-                        <a href="{{ route('psb.form', ['program' => 'MDTA']) }}"
-                            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md border border-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-[#0D3B2E] text-xs font-bold uppercase tracking-wider transition shadow-xs">
-                            <span>Daftar MDTA Sekarang &rarr;</span>
-                        </a>
+                    <div class="text-xs text-[#B89758] font-medium flex items-center gap-1.5 pt-2 border-t border-[#E5E0D8]">
+                        <span>&bull; Tahfidz Juz 30 &bull; Diniyah Sore &bull; Seni Islam</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Tabel Rincian Komponen Biaya MTs Lengkap -->
-            <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2 border-b border-[#E5E0D8] pb-3">
-                    <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Tabel Estimasi Rincian Biaya Masuk Awal (MTs)</h3>
-                    <span class="text-xs font-mono text-[#4B6358]">T.A {{ $activeWave?->academic_year ?? '2027/2028' }}</span>
-                </div>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs border-collapse">
-                        <thead>
-                            <tr class="bg-white border-b border-[#E5E0D8] text-[#0D3B2E]">
-                                <th class="py-3 px-4 font-bold">No</th>
-                                <th class="py-3 px-4 font-bold">Komponen Biaya</th>
-                                <th class="py-3 px-4 font-bold text-right">Santri Putra</th>
-                                <th class="py-3 px-4 font-bold text-right">Santri Putri</th>
-                                <th class="py-3 px-4 font-bold">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-[#E5E0D8]">
-                            <tr class="hover:bg-white transition">
-                                <td class="py-2.5 px-4 font-mono">1</td>
-                                <td class="py-2.5 px-4 font-semibold text-[#0D3B2E]">Infaq Pendaftaran PSB</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp {{ $feeMts }}</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp {{ $feeMts }}</td>
-                                <td class="py-2.5 px-4 text-[#4B6358]">Dibayarkan saat pendaftaran awal</td>
-                            </tr>
-                            <tr class="hover:bg-white transition">
-                                <td class="py-2.5 px-4 font-mono">2</td>
-                                <td class="py-2.5 px-4 font-semibold text-[#0D3B2E]">Syahriyah (Bulan Pertama)</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 500.000</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 500.000</td>
-                                <td class="py-2.5 px-4 text-[#4B6358]">Termasuk pendidikan &amp; makan 3x sehari</td>
-                            </tr>
-                            <tr class="hover:bg-white transition">
-                                <td class="py-2.5 px-4 font-mono">3</td>
-                                <td class="py-2.5 px-4 font-semibold text-[#0D3B2E]">Paket Seragam &amp; Atribut</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 950.000</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 1.050.000</td>
-                                <td class="py-2.5 px-4 text-[#4B6358]">Seragam formal madrasah &amp; jilbab (putri)</td>
-                            </tr>
-                            <tr class="hover:bg-white transition">
-                                <td class="py-2.5 px-4 font-mono">4</td>
-                                <td class="py-2.5 px-4 font-semibold text-[#0D3B2E]">Pengembangan Sarana Asrama</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 1.200.000</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 1.200.000</td>
-                                <td class="py-2.5 px-4 text-[#4B6358]">Fasilitas tempat tidur, lemari, &amp; sarana santri</td>
-                            </tr>
-                            <tr class="hover:bg-white transition">
-                                <td class="py-2.5 px-4 font-mono">5</td>
-                                <td class="py-2.5 px-4 font-semibold text-[#0D3B2E]">Kitab &amp; Modul Pembelajaran</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 500.000</td>
-                                <td class="py-2.5 px-4 text-right font-mono">Rp 500.000</td>
-                                <td class="py-2.5 px-4 text-[#4B6358]">Al-Qur'an mushaf, kitab salaf, buku panduan</td>
-                            </tr>
-                            <tr class="bg-white font-bold border-t-2 border-[#0D3B2E]">
-                                <td colspan="2" class="py-3 px-4 text-right uppercase text-[#0D3B2E]">Total Estimasi Biaya Masuk Awal:</td>
-                                <td class="py-3 px-4 text-right text-base text-[#0D3B2E] font-mono">Rp 3.250.000</td>
-                                <td class="py-3 px-4 text-right text-base text-[#0D3B2E] font-mono">Rp 3.350.000</td>
-                                <td class="py-3 px-4 text-[#059669]">Dapat diangsur sesuai kesepakatan</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <!-- Dedicated CTA to /psb/biaya -->
+            <div class="text-center pt-2">
+                <a href="{{ route('psb.fee') }}"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-xs">
+                    <span>Lihat Rincian Biaya &amp; Perlengkapan Lengkap &rarr;</span>
+                </a>
             </div>
         </div>
     </section>
@@ -493,115 +372,7 @@
         </div>
     </section>
 
-    <!-- 6. PERLENGKAPAN SANTRI BARU -->
-    <section id="perlengkapan-santri" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
-            <!-- Centered Header -->
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="flex items-center justify-center gap-3 sm:gap-4">
-                    <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
-                    <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                        PERLENGKAPAN SANTRI BARU
-                    </h2>
-                    <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
-                </div>
-            </div>
-
-            <!-- Tab Buttons -->
-            <div class="flex justify-center">
-                <div class="inline-flex p-1 bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl text-xs font-semibold">
-                    <button type="button" @click="equipmentTab = 'asrama'"
-                        class="px-5 py-2.5 rounded-lg transition"
-                        :class="equipmentTab === 'asrama' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'text-[#4B6358] hover:text-[#0D3B2E]'">
-                        Perlengkapan Asrama &amp; Ibadah
-                    </button>
-                    <button type="button" @click="equipmentTab = 'pribadi'"
-                        class="px-5 py-2.5 rounded-lg transition"
-                        :class="equipmentTab === 'pribadi' ? 'bg-[#0D3B2E] text-white shadow-xs' : 'text-[#4B6358] hover:text-[#0D3B2E]'">
-                        Makan, Mandi &amp; Mencuci
-                    </button>
-                </div>
-            </div>
-
-            <!-- Tab Content: Asrama & Ibadah -->
-            <div x-show="equipmentTab === 'asrama'" x-transition class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Santri Putra -->
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4">
-                        <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
-                            <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Perlengkapan Santri Putra</h3>
-                            <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-emerald-100 text-[#084C27]">Putra</span>
-                        </div>
-                        <ul class="text-xs space-y-2.5 text-[#18181B]">
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span><span>Baju koko putih &amp; warna sopan (minimal 3 stel)</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span><span>Sarung santri (minimal 3 buah)</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span><span>Peci / kopyah hitam &amp; putih</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span><span>Sajadah &amp; Al-Qur'an mushaf standar</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span><span>Bantal &amp; sprei kasur ukuran asrama</span></li>
-                        </ul>
-                    </div>
-
-                    <!-- Santri Putri -->
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4">
-                        <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3">
-                            <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Perlengkapan Santri Putri</h3>
-                            <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-amber-100 text-amber-900">Putri</span>
-                        </div>
-                        <ul class="text-xs space-y-2.5 text-[#18181B]">
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#B89758]"></span><span>Gamis / busana muslimah syar'i longgar (minimal 3 stel)</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#B89758]"></span><span>Kerudung bergo syar'i warna hitam &amp; putih</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#B89758]"></span><span>Mukena sholat &amp; sajadah pribadi</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#B89758]"></span><span>Ciput / inner jilbab &amp; kaos kaki muslimah</span></li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-[#B89758]"></span><span>Bantal &amp; sprei kasur ukuran asrama</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab Content: Makan, Mandi & Cuci -->
-            <div x-show="equipmentTab === 'pribadi'" x-transition class="space-y-6">
-                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 space-y-4">
-                    <div class="border-b border-[#E5E0D8] pb-3 flex items-center justify-between flex-wrap gap-2">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Perlengkapan Mandi, Makan, &amp; Mencuci Mandiri</h3>
-                        <span class="text-xs font-mono text-[#059669] font-bold">Putra &amp; Putri</span>
-                    </div>
-
-                    <p class="text-xs text-[#4B6358] leading-relaxed">
-                        Pondok Pesantren Daar El Tazkiyah Sumardi melatih kemandirian santri sejak dini. <strong>Pesantren tidak menyediakan jasa laundry</strong>, sehingga santri mencuci pakaian secara mandiri dengan bimbingan musyrif/musyrifah asrama.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2 text-xs text-[#18181B]">
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Piring, sendok, &amp; gelas / botol minum pribadi</span>
-                        </div>
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Ember &amp; gayung mandi / cuci</span>
-                        </div>
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Hanger gantungan &amp; jepitan pakaian</span>
-                        </div>
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Peralatan mandi (sabun cair, sikat gigi, odol, handuk)</span>
-                        </div>
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Peralatan mencuci pakaian (sabun cuci &amp; sikat pakaian)</span>
-                        </div>
-                        <div class="p-3 bg-white border border-[#E5E0D8] rounded-xl flex items-center gap-2">
-                            <span class="text-[#059669] font-bold">&check;</span>
-                            <span>Peralatan cuci piring (spons &amp; sabun cuci piring)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FAQ RINGKAS PSB -->
+    <!-- 6. FAQ RINGKAS PSB -->
     <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
             <!-- Centered Header -->
@@ -672,6 +443,10 @@
                 <a href="{{ route('psb.form') }}"
                     class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-[#D97706] hover:bg-[#b46304] text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
                     <span>Isi Formulir Pendaftaran &rarr;</span>
+                </a>
+                <a href="{{ route('psb.fee') }}"
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/30 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider transition">
+                    <span>Rincian Biaya</span>
                 </a>
                 <a href="{{ route('psb.status') }}"
                     class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/30 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider transition">

@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-        {{ filled($title ?? null) ? $title . ' - ' . config('app.name', 'Daar El Tazkiyah') : 'Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi' }}
+        {{ filled($title ?? null) ? $title . ' - ' . config('app.name', 'Daar El Tazkiyah') : 'Pondok Pesantren Daar El Tazkiyah Sumardi' }}
     </title>
 
     <!-- Open Graph / Meta -->

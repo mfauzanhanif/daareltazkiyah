@@ -1,4 +1,4 @@
-@extends('layouts.public', ['title' => 'Profil Pesantren & Legalitas - DAAR EL TAZKIYAH SUMARDI'])
+@extends('layouts.public', ['title' => 'Profil - Daar El Tazkiyah Sumardi'])
 
 @section('content')
     <div x-data="{
@@ -25,7 +25,7 @@
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
                 <h1
                     class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
-                    Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi
+                    Profil Daar El Tazkiyah Sumardi
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl text-emerald-100/90 max-w-3xl mx-auto leading-relaxed">
                     Mencetak generasi Qur'ani yang berilmu amaliah, berakhlak mulia, berprestasi di tingkat nasional, dan
@@ -159,7 +159,7 @@
                             <div class="flex items-center gap-3">
                                 <span class="w-6 h-[1.5px] bg-amber-400"></span>
                                 <span class="text-amber-400 text-xs font-bold tracking-[0.25em] uppercase">
-                                    Visi Lembaga
+                                    VISI
                                 </span>
                             </div>
 
@@ -171,7 +171,6 @@
                         </div>
 
                         <div class="relative z-10 pt-6 mt-6 sm:mt-8 border-t border-white/15">
-                            <span class="text-xs text-emerald-200/80 font-mono">PPMTQ Daar El Tazkiyah Sumardi</span>
                         </div>
                     </div>
 
@@ -180,7 +179,7 @@
                         <div class="flex items-center gap-3 mb-2">
                             <span class="w-6 h-[1.5px] bg-[#084C27]"></span>
                             <span class="text-[#084C27] text-xs font-bold tracking-[0.25em] uppercase">
-                                4 Pilar Misi Pendidikan
+                                MISI
                             </span>
                         </div>
 
@@ -192,10 +191,6 @@
                                     class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
                                     <span class="text-[#B89758] mr-1.5">1.</span>Menanamkan kecintaan kepada Al-Qur'an
                                 </h3>
-                                <p class="text-xs text-[#4B6358] leading-relaxed">
-                                    Membina tilawah tajwid dan hafalan mutqin 30 juz Al-Qur'an sejak dini melalui halaqah
-                                    terarah.
-                                </p>
                             </div>
 
                             <!-- Misi 2 -->
@@ -205,10 +200,6 @@
                                     class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
                                     <span class="text-[#B89758] mr-1.5">2.</span>Membentuk akhlak mulia dan disiplin
                                 </h3>
-                                <p class="text-xs text-[#4B6358] leading-relaxed">
-                                    Membiasakan adab Islami, sholat berjamaah tepat waktu di masjid, dan kemandirian asrama
-                                    santri.
-                                </p>
                             </div>
 
                             <!-- Misi 3 -->
@@ -219,10 +210,6 @@
                                     <span class="text-[#B89758] mr-1.5">3.</span>Memberikan pendidikan berkualitas berbasis
                                     Islam
                                 </h3>
-                                <p class="text-xs text-[#4B6358] leading-relaxed">
-                                    Memadukan kurikulum salafiyah kepesantrenan dengan pendidikan formal nasional
-                                    Kementerian Agama RI.
-                                </p>
                             </div>
 
                             <!-- Misi 4 -->
@@ -233,10 +220,6 @@
                                     <span class="text-[#B89758] mr-1.5">4.</span>Mempersiapkan santri berprestasi di tingkat
                                     nasional
                                 </h3>
-                                <p class="text-xs text-[#4B6358] leading-relaxed">
-                                    Mengasah potensi santri pada Musabaqah Hifdzil Qur'an (MHQ), sains madrasah, dan dakwah
-                                    dwibahasa.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -369,298 +352,200 @@
         </section>
 
         <!-- 5. SECTION 4: DEWAN PENDIDIK & ASATIDZ -->
-        <section id="pendidik" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
-                <!-- Centered Header -->
+        <section id="pendidik" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+                <!-- Editorial Header -->
                 <div class="text-center max-w-3xl mx-auto">
                     <div class="flex items-center justify-center gap-3 sm:gap-4">
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                         <h2
                             class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            DEWAN PENDIDIK &amp; ASATIDZ
+                            DEWAN PENDIDIK
                         </h2>
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
                 </div>
 
-                <!-- Asatidz Showcase Card -->
-                <div
-                    class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 shadow-xs">
-                    <!-- Left: Dewan Pengajar Visual -->
-                    <div
-                        class="lg:col-span-6 bg-gradient-to-br from-[#084C27] via-[#0D3B2E] to-[#14532D] rounded-xl p-6 sm:p-8 text-white relative overflow-hidden flex flex-col items-center justify-between min-h-[300px]">
-                        <div class="text-center space-y-1 relative z-10">
-                            <span class="text-amber-300 text-[10px] font-mono uppercase tracking-widest font-bold">DEWAN
-                                ASATIDZAH &amp; PENDIDIK</span>
-                            <h3 class="font-sans font-extrabold text-xl sm:text-2xl text-white tracking-tight">
-                                Keluarga Besar Asatidz Pesantren
-                            </h3>
-                            <p class="text-xs text-emerald-100/90 max-w-md mx-auto">
-                                Membina kurikulum kepesantrenan, tahfidzul Qur'an mutqin, bahasa Arab, dan pembentukan
-                                karakter santri.
-                            </p>
+                <!-- Featured Showcase Banner -->
+                <div class="bg-white border border-[#E5E0D8] rounded-3xl overflow-hidden shadow-sm">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+
+                        <!-- Left: Narrative (5 Cols) -->
+                        <div
+                            class="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-[#0D3B2E] via-[#0A2E24] to-[#07221A] text-white relative overflow-hidden">
+                            <!-- Subtle Glow Accent -->
+                            <div
+                                class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-[#B89758]/10 blur-2xl pointer-events-none">
+                            </div>
+
+                            <div class="space-y-4 relative z-10">
+                                <div class="w-10 h-1 bg-[#B89758] rounded-full"></div>
+
+                                <h3 class="text-2xl sm:text-3xl font-bold leading-snug tracking-tight text-white">
+                                    Mendidik dengan Hati, Membina dengan Keteladanan Adab
+                                </h3>
+
+                                <p class="text-sm text-emerald-100/85 leading-relaxed">
+                                    Setiap santri didampingi secara intensif oleh jajaran Dewan Asatidz huffadz dan praktisi
+                                    pendidikan berpengalaman dalam setoran hafalan Al-Qur'an serta pembiasaan adab harian.
+                                </p>
+                            </div>
                         </div>
 
-                        <div class="relative z-10 w-full mt-4 flex justify-center">
-                            @if (file_exists(public_path('images/dewan-pengajar-transparan.webp')))
+                        <!-- Right: Interactive Group Photo (7 Cols) -->
+                        <div class="lg:col-span-7 relative bg-[#F3EFEA] min-h-[280px] sm:min-h-[360px] overflow-hidden group cursor-pointer"
+                            @click="openModal('{{ asset('images/foto-pengajar.webp') }}', 'Foto Bersama Dewan Pengajar PPMTQ Daar El Tazkiyah')">
+
+                            @if (file_exists(public_path('images/foto-pengajar.webp')))
+                                <img src="{{ asset('images/foto-pengajar.webp') }}"
+                                    alt="Dewan Pengajar PPMTQ Daar El Tazkiyah" loading="lazy"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            @elseif(file_exists(public_path('images/foto pengajar.webp')))
+                                <img src="{{ asset('images/foto%20pengajar.webp') }}"
+                                    alt="Dewan Pengajar PPMTQ Daar El Tazkiyah" loading="lazy"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            @elseif(file_exists(public_path('images/dewan-pengajar-transparan.webp')))
                                 <img src="{{ asset('images/dewan-pengajar-transparan.webp') }}"
                                     alt="Dewan Pengajar Daar El Tazkiyah Sumardi" loading="lazy"
-                                    class="max-h-60 sm:max-h-64 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300">
-                            @elseif(file_exists(public_path('images/dewan pengajar (latar transfaran).webp')))
-                                <img src="{{ asset('images/dewan%20pengajar%20(latar%20transfaran).webp') }}"
-                                    alt="Dewan Pengajar Daar El Tazkiyah Sumardi" loading="lazy"
-                                    class="max-h-60 sm:max-h-64 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300">
+                                    class="w-full h-full object-contain object-bottom pt-6 px-4 group-hover:scale-105 transition-transform duration-700">
                             @endif
-                        </div>
-                    </div>
 
-                    <!-- Right: Educator Highlight -->
-                    <div class="lg:col-span-6 space-y-4">
-                        <div class="border border-[#E5E0D8] rounded-xl overflow-hidden group shadow-xs">
-                            <div class="aspect-16/10 relative overflow-hidden bg-gray-100 cursor-pointer"
-                                @click="openModal('{{ asset('images/foto-pengajar.webp') }}', 'Foto Bersama Dewan Pengajar PPMTQ Daar El Tazkiyah')">
-                                @if (file_exists(public_path('images/foto-pengajar.webp')))
-                                    <img src="{{ asset('images/foto-pengajar.webp') }}"
-                                        alt="Foto Pengajar PPMTQ Daar El Tazkiyah" loading="lazy"
-                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                @elseif(file_exists(public_path('images/foto pengajar.webp')))
-                                    <img src="{{ asset('images/foto%20pengajar.webp') }}"
-                                        alt="Foto Pengajar PPMTQ Daar El Tazkiyah" loading="lazy"
-                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                @endif
-                                <div
-                                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Subtle Bottom Gradient & Action Pill -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#0D3B2E]/70 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                            </div>
+
+                            <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-white">
+                                <span class="text-xs sm:text-sm font-medium text-white/90 drop-shadow-xs">
+                                    Jajaran Dewan Asatidz &amp; Tenaga Pendidik
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/95 text-[#0D3B2E] px-3.5 py-2 rounded-full text-xs font-bold shadow-md group-hover:bg-[#B89758] group-hover:text-white transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                                     </svg>
-                                    <span>Perbesar Foto Pengajar</span>
-                                </div>
+                                    Perbesar Foto
+                                </span>
                             </div>
                         </div>
 
-                        <div class="space-y-2">
-                            <span
-                                class="text-[10px] font-mono uppercase tracking-wider text-[#059669] font-bold">PEMBIMBING
-                                BERINTEGRITAS</span>
-                            <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Komitmen Pendidik Berakhlakul Karimah
-                            </h4>
-                            <p class="text-xs text-[#4B6358] leading-relaxed">
-                                Santri didampingi langsung oleh <strong>Ust. Ahmad Ashil Fadhil, S.H., M.H.</strong> selaku
-                                Pengasuh Pesantren bersama asatidz huffadz dalam setoran hafalan Al-Qur'an dan pembiasaan
-                                adab harian.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Teachers Individual Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    @forelse($teachers as $teacher)
-                        <div
-                            class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-5 hover:border-[#0D3B2E] hover:bg-white hover:shadow-xs transition group">
-                            <div class="flex items-center gap-4">
+                <!-- Teachers Name-Only Directory Grid -->
+                <div class="space-y-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-[#0D3B2E]">Jajaran Pengajar &amp; Pembina</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        @forelse($teachers as $teacher)
+                            @php
+                                // Mengambil inisial dari nama asli (melewati gelar Ust., Ustz., Ibu, Bapak, Hj., H.)
+                                $cleanName = preg_replace(
+                                    '/^(Ust\.|Ustz\.|Ustadz|Ustadzah|Ibu|Bapak|Bp\.|Hj\.|H\.)\s+/i',
+                                    '',
+                                    $teacher->full_name,
+                                );
+                                $cleanName = preg_replace('/^(Hj\.|H\.)\s+/i', '', $cleanName);
+                                $initial = Str::upper(Str::substr(trim($cleanName), 0, 1));
+                            @endphp
+
+                            <div
+                                class="group bg-white border border-[#E5E0D8] rounded-xl p-4 hover:border-[#0D3B2E] hover:shadow-sm transition-all duration-200 flex items-center gap-3.5">
+                                <!-- Initials Avatar -->
                                 <div
-                                    class="w-12 h-12 rounded-full bg-[#0D3B2E] border-2 border-[#B89758] flex items-center justify-center text-white font-sans font-bold text-base shadow-xs shrink-0">
-                                    {{ Str::substr($teacher->full_name, 0, 1) }}
+                                    class="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] group-hover:bg-[#0D3B2E] group-hover:border-[#0D3B2E] flex items-center justify-center text-[#0D3B2E] group-hover:text-[#E5C88E] font-sans font-bold text-sm transition-colors shrink-0">
+                                    {{ $initial }}
                                 </div>
-                                <div class="min-w-0">
-                                    <h3
-                                        class="font-sans font-bold text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                        {{ $teacher->full_name }}
-                                    </h3>
-                                    <p class="text-xs text-[#059669] font-medium mt-0.5">
-                                        {{ $teacher->role_title }}
-                                    </p>
-                                    @if ($teacher->specialization)
-                                        <span class="inline-block text-[11px] text-[#4B6358] mt-1">
-                                            Bidang: {{ $teacher->specialization }}
-                                        </span>
-                                    @endif
-                                </div>
+
+                                <!-- Teacher Full Name Only -->
+                                <h4
+                                    class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition-colors leading-snug truncate">
+                                    {{ $teacher->full_name }}
+                                </h4>
                             </div>
-                        </div>
-                    @empty
-                        <div
-                            class="col-span-full text-center py-8 bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl text-xs text-[#4B6358]">
-                            Belum ada data asatidz yang dipublikasikan.
-                        </div>
-                    @endforelse
+                        @empty
+                            <div
+                                class="col-span-full text-center py-10 bg-white border border-dashed border-[#E5E0D8] rounded-2xl text-sm text-[#4B6358]">
+                                Belum ada data asatidz yang dipublikasikan.
+                            </div>
+                        @endforelse
+                    </div>
                 </div>
+
             </div>
         </section>
 
         <!-- 6. SECTION 5: LEGALITAS LEMBAGA -->
-        <section id="legalitas" class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
-                <!-- Centered Header -->
+        <section id="legalitas" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+                <!-- Simple Left-Aligned Header -->
                 <div class="text-center max-w-3xl mx-auto">
                     <div class="flex items-center justify-center gap-3 sm:gap-4">
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                         <h2
                             class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            LEGALITAS RESMI LEMBAGA
+                            LEGALITAS
                         </h2>
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
                 </div>
 
-                <!-- Legal Grid: 2 Columns -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                    <!-- Left: 7 Columns Legal Identitas -->
-                    <div
-                        class="lg:col-span-7 bg-white border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 space-y-6 flex flex-col justify-between shadow-xs">
-                        <div class="space-y-4">
-                            <div class="border-b border-[#E5E0D8] pb-3 flex items-center justify-between">
-                                <span class="text-xs font-mono font-bold text-[#0D3B2E] uppercase">IDENTITAS HUKUM
-                                    PESANTREN</span>
-                                <span
-                                    class="text-xs font-mono text-[#059669] font-bold px-2 py-0.5 bg-emerald-50 rounded border border-emerald-200">
-                                    Sah &amp; Terverifikasi
-                                </span>
-                            </div>
+                <!-- Single Clean Card with 2-Column Data Grid -->
+                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-10">
+                    <h3 class="text-lg font-bold text-[#0D3B2E] mb-6">
+                        Identitas Hukum Pesantren
+                    </h3>
 
-                            <div class="divide-y divide-[#E5E0D8] text-xs sm:text-sm">
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Yayasan Penyelenggara:</span>
-                                    <strong class="text-[#0D3B2E] font-bold text-right">Yayasan DAAR EL TAZKIYAH
-                                        SUMARDI</strong>
-                                </div>
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Unit Pendidikan Diniyah:</span>
-                                    <strong class="text-[#0D3B2E] font-bold text-right">MDT Ula DAAR EL TAZKIYAH
-                                        SUMARDI</strong>
-                                </div>
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-start justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Nomor Izin Operasional (Ijop):</span>
-                                    <div class="text-right">
-                                        <strong class="text-[#0D3B2E] font-bold block">Nomor: 0355</strong>
-                                        <span class="text-[11px] text-[#4B6358] block">Piagam Kemenag Kantor Kabupaten
-                                            Serang</span>
-                                        <span class="text-[10px] text-[#B89758] font-mono block">Ditetapkan: 28 Oktober
-                                            2026</span>
-                                    </div>
-                                </div>
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Nomor Statistik MDT (NSMDT):</span>
-                                    <strong
-                                        class="text-[#0D3B2E] font-mono font-bold tracking-wider text-base text-right">311236041251</strong>
-                                </div>
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Tahun Berdiri Yayasan:</span>
-                                    <strong class="text-[#0D3B2E] font-bold text-right">23 Juni 2025</strong>
-                                </div>
-                                <div class="py-3 flex flex-col sm:flex-row sm:items-start justify-between gap-1">
-                                    <span class="text-[#4B6358] font-medium">Alamat Lembaga Lengkap:</span>
-                                    <span class="text-[#0D3B2E] font-semibold text-right max-w-sm">
-                                        Kp. Lembur Sawah, Kel./Desa Mekar Baru, Kecamatan Petir, Kab. Serang, Provinsi
-                                        Banten.
-                                    </span>
-                                </div>
-                            </div>
+                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-sm">
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Yayasan Penyelenggara</dt>
+                            <dd class="font-bold text-[#0D3B2E] text-base">Yayasan Daar El Tazkiyah Sumardi</dd>
                         </div>
 
-                        <!-- 4 Slogans -->
-                        <div class="pt-4 border-t border-[#E5E0D8] space-y-3">
-                            <span
-                                class="text-[10px] font-mono font-bold text-[#B89758] tracking-widest uppercase block">MOTTO
-                                &amp; SLOGAN</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                                <div class="p-3 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#059669] shrink-0"></span>
-                                    <span class="text-xs font-semibold text-[#0D3B2E]">&ldquo;Ilmu - Iman - Amal -
-                                        Akhlak&rdquo;</span>
-                                </div>
-                                <div class="p-3 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#B89758] shrink-0"></span>
-                                    <span class="text-xs font-semibold text-[#0D3B2E]">&ldquo;Berilmu, Berakhlak,
-                                        Berprestasi&rdquo;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: 5 Columns Certificate Preview -->
-                    <div
-                        class="lg:col-span-5 bg-white border border-[#E5E0D8] rounded-2xl p-6 sm:p-8 space-y-5 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-3 mb-4">
-                                <span class="text-xs font-mono font-bold text-[#059669] uppercase">BUKTI PIAGAM
-                                    RESMI</span>
-                                <span class="text-[10px] font-mono text-[#4B6358]">Kemenag Serang</span>
-                            </div>
-
-                            <div
-                                class="border-2 border-dashed border-[#B89758]/50 rounded-xl p-4 bg-[#FAF8F5] text-center space-y-3 relative group">
-                                @php
-                                    $ijopFile = 'images/Ijop MDTA.jpg';
-                                    $ijopExists = file_exists(public_path($ijopFile));
-                                @endphp
-
-                                @if ($ijopExists)
-                                    <div class="relative aspect-4/3 overflow-hidden rounded-lg bg-gray-100 cursor-pointer shadow-xs"
-                                        @click="openModal('{{ asset($ijopFile) }}', 'Piagam Izin Operasional MDT Ula No. 0355')">
-                                        <img src="{{ asset($ijopFile) }}"
-                                            alt="Piagam Izin Operasional MDT Ula Nomor 0355" loading="lazy"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                        <div
-                                            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                                            </svg>
-                                            <span>Klik untuk Memperbesar</span>
-                                        </div>
-                                    </div>
-                                @else
-                                    <div class="py-6 px-4 bg-white border border-[#E5E0D8] rounded-xl shadow-xs space-y-3">
-                                        <div
-                                            class="w-14 h-14 mx-auto rounded-full bg-emerald-50 border-2 border-[#B89758] flex items-center justify-center text-[#0D3B2E]">
-                                            <svg class="w-7 h-7" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                            </svg>
-                                        </div>
-                                        <div class="space-y-1">
-                                            <span
-                                                class="text-[10px] font-mono uppercase tracking-widest text-[#B89758] font-bold block">KEMENTERIAN
-                                                AGAMA RI</span>
-                                            <h4 class="font-sans font-bold text-base text-[#0D3B2E]">Piagam Izin
-                                                Operasional MDTA</h4>
-                                            <p class="text-xs font-mono text-[#059669] font-bold">Nomor: 0355</p>
-                                        </div>
-                                        <div class="pt-2 text-[10px] font-mono text-[#4B6358] border-t border-[#E5E0D8]">
-                                            NSMDT: 311236041251 &bull; Kemenag Kab. Serang
-                                        </div>
-                                    </div>
-                                @endif
-
-                                <div class="text-left space-y-1 text-xs text-[#4B6358] pt-1">
-                                    <p><strong class="text-[#0D3B2E]">Dokumen:</strong> Piagam Izin Operasional MDTA</p>
-                                    <p><strong class="text-[#0D3B2E]">Penerbit:</strong> Kemenag Kabupaten Serang</p>
-                                    <p><strong class="text-[#0D3B2E]">Status:</strong> Sah &amp; Terdaftar Resmi</p>
-                                </div>
-                            </div>
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Unit Pendidikan Diniyah</dt>
+                            <dd class="font-bold text-[#0D3B2E] text-base">MDT Ula Daar El Tazkiyah Sumardi</dd>
                         </div>
 
-                        <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
-                            @if ($ijopExists)
-                                <button type="button"
-                                    @click="openModal('{{ asset($ijopFile) }}', 'Piagam Izin Operasional MDT Ula No. 0355')"
-                                    class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
-                                    <span>Preview Piagam Asli</span>
-                                </button>
-                            @else
-                                <a href="{{ route('contact.index') }}"
-                                    class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
-                                    <span>Hubungi Sekretariat &rarr;</span>
-                                </a>
-                            @endif
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Nomor Izin Operasional (Ijop)</dt>
+                            <dd class="font-bold text-[#0D3B2E]">
+                                Nomor: 0355 <span class="font-normal text-[#4B6358]">— Kemenag Kab. Serang (28 Oktober
+                                    2026)</span>
+                            </dd>
                         </div>
-                    </div>
+
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Nomor Statistik MDT (NSMDT)</dt>
+                            <dd class="font-bold text-[#0D3B2E]">311236041251</dd>
+                        </div>
+
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Tanggal Berdiri Yayasan</dt>
+                            <dd class="font-bold text-[#0D3B2E]">23 Juni 2025</dd>
+                        </div>
+
+                        <div class="border-b border-[#E5E0D8] pb-4">
+                            <dt class="text-[#4B6358] text-xs mb-1">Motto Pendidikan</dt>
+                            <dd class="font-medium italic text-[#0D3B2E]">
+                                &ldquo;Ilmu, Iman, Amal, Akhlak &mdash; Berilmu, Berakhlak, Berprestasi&rdquo;
+                            </dd>
+                        </div>
+
+                        <div class="md:col-span-2 pt-1">
+                            <dt class="text-[#4B6358] text-xs mb-1">Alamat Lengkap Lembaga</dt>
+                            <dd class="font-semibold text-[#0D3B2E]">
+                                Kp. Lembur Sawah, Desa Mekar Baru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten.
+                            </dd>
+                        </div>
+                    </dl>
                 </div>
+
             </div>
         </section>
 

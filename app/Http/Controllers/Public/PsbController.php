@@ -33,6 +33,15 @@ final class PsbController extends Controller
         return view('public.psb.index', compact('activeWave', 'selectedProgram', 'feeMts', 'feeMdta'));
     }
 
+    public function fee(Request $request): View
+    {
+        $activeWave = AdmissionWave::currentActive();
+        $feeMts = $activeWave ? number_format($activeWave->fee_mts, 0, ',', '.') : '100.000';
+        $feeMdta = $activeWave ? number_format($activeWave->fee_mdta, 0, ',', '.') : '25.000';
+
+        return view('public.psb.fee', compact('activeWave', 'feeMts', 'feeMdta'));
+    }
+
     public function form(Request $request): View
     {
         $activeWave = AdmissionWave::currentActive();

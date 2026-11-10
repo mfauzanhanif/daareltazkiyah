@@ -56,6 +56,7 @@
 
     /* Typography Families - Modern Clean Sans-Serif (Calibri / Arial / Plus Jakarta Sans) */
     --font-arabic: 'Amiri', 'Scheherazade New', serif;
+    --font-amiri: 'Amiri', serif;
     --font-serif: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;
     --font-editorial: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;
     --font-display: 'Plus Jakarta Sans', 'Calibri', 'Arial', ui-sans-serif, system-ui, -apple-system, sans-serif;

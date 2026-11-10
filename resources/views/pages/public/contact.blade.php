@@ -8,13 +8,10 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#084C27]/90 to-[#042816]/85"></div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-            <span class="text-xs font-semibold uppercase tracking-widest text-[#B89758]">Silaturahmi & Layanan Informasi</span>
             <div class="flex items-center justify-center gap-3">
-                <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                 <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
                     Kontak & Lokasi PPMTQ Daar El Tazkiyah Sumardi
                 </h1>
-                <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
             </div>
             <p class="text-sm sm:text-base md:text-lg text-emerald-100/90 max-w-2xl mx-auto leading-relaxed">
                 Kami menyambut hangat kunjungan silaturahmi, konsultasi pendaftaran santri baru, dan informasi seputar kepesantrenan di Kabupaten Serang, Banten.
@@ -194,7 +191,7 @@
                         <div class="border-b border-[#E5E0D8]/60 pb-4">
                             <span class="text-xs font-bold uppercase tracking-wider text-[#059669]">JARINGAN MEDIA</span>
                             <h3 class="font-sans font-bold text-xl text-[#0D3B2E] mt-1">
-                                Media Sosial Resmi: @media_daareltazkiyah_sumardi
+                                Media Sosial Resmi
                             </h3>
                             <p class="text-xs text-[#4B6358] mt-1">
                                 Dapatkan update dokumentasi kegiatan, siaran langsung pengajian, dan informasi penerimaan santri.
@@ -210,7 +207,6 @@
                                 </div>
                                 <div>
                                     <span class="font-sans font-bold text-xs text-[#0D3B2E] block">Instagram</span>
-                                    <span class="text-[10px] text-[#4B6358] font-mono">@media_daareltazkiyah_sumardi</span>
                                 </div>
                             </a>
 
@@ -222,7 +218,6 @@
                                 </div>
                                 <div>
                                     <span class="font-sans font-bold text-xs text-[#0D3B2E] block">TikTok</span>
-                                    <span class="text-[10px] text-[#4B6358] font-mono">@media.daareltazki</span>
                                 </div>
                             </a>
 
@@ -234,7 +229,6 @@
                                 </div>
                                 <div>
                                     <span class="font-sans font-bold text-xs text-[#0D3B2E] block">Facebook</span>
-                                    <span class="text-[10px] text-[#4B6358] font-mono">Daar-El-tazkiyah-Sumardi</span>
                                 </div>
                             </a>
                         </div>

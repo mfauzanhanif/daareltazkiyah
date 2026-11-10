@@ -116,19 +116,11 @@
                         </a>
                         <a href="{{ route('program.index') }}#program-pendidikan"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Jenjang MTs &amp; MDTA
+                            Program Pendidikan
                         </a>
-                        <a href="{{ route('program.index') }}#target-hafalan"
+                        <a href="{{ route('program.index') }}#kurikulum"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Target Hafalan MDTA
-                        </a>
-                        <a href="{{ route('program.index') }}#jadwal-harian"
-                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Jadwal Harian Santri MDTA
-                        </a>
-                        <a href="{{ route('program.index') }}#kegiatan-seni"
-                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Pengembangan Seni (Kamis)
+                            Kurikulum
                         </a>
                         <a href="{{ route('program.index') }}#ekstrakurikuler"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -137,11 +129,44 @@
                     </div>
                 </div>
 
-                <!-- PSB (Informasi Pendaftaran) -->
-                <a href="{{ route('psb.index') }}"
-                    class="px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('psb') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}">
-                    PSB
-                </a>
+                <!-- Dropdown: PSB -->
+                <div class="relative" @mouseenter="openDropdown = 'psb'" @mouseleave="openDropdown = null">
+                    <a href="{{ route('psb.index') }}"
+                        class="inline-flex items-center gap-1.5 px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('psb*') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}"
+                        :class="{ 'text-[#059669]': openDropdown === 'psb' }">
+                        <span>PSB</span>
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200"
+                            :class="{ 'rotate-180': openDropdown === 'psb' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+
+                    <!-- Dropdown Panel: PSB -->
+                    <div x-show="openDropdown === 'psb'" x-cloak
+                        x-transition:enter="transition ease-out duration-150"
+                        x-transition:enter-start="opacity-0 translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-100"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 translate-y-1"
+                        class="absolute left-0 w-52 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
+
+                        <a href="{{ route('psb.index') }}"
+                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
+                            Info Pendaftaran
+                        </a>
+                        <a href="{{ route('psb.fee') }}"
+                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                            Rincian Biaya
+                        </a>
+                        <a href="{{ route('psb.status') }}"
+                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                            Cek Status
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Berita -->
                 <a href="{{ route('news.index') }}"
@@ -286,23 +311,40 @@
                             <a href="{{ route('program.index') }}#program-unggulan" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Unggulan</a>
                             <a href="{{ route('program.index') }}#program-pendidikan" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Jenjang MTs &amp; MDTA</a>
-                            <a href="{{ route('program.index') }}#target-hafalan" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Target Hafalan MDTA</a>
-                            <a href="{{ route('program.index') }}#jadwal-harian" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Jadwal Harian Santri MDTA</a>
-                            <a href="{{ route('program.index') }}#kegiatan-seni" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Pengembangan Seni (Kamis)</a>
+                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Pendidikan</a>
+                            <a href="{{ route('program.index') }}#kurikulum" @click="mobileMenuOpen = false"
+                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Kurikulum</a>
                             <a href="{{ route('program.index') }}#ekstrakurikuler" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Ekstrakurikuler</a>
                         </div>
                     </div>
 
-                    <!-- PSB -->
-                    <a href="{{ route('psb.index') }}" @click="mobileMenuOpen = false"
-                        class="block px-3 py-2.5 border-t border-[#E5E0D8]/60 {{ request()->is('psb') ? 'border-l-2 border-[#0D3B2E] bg-white text-[#0D3B2E] font-bold' : 'border-l-2 border-transparent text-[#18181B] hover:text-[#059669]' }}">
-                        PSB
-                    </a>
+                    <!-- PSB Accordion -->
+                    <div x-data="{ expanded: {{ request()->is('psb*') ? 'true' : 'false' }} }" class="border-t border-[#E5E0D8]/60 pt-1">
+                        <button type="button" @click="expanded = !expanded"
+                            class="w-full flex items-center justify-between px-3 py-2.5 text-left {{ request()->is('psb*') ? 'text-[#0D3B2E] font-bold' : 'text-[#18181B] hover:text-[#059669]' }}">
+                            <span>PSB</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': expanded }" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs normal-case font-medium border-l border-[#E5E0D8] ml-3 mb-2">
+                            <a href="{{ route('psb.index') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('psb.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">
+                                Info Pendaftaran
+                            </a>
+                            <a href="{{ route('psb.fee') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('psb.fee') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">
+                                Rincian Biaya
+                            </a>
+                            <a href="{{ route('psb.status') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('psb.status') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">
+                                Cek Status
+                            </a>
+                        </div>
+                    </div>
 
                     <!-- Berita -->
                     <a href="{{ route('news.index') }}" @click="mobileMenuOpen = false"

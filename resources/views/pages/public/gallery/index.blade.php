@@ -16,13 +16,10 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#084C27]/90 to-[#042816]/85"></div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-            <span class="text-xs font-semibold uppercase tracking-widest text-[#B89758]">Dokumentasi Santri</span>
             <div class="flex items-center justify-center gap-3">
-                <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                 <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
                     Potret Rutinitas & Dokumentasi Santri
                 </h1>
-                <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
             </div>
             <p class="text-sm sm:text-base md:text-lg text-emerald-100/90 max-w-2xl mx-auto leading-relaxed">
                 Dokumentasi visual kegiatan harian santri, halaqah Al-Qur'an, tasmi' akbar, ekstrakurikuler, dan lingkungan asri kampus PPMTQ Daar El Tazkiyah Sumardi di Serang, Banten.

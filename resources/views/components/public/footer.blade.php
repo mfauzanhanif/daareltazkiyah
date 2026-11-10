@@ -61,6 +61,8 @@
                             class="hover:text-white hover:underline transition">Program Pendidikan</a></li>
                     <li><a href="{{ route('psb.index') }}"
                             class="hover:text-white hover:underline transition">Informasi PSB</a></li>
+                    <li><a href="{{ route('psb.fee') }}"
+                            class="hover:text-white hover:underline transition">Rincian Biaya PSB</a></li>
                     <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Berita
                             &amp; Warta</a></li>
                     <li><a href="{{ route('gallery.index') }}"
@@ -143,7 +145,7 @@
 
         <!-- Hadith Bar -->
         <div class="py-6 border-b border-white/10 text-center" dir="rtl" style="line-height: 1.8;">
-            <p class="font-arabic text-amber-200/90 text-sm md:text-base tracking-wide">
+            <p class="font-amiri text-amber-200/90 text-sm md:text-base tracking-wide">
                 مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
             </p>
         </div>
