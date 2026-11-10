@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="pt-8">
-                    <a href="{{ route('psb.index') }}?program=MTS" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm">
+                    <a href="{{ route('psb.form', ['program' => 'MTS']) }}" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm">
                         <span>Daftar MTS Sekarang</span>
                         <span aria-hidden="true">&rarr;</span>
                     </a>
@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="pt-8">
-                    <a href="{{ route('psb.index') }}?program=MDTA" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-[#0D3B2E] text-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white font-semibold text-xs uppercase tracking-wider transition">
+                    <a href="{{ route('psb.form', ['program' => 'MDTA']) }}" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-[#0D3B2E] text-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white font-semibold text-xs uppercase tracking-wider transition">
                         <span>Daftar MDTA Sekarang</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>

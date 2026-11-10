@@ -137,6 +137,12 @@
                     </div>
                 </div>
 
+                <!-- PSB (Informasi Pendaftaran) -->
+                <a href="{{ route('psb.index') }}"
+                    class="px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('psb') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}">
+                    PSB
+                </a>
+
                 <!-- Berita -->
                 <a href="{{ route('news.index') }}"
                     class="px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('berita*') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}">
@@ -158,7 +164,7 @@
 
             <!-- Desktop CTAs -->
             <div class="hidden lg:flex items-center gap-3">
-                <a href="{{ route('psb.index') }}"
+                <a href="{{ route('psb.form') }}"
                     class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white border border-[#0D3B2E] transition group shadow-xs">
                     <span>Daftar</span>
                 </a>
@@ -212,8 +218,8 @@
                 <div class="flex items-center gap-2.5 min-w-0">
                     <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo" class="w-8 h-8 object-contain shrink-0" onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
                     <div class="min-w-0">
-                        <span class="block text-[8px] font-semibold text-[#4B6358] uppercase truncate leading-tight">PPMTQ Daar El Tazkiyah</span>
-                        <span class="block font-sans font-extrabold text-xs text-[#0D3B2E] uppercase truncate leading-tight">MENU UTAMA</span>
+                        <span class="block text-[8px] font-semibold text-[#4B6358] uppercase truncate leading-tight">Pondok Pesantren Modern Tahfidzul Qur'an</span>
+                        <span class="block font-sans font-extrabold text-xs text-[#0D3B2E] uppercase truncate leading-tight">DAAR EL TAZKIYAH SUMARDI</span>
                     </div>
                 </div>
                 <button type="button" @click="mobileMenuOpen = false"
@@ -291,6 +297,10 @@
                         </div>
                     </div>
 
+                    <a href="{{ route('psb.index') }}" @click="mobileMenuOpen = false"
+                        class="block px-3 py-2 border-t border-[#E5E0D8]/60 {{ request()->is('psb') ? 'text-[#0D3B2E] font-bold bg-white' : '' }}">
+                        Informasi PSB
+                    </a>
                     <a href="{{ route('news.index') }}" @click="mobileMenuOpen = false"
                         class="block px-3 py-2 border-t border-[#E5E0D8]/60">
                         Berita &amp; Warta
@@ -306,9 +316,9 @@
 
             <!-- Off-Canvas Footer CTA -->
             <div class="p-4 border-t border-[#E5E0D8] bg-white space-y-2 shrink-0">
-                <a href="{{ route('psb.index') }}" @click="mobileMenuOpen = false"
+                <a href="{{ route('psb.form') }}" @click="mobileMenuOpen = false"
                     class="block w-full text-center px-4 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm">
-                    Daftar (PSB Online) &rarr;
+                    Daftar (Formulir Online) &rarr;
                 </a>
             </div>
         </div>

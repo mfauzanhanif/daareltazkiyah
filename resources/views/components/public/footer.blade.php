@@ -66,7 +66,9 @@
                     <li><a href="{{ route('contact.index') }}"
                             class="hover:text-white hover:underline transition">Kontak Kami</a></li>
                     <li><a href="{{ route('psb.index') }}"
-                            class="hover:text-white hover:underline transition">Penerimaan Santri Baru (PSB)</a></li>
+                            class="hover:text-white hover:underline transition">Informasi PSB</a></li>
+                    <li><a href="{{ route('psb.form') }}"
+                            class="hover:text-white hover:underline transition text-amber-300 font-semibold">Formulir Pendaftaran Online</a></li>
                 </ul>
             </div>
 

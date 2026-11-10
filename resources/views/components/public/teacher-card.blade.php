@@ -2,10 +2,10 @@
     'teacher',
 ])
 
-<div class="bg-white border border-[#E5E0D8] rounded-md p-5 hover:border-[#0D3B2E] transition-all flex flex-col justify-between group">
+<div class="bg-white border border-[#E5E0D8] rounded-2xl p-5 hover:border-[#059669]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group shadow-2xs">
     <div class="space-y-4">
         <!-- 3:4 Portrait Photo Container -->
-        <div class="aspect-3/4 w-full border border-[#E5E0D8] rounded-md bg-[#FAF8F5] relative overflow-hidden">
+        <div class="aspect-3/4 w-full border border-[#E5E0D8] rounded-xl bg-[#FAF8F5] relative overflow-hidden">
             @if(!empty($teacher->photo_path))
                 <img src="{{ asset('storage/' . $teacher->photo_path) }}"
                      alt="{{ $teacher->full_name }}"
@@ -22,9 +22,9 @@
                 </div>
             @endif
 
-            <!-- Role Label (Editorial Style) -->
+            <!-- Role Label -->
             <div class="absolute bottom-0 inset-x-0 bg-[#0D3B2E]/90 text-white p-2 text-center border-t border-[#B89758]/30">
-                <span class="editorial-label text-amber-200 block text-[10px]">
+                <span class="text-amber-200 block text-[10px] font-bold uppercase tracking-wider">
                     {{ $teacher->role_title }}
                 </span>
             </div>

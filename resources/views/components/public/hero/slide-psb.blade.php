@@ -38,13 +38,13 @@
 
             <!-- Action CTAs (Simplified & Clean) -->
             <div class="pt-1 sm:pt-2 flex flex-wrap items-center gap-3">
-                <a href="{{ route('psb.index') }}"
+                <a href="{{ route('psb.form') }}"
                     class="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-md bg-[#B89758] hover:bg-[#a38347] text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-sm">
                     <span>Daftar Sekarang &rarr;</span>
                 </a>
                 <a href="{{ route('psb.index') }}#tabel-biaya"
                     class="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-md bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white text-xs sm:text-sm font-semibold transition">
-                    <span>Rincian Biaya &rarr;</span>
+                    <span>Informasi &amp; Biaya &rarr;</span>
                 </a>
             </div>
         </div>

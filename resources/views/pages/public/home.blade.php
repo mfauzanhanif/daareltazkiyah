@@ -368,7 +368,7 @@
                         </div>
 
                         <div class="pt-5 border-t border-[#E5E0D8]">
-                            <a href="{{ route('psb.index') }}?program=MTS"
+                            <a href="{{ route('psb.form', ['program' => 'MTS']) }}"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition shadow-xs">
                                 <span>Daftar MTS Sekarang</span>
                                 <span aria-hidden="true">&rarr;</span>
@@ -423,7 +423,7 @@
                         </div>
 
                         <div class="pt-5 border-t border-[#E5E0D8]">
-                            <a href="{{ route('psb.index') }}?program=MDTA"
+                            <a href="{{ route('psb.form', ['program' => 'MDTA']) }}"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md border border-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition shadow-xs">
                                 <span>Daftar MDTA Sekarang</span>
                                 <span aria-hidden="true">&rarr;</span>
@@ -771,7 +771,7 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                    <a href="{{ route('psb.index') }}"
+                    <a href="{{ route('psb.form') }}"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-[#D97706] hover:bg-[#b46304] text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
                         <span>Daftar Sekarang</span>
                     </a>

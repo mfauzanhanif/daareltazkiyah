@@ -18,6 +18,7 @@
     <link rel="alternate icon" href="{{ asset('images/logo_daar_el_tazkiyah.png') }}" type="image/png">
     <link rel="apple-touch-icon" href="{{ asset('images/logo_daar_el_tazkiyah.png') }}">
 
+    <!-- Self-hosted fonts -->
     @fonts
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])

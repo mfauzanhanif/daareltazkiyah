@@ -26,9 +26,19 @@ final class PsbController extends Controller
     public function index(Request $request): View
     {
         $activeWave = AdmissionWave::currentActive();
-        $selectedProgram = $request->query('program', 'MTS');
+        $selectedProgram = (string) $request->query('program', 'MTS');
+        $feeMts = $activeWave ? number_format($activeWave->fee_mts, 0, ',', '.') : '100.000';
+        $feeMdta = $activeWave ? number_format($activeWave->fee_mdta, 0, ',', '.') : '25.000';
 
-        return view('public.psb.index', compact('activeWave', 'selectedProgram'));
+        return view('public.psb.index', compact('activeWave', 'selectedProgram', 'feeMts', 'feeMdta'));
+    }
+
+    public function form(Request $request): View
+    {
+        $activeWave = AdmissionWave::currentActive();
+        $selectedProgram = (string) $request->query('program', 'MTS');
+
+        return view('public.psb.form', compact('activeWave', 'selectedProgram'));
     }
 
     public function store(StoreApplicantRequest $request, RegistrationService $registrationService): RedirectResponse

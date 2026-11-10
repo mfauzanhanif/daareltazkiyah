@@ -35,6 +35,7 @@ Route::get('/galeri', [GalleryController::class, 'index'])->name('gallery.index'
 // --- Public PSB Online Portal ---
 Route::prefix('psb')->name('psb.')->group(function () {
     Route::get('/', [PsbController::class, 'index'])->name('index');
+    Route::get('/form', [PsbController::class, 'form'])->name('form');
     Route::post('/daftar', [PsbController::class, 'store'])->name('store');
     Route::get('/sukses/{registration_number}', [PsbController::class, 'success'])->name('success');
     Route::get('/bukti/{registration_number}', [PsbController::class, 'downloadProof'])->name('proof');

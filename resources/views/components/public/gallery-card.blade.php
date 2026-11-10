@@ -2,7 +2,7 @@
     'gallery',
 ])
 
-<a href="{{ route('gallery.index') }}" class="group aspect-square border border-[#E5E0D8] rounded-md bg-[#FAF8F5] relative overflow-hidden block hover:border-[#0D3B2E] transition">
+<a href="{{ route('gallery.index') }}" class="group aspect-square border border-[#E5E0D8] rounded-2xl bg-[#FAF8F5] relative overflow-hidden block hover:border-[#059669]/50 hover:shadow-md transition-all duration-300 shadow-2xs">
     @if(!empty($gallery->cover_image))
         <img src="{{ asset('storage/' . $gallery->cover_image) }}"
              alt="{{ $gallery->title }}"
@@ -14,16 +14,16 @@
         </div>
     @endif
 
-    <!-- Photo Count Marker (Editorial Style) -->
+    <!-- Photo Count Marker -->
     @if($gallery->photos && $gallery->photos->count() > 0)
-        <div class="absolute top-2 right-2 px-2 py-0.5 rounded bg-[#0D3B2E] text-white text-[10px] font-mono border border-white/20">
+        <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-lg bg-[#0D3B2E]/90 text-white text-[10px] font-mono border border-white/20">
             {{ $gallery->photos->count() }} Foto
         </div>
     @endif
 
     <!-- Overlay Title on Hover -->
-    <div class="absolute inset-0 bg-[#0D3B2E]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end text-white">
-        <span class="editorial-label text-amber-300 block text-[10px]">DOKUMENTASI</span>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#0D3B2E]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end text-white">
+        <span class="text-amber-300 block text-[10px] font-bold uppercase tracking-wider">DOKUMENTASI</span>
         <span class="font-sans text-xs md:text-sm font-bold line-clamp-2 leading-snug mt-1">
             {{ $gallery->title }}
         </span>
