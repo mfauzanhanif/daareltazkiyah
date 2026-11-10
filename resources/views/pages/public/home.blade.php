@@ -43,7 +43,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">01.</span>Tahfidzul Qur'an
+                            <span class="text-[#B89758] mr-1.5">1.</span>Tahfidzul Qur'an
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Program menghafal Al-Qur'an secara terarah dan mutqin.
@@ -57,7 +57,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">02.</span>Tahfidz Hadits
+                            <span class="text-[#B89758] mr-1.5">2.</span>Tahfidz Hadits
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Menghafal dan memahami hadits-hadits pilihan.
@@ -71,7 +71,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">03.</span>Kajian Kitab Kuning
+                            <span class="text-[#B89758] mr-1.5">3.</span>Kajian Kitab Kuning
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Pendalaman khazanah keilmuan Islam klasik (Turats).
@@ -85,7 +85,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">04.</span>Bahasa Arab &amp; Inggris
+                            <span class="text-[#B89758] mr-1.5">4.</span>Bahasa Arab &amp; Inggris
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Pembiasaan komunikasi dwibahasa sehari-hari.
@@ -99,7 +99,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">05.</span>Public Speaking &amp; Da'wah
+                            <span class="text-[#B89758] mr-1.5">5.</span>Public Speaking &amp; Da'wah
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Pelatihan dakwah, pidato (muhadharah), dan retorika.
@@ -113,7 +113,7 @@
                             class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
-                            <span class="text-[#B89758] mr-1.5">06.</span>Pembinaan Akhlak &amp; Kedisiplinan
+                            <span class="text-[#B89758] mr-1.5">6.</span>Pembinaan Akhlak &amp; Kedisiplinan
                         </h3>
                         <p class="text-xs text-[#4B6358] leading-relaxed">
                             Pembentukan karakter santri melalui pembiasaan adab Islami.
@@ -183,58 +183,41 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4.5 h-full">
                             <!-- Misi 1 -->
                             <div
-                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
-                                <div class="space-y-2">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-mono text-xs font-bold text-[#B89758]">01</span>
-                                    </div>
-                                    <h3
-                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                        {{ "Menanamkan kecintaan kepada Al-Qur'an" }}
-                                    </h3>
-                                </div>
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-center">
+                                <h3
+                                    class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                    <span
+                                        class="text-[#B89758] mr-1.5">1.</span>{{ "Menanamkan kecintaan kepada Al-Qur'an" }}
+                                </h3>
                             </div>
 
                             <!-- Misi 2 -->
                             <div
-                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
-                                <div class="space-y-2">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-mono text-xs font-bold text-[#B89758]">02</span>
-                                    </div>
-                                    <h3
-                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                        {{ 'Membentuk akhlak mulia dan disiplin' }}
-                                    </h3>
-                                </div>
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-center">
+                                <h3
+                                    class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                    <span class="text-[#B89758] mr-1.5">2.</span>{{ 'Membentuk akhlak mulia dan disiplin' }}
+                                </h3>
                             </div>
 
                             <!-- Misi 3 -->
                             <div
-                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
-                                <div class="space-y-2">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-mono text-xs font-bold text-[#B89758]">03</span>
-                                    </div>
-                                    <h3
-                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                        {{ 'Memberikan pendidikan berkualitas berbasis Islam' }}
-                                    </h3>
-                                </div>
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-center">
+                                <h3
+                                    class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                    <span
+                                        class="text-[#B89758] mr-1.5">3.</span>{{ 'Memberikan pendidikan berkualitas berbasis Islam' }}
+                                </h3>
                             </div>
 
                             <!-- Misi 4 -->
                             <div
-                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-between">
-                                <div class="space-y-2">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-mono text-xs font-bold text-[#B89758]">04</span>
-                                    </div>
-                                    <h3
-                                        class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
-                                        {{ 'Mempersiapkan santri berprestasi di tingkat nasional' }}
-                                    </h3>
-                                </div>
+                                class="bg-white border border-[#E5E0D8] rounded-xl p-5 sm:p-6 space-y-2.5 hover:border-[#0D3B2E] hover:shadow-xs transition group flex flex-col justify-center">
+                                <h3
+                                    class="font-sans font-bold text-sm sm:text-base text-[#0D3B2E] group-hover:text-[#059669] transition leading-snug">
+                                    <span
+                                        class="text-[#B89758] mr-1.5">4.</span>{{ 'Mempersiapkan santri berprestasi di tingkat nasional' }}
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -338,13 +321,18 @@
 
                 <!-- 2-Column Program Comparison Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                    <!-- Program 1: MTS -->
+                    <!-- Program 1: MTS (Mukim 24 Jam) -->
                     <div
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-6">
-                            <!-- Header -->
-                            <div class="space-y-2">
-                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTs</h3>
+                            <div>
+                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                    <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM</span>
+                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim</span>
+                                </div>
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
+                                </div>
                             </div>
 
                             <!-- Price Card (Ringkas 2 Kolom) -->
@@ -358,8 +346,7 @@
                                 </div>
                                 <div class="text-right border-l border-[#E5E0D8] pl-4">
                                     <span class="block text-xs text-[#4B6358]">Pendaftaran</span>
-                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp
-                                        {{ $feeMts }}</span>
+                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp {{ $feeMts }}</span>
                                 </div>
                             </div>
 
@@ -375,7 +362,7 @@
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
-                                    <span>Ijazah resmi Kementerian Agama RI</span>
+                                    <span>Ijazah formal Madrasah Tsanawiyah (Kemenag RI)</span>
                                 </li>
                             </ul>
                         </div>
@@ -383,7 +370,7 @@
                         <div class="pt-5 border-t border-[#E5E0D8]">
                             <a href="{{ route('psb.index') }}?program=MTS"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition shadow-xs">
-                                <span>Daftar MTs Sekarang</span>
+                                <span>Daftar MTS Sekarang</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>
@@ -393,9 +380,14 @@
                     <div
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-6">
-                            <!-- Header -->
-                            <div class="space-y-2">
-                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
+                            <div>
+                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                    <span class="editorial-label text-[#B89758]">SEKOLAH SORE NON-MUKIM</span>
+                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-800">Non-Mukim</span>
+                                </div>
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah Takmiliyah Awaliyah)</h3>
+                                </div>
                             </div>
 
                             <!-- Price Card (Ringkas 2 Kolom) -->
@@ -409,8 +401,7 @@
                                 </div>
                                 <div class="text-right border-l border-[#E5E0D8] pl-4">
                                     <span class="block text-xs text-[#4B6358]">Pendaftaran</span>
-                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp
-                                        {{ $feeMdta }}</span>
+                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp {{ $feeMdta }}</span>
                                 </div>
                             </div>
 
@@ -418,7 +409,7 @@
                             <ul class="text-sm space-y-2.5 text-[#18181B]">
                                 <li class="flex items-center gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
-                                    <span>KBM Senin – Kamis (13.30 – 16.10 WIB)</span>
+                                    <span>Jadwal sekolah sore hari ba'da Ashar (Senin – Kamis)</span>
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>

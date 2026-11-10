@@ -17,56 +17,19 @@
     }
 }" @keydown.escape.window="closeModal()">
 
-    <!-- Page Header (Editorial Academic Banner with Real Santri Photo Backdrop) -->
-    <section class="bg-white border-b border-[#E5E0D8] pt-12 pb-14 md:pt-16 md:pb-20 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- Page Header (Editorial Academic Banner with Santri Photo Background) -->
+    <section class="relative bg-cover bg-center overflow-hidden py-16 md:py-24 border-b border-[#B89758]/30"
+             style="background-image: url('{{ asset('images/foto-santri-2.webp') }}');">
+        <!-- Dark Forest Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#084C27]/90 to-[#042816]/85"></div>
 
-                <div class="lg:col-span-7 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-mono font-bold text-[#059669] uppercase tracking-wider">Kurikulum Terpadu & Kegiatan Santri T.A 2026/2027</span>
-                    </div>
-                    <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.15]">
-                        Program Pendidikan & Kurikulum MDTA
-                    </h1>
-                    <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
-                        Memadukan tahfidzul Qur'an mutqin, pembelajaran diniyah kitab salaf, praktik ibadah harian, serta pembinaan minat bakat dan seni santri di bawah naungan Yayasan DAAR EL TAZKIYAH SUMARDI.
-                    </p>
-                    <div class="flex flex-wrap items-center gap-2.5 pt-2 text-xs font-bold uppercase tracking-wider">
-                        <a href="#program-unggulan" class="px-3.5 py-2 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] transition">
-                            &darr; Program Unggulan
-                        </a>
-                        <a href="#program-pendidikan" class="px-3.5 py-2 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] transition">
-                            &darr; Jenjang MTs & MDTA
-                        </a>
-                        <a href="#target-hafalan" class="px-3.5 py-2 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] transition">
-                            &darr; Target Hafalan MDTA
-                        </a>
-                        <a href="#jadwal-harian" class="px-3.5 py-2 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] transition">
-                            &darr; Jadwal Santri MDTA
-                        </a>
-                        <a href="#kegiatan-seni" class="px-3.5 py-2 rounded-md bg-[#FAF8F5] border border-[#E5E0D8] text-[#0D3B2E] hover:border-[#0D3B2E] transition">
-                            &darr; Kegiatan Seni (Kamis)
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Visual: Santri Header Image Frame -->
-                <div class="lg:col-span-5">
-                    <div class="border border-[#E5E0D8] rounded-xl overflow-hidden shadow-md bg-white p-2">
-                        <div class="aspect-16/10 relative overflow-hidden rounded-lg bg-gray-100 cursor-pointer group"
-                             @click="openModal('{{ asset('images/foto-santri-1.webp') }}', 'Potret Santri Daar El Tazkiyah Sumardi')">
-                            <img src="{{ asset('images/foto-santri-1.webp') }}"
-                                alt="Santri Daar El Tazkiyah Sumardi"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
-                                <span class="text-white text-xs font-semibold">Generasi Berilmu, Berakhlak, Berprestasi</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
+            <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
+                Program Pendidikan & Kurikulum MDTA
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-emerald-100/90 max-w-3xl mx-auto leading-relaxed">
+                Memadukan tahfidzul Qur'an mutqin, pembelajaran diniyah kitab salaf, praktik ibadah harian, serta pembinaan minat bakat dan seni santri di bawah naungan Yayasan DAAR EL TAZKIYAH SUMARDI.
+            </p>
         </div>
     </section>
 

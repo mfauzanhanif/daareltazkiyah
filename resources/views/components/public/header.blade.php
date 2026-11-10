@@ -7,7 +7,7 @@
 @endphp
 
 <!-- Main Editorial Navigation Header (Sticky with Off-Canvas Mobile Drawer) -->
-<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E5E0D8] transition-all w-full shadow-xs">
+<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E5E0D8] transition-colors duration-200 w-full shadow-xs">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
 
@@ -67,10 +67,6 @@
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
                             Selayang Pandang
                         </a>
-                        <a href="{{ route('profile.index') }}#legalitas-lembaga"
-                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Legalitas &amp; Piagam Ijop
-                        </a>
                         <a href="{{ route('profile.index') }}#visi-misi"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
                             Visi &amp; Misi
@@ -82,6 +78,10 @@
                         <a href="{{ route('profile.index') }}#pendidik"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
                             Dewan Pendidik
+                        </a>
+                        <a href="{{ route('profile.index') }}#legalitas"
+                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                            Legalitas
                         </a>
                     </div>
                 </div>
@@ -178,33 +178,34 @@
     </div>
 
     <!-- Off-Canvas Mobile Navigation Drawer -->
-    <div x-show="mobileMenuOpen" x-cloak
-         x-effect="document.body.classList.toggle('overflow-hidden', mobileMenuOpen)"
-         class="fixed inset-0 z-50 lg:hidden"
-         role="dialog" aria-modal="true" aria-label="Menu Navigasi Mobile">
+    <template x-teleport="body">
+        <div x-show="mobileMenuOpen" x-cloak
+             x-effect="document.body.classList.toggle('overflow-hidden', mobileMenuOpen)"
+             class="fixed inset-0 z-[100] lg:hidden"
+             role="dialog" aria-modal="true" aria-label="Menu Navigasi Mobile">
 
-        <!-- Backdrop Overlay -->
-        <div x-show="mobileMenuOpen"
-             x-transition:enter="transition-opacity ease-linear duration-300"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             x-transition:leave="transition-opacity ease-linear duration-200"
-             x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0"
-             class="fixed inset-0 bg-black/60 backdrop-blur-xs"
-             @click="mobileMenuOpen = false"
-             aria-hidden="true"></div>
+            <!-- Backdrop Overlay -->
+            <div x-show="mobileMenuOpen"
+                 x-transition:enter="transition-opacity ease-linear duration-300"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition-opacity ease-linear duration-200"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"
+                 class="fixed inset-0 bg-black/60 backdrop-blur-xs"
+                 @click="mobileMenuOpen = false"
+                 aria-hidden="true"></div>
 
-        <!-- Off-Canvas Drawer Panel (Sliding in from Right) -->
-        <div x-show="mobileMenuOpen"
-             x-transition:enter="transition ease-in-out duration-300 transform"
-             x-transition:enter-start="translate-x-full"
-             x-transition:enter-end="translate-x-0"
-             x-transition:leave="transition ease-in-out duration-200 transform"
-             x-transition:leave-start="translate-x-0"
-             x-transition:leave-end="translate-x-full"
-             class="fixed inset-y-0 right-0 w-[85%] max-w-xs sm:max-w-sm bg-[#FAF8F5] shadow-2xl border-l border-[#E5E0D8] flex flex-col justify-between overflow-y-auto z-10"
-             @keydown.escape.window="mobileMenuOpen = false">
+            <!-- Off-Canvas Drawer Panel (Sliding in from Right) -->
+            <div x-show="mobileMenuOpen"
+                 x-transition:enter="transition ease-in-out duration-300 transform"
+                 x-transition:enter-start="translate-x-full"
+                 x-transition:enter-end="translate-x-0"
+                 x-transition:leave="transition ease-in-out duration-200 transform"
+                 x-transition:leave-start="translate-x-0"
+                 x-transition:leave-end="translate-x-full"
+                 class="fixed inset-y-0 right-0 w-[85%] max-w-xs sm:max-w-sm bg-[#FAF8F5] shadow-2xl border-l border-[#E5E0D8] flex flex-col justify-between overflow-y-auto z-[101]"
+                 @keydown.escape.window="mobileMenuOpen = false">
 
             <!-- Off-Canvas Header -->
             <div class="p-4 border-b border-[#E5E0D8] bg-white flex items-center justify-between shrink-0">
@@ -252,14 +253,14 @@
                         <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
                             <a href="{{ route('profile.index') }}#selayang-pandang" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Selayang Pandang</a>
-                            <a href="{{ route('profile.index') }}#legalitas-lembaga" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Legalitas &amp; Piagam Ijop</a>
                             <a href="{{ route('profile.index') }}#visi-misi" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Visi &amp; Misi</a>
                             <a href="{{ route('profile.index') }}#fasilitas" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Fasilitas Pesantren</a>
                             <a href="{{ route('profile.index') }}#pendidik" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Dewan Pendidik</a>
+                            <a href="{{ route('profile.index') }}#legalitas" @click="mobileMenuOpen = false"
+                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Legalitas</a>
                         </div>
                     </div>
 
@@ -312,4 +313,5 @@
             </div>
         </div>
     </div>
+    </template>
 </header>

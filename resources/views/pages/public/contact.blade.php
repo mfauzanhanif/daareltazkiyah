@@ -1,17 +1,19 @@
 @extends('layouts.public', ['title' => 'Kontak & Lokasi Pesantren - PPMTQ Daar El Tazkiyah Sumardi'])
 
 @section('content')
-    <!-- Page Header (Editorial Academic Banner) -->
-    <section class="bg-white border-b border-[#E5E0D8] pt-12 pb-14 md:pt-16 md:pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl space-y-4">
-                <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-[1.15]">
-                    Kontak & Lokasi PPMTQ Daar El Tazkiyah Sumardi
-                </h1>
-                <p class="text-base sm:text-lg text-[#4B6358] leading-relaxed">
-                    Kami menyambut hangat kunjungan silaturahmi, konsultasi pendaftaran santri baru, dan informasi seputar kepesantrenan di Kabupaten Serang, Banten.
-                </p>
-            </div>
+    <!-- Page Header (Editorial Academic Banner with Santri Photo Background) -->
+    <section class="relative bg-cover bg-center overflow-hidden py-16 md:py-24 border-b border-[#B89758]/30"
+             style="background-image: url('{{ asset('images/foto-santri-2.webp') }}');">
+        <!-- Dark Forest Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#084C27]/90 to-[#042816]/85"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
+            <h1 class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
+                Kontak & Lokasi PPMTQ Daar El Tazkiyah Sumardi
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-emerald-100/90 max-w-3xl mx-auto leading-relaxed">
+                Kami menyambut hangat kunjungan silaturahmi, konsultasi pendaftaran santri baru, dan informasi seputar kepesantrenan di Kabupaten Serang, Banten.
+            </p>
         </div>
     </section>
 
