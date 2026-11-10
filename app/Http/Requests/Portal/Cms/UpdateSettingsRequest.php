@@ -35,7 +35,6 @@ final class UpdateSettingsRequest extends FormRequest
             'psb_contact_person' => ['nullable', 'string', 'max:100'],
             'facebook_url' => ['nullable', 'string', 'max:255'],
             'instagram_url' => ['nullable', 'string', 'max:255'],
-            'youtube_url' => ['nullable', 'string', 'max:255'],
             'tiktok_url' => ['nullable', 'string', 'max:255'],
         ];
     }

@@ -61,11 +61,15 @@
                             x-transition:leave="transition ease-in duration-100"
                             x-transition:leave-start="opacity-100 translate-y-0"
                             x-transition:leave-end="opacity-0 translate-y-1"
-                            class="absolute left-0 w-48 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
+                            class="absolute left-0 w-52 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
 
                             <a href="{{ route('profile.index') }}#selayang-pandang"
                                 class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
                                 Selayang Pandang
+                            </a>
+                            <a href="{{ route('profile.index') }}#legalitas-lembaga"
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Legalitas & Piagam Ijop
                             </a>
                             <a href="{{ route('profile.index') }}#visi-misi"
                                 class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -104,7 +108,7 @@
                             x-transition:leave="transition ease-in duration-100"
                             x-transition:leave-start="opacity-100 translate-y-0"
                             x-transition:leave-end="opacity-0 translate-y-1"
-                            class="absolute left-0 w-48 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
+                            class="absolute left-0 w-56 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
 
                             <a href="{{ route('program.index') }}#program-unggulan"
                                 class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
@@ -112,7 +116,19 @@
                             </a>
                             <a href="{{ route('program.index') }}#program-pendidikan"
                                 class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                                Program Pendidikan
+                                Jenjang MTs & MDTA
+                            </a>
+                            <a href="{{ route('program.index') }}#target-hafalan"
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Target Hafalan MDTA
+                            </a>
+                            <a href="{{ route('program.index') }}#jadwal-harian"
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Jadwal Harian Santri MDTA
+                            </a>
+                            <a href="{{ route('program.index') }}#kegiatan-seni"
+                                class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                                Pengembangan Seni (Kamis)
                             </a>
                             <a href="{{ route('program.index') }}#ekstrakurikuler"
                                 class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -200,6 +216,8 @@
                     <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs border-l border-[#E5E0D8] ml-3 mb-2">
                         <a href="{{ route('profile.index') }}#selayang-pandang" @click="mobileMenuOpen = false"
                             class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Selayang Pandang</a>
+                        <a href="{{ route('profile.index') }}#legalitas-lembaga" @click="mobileMenuOpen = false"
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Legalitas & Piagam Ijop</a>
                         <a href="{{ route('profile.index') }}#visi-misi" @click="mobileMenuOpen = false"
                             class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Visi & Misi</a>
                         <a href="{{ route('profile.index') }}#fasilitas" @click="mobileMenuOpen = false"
@@ -213,7 +231,7 @@
                 <div x-data="{ expanded: false }" class="border-t border-[#E5E0D8]/60 pt-1">
                     <button type="button" @click="expanded = !expanded"
                         class="w-full flex items-center justify-between px-3 py-2 text-left">
-                        <span>Program Pendidikan</span>
+                        <span>Program & Kurikulum</span>
                         <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': expanded }" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -224,7 +242,13 @@
                         <a href="{{ route('program.index') }}#program-unggulan" @click="mobileMenuOpen = false"
                             class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Unggulan</a>
                         <a href="{{ route('program.index') }}#program-pendidikan" @click="mobileMenuOpen = false"
-                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Pendidikan (MTs & MDTA)</a>
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Jenjang MTs & MDTA</a>
+                        <a href="{{ route('program.index') }}#target-hafalan" @click="mobileMenuOpen = false"
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Target Hafalan MDTA</a>
+                        <a href="{{ route('program.index') }}#jadwal-harian" @click="mobileMenuOpen = false"
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Jadwal Harian Santri MDTA</a>
+                        <a href="{{ route('program.index') }}#kegiatan-seni" @click="mobileMenuOpen = false"
+                            class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Pengembangan Seni (Kamis)</a>
                         <a href="{{ route('program.index') }}#ekstrakurikuler" @click="mobileMenuOpen = false"
                             class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Ekstrakurikuler</a>
                     </div>

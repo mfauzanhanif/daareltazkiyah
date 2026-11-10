@@ -431,7 +431,6 @@ Berikut adalah rancangan tabel utama untuk migrasi Laravel. Semua tabel mengguna
 | `monthly_fee_mdta`    | `billing`      | 12000                                                            |
 | `facebook_url`        | `social_media` | (URL)                                                            |
 | `instagram_url`       | `social_media` | (URL)                                                            |
-| `youtube_url`         | `social_media` | (URL)                                                            |
 
 ### 7.12. Data Seeder Awal
 

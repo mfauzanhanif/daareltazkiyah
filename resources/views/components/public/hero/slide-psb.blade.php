@@ -36,30 +36,40 @@
                         Rp 500.000 <span class="text-xs font-normal text-gray-500">/ bulan</span>
                     </div>
                     <p class="text-[11px] text-[#059669] mt-0.5 leading-tight">
-                        Termasuk makan 3x sehari, asrama, & pendidikan
+                        Termasuk makan 3x sehari, asrama &amp; pendidikan
                     </p>
+                    <div class="text-[10px] text-[#4B6358] pt-1.5 border-t border-[#E5E0D8]/60 mt-1.5 flex justify-between">
+                        <span>Total Masuk Awal:</span>
+                        <strong class="text-[#0D3B2E]">Putra Rp 3,25 Jt &bull; Putri Rp 3,35 Jt</strong>
+                    </div>
                 </div>
 
                 <!-- MDTA Card -->
                 <div class="bg-white border border-[#E5E0D8] rounded-md p-3.5 shadow-2xs">
                     <div class="flex items-center justify-between">
-                        <span class="font-bold text-xs text-[#0D3B2E]">Jenjang MDTA</span>
+                        <span class="font-bold text-xs text-[#0D3B2E]">Jenjang MDT Ula</span>
                         <span class="text-[9px] font-semibold bg-[#B89758] text-white px-2 py-0.5 rounded">SEKOLAH SORE</span>
                     </div>
                     <div class="text-base sm:text-lg font-extrabold text-[#0D3B2E] mt-1 font-sans">
                         Rp 12.000 <span class="text-xs font-normal text-gray-500">/ bulan</span>
                     </div>
                     <p class="text-[11px] text-[#4B6358] mt-0.5 leading-tight">
-                        Pendidikan diniyah & tahsin tingkat SD
+                        Pendidikan diniyah &amp; tahsin tingkat SD
                     </p>
+                    <div class="text-[10px] text-[#4B6358] pt-1.5 border-t border-[#E5E0D8]/60 mt-1.5 flex justify-between">
+                        <span>Jadwal Belajar:</span>
+                        <strong class="text-[#0D3B2E]">Senin – Kamis (13.30–16.10 WIB)</strong>
+                    </div>
                 </div>
             </div>
 
-            <!-- Subtle secondary link -->
-            <div class="pt-1">
+            <!-- Action CTAs -->
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a href="{{ route('psb.index') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
+                    <span>Lihat Rincian Biaya &amp; Daftar &rarr;</span>
+                </a>
                 <a href="{{ route('psb.status') }}" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] transition">
-                    <span>Sudah mendaftar sebelumnya? Cek status pendaftaran</span>
-                    <span aria-hidden="true">&rarr;</span>
+                    <span>Cek Status &rarr;</span>
                 </a>
             </div>
         </div>
@@ -68,32 +78,32 @@
         <div class="hidden md:flex md:col-span-5 flex-col items-center">
             <div class="w-full max-w-sm bg-white border border-[#E5E0D8] rounded-md p-4 space-y-3 shadow-sm">
                 <div class="border-b border-[#E5E0D8] pb-2 flex items-center justify-between">
-                    <span class="text-xs font-bold text-[#0D3B2E] uppercase tracking-wider">JADWAL & BIAYA REGISTRASI</span>
+                    <span class="text-xs font-bold text-[#0D3B2E] uppercase tracking-wider">TOTAL BIAYA MASUK SLTP/SMP</span>
                     <span class="text-xs font-mono text-[#059669] font-bold">2027/2028</span>
                 </div>
 
-                <!-- Wave 1 -->
-                <div class="p-2.5 rounded-md bg-[#FAF8F5] border-l-4 border-[#059669] space-y-1">
-                    <h4 class="font-bold text-xs text-[#0D3B2E]">Gelombang I (Sedang Dibuka)</h4>
-                    <p class="text-[11px] text-[#4B6358]">1 Oktober 2026 – 28 Februari 2027</p>
-                    <div class="text-[11px] text-[#0D3B2E] font-semibold pt-0.5">
-                        Registrasi: MTs Rp {{ $feeMts }} | MDTA Rp {{ $feeMdta }}
+                <!-- Total Cost Highlight -->
+                <div class="grid grid-cols-2 gap-2 text-center">
+                    <div class="p-2.5 rounded-md bg-[#FAF8F5] border border-[#E5E0D8]">
+                        <span class="text-[10px] font-mono text-[#4B6358] uppercase block">Santri Putra</span>
+                        <strong class="font-sans font-extrabold text-base text-[#0D3B2E] block mt-0.5">Rp 3.250.000</strong>
+                    </div>
+                    <div class="p-2.5 rounded-md bg-[#FAF8F5] border border-[#E5E0D8]">
+                        <span class="text-[10px] font-mono text-[#4B6358] uppercase block">Santri Putri</span>
+                        <strong class="font-sans font-extrabold text-base text-[#0D3B2E] block mt-0.5">Rp 3.350.000</strong>
                     </div>
                 </div>
 
-                <!-- Wave 2 -->
-                <div class="p-2.5 rounded-md bg-[#FAF8F5] border-l-4 border-[#B89758] space-y-1">
-                    <h4 class="font-bold text-xs text-[#0D3B2E]">Gelombang II</h4>
-                    <p class="text-[11px] text-[#4B6358]">1 Maret 2027 – 30 Juni 2027</p>
-                    <div class="text-[11px] text-[#0D3B2E] font-semibold pt-0.5">
-                        Registrasi: MTs Rp 150.000 | MDTA Rp 30.000
-                    </div>
+                <!-- Inclusions Checklist -->
+                <div class="p-2.5 rounded-md bg-emerald-50/60 border-l-4 border-[#059669] text-[11px] text-[#084C27] space-y-1">
+                    <p class="font-semibold">&check; Termasuk kasur, lemari, seragam, buku/kitab, wakaf &amp; iuran bln 1.</p>
+                    <p class="text-[10px] text-[#4B6358] italic">*Santri membawa peralatan cuci pakaian mandiri.</p>
                 </div>
 
-                <!-- Requirements Checklist -->
-                <div class="pt-2 border-t border-[#E5E0D8] text-[11px] text-[#4B6358]">
-                    <span class="font-bold text-[#0D3B2E] block uppercase tracking-wider text-[10px] mb-0.5">Syarat Pendaftaran:</span>
-                    Fotokopi Akta Lahir, KK, KTP Orang Tua, Ijazah/SKL, dan Pas Foto 3x4 (2 lembar).
+                <div class="pt-1">
+                    <a href="{{ route('psb.index') }}" class="w-full inline-flex items-center justify-center py-2 px-3 rounded-md bg-[#0D3B2E] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#059669] transition">
+                        Daftar Santri Baru Sekarang
+                    </a>
                 </div>
             </div>
         </div>

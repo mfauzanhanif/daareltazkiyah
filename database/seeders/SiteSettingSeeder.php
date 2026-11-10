@@ -20,13 +20,43 @@ class SiteSettingSeeder extends Seeder
                 'group' => SettingGroup::General,
             ],
             [
+                'key' => 'foundation_name',
+                'value' => 'DAAR EL TAZKIYAH SUMARDI',
+                'group' => SettingGroup::General,
+            ],
+            [
+                'key' => 'mdta_unit_name',
+                'value' => 'MDT Ula DAAR EL TAZKIYAH SUMARDI',
+                'group' => SettingGroup::General,
+            ],
+            [
+                'key' => 'mdta_ijop_number',
+                'value' => '0355',
+                'group' => SettingGroup::General,
+            ],
+            [
+                'key' => 'mdta_ijop_full',
+                'value' => 'Piagam Izin Operasional Penyelenggaraan Madrasah Diniyah Takmiliyah Ula Nomor: 0355 (Kemenag Kabupaten Serang, ditetapkan di Serang, 28 Oktober 2026)',
+                'group' => SettingGroup::General,
+            ],
+            [
+                'key' => 'mdta_nsmdt',
+                'value' => '311236041251',
+                'group' => SettingGroup::General,
+            ],
+            [
+                'key' => 'established_date',
+                'value' => '2025-06-23',
+                'group' => SettingGroup::General,
+            ],
+            [
                 'key' => 'school_tagline',
-                'value' => 'Bersama Al-Qur\'an Meraih Masa Depan Gemilang',
+                'value' => 'Bersama Al-Qur\'an, Membangun Generasi Berakhlak Mulia',
                 'group' => SettingGroup::General,
             ],
             [
                 'key' => 'school_address',
-                'value' => 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten',
+                'value' => 'Kp. Lembur Sawah, Kel./Desa Mekar Baru, Kecamatan Petir, Kab. Serang, Provinsi Banten',
                 'group' => SettingGroup::General,
             ],
             [
@@ -97,22 +127,17 @@ class SiteSettingSeeder extends Seeder
             // Social Media
             [
                 'key' => 'facebook_url',
-                'value' => 'https://facebook.com/media_daar_eltazkiyah',
+                'value' => 'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791',
                 'group' => SettingGroup::SocialMedia,
             ],
             [
                 'key' => 'instagram_url',
-                'value' => 'https://instagram.com/media_daar_eltazkiyah',
-                'group' => SettingGroup::SocialMedia,
-            ],
-            [
-                'key' => 'youtube_url',
-                'value' => 'https://youtube.com/@media_daar_eltazkiyah',
+                'value' => 'https://www.instagram.com/media_daareltazkiyah_sumardi',
                 'group' => SettingGroup::SocialMedia,
             ],
             [
                 'key' => 'tiktok_url',
-                'value' => 'https://tiktok.com/@media_daar_eltazkiyah',
+                'value' => 'https://www.tiktok.com/@media.daareltazki',
                 'group' => SettingGroup::SocialMedia,
             ],
         ];

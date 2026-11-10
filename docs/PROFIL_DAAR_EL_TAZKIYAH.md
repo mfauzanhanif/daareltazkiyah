@@ -122,5 +122,8 @@ Untuk menunjang bakat dan minat santri, tersedia berbagai kegiatan ekstrakurikul
 - **Nomor Telepon / WhatsApp Pendaftaran:**
   - **Pendaftaran MTs/SMP:** 0896-5332-4339
   - **Pendaftaran MDTA:** 0895-0718-4811
-- **Media Sosial (Facebook, Instagram, TikTok, YouTube):** `@media_daar_eltazkiyah`
+- **Media Sosial
+  - Instagram:`https://www.instagram.com/media_daareltazkiyah_sumardi`
+  - Tiktok: `https://www.tiktok.com/@media.daareltazki`
+  - Facebook: `https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791`
 - **Website Resmi:** `www.daareltazkiyahsumardi.ponpes.id`
