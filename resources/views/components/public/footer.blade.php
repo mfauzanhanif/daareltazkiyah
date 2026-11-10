@@ -139,6 +139,13 @@
 
         </div>
 
+        <!-- Hadith Bar -->
+        <div class="py-6 border-b border-white/10 text-center" dir="rtl" style="line-height: 1.8;">
+            <p class="font-arabic text-amber-200/90 text-sm md:text-base tracking-wide">
+                مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
+            </p>
+        </div>
+
         <!-- Bottom Copyright Bar -->
         <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-emerald-200/70 gap-4">
             <!-- Left: Admin Panel (Mobile & Desktop) -->

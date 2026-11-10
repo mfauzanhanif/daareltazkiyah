@@ -21,99 +21,172 @@
         <x-public.hero :activeWave="$activeWave" :featuredPost="$featuredPost" :feeMts="$feeMts" :feeMdta="$feeMdta" />
 
         <!-- 2. PROGRAM UNGGULAN SECTION -->
-        <section id="program-unggulan" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
-                <div class="border-b border-[#E5E0D8] pb-6">
-                    <div class="space-y-2 max-w-2xl">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            PROGRAM UNGGULAN
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                            Kurikulum terpadu memadukan tahfidzul Qur'an mutqin, kajian khazanah turats Islam, serta
-                            keahlian bahasa Arab-Inggris dan kepemimpinan masa depan.
-                        </p>
+        <section id="program-unggulan" class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Pilar Pendidikan</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        PROGRAM UNGGULAN
+                    </h2>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                 </div>
 
                 <!-- 6 Flagship Program Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- 1. Tahfidzul Qur'an -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Tahfidzul Qur'an
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Program menghafal Al-Qur'an secara terarah dan mutqin. </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    01
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Tahfidzul Qur'an
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Program menghafal Al-Qur'an secara terarah dan mutqin.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 2. Tahfidz Hadits -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Tahfidz Hadits
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Menghafal dan memahami hadits-hadits pilihan. </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    02
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Tahfidz Hadits
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Menghafal dan memahami hadits-hadits pilihan.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 3. Kajian Kitab Kuning -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Kajian Kitab Kuning
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Pendalaman khazanah keilmuan Islam klasik (Turats). </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    03
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Kajian Kitab Kuning
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Pendalaman khazanah keilmuan Islam klasik (Turats).
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 4. Bahasa Arab & Inggris -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Bahasa Arab &amp; Inggris
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Pembiasaan komunikasi dwibahasa sehari-hari. </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    04
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Bahasa Arab &amp; Inggris
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Pembiasaan komunikasi dwibahasa sehari-hari.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 5. Public Speaking -->
+                    <!-- 5. Public Speaking & Da'wah -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Public Speaking &amp; Da'wah
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Pelatihan dakwah, pidato (muhadharah), dan retorika. </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    05
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Public Speaking &amp; Da'wah
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Pelatihan dakwah, pidato (muhadharah), dan retorika.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 6. Pembinaan Akhlak & Kedisiplinan -->
                     <div
-                        class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition group">
-                        <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition">
-                            Pembinaan Akhlak &amp; Kedisiplinan
-                        </h3>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Pembentukan karakter santri melalui pembiasaan adab Islami. </p>
+                        class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-4 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white border border-[#E5E0D8] font-mono text-xs font-bold text-[#B89758] group-hover:bg-[#0D3B2E] group-hover:text-white group-hover:border-[#0D3B2E] transition-colors duration-300 shadow-xs">
+                                    06
+                                </span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#B89758]/40 group-hover:bg-[#059669] transition-colors"></span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
+                                    Pembinaan Akhlak &amp; Kedisiplinan
+                                </h3>
+                                <p class="text-xs text-[#4B6358] leading-relaxed">
+                                    Pembentukan karakter santri melalui pembiasaan adab Islami.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 3. VISI & MISI INSTITUSI -->
-        <section class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
-                <!-- Header -->
-                <div class="border-b border-[#E5E0D8] pb-6">
-                    <div class="space-y-2 max-w-2xl">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            VISI &amp; MISI
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                            Haluan dan komitmen PPMTQ Daar El Tazkiyah Sumardi dalam membina generasi Qur'ani yang berilmu,
-                            berakhlak mulia, dan siap mengabdi untuk umat.
-                        </p>
+        <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Haluan &amp; Komitmen</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        VISI &amp; MISI
+                    </h2>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                 </div>
 
                 <!-- 2-Column Grid: Left Visi, Right Misi -->
@@ -222,25 +295,21 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
-                    <div class="space-y-2 max-w-2xl">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            BERITA TERKINI
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358]">
-                            Warta Pesantren &amp; Agenda Kegiatan terbaru seputar dinamika santri, kegiatan tahfidz
-                            Al-Qur'an, dan pengumuman resmi PPMTQ Daar El Tazkiyah Sumardi.
-                        </p>
+        <!-- 4. BERITA TERKINI SECTION -->
+        <section class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Kabar Pesantren</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
-                    <div>
-                        <a href="{{ route('news.index') }}"
-                            class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md border border-[#E5E0D8] hover:border-[#0D3B2E] bg-[#FAF8F5] text-xs font-bold uppercase tracking-wider text-[#0D3B2E] transition shadow-xs group shrink-0">
-                            <span>Lihat Semua Berita</span>
-                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                        </a>
-                    </div>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        BERITA TERKINI
+                    </h2>
+                    <span class="sr-only">Warta Pesantren &amp; Agenda Kegiatan</span>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                 </div>
 
                 <!-- News Grid -->
@@ -294,27 +363,32 @@
                         </div>
                     @endforelse
                 </div>
+
+                <!-- Centered Action Link -->
+                <div class="text-center pt-2">
+                    <a href="{{ route('news.index') }}"
+                        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#E5E0D8] hover:border-[#0D3B2E] bg-[#FAF8F5] text-xs font-bold uppercase tracking-wider text-[#0D3B2E] transition shadow-xs group">
+                        <span>Lihat Semua Berita</span>
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- 5. PROGRAM PENDIDIKAN COMPARISON SECTION (MTS & MDTA) -->
-        <section id="program" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
-                <!-- Section Header -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
-                    <div class="space-y-2 max-w-2xl">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            PROGRAM PENDIDIKAN
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                            Dua program pendidikan terstruktur dirancang khusus untuk membina hafalan Al-Qur'an, adab mulia,
-                            dan kecerdasan intelektual santri di Serang, Banten.
-                        </p>
+        <section id="program" class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Jenjang Formal &amp; Diniyah</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
-                    <a href="{{ route('program.index') }}"
-                        class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3B2E] hover:text-[#059669] transition uppercase tracking-wider">
-                        <span>Lihat Kurikulum Lengkap MDTA &rarr;</span>
-                    </a>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        PROGRAM PENDIDIKAN
+                    </h2>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                 </div>
 
                 <!-- 2-Column Program Comparison Grid -->
@@ -325,12 +399,8 @@
                         <div class="space-y-6">
                             <div>
                                 <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span
-                                        class="text-xs font-mono font-bold text-[#059669] tracking-wider uppercase">PROGRAM
-                                        UNGGULAN MUKIM</span>
-                                    <span
-                                        class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim
-                                        24 Jam</span>
+                                    <span class="text-xs font-mono font-bold text-[#059669] tracking-wider uppercase">PROGRAM UNGGULAN MUKIM</span>
+                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim 24 Jam</span>
                                 </div>
                                 <div class="flex items-center justify-between gap-2">
                                     <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
@@ -397,15 +467,12 @@
                         <div class="space-y-6">
                             <div>
                                 <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span
-                                        class="text-xs font-mono font-bold text-[#B89758] tracking-wider uppercase">PROGRAM
-                                        SEKOLAH SORE</span>
+                                    <span class="text-xs font-mono font-bold text-[#B89758] tracking-wider uppercase">PROGRAM SEKOLAH SORE</span>
                                     <span
                                         class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#B89758] text-white">Non-Mukim</span>
                                 </div>
                                 <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah
-                                        Takmiliyah Awaliyah)</h3>
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah Takmiliyah Awaliyah)</h3>
                                 </div>
                                 <div class="text-xs font-mono text-[#059669] font-bold mt-1">MDT Ula DAAR EL TAZKIYAH
                                     SUMARDI (Tingkat Ula)</div>
@@ -465,27 +532,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="text-center pt-2">
+                    <a href="{{ route('program.index') }}"
+                        class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3B2E] hover:text-[#059669] transition uppercase tracking-wider">
+                        <span>Lihat Kurikulum Lengkap MDTA &rarr;</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- 6. SECTION GALERI KEGIATAN (FOTO ASLI SANTRI & LIGHTBOX) -->
-        <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]" id="kehidupan-santri">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
-                    <div class="space-y-2 max-w-2xl">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            GALERI KEGIATAN
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358]">
-                            Potret Rutinitas &amp; Kehidupan Santri: Dokumentasi nyata kegiatan belajar mengajar, lantunan
-                            hafalan Al-Qur'an, dan pembiasaan adab mulia santri putra &amp; putri.
-                        </p>
+        <section class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]" id="kehidupan-santri">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Dokumentasi Santri</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
-                    <a href="{{ route('gallery.index') }}"
-                        class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md border border-[#E5E0D8] hover:border-[#0D3B2E] bg-[#FAF8F5] text-xs font-bold uppercase tracking-wider text-[#0D3B2E] transition shadow-xs group">
-                        <span>Buka Galeri Foto Lengkap</span>
-                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                    </a>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        GALERI KEGIATAN
+                    </h2>
+                    <span class="sr-only">Potret Rutinitas &amp; Kehidupan Santri</span>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                 </div>
 
                 @if (isset($latestGalleries) && $latestGalleries->isEmpty())
@@ -581,28 +652,41 @@
                     </div>
                 </div>
 
+                <!-- Centered Action Link -->
+                <div class="text-center pt-2">
+                    <a href="{{ route('gallery.index') }}"
+                        class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#E5E0D8] hover:border-[#0D3B2E] bg-[#FAF8F5] text-xs font-bold uppercase tracking-wider text-[#0D3B2E] transition shadow-xs group">
+                        <span>Buka Galeri Foto Lengkap</span>
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
             </div>
         </section>
 
         <!-- 7. HIGHLIGHT INFORMASI BIAYA PSB (T.A 2027/2028) -->
-        <section class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]" id="informasi-psb">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
+        <section class="py-12 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]" id="informasi-psb">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-12">
 
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
-                    <div class="max-w-3xl space-y-2">
-                        <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                            PENERIMAAN SANTRI BARU
-                        </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                            Informasi Biaya &amp; Persyaratan Pendaftaran Tingkat SLTP/SMP Sederajat (MTs Mukim 24 Jam)
-                            transparan dan terjangkau untuk putra &amp; putri Tahun Ajaran
-                            {{ $activeWave?->academic_year ?? '2027/2028' }}.
-                        </p>
+                <!-- Centered Section Header -->
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <div class="inline-flex items-center justify-center gap-2">
+                        <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                        <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Tahun Ajaran {{ $activeWave?->academic_year ?? '2027/2028' }}</span>
+                        <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
-                    <a href="{{ route('psb.index') }}#tabel-biaya"
-                        class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md bg-[#0D3B2E] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#059669] transition shadow-xs">
-                        <span>Lihat Tabel Lengkap 12 Biaya &rarr;</span>
-                    </a>
+                    <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        PENERIMAAN SANTRI BARU
+                    </h2>
+                    <span class="sr-only">Informasi Biaya &amp; Persyaratan Pendaftaran</span>
+                    <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full"></div>
+                    <div class="pt-1">
+                        <a href="{{ route('psb.index') }}#tabel-biaya"
+                            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E0D8] bg-white text-xs font-semibold text-[#0D3B2E] hover:border-[#0D3B2E] hover:bg-[#FAF8F5] transition shadow-xs">
+                            <span>Lihat Tabel Lengkap 12 Biaya</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Two-Column PSB Cards -->
@@ -722,17 +806,19 @@
         </section>
 
         <!-- 8. SOSIAL MEDIA SECTION (3 KOLOM SEIMBANG) -->
-        <section class="py-10 md:py-14 bg-white border-b border-[#E5E0D8]">
+        <section class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-8 md:p-12 space-y-8 shadow-xs">
-                    <div class="max-w-2xl mx-auto text-center space-y-3">
+                <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-8 md:p-12 space-y-8 shadow-xs">
+                    <div class="max-w-2xl mx-auto text-center space-y-2">
+                        <div class="inline-flex items-center justify-center gap-2">
+                            <span class="w-6 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
+                            <span class="text-[11px] font-mono font-bold tracking-[0.25em] text-[#B89758] uppercase">Koneksi &amp; Publikasi</span>
+                            <span class="w-6 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
+                        </div>
                         <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E] tracking-tight">
                             SOSIAL MEDIA
                         </h2>
-                        <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                            Ikuti dinamika santri, lantunan murottal Al-Qur'an, dan informasi resmi PPMTQ Daar El Tazkiyah
-                            Sumardi melalui kanal media sosial resmi.
-                        </p>
+                        <div class="w-12 h-0.5 bg-[#B89758] mx-auto rounded-full mt-2"></div>
                     </div>
 
                     @php
