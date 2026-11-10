@@ -19,8 +19,8 @@
                         Pondok Pesantren Modern Tahfidzul Quran
                     </span>
                     <span
-                        class="block text-2xl min-[360px]:text-[28px] min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#059669] leading-[1.08] tracking-tight mt-0.5 sm:mt-1">
-                        Daar El Tazkiyah Sumardi
+                        class="block text-2xl min-[360px]:text-[28px] min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#059669] leading-[1.08] tracking-tight mt-0.5 sm:mt-1 uppercase">
+                        DAAR EL TAZKIYAH SUMARDI
                     </span>
                 </h1>
             @else
@@ -30,7 +30,7 @@
                         Pondok Pesantren Modern Tahfidzul Quran
                     </span>
                     <span
-                        class="block text-2xl min-[360px]:text-[28px] min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#059669] leading-[1.08] tracking-tight mt-0.5 sm:mt-1">
+                        class="block text-2xl min-[360px]:text-[28px] min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#059669] leading-[1.08] tracking-tight mt-0.5 sm:mt-1 uppercase">
                         DAAR EL TAZKIYAH SUMARDI
                     </span>
                 </div>

@@ -66,7 +66,7 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'school_email',
-                'value' => 'info@daareltazkiyah.sch.id',
+                'value' => 'sekretariat@daareltazkiyahsumardi.ponpes.id',
                 'group' => SettingGroup::General,
             ],
             [
@@ -88,7 +88,7 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'psb_whatsapp_greeting',
-                'value' => 'Assalamu\'alaikum Panitia PSB PPMTQ Daar El Tazkiyah, saya ingin bertanya perihal pendaftaran santri baru.',
+                'value' => 'Assalamu\'alaikum Ustadz, saya ingin bertanya perihal PPMTQ Daar El Tazkiyah.',
                 'group' => SettingGroup::Psb,
             ],
             [

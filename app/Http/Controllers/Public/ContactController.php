@@ -23,7 +23,7 @@ final class ContactController extends Controller
         $waMdtaNumber = (string) SiteSetting::get('psb_whatsapp_mdta_number', '0895-0718-4811');
         $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
         $sitePhone = (string) SiteSetting::get('school_phone', '0896-5332-4339');
-        $siteEmail = (string) SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
+        $siteEmail = (string) SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id');
 
         return view('public.contact', compact(
             'activeWave',

@@ -22,7 +22,7 @@ final class PdfService
             'school_name' => (string) SiteSetting::get('school_name', 'Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi'),
             'school_address' => (string) SiteSetting::get('school_address', 'Jl. Cibanteng Babengket RT 02/02, Desa Cihideung Udik, Kec. Ciampea, Kab. Bogor, Jawa Barat'),
             'school_phone' => (string) SiteSetting::get('school_phone', '0812-3456-7890'),
-            'school_email' => (string) SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id'),
+            'school_email' => (string) SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id'),
             'bank_name' => (string) SiteSetting::get('bank_name', 'Bank Syariah Indonesia (BSI)'),
             'bank_account_number' => (string) SiteSetting::get('bank_account_number', '7123456789'),
             'bank_account_name' => (string) SiteSetting::get('bank_account_name', 'PPMTQ DAAR EL TAZKIYAH'),

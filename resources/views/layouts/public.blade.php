@@ -35,7 +35,7 @@
             'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten',
         );
         $sitePhone = \App\Models\SiteSetting::get('school_phone', '0896-5332-4339');
-        $siteEmail = \App\Models\SiteSetting::get('school_email', 'info@daareltazkiyah.sch.id');
+        $siteEmail = \App\Models\SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id');
     @endphp
 
     <!-- Public Master Navigation Header -->
