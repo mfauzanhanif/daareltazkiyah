@@ -83,9 +83,6 @@
                         Dirancang secara komprehensif untuk mencetak santri yang mutqin dalam hafalan Al-Qur'an, berpengetahuan luas, mandiri, dan berakhlak karimah.
                     </p>
                 </div>
-                <div class="font-arabic text-base sm:text-lg text-[#084C27] font-semibold" dir="rtl" style="line-height: 1.8;">
-                    خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
-                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

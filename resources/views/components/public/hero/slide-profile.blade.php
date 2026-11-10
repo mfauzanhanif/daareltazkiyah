@@ -1,36 +1,70 @@
+@props([
+    'isClone' => false,
+])
+
 <!-- Slide 1: Profil Pesantren & Identitas -->
-<div class="w-full shrink-0" :inert="currentSlide !== 1" :aria-hidden="currentSlide !== 1">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-center">
-        <!-- Left: Headline & Information -->
-        <div class="md:col-span-7 flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
-            <div class="space-y-2 sm:space-y-3">
-                <h1 class="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0D3B2E] tracking-tight leading-tight">
-                    Pondok Pesantren Modern Tahfidzul Quran <br class="hidden sm:inline" />
-                    <span class="text-[#059669]">Daar El Tazkiyah Sumardi</span>
+<div class="w-full shrink-0 px-3 sm:px-5 md:px-6"
+     @if($isClone)
+         inert aria-hidden="true"
+     @else
+         :inert="currentSlide !== 1" :aria-hidden="currentSlide !== 1"
+     @endif>
+    <div class="grid grid-cols-12 gap-x-3 sm:gap-x-6 lg:gap-x-8 gap-y-2 sm:gap-y-3 md:gap-y-4 items-center h-[390px] sm:h-[420px] md:h-[450px]">
+
+        <!-- Element 1: Headline & Motto (Mobile: Row 1 Full Width Col 1-12 | Desktop: Row 1 Col 1-7) -->
+        <div class="col-span-12 md:col-span-7 col-start-1 row-start-1 flex flex-col justify-center text-left space-y-1 sm:space-y-2.5">
+            @if(!$isClone)
+                <h1 class="w-full font-sans tracking-tight">
+                    <span class="block text-base min-[380px]:text-lg sm:text-2xl md:text-3xl lg:text-[34px] font-bold text-[#0D3B2E] leading-tight">
+                        Pondok Pesantren Modern Tahfidzul Quran
+                    </span>
+                    <span class="block text-xl min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#059669] leading-tight mt-0.5 sm:mt-1.5">
+                        Daar El Tazkiyah Sumardi
+                    </span>
                 </h1>
-
-                <!-- Humanized, dignified editorial motto -->
-                <div class="flex items-center gap-2.5 sm:gap-3">
-                    <span class="w-6 sm:w-8 h-0.5 bg-[#B89758]/80 rounded-full shrink-0" aria-hidden="true"></span>
-                    <p class="text-sm sm:text-base md:text-lg font-serif italic text-[#B89758] tracking-wide">
-                        &ldquo;Bersama Al-Qur'an Meraih Masa Depan Gemilang.&rdquo;
-                    </p>
+            @else
+                <div role="heading" aria-level="1" class="w-full font-sans tracking-tight" aria-hidden="true">
+                    <span class="block text-base min-[380px]:text-lg sm:text-2xl md:text-3xl lg:text-[34px] font-bold text-[#0D3B2E] leading-tight">
+                        Pondok Pesantren Modern Tahfidzul Quran
+                    </span>
+                    <span class="block text-xl min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#059669] leading-tight mt-0.5 sm:mt-1.5">
+                        Daar El Tazkiyah Sumardi
+                    </span>
                 </div>
-            </div>
+            @endif
 
-            <p class="text-xs sm:text-sm md:text-base text-[#4B6358] max-w-xl leading-relaxed">
-                Lembaga pendidikan Islam di Kabupaten Serang, Banten yang memadukan kurikulum pendidikan formal dan kepesantrenan untuk melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi, dan siap mengabdi kepada masyarakat.
-            </p>
+            <!-- Dignified editorial motto -->
+            <div class="flex items-center gap-2 sm:gap-3 pt-0.5">
+                <span class="w-4 sm:w-8 h-0.5 bg-[#B89758]/80 rounded-full shrink-0" aria-hidden="true"></span>
+                <p class="text-xs sm:text-base md:text-lg font-serif italic text-[#B89758] tracking-wide">
+                    &ldquo;Bersama Al-Qur'an Meraih Masa Depan Gemilang.&rdquo;
+                </p>
+            </div>
         </div>
 
-        <!-- Right Visual: Arch Frame Pengasuh with Prominent Cutout Photo (Visible on Mobile & Desktop) -->
-        <div class="flex md:col-span-5 flex-col items-center justify-center relative mt-4 md:mt-0">
+        <!-- Element 2: Description (Mobile: Row 2 Col 1-7 Beside Photo | Desktop: Row 2 Col 1-7 Under Title) -->
+        <div class="col-span-7 md:col-span-7 col-start-1 row-start-2 flex flex-col justify-center text-left space-y-1.5 sm:space-y-2">
+            <p class="text-[11px] min-[380px]:text-xs sm:text-sm md:text-base text-[#4B6358] leading-relaxed">
+                Lembaga pendidikan Islam di Petir, Serang yang membina generasi Qur'ani berakhlak mulia, cerdas, dan mandiri dengan perpaduan kurikulum pesantren dan nasional.
+            </p>
+            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 text-[9.5px] sm:text-xs font-mono text-[#059669] font-semibold">
+                <span class="bg-emerald-50 px-1.5 py-0.5 rounded">&check; MTs Mukim 24 Jam</span>
+                <span class="bg-amber-50 text-[#B89758] px-1.5 py-0.5 rounded">&check; MDT Ula Sore</span>
+            </div>
+        </div>
+
+        <!-- Element 3: Foto Pengasuh Arch Frame (Mobile: Row 2 Col 8-12 Beside Description | Desktop: Rows 1-2 Col 8-12) -->
+        <div class="col-span-5 md:col-span-5 col-start-8 row-start-2 md:row-start-1 md:row-span-2 flex flex-col items-center justify-center relative">
             <div class="relative flex flex-col items-center justify-end w-full max-w-sm">
                 <!-- Arch Backdrop with rounded-arch and border-gold-hairline -->
-                <div class="relative w-48 sm:w-64 md:w-72 lg:w-80 h-56 sm:h-72 md:h-84 lg:h-88 rounded-arch border-gold-hairline bg-gradient-to-t from-[#084C27] via-[#0D3B2E] to-[#14532D] shadow-xl overflow-hidden flex items-end justify-center pt-4 sm:pt-6">
+                <div class="relative w-28 min-[380px]:w-34 sm:w-52 md:w-68 lg:w-80 h-38 min-[380px]:h-44 sm:h-64 md:h-78 lg:h-84 rounded-arch border-gold-hairline bg-gradient-to-t from-[#084C27] via-[#0D3B2E] to-[#14532D] shadow-xl overflow-hidden flex items-end justify-center pt-2 sm:pt-6">
                     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,#B89758,transparent_70%)]"></div>
 
-                    @if(file_exists(public_path('images/pengasuh daar el tazkiyah.webp')))
+                    @if(file_exists(public_path('images/pengasuh-daar-el-tazkiyah.webp')))
+                        <img src="{{ asset('images/pengasuh-daar-el-tazkiyah.webp') }}"
+                            alt="Ust. Ahmad Ashil Fadhil, S.H., M.H."
+                            class="relative z-10 h-[92%] w-auto max-w-full object-contain object-bottom drop-shadow-2xl select-none pointer-events-none">
+                    @elseif(file_exists(public_path('images/pengasuh daar el tazkiyah.webp')))
                         <img src="{{ asset('images/pengasuh daar el tazkiyah.webp') }}"
                             alt="Ust. Ahmad Ashil Fadhil, S.H., M.H."
                             class="relative z-10 h-[92%] w-auto max-w-full object-contain object-bottom drop-shadow-2xl select-none pointer-events-none">
@@ -43,16 +77,17 @@
                 </div>
 
                 <!-- Floating Name Badge -->
-                <div class="relative z-20 -mt-4 sm:-mt-5 bg-white/95 backdrop-blur-md border border-gold-hairline px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg shadow-lg text-center max-w-[220px] sm:max-w-[260px]">
-                    <span class="text-[9px] sm:text-[10px] font-bold tracking-widest text-[#B89758] uppercase block">PENGASUH PESANTREN</span>
-                    <h3 class="font-sans font-bold text-xs sm:text-sm text-[#0D3B2E] tracking-tight leading-tight mt-0.5">
+                <div class="relative z-20 -mt-2.5 sm:-mt-4 bg-white/95 backdrop-blur-md border border-gold-hairline px-2 sm:px-4 py-1 sm:py-2 rounded-md sm:rounded-lg shadow-lg text-center max-w-[125px] sm:max-w-[220px] md:max-w-[260px]">
+                    <span class="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold tracking-widest text-[#B89758] uppercase block">PENGASUH PESANTREN</span>
+                    <h3 class="font-sans font-bold text-[8.5px] sm:text-xs md:text-sm text-[#0D3B2E] tracking-tight leading-tight mt-0.5 truncate">
                         Ust. Ahmad Ashil Fadhil, S.H., M.H.
                     </h3>
-                    <p class="text-[9px] sm:text-[10px] text-[#4B6358] font-normal">
+                    <p class="text-[7px] sm:text-[9px] text-[#4B6358] font-normal truncate hidden sm:block">
                         PPMTQ Daar El Tazkiyah Sumardi
                     </p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

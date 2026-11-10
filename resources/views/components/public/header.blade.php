@@ -20,10 +20,10 @@
                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
 
                     <div class="flex flex-col justify-center min-w-0 w-fit">
-                        <div class="block text-[7.5px] min-[360px]:text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-[#4B6358] uppercase tracking-[0.04em] sm:tracking-[0.035em] lg:tracking-[0.05em] whitespace-nowrap text-justify [text-align-last:justify] leading-tight select-none">
+                        <div class="block text-[7.5px] min-[360px]:text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-[#4B6358] uppercase tracking-[0.05em] sm:tracking-[0.045em] lg:tracking-[0.055em] whitespace-nowrap text-justify [text-align-last:justify] leading-tight select-none">
                             Pondok Pesantren Modern Tahfidzul Qur'an
                         </div>
-                        <div class="block font-sans font-extrabold text-[14px] min-[360px]:text-[15px] sm:text-[18.5px] lg:text-[21px] text-[#0D3B2E] tracking-normal uppercase whitespace-nowrap text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
+                        <div class="block font-sans font-extrabold text-[13.5px] min-[360px]:text-[14.5px] sm:text-[18px] lg:text-[20.5px] text-[#0D3B2E] tracking-[0.02em] [word-spacing:0.24em] uppercase whitespace-nowrap text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
                             DAAR EL TAZKIYAH SUMARDI
                         </div>
                     </div>

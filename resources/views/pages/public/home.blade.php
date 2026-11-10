@@ -21,11 +21,10 @@
     <x-public.hero :activeWave="$activeWave" :featuredPost="$featuredPost" :feeMts="$feeMts" :feeMdta="$feeMdta" />
 
     <!-- 2. PROGRAM UNGGULAN SECTION -->
-    <section id="program-unggulan" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="program-unggulan" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
-                    <span class="editorial-label text-[#059669]">6 PILAR UTAMA</span>
                     <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                         PROGRAM UNGGULAN
                     </h2>
@@ -104,7 +103,7 @@
     </section>
 
     <!-- 3. VISI & MISI INSTITUSI -->
-    <section class="py-16 md:py-20 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+    <section class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 <!-- Left: Visi Quote -->
@@ -218,8 +217,8 @@
     </section>
 
     <!-- 4. SECTION TENTANG KAMI & PROFIL ASATIDZ (WITH NEW ASATIDZ IMAGES) -->
-    <section class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]" id="tentang-kami">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]" id="tentang-kami">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
@@ -320,8 +319,8 @@
     </section>
 
     <!-- 5. PROGRAM PENDIDIKAN COMPARISON SECTION (MTS & MDTA) -->
-    <section id="program" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="program" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
@@ -476,8 +475,8 @@
     </section>
 
     <!-- 6. SECTION KEHIDUPAN SANTRI & DOKUMENTASI (WITH SANTRI IMAGES) -->
-    <section class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]" id="kehidupan-santri">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]" id="kehidupan-santri">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">DINAMIKA SANTRI</span>
