@@ -1,13 +1,13 @@
 <!-- Carousel Bottom Navigation & Persistent Action Buttons (Borderless & Clean) -->
-<div class="pt-3 sm:pt-4 flex items-center justify-between gap-2 sm:gap-3 shrink-0">
+<div class="pt-2 sm:pt-4 flex items-center justify-between gap-2 sm:gap-3 shrink-0 w-full overflow-hidden">
     <!-- Action CTAs: Daftar Sekarang & Profil Pesantren (Single line on mobile) -->
-    <div class="flex items-center gap-1.5 sm:gap-2.5 min-w-0 shrink">
+    <div class="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
         <a href="{{ route('psb.index') }}"
-            class="inline-flex items-center justify-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-[10px] sm:text-xs uppercase tracking-wide sm:tracking-wider whitespace-nowrap transition shadow-xs">
+            class="inline-flex items-center justify-center px-2.5 min-[360px]:px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white font-semibold text-[9.5px] min-[360px]:text-[10px] sm:text-xs uppercase tracking-wider whitespace-nowrap transition shadow-xs">
             Daftar Sekarang
         </a>
         <a href="{{ route('profile.index') }}"
-            class="inline-flex items-center justify-center px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-md bg-white hover:bg-[#FAF8F5] text-[#0D3B2E] font-semibold text-[10px] sm:text-xs uppercase tracking-wide sm:tracking-wider whitespace-nowrap transition shadow-xs">
+            class="inline-flex items-center justify-center px-2.5 min-[360px]:px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-md bg-white hover:bg-[#FAF8F5] text-[#0D3B2E] font-semibold text-[9.5px] min-[360px]:text-[10px] sm:text-xs uppercase tracking-wider whitespace-nowrap transition shadow-xs">
             Profil Pesantren
         </a>
     </div>
