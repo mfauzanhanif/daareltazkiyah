@@ -34,7 +34,7 @@
         <div class="relative z-10 max-w-2xl space-y-3 text-left">
             <div class="flex flex-wrap items-center gap-2">
                 <span class="px-2.5 py-1 rounded-full bg-[#059669] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-xs">
-                    WARTA &amp; KABAR TERKINI
+                    BERITA TERKINI
                 </span>
                 <span class="px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-amber-300 text-xs font-semibold">
                     {{ $featuredPost?->category?->name ?? 'Kegiatan Santri' }}
