@@ -12,9 +12,16 @@
             'Kp. Lembur Sawah, Kel./Desa Mekar Baru, Kecamatan Petir, Kab. Serang, Provinsi Banten',
         );
     $sitePhone = $sitePhone ?? \App\Models\SiteSetting::get('school_phone', '0896-5332-4339');
-    $siteEmail = $siteEmail ?? \App\Models\SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id');
-    $facebookUrl = \App\Models\SiteSetting::get('facebook_url', 'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791');
-    $instagramUrl = \App\Models\SiteSetting::get('instagram_url', 'https://www.instagram.com/media_daareltazkiyah_sumardi');
+    $siteEmail =
+        $siteEmail ?? \App\Models\SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id');
+    $facebookUrl = \App\Models\SiteSetting::get(
+        'facebook_url',
+        'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791',
+    );
+    $instagramUrl = \App\Models\SiteSetting::get(
+        'instagram_url',
+        'https://www.instagram.com/media_daareltazkiyah_sumardi',
+    );
     $tiktokUrl = \App\Models\SiteSetting::get('tiktok_url', 'https://www.tiktok.com/@media.daareltazki');
 @endphp
 
@@ -36,16 +43,9 @@
                     </div>
                 </div>
                 <p class="text-xs text-emerald-100/80 leading-relaxed">
-                    Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi &amp; MDT Ula Daar El Tazkiyah Sumardi
+                    Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi &amp; MDT Ula Daar El Tazkiyah
+                    Sumardi
                     mendidik generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi, dan siap mengabdi untuk umat.
-                </p>
-
-                <div class="text-xs text-amber-300 font-medium font-arabic text-base sm:text-lg leading-relaxed pt-2"
-                    dir="rtl" style="line-height: 1.8;">
-                    مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
-                </div>
-                <p class="text-[11px] text-emerald-200/80 italic">
-                    &ldquo;Barangsiapa menempuh jalan untuk mencari ilmu, maka Allah mudahkan baginya jalan menuju surga.&rdquo; (HR. Muslim)
                 </p>
             </div>
 
@@ -53,13 +53,20 @@
             <div class="space-y-3">
                 <span class="editorial-label text-amber-300">NAVIGASI UTAMA</span>
                 <ul class="text-xs space-y-2 text-emerald-100/80 pt-1">
-                    <li><a href="{{ route('home') }}" class="hover:text-white hover:underline transition">Beranda</a></li>
-                    <li><a href="{{ route('profile.index') }}" class="hover:text-white hover:underline transition">Profil Pesantren</a></li>
-                    <li><a href="{{ route('program.index') }}" class="hover:text-white hover:underline transition">Program Pendidikan</a></li>
-                    <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Berita &amp; Warta</a></li>
-                    <li><a href="{{ route('gallery.index') }}" class="hover:text-white hover:underline transition">Galeri Foto</a></li>
-                    <li><a href="{{ route('contact.index') }}" class="hover:text-white hover:underline transition">Kontak Kami</a></li>
-                    <li><a href="{{ route('psb.index') }}" class="hover:text-white hover:underline transition">Penerimaan Santri Baru (PSB)</a></li>
+                    <li><a href="{{ route('home') }}" class="hover:text-white hover:underline transition">Beranda</a>
+                    </li>
+                    <li><a href="{{ route('profile.index') }}"
+                            class="hover:text-white hover:underline transition">Profil Pesantren</a></li>
+                    <li><a href="{{ route('program.index') }}"
+                            class="hover:text-white hover:underline transition">Program Pendidikan</a></li>
+                    <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Berita
+                            &amp; Warta</a></li>
+                    <li><a href="{{ route('gallery.index') }}"
+                            class="hover:text-white hover:underline transition">Galeri Foto</a></li>
+                    <li><a href="{{ route('contact.index') }}"
+                            class="hover:text-white hover:underline transition">Kontak Kami</a></li>
+                    <li><a href="{{ route('psb.index') }}"
+                            class="hover:text-white hover:underline transition">Penerimaan Santri Baru (PSB)</a></li>
                 </ul>
             </div>
 
@@ -68,15 +75,15 @@
                 <span class="editorial-label text-amber-300">PROGRAM PENDIDIKAN</span>
                 <ul class="text-xs space-y-3 text-emerald-100/80 pt-1">
                     <li>
-                        <a href="{{ route('program.index') }}#program-pendidikan" class="hover:text-white hover:underline transition block">
-                            <span class="font-semibold text-white block">MTs (Madrasah Tsanawiyah)</span>
-                            <span class="text-[11px] text-emerald-200/70">Program Unggulan Asrama Mukim 24 Jam</span>
+                        <a href="{{ route('program.index') }}#program-pendidikan"
+                            class="hover:text-white hover:underline transition block">
+                            <span class="font-semibold text-white block">MTs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('program.index') }}#mdta-kurikulum" class="hover:text-white hover:underline transition block">
-                            <span class="font-semibold text-white block">MDTA (MDT Ula)</span>
-                            <span class="text-[11px] text-emerald-200/70">Sekolah Diniyah Sore (Non-Mukim)</span>
+                        <a href="{{ route('program.index') }}#mdta-kurikulum"
+                            class="hover:text-white hover:underline transition block">
+                            <span class="font-semibold text-white block">MDTA</span>
                         </a>
                     </li>
                 </ul>
@@ -136,12 +143,14 @@
         <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-emerald-200/70 gap-4">
             <!-- Left: Admin Panel (Mobile & Desktop) -->
             <div class="w-full md:w-auto text-left">
-                <a href="{{ route('login') }}" class="hover:text-amber-300 transition font-semibold text-emerald-200/80">Admin Panel</a>
+                <a href="{{ route('login') }}"
+                    class="hover:text-amber-300 transition font-semibold text-emerald-200/80">Admin Panel</a>
             </div>
 
             <!-- Center: Copyright -->
             <div class="w-full md:w-auto text-center flex-1">
-                <p>&copy; {{ date('Y') }} Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi. Seluruh hak cipta dilindungi.</p>
+                <p>&copy; {{ date('Y') }} Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi.
+                    Seluruh hak cipta dilindungi.</p>
             </div>
 
             <!-- Spacer for visual symmetry on desktop -->
