@@ -1,7 +1,7 @@
 @extends('layouts.public', ['title' => 'Cek Status Pendaftaran PSB - PPMTQ Daar El Tazkiyah Sumardi'])
 
 @section('content')
-<section class="py-12 md:py-20 bg-[#FAF8F5]">
+<section class="py-10 md:py-16 bg-[#FAF8F5]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div class="text-center space-y-3">

@@ -95,8 +95,8 @@
     </section>
 
     <!-- SECTION 1: TABEL RINCIAN BIAYA PSB (T.A 2027 - 2028) -->
-    <section id="tabel-biaya" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="tabel-biaya" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -274,8 +274,8 @@
     </section>
 
     <!-- SECTION 2: DAFTAR PERLENGKAPAN SANTRI BARU (PUTRA & PUTRI) -->
-    <section id="perlengkapan-santri" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="perlengkapan-santri" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -485,8 +485,8 @@
     </section>
 
     <!-- SECTION 3: FORMULIR PENDAFTARAN ONLINE (LIVEWIRE WIZARD) -->
-    <section id="formulir-pendaftaran" class="py-16 md:py-24 bg-[#FAF8F5] scroll-mt-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section id="formulir-pendaftaran" class="py-10 md:py-16 bg-[#FAF8F5] scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             @if(!$activeWave)
                 <!-- CLOSED ADMISSION STATE -->

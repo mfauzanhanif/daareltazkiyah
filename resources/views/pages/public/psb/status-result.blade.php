@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('content')
-<section class="py-12 md:py-20 bg-[#FDFBF7]">
+<section class="py-10 md:py-16 bg-[#FDFBF7]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <!-- Header -->

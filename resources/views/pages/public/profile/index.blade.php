@@ -52,7 +52,7 @@
     </section>
 
     <!-- SECTION 1: SELAYANG PANDANG (WITH PENGASUH PHOTO ON RIGHT) -->
-    <section id="selayang-pandang" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+    <section id="selayang-pandang" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -131,8 +131,8 @@
     </section>
 
     <!-- SECTION 2: DATA LEGALITAS & PROFIL RESMI LEMBAGA -->
-    <section id="legalitas-lembaga" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="legalitas-lembaga" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -301,8 +301,8 @@
     </section>
 
     <!-- SECTION 3: VISI & MISI -->
-    <section id="visi-misi" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="visi-misi" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="max-w-3xl space-y-2">
                 <span class="editorial-label text-[#059669]">VISI & HALUAN</span>
                 <h2 class="font-sans text-3xl sm:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -379,8 +379,8 @@
     </section>
 
     <!-- SECTION 4: FASILITAS PESANTREN -->
-    <section id="fasilitas" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="fasilitas" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">SARANA & PRASARANA</span>
@@ -494,8 +494,8 @@
     </section>
 
     <!-- SECTION 5: TENAGA PENDIDIK & DEWAN ASATIDZ (WITH NEW IMAGES) -->
-    <section id="pendidik" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="pendidik" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">DEWAN GURU & ASATIDZ</span>

@@ -71,8 +71,8 @@
     </section>
 
     <!-- SECTION 1: 6 PROGRAM UNGGULAN -->
-    <section id="program-unggulan" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="program-unggulan" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
                     <span class="editorial-label text-[#059669]">PILAR UTAMA KEUNGGULAN</span>
@@ -162,8 +162,8 @@
     </section>
 
     <!-- SECTION 2: JENJANG PENDIDIKAN (MTS & MDTA) -->
-    <section id="program-pendidikan" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="program-pendidikan" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">JENJANG FORMAL & DINIYAH RESMI</span>
@@ -315,8 +315,8 @@
     </section>
 
     <!-- SECTION 3: TARGET HAFALAN AL-QUR'AN SANTRI MDTA (T.A 2026/2027) -->
-    <section id="target-hafalan" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="target-hafalan" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -475,8 +475,8 @@
     </section>
 
     <!-- SECTION 4: JADWAL MATA PELAJARAN HARIAN SANTRI MDTA (SENIN – KAMIS) -->
-    <section id="jadwal-harian" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="jadwal-harian" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -612,8 +612,8 @@
     </section>
 
     <!-- SECTION 5: PROGRAM PENGEMBANGAN BAKAT & KEGIATAN SENI (KAMIS 15.15 - 16.00 WIB) -->
-    <section id="kegiatan-seni" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="kegiatan-seni" class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-3xl">
@@ -783,8 +783,8 @@
     </section>
 
     <!-- SECTION 6: EKSTRAKURIKULER SANTRI -->
-    <section id="ekstrakurikuler" class="py-16 md:py-24 bg-white border-b border-[#E5E0D8] scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="ekstrakurikuler" class="py-10 md:py-16 bg-white border-b border-[#E5E0D8] scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">PENGEMBANGAN MINAT & BAKAT SANTRI</span>

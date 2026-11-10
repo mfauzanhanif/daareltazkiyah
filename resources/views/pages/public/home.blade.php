@@ -573,8 +573,8 @@
     </section>
 
     <!-- 7. GRID BERITA (FEATURED) -->
-    <section class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#E5E0D8]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section class="py-10 md:py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="space-y-2 max-w-2xl">
                     <span class="editorial-label text-[#059669]">WARTA &amp; KABAR TERKINI</span>
@@ -652,8 +652,8 @@
     </section>
 
     <!-- 8. HIGHLIGHT INFORMASI BIAYA PSB (T.A 2027/2028) -->
-    <section class="py-16 md:py-24 bg-white border-b border-[#E5E0D8]" id="informasi-psb">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]" id="informasi-psb">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
                 <div class="max-w-3xl space-y-2">
@@ -774,7 +774,7 @@
     </section>
 
     <!-- 9. SOSIAL MEDIA SECTION -->
-    <section class="py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+    <section class="py-10 md:py-14 bg-[#FAF8F5] border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white border border-[#E5E0D8] rounded-md p-8 md:p-12 space-y-8 shadow-xs">
                 <div class="max-w-2xl mx-auto text-center space-y-3">
@@ -823,7 +823,7 @@
     </section>
 
     <!-- 10. CTA SECTION (PENUTUP) -->
-    <section class="py-16 md:py-20 bg-[#084C27] text-white">
+    <section class="py-10 md:py-16 bg-[#084C27] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <div class="max-w-2xl mx-auto space-y-3">
                 <span class="editorial-label text-amber-300">PENDAFTARAN &amp; SILATURAHMI</span>

@@ -24,7 +24,7 @@
     </section>
 
     <!-- Main Gallery Section with Pinterest Masonry & Lightbox -->
-    <section class="py-12 md:py-20 bg-[#FAF8F5]" x-data="{
+    <section class="py-10 md:py-16 bg-[#FAF8F5]" x-data="{
         activeFilter: 'semua',
         isOpen: false,
         photos: [],

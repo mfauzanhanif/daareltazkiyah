@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('content')
-<section class="py-12 md:py-20 bg-[#FDFBF7]" x-data="{ copiedReg: false, copiedToken: false }">
+<section class="py-10 md:py-16 bg-[#FDFBF7]" x-data="{ copiedReg: false, copiedToken: false }">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <!-- Success Card -->

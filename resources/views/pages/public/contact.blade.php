@@ -16,7 +16,7 @@
     </section>
 
     <!-- Main Content Grid -->
-    <section class="py-16 md:py-24 bg-[#FAF8F5]">
+    <section class="py-10 md:py-16 bg-[#FAF8F5]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
