@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth overflow-x-hidden">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth overflow-x-clip">
 
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
 </head>
 
 <body
-    class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between overflow-x-hidden w-full max-w-full">
+    class="min-h-screen bg-[#FDFBF7] text-[#0F291E] font-sans antialiased selection:bg-[#D97706] selection:text-white flex flex-col justify-between overflow-x-clip w-full max-w-full">
 
     @php
         $activeWave = \App\Models\AdmissionWave::currentActive();

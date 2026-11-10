@@ -119,22 +119,18 @@
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-[#B89758]/10 rounded-full blur-2xl pointer-events-none"></div>
                 <div class="relative z-10 max-w-3xl space-y-3">
                     <div class="flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-[#B89758]"></span>
-                        <span class="text-xs font-mono uppercase tracking-widest text-[#B89758] font-bold">VISI UTAMA LEMBAGA</span>
+                        <span class="text-xs font-mono uppercase tracking-widest text-[#B89758] font-bold">VISI</span>
                     </div>
                     <blockquote class="font-sans font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[32px] text-white leading-snug">
                         "{{ "Melahirkan generasi Qur'ani yang berilmu, berakhlak mulia, berprestasi dan siap mengabdi untuk umat." }}"
                     </blockquote>
-                    <p class="text-xs text-emerald-100/80 font-mono tracking-wide pt-1">
-                        &bull; DAAR EL TAZKIYAH SUMARDI &bull; SERANG, BANTEN
-                    </p>
                 </div>
             </div>
 
             <!-- 6 Misi Cards (Grid 2x3 on Mobile, 3x2 on Desktop) -->
             <div class="space-y-4">
                 <div class="flex items-center gap-2 border-b border-[#E5E0D8] pb-2">
-                    <span class="text-xs font-mono uppercase tracking-wider text-[#0D3B2E] font-bold">MISI PENDIDIKAN</span>
+                    <span class="text-xs font-mono uppercase tracking-wider text-[#0D3B2E] font-bold">MISI</span>
                 </div>
 
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
@@ -208,7 +204,6 @@
         </div>
     </section>
 
-    <!-- 4. BERITA TERKINI SECTION (PINDAH SETELAH VISI MISI) -->
     <section class="py-10 md:py-16 bg-white border-b border-[#E5E0D8]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#E5E0D8] pb-6">
