@@ -13,17 +13,17 @@
 
                 <!-- Institutional Brand & Logo -->
                 <a href="{{ route('home') }}"
-                    class="flex items-center gap-2 sm:gap-3 group shrink-0 py-1.5 mr-2">
+                    class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5 group shrink-0 py-1.5 mr-2">
                     <img src="{{ asset('images/logo_daar_el_tazkiyah.svg') }}" alt="Logo PPMTQ Daar El Tazkiyah Sumardi"
                         width="56" height="56"
-                        class="w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 shrink-0 object-contain transition-transform group-hover:scale-105"
+                        class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
                         onerror="this.onerror=null; this.src='{{ asset('images/logo_daar_el_tazkiyah.png') }}';">
 
                     <div class="flex flex-col justify-center min-w-0 w-fit">
-                        <div class="block text-[8px] xs:text-[9.5px] sm:text-[10px] md:text-[11px] font-semibold text-[#4B6358] uppercase tracking-wider whitespace-nowrap text-justify [text-align-last:justify] leading-tight select-none">
+                        <div class="block text-[7.5px] min-[360px]:text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-[#4B6358] uppercase tracking-[0.04em] sm:tracking-[0.035em] lg:tracking-[0.05em] whitespace-nowrap text-justify [text-align-last:justify] leading-tight select-none">
                             Pondok Pesantren Modern Tahfidzul Qur'an
                         </div>
-                        <div class="block font-sans font-extrabold text-[12.5px] xs:text-[14px] sm:text-[16.5px] md:text-[18.5px] text-[#0D3B2E] tracking-tight uppercase whitespace-nowrap text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
+                        <div class="block font-sans font-extrabold text-[14px] min-[360px]:text-[15px] sm:text-[18.5px] lg:text-[21px] text-[#0D3B2E] tracking-normal uppercase whitespace-nowrap text-justify [text-align-last:justify] leading-tight mt-0.5 select-none">
                             DAAR EL TAZKIYAH SUMARDI
                         </div>
                     </div>

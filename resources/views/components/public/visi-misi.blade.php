@@ -43,7 +43,7 @@
                             {{ "Menanamkan kecintaan kepada Al-Qur'an" }}
                         </h4>
                         <p class="text-sm text-[#52525B] leading-relaxed">
-                            Membimbing hafalan Al-Qur'an 30 juz dengan kaidah tahsin bersanad, tadabbur makna ayat, dan pembiasaan muraja'ah harian secara disiplin.
+                            Membimbing hafalan Al-Qur'an 30 juz dengan kaidah tahsin, tadabbur makna ayat, dan pembiasaan muraja'ah harian secara disiplin.
                         </p>
                     </div>
                 </div>

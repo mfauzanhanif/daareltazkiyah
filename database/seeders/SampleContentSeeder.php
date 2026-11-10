@@ -52,7 +52,7 @@ class SampleContentSeeder extends Seeder
                     'author_id' => $author->id,
                     'title' => 'Santri Daar El Tazkiyah Raih Juara 1 Musabaqah Hifdzil Qur\'an Tingkat Jawa Barat',
                     'excerpt' => 'Prestasi membanggakan kembali ditorehkan santri PPMTQ Daar El Tazkiyah dalam ajang MHQ 10 Juz tingkat Provinsi Jawa Barat.',
-                    'content' => '<p>Prestasi gemilang ditorehkan oleh santri PPMTQ Daar El Tazkiyah dalam kejuaraan MHQ 10 Juz tingkat Jawa Barat. Keberhasilan ini merupakan buah dari disiplin ziyadah dan murajaah harian yang dibina langsung oleh para asatidz tahfidz bersanad.</p>',
+                    'content' => '<p>Prestasi gemilang ditorehkan oleh santri PPMTQ Daar El Tazkiyah dalam kejuaraan MHQ 10 Juz tingkat Jawa Barat. Keberhasilan ini merupakan buah dari disiplin ziyadah dan murajaah harian yang dibina langsung oleh para asatidz tahfidz.</p>',
                     'status' => PostStatus::Published,
                     'is_featured' => true,
                     'published_at' => now()->subDays(5),
@@ -112,7 +112,7 @@ class SampleContentSeeder extends Seeder
         );
         GalleryPhoto::firstOrCreate(
             ['gallery_id' => $album1->id, 'file_path' => 'placeholders/tasmi_2.webp'],
-            ['caption' => 'Pemberian Ijazah Sanad Tahfidz', 'sort_order' => 2]
+            ['caption' => 'Pemberian Ijazah Tahfidz', 'sort_order' => 2]
         );
         GalleryPhoto::firstOrCreate(
             ['gallery_id' => $album2->id, 'file_path' => 'placeholders/rihlah_1.webp'],

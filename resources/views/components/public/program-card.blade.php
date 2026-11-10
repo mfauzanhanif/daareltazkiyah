@@ -18,7 +18,7 @@
 
         <!-- 2-Column Program Comparison Bento -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-            
+
             <!-- Program 1: MTS (Mukim 24 Jam) -->
             <div class="bg-[#FAF8F5] rounded-md p-8 border border-[#E5E0D8] relative flex flex-col justify-between">
                 <!-- Highlight Badge -->
@@ -66,7 +66,7 @@
                             </li>
                             <li class="flex items-center gap-2.5">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                <span>Makan 3 kali sehari dengan menu bergizi & layanan laundry</span>
+                                <span>Makan 3 kali sehari dengan menu bergizi</span>
                             </li>
                             <li class="flex items-center gap-2.5">
                                 <span class="w-1.5 h-1.5 bg-[#059669]"></span>

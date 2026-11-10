@@ -44,11 +44,11 @@
                 <div class="bg-white border border-[#E5E0D8] rounded-md p-6 space-y-3 hover:border-[#0D3B2E] hover:shadow-xs transition">
                     <div class="flex items-center justify-between">
                         <span class="font-mono text-xs font-bold text-[#B89758]">01</span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-[#084C27] font-semibold">Mutqin Bersanad</span>
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-[#084C27] font-semibold">Mutqin</span>
                     </div>
                     <h3 class="font-sans font-bold text-lg text-[#0D3B2E]">Tahfidz Al-Qur'an</h3>
                     <p class="text-xs text-[#4B6358] leading-relaxed">
-                        Program menghafal Al-Qur'an secara terarah dan mutqin. Menerapkan bimbingan harian dengan target terukur dan sanad tajwid riwayat Hafsh 'an 'Ashim.
+                        Program menghafal Al-Qur'an secara terarah dan mutqin. Menerapkan bimbingan harian dengan target terukur.
                     </p>
                 </div>
 
@@ -158,7 +158,7 @@
                                 </span>
                             </div>
                             <p class="text-xs text-[#059669] font-medium leading-relaxed">
-                                *Sudah termasuk makan 3x sehari, asrama mukim, laundry, air minum steril, dan biaya pendidikan.
+                                *Sudah termasuk makan 3x sehari, asrama mukim, air minum steril, dan biaya pendidikan.
                             </p>
                             <div class="flex items-baseline justify-between pt-2 border-t border-[#E5E0D8] text-xs">
                                 <span class="text-[#4B6358]">Biaya Pendaftaran PSB:</span>
@@ -240,7 +240,7 @@
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[#059669] font-bold">&check;</span>
-                                    <span>Tahsin Al-Qur'an bersanad, makharijul huruf, dan hafalan Juz 30.</span>
+                                    <span>Tahsin Al-Qur'an, makharijul huruf, dan hafalan Juz 30.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[#059669] font-bold">&check;</span>

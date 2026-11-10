@@ -24,7 +24,7 @@ class TeacherSeeder extends Seeder
             [
                 'full_name' => 'Ust. Ahmad Ashil Fadhil',
                 'role_title' => 'Pengasuh Pondok Pesantren',
-                'bio' => 'Pengasuh Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi, alumni perguruan tinggi syariah & hukum Islam dengan komitmen mencetak generasi Qur\'ani mutqin bersanad.',
+                'bio' => 'Pengasuh Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi, alumni perguruan tinggi syariah & hukum Islam dengan komitmen mencetak generasi Qur\'ani.',
                 'specialization' => 'Tafsir, Hadits & Hukum Islam',
                 'photo_path' => null,
                 'sort_order' => 2,

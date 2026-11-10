@@ -46,7 +46,7 @@ test('profile page displays dewan asatidz roster and pengasuh', function () {
         'id' => (string) Str::ulid(),
         'full_name' => 'Ust. Muhammad Rizki, S.Pd.I., Al-Hafizh',
         'role_title' => 'Musyrif Tahfidz',
-        'bio' => 'Hafizh 30 Juz Bersanad Qira\'at Ashim',
+        'bio' => 'Hafizh 30 Juz',
         'sort_order' => 10,
         'is_active' => true,
     ]);

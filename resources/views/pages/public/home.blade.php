@@ -31,8 +31,7 @@
                         Tahfidz Al-Qur'an
                     </h3>
                     <p class="text-xs text-[#4B6358] leading-relaxed">
-                        Program menghafal Al-Qur'an secara terarah, terstruktur, dan mutqin dengan bimbingan asatidz huffadz
-                        bersanad melalui metode sabaq, sabqi, dan manzil.
+                        Program menghafal Al-Qur'an secara terarah, terstruktur, dan mutqin dengan bimbingan asatidz huffadz.
                     </p>
                 </div>
 
@@ -145,7 +144,7 @@
                         </button>
                         <div x-show="activeMisi === 1"
                             class="px-5 pb-4 pt-1 text-xs text-[#4B6358] border-t border-[#E5E0D8] leading-relaxed bg-[#FAF8F5]">
-                            Membimbing hafalan 30 juz Al-Qur'an dengan kaidah tahsin bersanad, tadabbur makna ayat, dan
+                            Membimbing hafalan 30 juz Al-Qur'an dengan kaidah tahsin, tadabbur makna ayat, dan
                             pembiasaan muraja'ah harian secara disiplin melalui metode sabaq, sabqi, dan manzil.
                         </div>
                     </div>
@@ -276,7 +275,7 @@
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                    <span>Makan 3 kali sehari dengan menu bergizi & layanan laundry</span>
+                                    <span>Makan 3 kali sehari dengan menu bergizi</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 bg-[#059669]"></span>
@@ -345,7 +344,7 @@
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                    <span>Tahsin Al-Qur'an bersanad & hafalan Juz 30</span>
+                                    <span>Tahsin Al-Qur'an & hafalan Juz 30</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 bg-[#059669]"></span>

@@ -300,7 +300,7 @@
                         Tenaga Pendidik & Pembimbing Santri
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
-                        Dididik langsung oleh para guru, huffadz Al-Qur'an bersanad, dan akademisi berintegritas tinggi.
+                        Dididik langsung oleh para guru, huffadz Al-Qur'an, dan akademisi berintegritas tinggi.
                     </p>
                 </div>
                 <span class="text-xs font-mono text-[#059669] font-bold">9 Dewan Pendidik</span>
