@@ -48,5 +48,9 @@
                 </a>
             </div>
         </div>
+
+        <!-- Foto 2 Anak Santri di Samping Kanan -->
+        <img src="{{ asset('images/foto-santri.webp') }}" alt="Santri Putra dan Putri Daar El Tazkiyah"
+            class="hidden md:block absolute bottom-0 right-4 lg:right-10 z-10 h-[85%] lg:h-[92%] w-auto object-contain object-bottom select-none pointer-events-none drop-shadow-2xl">
     </div>
 </div>

@@ -39,7 +39,9 @@
                     <!-- 1. Tahfidzul Qur'an -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">01.</span>Tahfidzul Qur'an
                         </h3>
@@ -51,7 +53,9 @@
                     <!-- 2. Tahfidz Hadits -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">02.</span>Tahfidz Hadits
                         </h3>
@@ -63,7 +67,9 @@
                     <!-- 3. Kajian Kitab Kuning -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">03.</span>Kajian Kitab Kuning
                         </h3>
@@ -75,7 +81,9 @@
                     <!-- 4. Bahasa Arab & Inggris -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">04.</span>Bahasa Arab &amp; Inggris
                         </h3>
@@ -87,7 +95,9 @@
                     <!-- 5. Public Speaking & Da'wah -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">05.</span>Public Speaking &amp; Da'wah
                         </h3>
@@ -99,7 +109,9 @@
                     <!-- 6. Pembinaan Akhlak & Kedisiplinan -->
                     <div
                         class="group relative bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-6 sm:p-7 space-y-2 hover:border-[#0D3B2E] hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B89758] to-[#059669] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
                         <h3 class="font-sans font-bold text-lg text-[#0D3B2E] group-hover:text-[#059669] transition-colors">
                             <span class="text-[#B89758] mr-1.5">06.</span>Pembinaan Akhlak &amp; Kedisiplinan
                         </h3>
@@ -316,7 +328,8 @@
                 <div class="text-center max-w-3xl mx-auto">
                     <div class="flex items-center justify-center gap-3 sm:gap-4">
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
-                        <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        <h2
+                            class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                             PROGRAM PENDIDIKAN
                         </h2>
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
@@ -327,67 +340,50 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                     <!-- Program 1: MTS -->
                     <div
-                        class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
+                        class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-6">
-                            <div>
-                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span class="text-xs font-mono font-bold text-[#059669] tracking-wider uppercase">PROGRAM UNGGULAN MUKIM</span>
-                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim 24 Jam</span>
-                                </div>
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
-                                </div>
-                            </div>
-
-                            <!-- Price Card -->
-                            <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-lg space-y-2.5">
-                                <div class="flex items-baseline justify-between">
-                                    <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriyah):</span>
-                                    <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
-                                        Rp 500.000 <span class="text-xs font-normal text-gray-500">/ bln</span>
-                                    </span>
-                                </div>
-                                <div class="flex items-baseline justify-between pt-2 border-t border-[#E5E0D8]">
-                                    <span class="text-xs font-semibold text-[#4B6358]">Biaya Registrasi Pendaftaran:</span>
-                                    <span class="text-lg font-bold text-[#B89758] font-sans">
-                                        Rp {{ $feeMts }}
-                                    </span>
-                                </div>
-                                <p class="text-[11px] text-[#059669] leading-tight">
-                                    *Sudah mencakup pendidikan asrama dan konsumsi makan 3x sehari. Santri membawa alat
-                                    mencuci mandiri.
-                                </p>
-                            </div>
-
-                            <!-- Features -->
+                            <!-- Header -->
                             <div class="space-y-2">
-                                <div class="text-xs font-bold text-[#0D3B2E] uppercase tracking-wider">Fasilitas &amp;
-                                    Kurikulum:</div>
-                                <ul class="text-xs space-y-2 text-[#18181B]">
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Asrama mukim 24 jam dengan bimbingan asatidz intensif</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Konsumsi makan 3 kali sehari dengan menu bergizi higienis</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Ijazah formal Madrasah Tsanawiyah (Kementerian Agama RI)</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Tahfidzul Qur'an mutqin &amp; kajian kitab kuning</span>
-                                    </li>
-                                </ul>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTs</h3>
                             </div>
+
+                            <!-- Price Card (Ringkas 2 Kolom) -->
+                            <div
+                                class="bg-[#FAF8F5] p-4 border border-[#E5E0D8] rounded-lg flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-[#4B6358]">Syahriyah (Bulanan)</span>
+                                    <span class="text-xl sm:text-2xl font-bold text-[#0D3B2E] font-sans">
+                                        Rp 500.000 <span class="text-xs font-normal text-gray-500">/bln</span>
+                                    </span>
+                                </div>
+                                <div class="text-right border-l border-[#E5E0D8] pl-4">
+                                    <span class="block text-xs text-[#4B6358]">Pendaftaran</span>
+                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp
+                                        {{ $feeMts }}</span>
+                                </div>
+                            </div>
+
+                            <!-- Key Points (Singkat & Padat) -->
+                            <ul class="text-sm space-y-2.5 text-[#18181B]">
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
+                                    <span>Asrama mukim 24 jam &amp; makan 3x sehari</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
+                                    <span>Tahfidzul Qur'an &amp; kajian kitab kuning</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#059669] shrink-0"></span>
+                                    <span>Ijazah resmi Kementerian Agama RI</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="pt-6 border-t border-[#E5E0D8]">
+                        <div class="pt-5 border-t border-[#E5E0D8]">
                             <a href="{{ route('psb.index') }}?program=MTS"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition shadow-xs">
-                                <span>Daftar MTS Sekarang</span>
+                                <span>Daftar MTs Sekarang</span>
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>
@@ -395,67 +391,47 @@
 
                     <!-- Program 2: MDTA (Sekolah Sore) -->
                     <div
-                        class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 relative flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
+                        class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-6">
-                            <div>
-                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span class="text-xs font-mono font-bold text-[#B89758] tracking-wider uppercase">PROGRAM SEKOLAH SORE</span>
-                                    <span
-                                        class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#B89758] text-white">Non-Mukim</span>
-                                </div>
-                                <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah Takmiliyah Awaliyah)</h3>
-                                </div>
-                                <div class="text-xs font-mono text-[#059669] font-bold mt-1">MDT Ula DAAR EL TAZKIYAH
-                                    SUMARDI (Tingkat Ula)</div>
-                            </div>
-
-                            <!-- Price Card -->
-                            <div class="bg-[#FAF8F5] p-5 border border-[#E5E0D8] rounded-lg space-y-2.5">
-                                <div class="flex items-baseline justify-between">
-                                    <span class="text-xs font-semibold text-[#4B6358]">Biaya Bulanan (Syahriyah):</span>
-                                    <span class="text-2xl font-bold text-[#0D3B2E] font-sans">
-                                        Rp 12.000 <span class="text-xs font-normal text-gray-500">/ bln</span>
-                                    </span>
-                                </div>
-                                <div class="flex items-baseline justify-between pt-2 border-t border-[#E5E0D8]">
-                                    <span class="text-xs font-semibold text-[#4B6358]">Biaya Registrasi Pendaftaran:</span>
-                                    <span class="text-lg font-bold text-[#B89758] font-sans">
-                                        Rp {{ $feeMdta }}
-                                    </span>
-                                </div>
-                                <p class="text-[11px] text-[#4B6358]/80 italic">
-                                    *Izin Operasional Resmi Kemenag Kab. Serang No. 0355 (NSMDT: 311236041251).
-                                </p>
-                            </div>
-
-                            <!-- Features -->
+                            <!-- Header -->
                             <div class="space-y-2">
-                                <div class="text-xs font-bold text-[#0D3B2E] uppercase tracking-wider">Materi &amp; Jadwal
-                                    Belajar MDTA:</div>
-                                <ul class="text-xs space-y-2 text-[#18181B]">
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Jadwal sekolah sore hari ba'da Ashar &amp; Dhuhur: Senin s/d Kamis (Pukul
-                                            13.30 – 16.10 WIB)</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Tahfidzul Qur'an setiap Senin dengan target berjenjang Kelas 1-3</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Materi Diniyah: Aqidah, Bahasa Arab, Hadist, Akhlak, Fiqh, &amp; SKI</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-[#059669]"></span>
-                                        <span>Pengembangan Seni bergilir: Hadroh, Senam, Kaligrafi, Drama, &amp; Alam</span>
-                                    </li>
-                                </ul>
+                                <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
                             </div>
+
+                            <!-- Price Card (Ringkas 2 Kolom) -->
+                            <div
+                                class="bg-[#FAF8F5] p-4 border border-[#E5E0D8] rounded-lg flex items-center justify-between">
+                                <div>
+                                    <span class="block text-xs text-[#4B6358]">Syahriyah (Bulanan)</span>
+                                    <span class="text-xl sm:text-2xl font-bold text-[#0D3B2E] font-sans">
+                                        Rp 12.000 <span class="text-xs font-normal text-gray-500">/bln</span>
+                                    </span>
+                                </div>
+                                <div class="text-right border-l border-[#E5E0D8] pl-4">
+                                    <span class="block text-xs text-[#4B6358]">Pendaftaran</span>
+                                    <span class="text-base sm:text-lg font-bold text-[#B89758] font-sans">Rp
+                                        {{ $feeMdta }}</span>
+                                </div>
+                            </div>
+
+                            <!-- Key Points (Singkat & Padat) -->
+                            <ul class="text-sm space-y-2.5 text-[#18181B]">
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
+                                    <span>KBM Senin – Kamis (13.30 – 16.10 WIB)</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
+                                    <span>Tahfidz Qur'an &amp; materi dasar Diniyah</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#B89758] shrink-0"></span>
+                                    <span>Ekstrakurikuler seni Islami &amp; kaligrafi</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="pt-6 border-t border-[#E5E0D8]">
+                        <div class="pt-5 border-t border-[#E5E0D8]">
                             <a href="{{ route('psb.index') }}?program=MDTA"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md border border-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-[#0D3B2E] text-xs font-semibold uppercase tracking-wider transition shadow-xs">
                                 <span>Daftar MDTA Sekarang</span>
@@ -463,13 +439,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="text-center pt-2">
-                    <a href="{{ route('program.index') }}"
-                        class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3B2E] hover:text-[#059669] transition uppercase tracking-wider">
-                        <span>Lihat Kurikulum Lengkap MDTA &rarr;</span>
-                    </a>
                 </div>
             </div>
         </section>
@@ -481,7 +450,8 @@
                 <div class="text-center max-w-3xl mx-auto">
                     <div class="flex items-center justify-center gap-3 sm:gap-4">
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
-                        <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        <h2
+                            class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                             GALERI KEGIATAN
                         </h2>
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
@@ -602,19 +572,13 @@
                 <div class="text-center max-w-3xl mx-auto space-y-3">
                     <div class="flex items-center justify-center gap-3 sm:gap-4">
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
-                        <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
+                        <h2
+                            class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
                             PENERIMAAN SANTRI BARU
                         </h2>
                         <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                     </div>
                     <span class="sr-only">Informasi Biaya &amp; Persyaratan Pendaftaran</span>
-                    <div class="pt-1">
-                        <a href="{{ route('psb.index') }}#tabel-biaya"
-                            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#E5E0D8] bg-white text-xs font-semibold text-[#0D3B2E] hover:border-[#0D3B2E] hover:bg-[#FAF8F5] transition shadow-xs">
-                            <span>Lihat Tabel Lengkap 12 Biaya</span>
-                            <span>&rarr;</span>
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Two-Column PSB Cards -->
@@ -626,35 +590,26 @@
                             <div class="border-b border-[#E5E0D8] pb-3 flex items-center justify-between">
                                 <span class="text-xs font-mono font-bold text-[#0D3B2E] tracking-wider uppercase">TOTAL
                                     ESTIMASI BIAYA MASUK</span>
-                                <span class="text-xs font-mono text-[#059669] font-bold">SLTP / SMP Sederajat</span>
                             </div>
 
                             <!-- 2-Box Summary for Putra & Putri -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-[#FAF8F5] border-2 border-emerald-600/30 rounded-lg p-5 space-y-2">
+                                <div class="bg-[#FAF8F5] border-2 border-emerald-600/30 rounded-lg p-5 space-y-1">
                                     <span
                                         class="text-[10px] font-mono uppercase tracking-wider text-[#4B6358] block font-bold">Santri
                                         Laki-Laki</span>
                                     <div class="font-sans font-extrabold text-2xl text-[#0D3B2E]">
                                         Rp 3.250.000
                                     </div>
-                                    <p class="text-[11px] text-[#4B6358] leading-tight">
-                                        Total 11 komponen (Pendaftaran, Ujian, Seragam Olahraga &amp; Muslim, Kasur, Lemari,
-                                        Kitab, Organisasi, Ekskul, Wakaf, &amp; Iuran Bulan 1).
-                                    </p>
                                 </div>
 
-                                <div class="bg-[#FAF8F5] border-2 border-amber-600/30 rounded-lg p-5 space-y-2">
+                                <div class="bg-[#FAF8F5] border-2 border-amber-600/30 rounded-lg p-5 space-y-1">
                                     <span
                                         class="text-[10px] font-mono uppercase tracking-wider text-[#4B6358] block font-bold">Santri
                                         Perempuan</span>
                                     <div class="font-sans font-extrabold text-2xl text-[#0D3B2E]">
                                         Rp 3.350.000
                                     </div>
-                                    <p class="text-[11px] text-[#4B6358] leading-tight">
-                                        Total 12 komponen (Termasuk tambahan 1 set kerudung hitam + putih khusus santri
-                                        putri).
-                                    </p>
                                 </div>
                             </div>
 
@@ -667,7 +622,7 @@
                                             class="text-xs font-normal text-gray-500">/ bulan</span></strong>
                                 </div>
                                 <div class="text-xs text-[#059669] font-semibold sm:text-right">
-                                    &check; Sudah termasuk biaya pendidikan &amp; makan 3x sehari
+                                    Sudah termasuk biaya pendidikan &amp; makan 3x sehari
                                 </div>
                             </div>
                         </div>
@@ -678,9 +633,9 @@
                                 class="text-xs font-bold text-[#4B6358] hover:text-[#0D3B2E] transition">
                                 Sudah Mendaftar? Cek Status &rarr;
                             </a>
-                            <a href="{{ route('psb.index') }}"
+                            <a href="{{ route('psb.index') }}#tabel-biaya"
                                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-bold uppercase tracking-wider transition shadow-xs">
-                                <span>Buka Formulir Pendaftaran Online &rarr;</span>
+                                <span>Lihat rincian biaya</span>
                             </a>
                         </div>
                     </div>
@@ -737,7 +692,7 @@
         <section class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-2xl p-8 md:p-12 space-y-8 shadow-xs">
-                    <div class="max-w-2xl mx-auto text-center">
+                    <div class="max-w-2xl mx-auto text-center space-y-2">
                         <div class="flex items-center justify-center gap-3 sm:gap-4">
                             <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                             <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E] tracking-tight">
@@ -745,6 +700,9 @@
                             </h2>
                             <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
                         </div>
+                        <p class="text-xs sm:text-sm text-[#4B6358]">
+                            Ikuti dokumentasi kegiatan dan informasi terbaru santri melalui kanal resmi kami
+                        </p>
                     </div>
 
                     @php
@@ -763,47 +721,44 @@
                     @endphp
 
                     <!-- 3 Columns Social Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto">
                         <!-- Instagram -->
                         <a href="{{ $igUrl }}" target="_blank" rel="noopener noreferrer"
-                            class="p-6 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:shadow-xs transition flex flex-col items-center text-center space-y-2 group">
+                            class="px-5 py-4 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 flex items-center justify-center gap-3.5 group">
                             <div
-                                class="w-12 h-12 rounded-full bg-pink-50 border border-pink-200 flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                class="w-10 h-10 rounded-lg bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                             </div>
-                            <span class="font-sans font-bold text-sm text-[#0D3B2E]">Instagram</span>
-                            <span class="text-xs text-[#4B6358] font-mono">@media_daareltazkiyah_sumardi</span>
+                            <span class="font-sans font-bold text-base text-[#0D3B2E]">Instagram</span>
                         </a>
 
                         <!-- TikTok -->
                         <a href="{{ $ttUrl }}" target="_blank" rel="noopener noreferrer"
-                            class="p-6 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:shadow-xs transition flex flex-col items-center text-center space-y-2 group">
+                            class="px-5 py-4 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 flex items-center justify-center gap-3.5 group">
                             <div
-                                class="w-12 h-12 rounded-full bg-slate-100 border border-slate-300 flex items-center justify-center text-slate-800 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.35 2.27.7.13 1.43.05 2.09-.22.95-.39 1.64-1.24 1.84-2.24.11-.6.13-1.21.13-1.82.01-4.28 0-8.56 0-12.84z" />
                                 </svg>
                             </div>
-                            <span class="font-sans font-bold text-sm text-[#0D3B2E]">TikTok</span>
-                            <span class="text-xs text-[#4B6358] font-mono">@media.daareltazki</span>
+                            <span class="font-sans font-bold text-base text-[#0D3B2E]">TikTok</span>
                         </a>
 
                         <!-- Facebook -->
                         <a href="{{ $fbUrl }}" target="_blank" rel="noopener noreferrer"
-                            class="p-6 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:shadow-xs transition flex flex-col items-center text-center space-y-2 group">
+                            class="px-5 py-4 border border-[#E5E0D8] rounded-xl bg-white hover:border-[#0D3B2E] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 flex items-center justify-center gap-3.5 group">
                             <div
-                                class="w-12 h-12 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                class="w-10 h-10 rounded-lg bg-[#1877F2] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </div>
-                            <span class="font-sans font-bold text-sm text-[#0D3B2E]">Facebook</span>
-                            <span class="text-xs text-[#4B6358] font-mono">Daar-El-tazkiyah-Sumardi</span>
+                            <span class="font-sans font-bold text-base text-[#0D3B2E]">Facebook</span>
                         </a>
                     </div>
                 </div>
@@ -827,12 +782,12 @@
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                     <a href="{{ route('psb.index') }}"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-[#D97706] hover:bg-[#b46304] text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
-                        <span>Daftar Santri Baru (Online)</span>
+                        <span>Daftar Sekarang</span>
                     </a>
                     <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}" target="_blank"
                         rel="noopener noreferrer"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border border-white/30 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider transition">
-                        <span>Konsultasi WhatsApp</span>
+                        <span>Hubungi Kami</span>
                     </a>
                 </div>
             </div>
