@@ -34,13 +34,13 @@ class SampleContentSeeder extends Seeder
                     'author_id' => $author->id,
                     'title' => 'Penerimaan Santri Baru (PSB) Tahun Ajaran 2027/2028 Resmi Dibuka',
                     'excerpt' => 'PPMTQ Daar El Tazkiyah Sumardi secara resmi membuka pendaftaran santri baru jenjang MTS dan MDTA Gelombang I.',
-                    'content' => '<p>Alhamdulillah, Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi secara resmi membuka pendaftaran santri baru untuk Tahun Ajaran 2027/2028.</p><p>Pendaftaran dibuka untuk dua jenjang pendidikan unggulan: Madrasah Tsanawiyah (MTS - Mukim 24 Jam) dan Madrasah Diniyah Takmiliyah Awaliyah (MDTA - Sekolah Sore). Calon santri dan wali santri dapat melakukan pendaftaran secara mandiri melalui website resmi ini.</p>',
+                    'content' => '<p>Alhamdulillah, Pondok Pesantren Modern Tahfidzul Qur\'an Daar El Tazkiyah Sumardi secara resmi membuka pendaftaran santri baru untuk Tahun Ajaran 2027/2028.</p><p>Pendaftaran dibuka untuk dua jenjang pendidikan unggulan: Madrasah Tsanawiyah dan Madrasah Diniyah Takmiliyah Awaliyah. Calon santri dan wali santri dapat melakukan pendaftaran secara mandiri melalui website resmi ini.</p>',
                     'status' => PostStatus::Published,
                     'is_featured' => true,
                     'featured_image' => 'galleries/photos/foto-santri-3.webp',
                     'published_at' => now()->subDays(10),
                     'meta_title' => 'PSB 2027/2028 PPMTQ Daar El Tazkiyah Dibuka',
-                    'meta_description' => 'Informasi lengkap pendaftaran santri baru MTS Mukim dan MDTA Sore PPMTQ Daar El Tazkiyah Tahun Ajaran 2027/2028.',
+                    'meta_description' => 'Informasi lengkap pendaftaran santri baru MTS dan MDTA PPMTQ Daar El Tazkiyah Tahun Ajaran 2027/2028.',
                 ]
             );
         }

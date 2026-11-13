@@ -406,7 +406,7 @@
                                 <input type="radio" wire:model.live="program_type" value="MTS" {{ ! $mtsQuotaOpen ? 'disabled' : '' }} class="sr-only">
                                 <div>
                                     <div class="flex items-center justify-between mb-3">
-                                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#0D3B2E] text-white">MTS Mukim 24 Jam</span>
+                                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#0D3B2E] text-white">MTS</span>
                                         @if ($mtsQuotaOpen)
                                             <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center {{ $program_type === 'MTS' ? 'border-[#0D3B2E] bg-[#0D3B2E]' : 'border-gray-300' }}"></span>
                                         @else
@@ -430,7 +430,7 @@
                                 <input type="radio" wire:model.live="program_type" value="MDTA" {{ ! $mdtaQuotaOpen ? 'disabled' : '' }} class="sr-only">
                                 <div>
                                     <div class="flex items-center justify-between mb-3">
-                                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-600 text-white">MDTA Sekolah Sore</span>
+                                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-600 text-white">MDTA</span>
                                         @if ($mdtaQuotaOpen)
                                             <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center {{ $program_type === 'MDTA' ? 'border-amber-600 bg-amber-600' : 'border-gray-300' }}"></span>
                                         @else

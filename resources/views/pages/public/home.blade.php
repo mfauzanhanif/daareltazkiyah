@@ -326,10 +326,6 @@
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-5">
                             <div>
-                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM</span>
-                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim</span>
-                                </div>
                                 <div class="flex items-center justify-between gap-2">
                                     <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
                                 </div>
@@ -337,7 +333,9 @@
 
                             <!-- Concise Description -->
                             <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                                Pendidikan formal tingkat menengah pertama terpadu asrama mukim 24 jam dengan bimbingan asatidz intensif, tahfidzul Qur'an mutqin, kajian kitab kuning, serta kurikulum nasional terakreditasi Kemenag RI.
+                                Pendidikan formal tingkat menengah pertama terpadu asrama mukim 24 jam dengan bimbingan
+                                asatidz intensif, tahfidzul Qur'an mutqin, kajian kitab kuning, serta kurikulum nasional
+                                terakreditasi Kemenag RI.
                             </p>
 
                             <!-- Key Points (Singkat & Padat) -->
@@ -365,23 +363,22 @@
                         </div>
                     </div>
 
-                    <!-- Program 2: MDTA (Sekolah Sore) -->
+                    <!-- Program 2: MDTA -->
                     <div
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-5">
                             <div>
-                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
-                                    <span class="editorial-label text-[#B89758]">SEKOLAH SORE</span>
-                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-900 border border-amber-200">Non-Mukim</span>
-                                </div>
                                 <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah Takmiliyah Awaliyah)</h3>
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah
+                                        Takmiliyah Awaliyah)</h3>
                                 </div>
                             </div>
 
                             <!-- Concise Description -->
                             <p class="text-xs sm:text-sm text-[#4B6358] leading-relaxed">
-                                Pendidikan keagamaan Islam non-mukim sore hari bagi santri usia SD/MI (Senin &ndash; Kamis), fokus pada baca tulis Al-Qur'an (BTQ), praktik ibadah harian, adab karimah, dan hafalan Juz 30.
+                                Pendidikan keagamaan Islam non-mukim sore hari bagi santri usia SD/MI (Senin &ndash; Kamis),
+                                fokus pada baca tulis Al-Qur'an (BTQ), praktik ibadah harian, adab karimah, dan hafalan Juz
+                                30.
                             </p>
 
                             <!-- Key Points (Singkat & Padat) -->
@@ -471,22 +468,26 @@
                                     @endphp
                                     <div class="w-72 sm:w-80 md:w-96 shrink-0 aspect-16/10 rounded-2xl overflow-hidden relative group/card cursor-pointer border border-[#E5E0D8] shadow-xs hover:shadow-xl hover:border-[#B89758] transition-all duration-300 transform-gpu hover:-translate-y-1 focus:outline-hidden focus:ring-2 focus:ring-[#059669]"
                                         @click="openModal(@js($coverSrc), @js($gallery->title))"
-                                        role="button"
-                                        tabindex="0"
+                                        role="button" tabindex="0"
                                         @keydown.enter="openModal(@js($coverSrc), @js($gallery->title))"
                                         @keydown.space.prevent="openModal(@js($coverSrc), @js($gallery->title))"
                                         aria-label="{{ $gallery->title }}">
-                                        <img src="{{ $coverSrc }}" alt="{{ $gallery->title }}"
-                                            loading="lazy"
+                                        <img src="{{ $coverSrc }}" alt="{{ $gallery->title }}" loading="lazy"
                                             class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500 ease-out">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent transition-opacity duration-300"></div>
-                                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 shadow-xs">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent transition-opacity duration-300">
+                                        </div>
+                                        <div
+                                            class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 shadow-xs">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                                             </svg>
                                         </div>
                                         <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                                            <h3 class="font-sans font-bold text-sm sm:text-base text-white leading-snug drop-shadow line-clamp-2 group-hover/card:text-amber-300 transition-colors duration-200">
+                                            <h3
+                                                class="font-sans font-bold text-sm sm:text-base text-white leading-snug drop-shadow line-clamp-2 group-hover/card:text-amber-300 transition-colors duration-200">
                                                 {{ $gallery->title }}
                                             </h3>
                                         </div>
@@ -513,17 +514,22 @@
                                     <div class="w-72 sm:w-80 md:w-96 shrink-0 aspect-16/10 rounded-2xl overflow-hidden relative group/card cursor-pointer border border-[#E5E0D8] shadow-xs hover:shadow-xl hover:border-[#B89758] transition-all duration-300 transform-gpu hover:-translate-y-1"
                                         @click="openModal(@js($coverSrc), @js($gallery->title))"
                                         tabindex="-1">
-                                        <img src="{{ $coverSrc }}" alt="{{ $gallery->title }}"
-                                            loading="lazy"
+                                        <img src="{{ $coverSrc }}" alt="{{ $gallery->title }}" loading="lazy"
                                             class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500 ease-out">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent transition-opacity duration-300"></div>
-                                        <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 shadow-xs">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent transition-opacity duration-300">
+                                        </div>
+                                        <div
+                                            class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 shadow-xs">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                                             </svg>
                                         </div>
                                         <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                                            <h3 class="font-sans font-bold text-sm sm:text-base text-white leading-snug drop-shadow line-clamp-2 group-hover/card:text-amber-300 transition-colors duration-200">
+                                            <h3
+                                                class="font-sans font-bold text-sm sm:text-base text-white leading-snug drop-shadow line-clamp-2 group-hover/card:text-amber-300 transition-colors duration-200">
                                                 {{ $gallery->title }}
                                             </h3>
                                         </div>
@@ -574,14 +580,17 @@
                     </a>
                     @php
                         $cleanWaPhone = preg_replace('/[^0-9]/', '', (string) ($waNumber ?? '089653324339'));
-                        $waText = urlencode("Assalamu'alaikum Panitia PSB PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pendaftaran santri baru.");
+                        $waText = urlencode(
+                            "Assalamu'alaikum Panitia PSB PPMTQ Daar El Tazkiyah, saya ingin bertanya seputar pendaftaran santri baru.",
+                        );
                         $waCtaUrl = "https://api.whatsapp.com/send/?phone={$cleanWaPhone}&text={$waText}&type=phone_number&app_absent=0";
                     @endphp
-                    <a href="{{ $waCtaUrl }}" target="_blank"
-                        rel="noopener noreferrer"
+                    <a href="{{ $waCtaUrl }}" target="_blank" rel="noopener noreferrer"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full border border-[#0D3B2E] bg-white hover:bg-[#0D3B2E] text-[#0D3B2E] hover:text-white font-semibold text-xs uppercase tracking-wider transition-all duration-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 group">
-                        <svg class="w-5 h-5 fill-[#25D366] group-hover:fill-white shrink-0 transition-colors" viewBox="0 0 24 24">
-                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.57 1.77.879 2.801.88h.005c3.179 0 5.766-2.587 5.767-5.766.001-3.181-2.585-5.767-5.777-5.767zm7.537 5.764c-.002 4.156-3.383 7.537-7.542 7.537-1.325-.001-2.571-.351-3.666-.999l-4.088 1.072 1.091-3.987c-.714-1.144-1.095-2.476-1.094-3.843.003-4.156 3.385-7.537 7.545-7.537 4.159.001 7.543 3.382 7.544 7.541l.21-.004zm-10.428-2.31c-.139-.307-.285-.313-.418-.319-.108-.005-.232-.005-.357-.005-.125 0-.327.046-.499.233-.172.187-.655.641-.655 1.562s.67 1.812.763 1.937c.094.125 1.319 2.014 3.195 2.825.446.193.795.308 1.066.394.448.143.856.123 1.178.075.359-.054 1.107-.453 1.263-.89.156-.437.156-.812.11-.89-.047-.078-.172-.125-.359-.219-.187-.094-1.107-.546-1.279-.609-.172-.062-.297-.094-.422.094-.125.187-.484.609-.593.734-.109.125-.219.14-.406.047-.187-.094-.79-.291-1.505-.929-.556-.497-.932-1.111-1.041-1.298-.109-.187-.012-.288.082-.381.084-.084.187-.219.281-.328.094-.109.125-.187.187-.312.062-.125.031-.234-.016-.328-.046-.094-.418-1.008-.578-1.38z"/>
+                        <svg class="w-5 h-5 fill-[#25D366] group-hover:fill-white shrink-0 transition-colors"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.974.57 1.77.879 2.801.88h.005c3.179 0 5.766-2.587 5.767-5.766.001-3.181-2.585-5.767-5.777-5.767zm7.537 5.764c-.002 4.156-3.383 7.537-7.542 7.537-1.325-.001-2.571-.351-3.666-.999l-4.088 1.072 1.091-3.987c-.714-1.144-1.095-2.476-1.094-3.843.003-4.156 3.385-7.537 7.545-7.537 4.159.001 7.543 3.382 7.544 7.541l.21-.004zm-10.428-2.31c-.139-.307-.285-.313-.418-.319-.108-.005-.232-.005-.357-.005-.125 0-.327.046-.499.233-.172.187-.655.641-.655 1.562s.67 1.812.763 1.937c.094.125 1.319 2.014 3.195 2.825.446.193.795.308 1.066.394.448.143.856.123 1.178.075.359-.054 1.107-.453 1.263-.89.156-.437.156-.812.11-.89-.047-.078-.172-.125-.359-.219-.187-.094-1.107-.546-1.279-.609-.172-.062-.297-.094-.422.094-.125.187-.484.609-.593.734-.109.125-.219.14-.406.047-.187-.094-.79-.291-1.505-.929-.556-.497-.932-1.111-1.041-1.298-.109-.187-.012-.288.082-.381.084-.084.187-.219.281-.328.094-.109.125-.187.187-.312.062-.125.031-.234-.016-.328-.046-.094-.418-1.008-.578-1.38z" />
                         </svg>
                         <span>Hubungi Kami</span>
                     </a>
@@ -589,18 +598,21 @@
 
                 <!-- Social Media Channel Integrations -->
                 @php
-                    $igUrl = $instagramUrl ?? \App\Models\SiteSetting::get(
-                        'instagram_url',
-                        'https://www.instagram.com/media_daareltazkiyah_sumardi',
-                    );
-                    $ttUrl = $tiktokUrl ?? \App\Models\SiteSetting::get(
-                        'tiktok_url',
-                        'https://www.tiktok.com/@media.daareltazki',
-                    );
-                    $fbUrl = $facebookUrl ?? \App\Models\SiteSetting::get(
-                        'facebook_url',
-                        'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791',
-                    );
+                    $igUrl =
+                        $instagramUrl ??
+                        \App\Models\SiteSetting::get(
+                            'instagram_url',
+                            'https://www.instagram.com/media_daareltazkiyah_sumardi',
+                        );
+                    $ttUrl =
+                        $tiktokUrl ??
+                        \App\Models\SiteSetting::get('tiktok_url', 'https://www.tiktok.com/@media.daareltazki');
+                    $fbUrl =
+                        $facebookUrl ??
+                        \App\Models\SiteSetting::get(
+                            'facebook_url',
+                            'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791',
+                        );
                 @endphp
                 <div class="pt-6 border-t border-[#E5E0D8] max-w-xl mx-auto space-y-3">
                     <p class="text-xs font-semibold text-[#4B6358] uppercase tracking-wider font-sans">
@@ -610,9 +622,11 @@
                         <!-- Instagram -->
                         <a href="{{ $igUrl }}" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-xs font-bold text-[#0D3B2E] hover:text-[#059669] hover:-translate-y-0.5 hover:shadow-xs transition-all duration-200 group">
-                            <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                            <span
+                                class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                             </span>
                             <span>Instagram</span>
@@ -621,9 +635,11 @@
                         <!-- TikTok -->
                         <a href="{{ $ttUrl }}" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-xs font-bold text-[#0D3B2E] hover:text-[#059669] hover:-translate-y-0.5 hover:shadow-xs transition-all duration-200 group">
-                            <span class="w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                            <span
+                                class="w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.35 2.27.7.13 1.43.05 2.09-.22.95-.39 1.64-1.24 1.84-2.24.11-.6.13-1.21.13-1.82.01-4.28 0-8.56 0-12.84z" />
+                                    <path
+                                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.18 2.09 2.35 2.27.7.13 1.43.05 2.09-.22.95-.39 1.64-1.24 1.84-2.24.11-.6.13-1.21.13-1.82.01-4.28 0-8.56 0-12.84z" />
                                 </svg>
                             </span>
                             <span>TikTok</span>
@@ -632,9 +648,11 @@
                         <!-- Facebook -->
                         <a href="{{ $fbUrl }}" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E5E0D8] bg-white hover:border-[#0D3B2E] text-xs font-bold text-[#0D3B2E] hover:text-[#059669] hover:-translate-y-0.5 hover:shadow-xs transition-all duration-200 group">
-                            <span class="w-6 h-6 rounded-full bg-[#1877F2] flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                            <span
+                                class="w-6 h-6 rounded-full bg-[#1877F2] flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
                                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </span>
                             <span>Facebook</span>

@@ -31,7 +31,7 @@
 
 Proyek ini bertujuan untuk membangun platform digital resmi **Pondok Pesantren Modern Tahfidzul Quran (PPMTQ) Daar El Tazkiyah Sumardi** (*Ma'had Dar Al-Tazkiyah Sumardi Al-Islami Li Tahfizhil Qur'an*). Sistem ini dirancang untuk memenuhi tiga kebutuhan utama dalam satu aplikasi terintegrasi:
 
-1. **Landing Page Profil Pondok:** Menampilkan identitas pesantren, profil pengasuh, visi-misi, program pendidikan (**MTS Mukim 24 Jam** & **MDTA Sekolah Sore**), rincian biaya, daftar tenaga pendidik, serta halaman kontak.
+1. **Landing Page Profil Pondok:** Menampilkan identitas pesantren, profil pengasuh, visi-misi, program pendidikan (**MTS** & **MDTA**), rincian biaya, daftar tenaga pendidik, serta halaman kontak.
 2. **Content Management System (CMS) Berita:** Media publikasi kegiatan santri, kajian, artikel keislaman, galeri kegiatan, dan pengumuman resmi pondok.
 3. **Sistem Penerimaan Santri Baru (PSB) Online:** Portal pendaftaran terpadu untuk Tahun Ajaran 2027/2028 (Gelombang I & II) lengkap dengan unggah berkas, cek status verifikasi, cetak bukti pendaftaran (PDF), dan rekapitulasi data panitia (Excel).
 
@@ -155,7 +155,7 @@ Font di-*self-host* (disimpan di `public/fonts/`) untuk menghindari ketergantung
 
    | Komponen Informasi                                              | Jenjang MTS                                                                                | Jenjang MDTA                                                                            |
    | :-------------------------------------------------------------- | :----------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |
-   | **Sistem Pendidikan**                                           | **Mukim 24 Jam** — Pendidikan Formal setara SMP dengan pembinaan Tahfidz Al-Qur'an.        | **Sekolah Sore & Tidak Mukim** — Pendidikan Diniyah untuk anak-anak usia sekolah dasar. |
+   | **Sistem Pendidikan**                                           | Pendidikan Formal setara SMP dengan pembinaan Tahfidz Al-Qur'an.        | Pendidikan Diniyah untuk anak-anak usia sekolah dasar. |
    | **Biaya Bulanan (SPP)**                                         | **Rp 500.000,- / bulan** *(Termasuk biaya makan 3x sehari, asrama, dan biaya pendidikan)*. | **Rp 12.000,- / bulan**.                                                                |
    | **Biaya Pendaftaran Gelombang I** *(1 Okt 2026 – 28 Feb 2027)*  | **Rp 100.000,-**                                                                           | **Rp 25.000,-**                                                                         |
    | **Biaya Pendaftaran Gelombang II** *(1 Mar 2027 – 30 Mei 2027)* | **Rp 150.000,-**                                                                           | **Rp 30.000,-**                                                                         |
@@ -212,7 +212,7 @@ Font di-*self-host* (disimpan di `public/fonts/`) untuk menghindari ketergantung
    * **AC:** Given tanggal hari ini 15 Juni 2027, When user buka halaman PSB, Then tampil halaman "Pendaftaran Ditutup".
 
 2. **Formulir Pendaftaran Online (Multi-Step Livewire Form):**
-   * **Langkah 1 — Pilihan Program:** Pilih jenjang (`MTS - Mukim 24 Jam` atau `MDTA - Sekolah Sore`). Menampilkan biaya pendaftaran berdasarkan gelombang aktif.
+   * **Langkah 1 — Pilihan Program:** Pilih jenjang (`MTS` atau `MDTA`). Menampilkan biaya pendaftaran berdasarkan gelombang aktif.
    * **Langkah 2 — Data Diri Calon Santri:** Nama Lengkap, NIK (16 digit), NISN (wajib untuk MTS, opsional untuk MDTA), Tempat & Tanggal Lahir, Jenis Kelamin, Anak ke- (urutan dalam keluarga), Asal Sekolah (SD/MI), Alamat Lengkap Santri.
    * **Langkah 3 — Data Orang Tua / Wali:** Nama Ayah, Nama Ibu, Pekerjaan Ayah, Pekerjaan Ibu, Penghasilan Rata-rata Keluarga, Nomor WhatsApp Aktif (Wajib), Alamat Orang Tua/Wali.
    * **Langkah 4 — Unggah Berkas & Bukti Pembayaran:** Pas Foto (3×4), Kartu Keluarga (KK), Akta Kelahiran, dan Bukti Transfer Biaya Pendaftaran. Format: JPG/PNG/PDF, maks 2MB per file. Upload satu per satu (sequential) untuk menghindari timeout di shared hosting.

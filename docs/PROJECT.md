@@ -53,7 +53,7 @@
 | 8 | Public Layout & Navigation | Responsive Islamic header, brand logo, navigation links, and announcement banner | M2 | PRD §6.1, DESIGN §10.4 |
 | 9 | Hero Section & Pengasuh Arch | Hero banner, Kufic pattern overlay (5%), portrait of Ust. Ahmad Ashil Fadhil with `rounded-arch` and gold hairline | M2 | PRD §6.1, DESIGN §6.2 |
 | 10 | Visi & Misi Bento Grid | Institutional vision quote in Playfair Display and 4 mission points with emerald checkmark icons | M2 | PRD §6.1, DESIGN §10.8 |
-| 11 | Dynamic Program & Fee Comparison | Comparison cards for MTS (Mukim 24h) and MDTA (Sekolah Sore) with live fee sync from active wave | M2 | PRD §6.1, DESIGN §10.2 |
+| 11 | Dynamic Program & Fee Comparison | Comparison cards for MTS and MDTA with live fee sync from active wave | M2 | PRD §6.1, DESIGN §10.2 |
 | 12 | Teachers & Educators Showcase | Dynamic grid/carousel of active teachers loaded from database seeders | M2 | PRD §6.1, DESIGN §10.8 |
 | 13 | Latest News Preview Widget | 3-column card grid displaying published articles with category badges and read time | M2 | PRD §6.1, PRD §7.8 |
 | 14 | Gallery Preview Grid | Grid preview of latest published photo albums linking to full gallery page | M2 | PRD §6.1, PRD §7.9 |

@@ -89,11 +89,11 @@
                 <flux:heading size="lg">Biaya Bulanan Program</flux:heading>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-xs font-semibold mb-1">SPP Bulanan MTS Mukim (Rp)</label>
+                        <label class="block text-xs font-semibold mb-1">SPP Bulanan MTS (Rp)</label>
                         <input type="number" name="monthly_fee_mts" value="{{ old('monthly_fee_mts', $settings['monthly_fee_mts']->value ?? '1200000') }}" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold mb-1">SPP Bulanan MDTA Sore (Rp)</label>
+                        <label class="block text-xs font-semibold mb-1">SPP Bulanan MDTA (Rp)</label>
                         <input type="number" name="monthly_fee_mdta" value="{{ old('monthly_fee_mdta', $settings['monthly_fee_mdta']->value ?? '350000') }}" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800">
                     </div>
                 </div>

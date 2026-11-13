@@ -26,8 +26,15 @@ return new class extends Migration
             $table->string('birth_place');
             $table->date('birth_date');
             $table->unsignedTinyInteger('child_order');
+            $table->unsignedTinyInteger('total_siblings')->nullable();
             $table->string('previous_school');
+            $table->string('school_level')->nullable();
+            $table->text('school_address')->nullable();
             $table->text('address');
+            $table->string('province')->nullable();
+            $table->string('city')->nullable();
+            $table->string('district')->nullable();
+            $table->string('village')->nullable();
             $table->unsignedBigInteger('registration_fee');
             $table->string('payment_status')->default('unpaid')->index();
             $table->string('application_status')->default('pending')->index();

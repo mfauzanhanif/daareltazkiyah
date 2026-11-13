@@ -55,7 +55,7 @@
                                     <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNumber) }}" target="_blank" rel="noopener noreferrer"
                                         class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] hover:border-[#059669] hover:bg-white flex items-center justify-between group transition shadow-2xs">
                                         <div>
-                                            <span class="text-[10px] text-[#059669] font-bold block uppercase tracking-wider">Pendaftaran MTs / SMP:</span>
+                                            <span class="text-[10px] text-[#059669] font-bold block uppercase tracking-wider">Pendaftaran MTs:</span>
                                             <span class="font-mono text-sm font-bold text-[#0D3B2E]">{{ $waNumber }}</span>
                                         </div>
                                         <span class="text-xs text-[#059669] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -64,7 +64,7 @@
                                     <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waMdtaNumber) }}" target="_blank" rel="noopener noreferrer"
                                         class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] hover:border-[#B89758] hover:bg-white flex items-center justify-between group transition shadow-2xs">
                                         <div>
-                                            <span class="text-[10px] text-[#B89758] font-bold block uppercase tracking-wider">Pendaftaran MDTA Sore:</span>
+                                            <span class="text-[10px] text-[#B89758] font-bold block uppercase tracking-wider">Pendaftaran MDTA:</span>
                                             <span class="font-mono text-sm font-bold text-[#0D3B2E]">{{ $waMdtaNumber }}</span>
                                         </div>
                                         <span class="text-xs text-[#B89758] group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -139,8 +139,8 @@
                                         Pilihan Program *
                                     </label>
                                     <select name="program_interest" id="program_interest" required class="w-full px-4 py-2.5 text-xs rounded-xl border border-[#E5E0D8] focus:border-[#059669] focus:bg-white focus:outline-none bg-[#FAF8F5] transition">
-                                        <option value="MTS">MTS Mukim 24 Jam</option>
-                                        <option value="MDTA">MDTA Sekolah Sore</option>
+                                        <option value="MTS">MTS</option>
+                                        <option value="MDTA">MDTA</option>
                                         <option value="UMUM">Konsultasi Umum</option>
                                     </select>
                                 </div>

@@ -19,7 +19,7 @@
         <!-- 2-Column Program Comparison Bento -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
 
-            <!-- Program 1: MTS (Mukim 24 Jam) -->
+            <!-- Program 1: MTS -->
             <div class="bg-[#FAF8F5] rounded-md p-8 border border-[#E5E0D8] relative flex flex-col justify-between">
                 <!-- Highlight Badge -->
                 <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-md bg-[#0D3B2E] text-white text-[11px] font-bold tracking-wide shadow-xs border border-[#B89758]/50">
@@ -88,12 +88,12 @@
                 </div>
             </div>
 
-            <!-- Program 2: MDTA (Sekolah Sore) -->
+            <!-- Program 2: MDTA -->
             <div class="bg-[#FAF8F5] rounded-md p-8 border border-[#E5E0D8] relative flex flex-col justify-between">
                 <div class="space-y-6">
                     <div>
                         <div class="flex items-center justify-between gap-2">
-                            <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Sekolah Sore)</h3>
+                            <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
                             <span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">Non-Mukim</span>
                         </div>
                         <p class="text-sm text-[#4B6358] mt-1.5 leading-relaxed">

@@ -58,8 +58,8 @@ final class ContactController extends Controller
         }
 
         $programLabel = match ($validated['program_interest']) {
-            'MTS' => 'MTs (Madrasah Tsanawiyah Mukim 24 Jam)',
-            'MDTA' => 'MDTA (Sekolah Sore Non-Mukim)',
+            'MTS' => 'MTs',
+            'MDTA' => 'MDTA',
             default => 'Konsultasi Umum Pesantren',
         };
 

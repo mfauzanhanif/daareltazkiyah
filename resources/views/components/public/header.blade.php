@@ -112,7 +112,7 @@
 
                         <a href="{{ route('program.index') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
-                            Program
+                            Program Unggulan
                         </a>
                         <a href="{{ route('mts.index') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -313,7 +313,7 @@
                         </button>
                         <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs normal-case font-medium border-l border-[#E5E0D8] ml-3 mb-2">
                             <a href="{{ route('program.index') }}" @click="mobileMenuOpen = false"
-                                class="block py-1.5 {{ request()->routeIs('program.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">Program</a>
+                                class="block py-1.5 {{ request()->routeIs('program.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">Program Unggulan</a>
                             <a href="{{ route('mts.index') }}" @click="mobileMenuOpen = false"
                                 class="block py-1.5 {{ request()->routeIs('mts.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">MTS</a>
                             <a href="{{ route('mdta.index') }}" @click="mobileMenuOpen = false"

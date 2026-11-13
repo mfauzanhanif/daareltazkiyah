@@ -35,7 +35,6 @@ test('homepage program pendidikan section displays concise descriptions and butt
         ->and($programSection)->not->toContain('12.000')
         ->and($programSection)->not->toContain('Rp ')
         ->and($programSection)->not->toContain('iuran')
-        ->and($programSection)->not->toContain('syahriyah')
         ->and($programSection)->toContain('Detail Program MTs')
         ->and($programSection)->toContain('Detail Program MDTA')
         ->and($programSection)->toContain('Daftar Santri Baru Sekarang');

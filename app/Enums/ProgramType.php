@@ -12,16 +12,16 @@ enum ProgramType: string
     public function label(): string
     {
         return match ($this) {
-            self::Mts => 'Madrasah Tsanawiyah (MTS - Mukim 24 Jam)',
-            self::Mdta => 'Madrasah Diniyah Takmiliyah Awaliyah (MDTA - Sekolah Sore)',
+            self::Mts => 'Madrasah Tsanawiyah',
+            self::Mdta => 'Madrasah Diniyah Takmiliyah Awaliyah',
         };
     }
 
     public function shortLabel(): string
     {
         return match ($this) {
-            self::Mts => 'MTS (Mukim)',
-            self::Mdta => 'MDTA (Sore)',
+            self::Mts => 'MTS',
+            self::Mdta => 'MDTA',
         };
     }
 

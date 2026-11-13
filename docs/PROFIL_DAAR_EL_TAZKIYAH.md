@@ -100,7 +100,7 @@ Untuk menunjang bakat dan minat santri, tersedia berbagai kegiatan ekstrakurikul
   - Tingkat MTs: Rp150.000,-
   - Tingkat MDTA: Rp30.000,-
 
-### Biaya Bulanan (Syahriyah)
+### Biaya Bulanan
 
 - **Tingkat MTs:** Rp500.000,- / bulan *(Sudah termasuk makan 3x sehari, asrama, dan biaya pendidikan)*.
 - **Tingkat MDTA:** Rp12.000,- / bulan *(Biaya pendidikan)*.

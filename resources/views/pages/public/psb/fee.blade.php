@@ -11,19 +11,9 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#042816] via-[#084C27]/90 to-[#042816]/85"></div>
 
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-                <!-- Breadcrumbs -->
-                <nav
-                    class="flex items-center justify-center gap-2 text-xs font-semibold text-emerald-200/90 uppercase tracking-wider">
-                    <a href="{{ route('home') }}" class="hover:text-white transition">Beranda</a>
-                    <span>/</span>
-                    <a href="{{ route('psb.index') }}" class="hover:text-white transition">PSB</a>
-                    <span>/</span>
-                    <span class="text-amber-300">Rincian Biaya Pendidikan</span>
-                </nav>
-
                 <h1
                     class="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
-                    Rincian Biaya Pendidikan Santri
+                    Rincian Biaya
                 </h1>
 
                 <p class="text-base sm:text-lg md:text-xl text-emerald-100/90 max-w-3xl mx-auto leading-relaxed">
@@ -31,20 +21,6 @@
                     di Pondok Pesantren Modern Tahfidzul Qur'an Daar El Tazkiyah Sumardi.
                 </p>
 
-                <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-                    <a href="{{ route('psb.form') }}"
-                        class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#D97706] hover:bg-[#b46304] text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-md">
-                        <span>Daftar Sekarang &rarr;</span>
-                    </a>
-                    <a href="{{ route('psb.perlengkapan') }}"
-                        class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-white/30 bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition backdrop-blur-xs">
-                        <span>Lihat Perlengkapan Santri</span>
-                    </a>
-                    <a href="{{ route('psb.status') }}"
-                        class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-emerald-400/50 bg-emerald-900/40 hover:bg-emerald-900/70 text-emerald-100 text-xs sm:text-sm font-semibold uppercase tracking-wider transition">
-                        <span>Cek Status</span>
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -74,7 +50,6 @@
                                     class="px-3 py-1 rounded-full bg-[#0D3B2E] text-white text-[11px] font-bold uppercase tracking-wider">
                                     MTs (Mukim 24 Jam)
                                 </span>
-                                <span class="text-xs font-mono font-bold text-[#059669]">Formal + Asrama</span>
                             </div>
                             <h3 class="font-sans font-extrabold text-2xl text-[#0D3B2E]">Madrasah Tsanawiyah</h3>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -130,7 +105,6 @@
                                     class="px-3 py-1 rounded-full bg-amber-600 text-white text-[11px] font-bold uppercase tracking-wider">
                                     MDTA (Non-Mukim)
                                 </span>
-                                <span class="text-xs font-mono font-bold text-amber-800">Sekolah Sore</span>
                             </div>
                             <h3 class="font-sans font-extrabold text-2xl text-[#0D3B2E]">Madrasah Diniyah</h3>
                             <p class="text-xs text-[#4B6358] leading-relaxed">
@@ -412,9 +386,8 @@
         <section class="py-12 md:py-16 bg-white border-b border-[#E5E0D8]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <span class="editorial-label text-[#059669]">TRANSPARANSI &amp; KEMUDAHAN</span>
                     <h2 class="font-sans text-2xl sm:text-3xl font-extrabold text-[#0D3B2E]">
-                        Kebijakan Pembayaran &amp; Rekening Resmi
+                        Rekening Resmi
                     </h2>
                     <p class="text-xs sm:text-sm text-[#4B6358]">
                         Informasi rekening resmi pondok pesantren serta panduan tata cara pembayaran infaq pendaftaran.
@@ -436,10 +409,6 @@
                                 Pesantren</span>
                             <h3 class="font-sans text-xl sm:text-2xl font-extrabold mt-0.5">{{ $bankName }}</h3>
                         </div>
-                        <span
-                            class="px-3 py-1 rounded-full bg-white/10 text-emerald-200 text-xs font-bold self-start sm:self-auto">
-                            Rekening PSB Online
-                        </span>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -458,59 +427,20 @@
                     </div>
 
                     <p class="text-xs text-emerald-100/80 pt-2 border-t border-white/10">
-                        Pastikan hanya mentransfer ke rekening resmi atas nama Yayasan di atas. Simpan
+                        Pastikan hanya mentransfer ke rekening resmi atas nama {{ $bankHolder }}. Simpan
                         bukti transfer untuk diunggah pada formulir atau dikonfirmasikan ke panitia PSB.
                     </p>
-                </div>
-
-                <!-- 3 Principles -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-5 space-y-2">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-emerald-50 text-[#0D3B2E] font-bold text-xs flex items-center justify-center font-mono">
-                            01
-                        </div>
-                        <h4 class="font-sans font-bold text-sm text-[#0D3B2E]">Skema Angsuran Terbuka</h4>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Biaya masuk awal dapat diangsur sesuai dengan kesepakatan orang tua/wali santri bersama pihak
-                            bendahara saat daftar ulang.
-                        </p>
-                    </div>
-
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-5 space-y-2">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-amber-50 text-amber-800 font-bold text-xs flex items-center justify-center font-mono">
-                            02
-                        </div>
-                        <h4 class="font-sans font-bold text-sm text-[#0D3B2E]">Tanpa Biaya Tersembunyi</h4>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Semua komponen tercantum secara transparan dan tertulis resmi. Tidak ada biaya siluman atau
-                            pungutan liar di luar tabel rincian.
-                        </p>
-                    </div>
-
-                    <div class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl p-5 space-y-2">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-emerald-50 text-[#0D3B2E] font-bold text-xs flex items-center justify-center font-mono">
-                            03
-                        </div>
-                        <h4 class="font-sans font-bold text-sm text-[#0D3B2E]">Musyawarah &amp; Konsultasi</h4>
-                        <p class="text-xs text-[#4B6358] leading-relaxed">
-                            Bagi keluarga yang memerlukan musyawarah pembiayaan atau keringanan khusus, panitia siap
-                            membantu melalui musyawarah kekeluargaan.
-                        </p>
-                    </div>
                 </div>
 
                 <!-- CTA Buttons -->
                 <div class="text-center pt-4 flex flex-wrap items-center justify-center gap-4">
                     <a href="{{ route('psb.form') }}"
                         class="px-8 py-3.5 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition shadow-xs">
-                        Mulai Mengisi Formulir Pendaftaran &rarr;
+                        Daftar Sekarang
                     </a>
                     <a href="{{ route('psb.perlengkapan') }}"
                         class="px-6 py-3.5 rounded-md border border-[#0D3B2E] bg-white text-[#0D3B2E] hover:bg-[#0D3B2E] hover:text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition">
-                        Lihat Perlengkapan Santri Baru
+                        Perlengkapan Santri Baru
                     </a>
                     @php
                         $waNum = \App\Models\SiteSetting::get('school_phone', '0896-5332-4339');
@@ -518,7 +448,7 @@
                     <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', (string) $waNum) }}?text=Halo%20Bendahara%20PSB%20Daar%20El%20Tazkiyah,%20saya%20ingin%20konsultasi%20mengenai%20rincian%20biaya."
                         target="_blank" rel="noopener noreferrer"
                         class="px-6 py-3.5 rounded-md border border-[#E5E0D8] bg-[#FAF8F5] text-[#0D3B2E] hover:border-[#0D3B2E] text-xs sm:text-sm font-semibold uppercase tracking-wider transition">
-                        Konsultasi via WhatsApp
+                        Hubungi Kami
                     </a>
                 </div>
             </div>
