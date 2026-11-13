@@ -105,12 +105,12 @@ class SiteSettingSeeder extends Seeder
             ],
             [
                 'key' => 'bank_account_name',
-                'value' => 'PPMTQ DAAR EL TAZKIYAH',
+                'value' => 'Yayasan Daar El Tazkiyah Sumardi',
                 'group' => SettingGroup::Billing,
             ],
             [
                 'key' => 'bank_account_number',
-                'value' => '7123456789',
+                'value' => '7366764695',
                 'group' => SettingGroup::Billing,
             ],
             [

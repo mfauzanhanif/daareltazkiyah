@@ -173,15 +173,15 @@
                     <div class="bg-white border border-[#E5E0D8] rounded-2xl p-4 sm:p-5 space-y-4 shadow-xs">
                         <div class="h-96 lg:h-[420px] w-full border border-[#E5E0D8] rounded-xl overflow-hidden bg-gray-100">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.578647895476!2d106.2163931!3d-6.2081547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e423d24e1011867%3A0x6b2e3895e7b514ab!2sMekarbaru%2C%20Kec.%20Petir%2C%20Kabupaten%20Serang%2C%20Banten!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51179.587366400716!2d106.26430659546654!3d-6.264714027642703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e421f0053b40bd5%3A0x8d034a5b4ab12b13!2sPondok%20Pesantre%20Modern%20Tahfidzul%20Quran%20(PPMTQ)%20Daar%20El%20Tazkiyah%20Sumardi!5e0!3m2!1sen!2sid!4v1794542113297!5m2!1sen!2sid"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi PPMTQ Daar El Tazkiyah Sumardi Petir Serang Banten">
                             </iframe>
                         </div>
                         <div class="p-2 text-xs text-[#4B6358] flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-[#E5E0D8]/60 pt-3">
-                            <span>Koordinat: Kp. Lembur Sawah, Desa Mekarbaru, Kec. Petir, Kab. Serang, Banten</span>
-                            <a href="https://maps.google.com/?q=Mekarbaru+Petir+Serang+Banten" target="_blank" rel="noopener noreferrer" class="text-[#0D3B2E] font-bold hover:text-[#059669] transition">
-                                Buka di Google Maps &rarr;
+                            <span>Kp. Lembur Sawah, Desa Mekarbaru, Kec. Petir, Kab. Serang, Banten</span>
+                            <a href="https://maps.app.goo.gl/x9DZ2MvSYgqh2aVS8" target="_blank" rel="noopener noreferrer" class="text-[#0D3B2E] font-bold hover:text-[#059669] transition">
+                                Buka di Google Maps
                             </a>
                         </div>
                     </div>

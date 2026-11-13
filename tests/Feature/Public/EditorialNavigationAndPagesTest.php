@@ -217,9 +217,8 @@ test('psb information landing page loads with wave details and direct cta to for
     $response = $this->get(route('psb.index'));
     $response->assertOk()
         ->assertSeeText('ALUR PENDAFTARAN SANTRI')
-        ->assertSeeText('RINCIAN BIAYA PENDIDIKAN')
-        ->assertSeeText('PERSYARATAN BERKAS PENDAFTARAN')
-        ->assertSeeText('PERLENGKAPAN SANTRI BARU')
+        ->assertSeeText('RINGKASAN BIAYA PENDIDIKAN')
+        ->assertSeeText('PERSYARATAN DOKUMEN')
         ->assertSeeText('PERTANYAAN SEPUTAR PSB')
         ->assertSee(route('psb.form'), false);
 });
@@ -231,18 +230,19 @@ test('psb registration form route loads standalone wizard view with breadcrumbs'
         ->assertSee(route('psb.index'), false);
 });
 
-test('navigation header contains PSB submenu pointing to psb.index, psb.fee, psb.status and Daftar CTA pointing to psb.form', function () {
+test('navigation header contains PSB submenu pointing to psb.index, psb.fee, psb.perlengkapan, psb.status and Daftar CTA pointing to psb.form', function () {
     $response = $this->get('/');
     $response->assertOk();
 
     $content = $response->getContent();
     expect($content)->toContain('href="'.route('psb.index').'"')
         ->and($content)->toContain('href="'.route('psb.fee').'"')
+        ->and($content)->toContain('href="'.route('psb.perlengkapan').'"')
         ->and($content)->toContain('href="'.route('psb.status').'"')
         ->and($content)->toContain('href="'.route('psb.form').'"');
 });
 
-test('psb fee and equipment route loads successfully with fee tables and equipment breakdown', function () {
+test('psb fee and equipment routes load successfully with fee tables and equipment breakdown', function () {
     AdmissionWave::create([
         'name' => 'Gelombang I 2027',
         'slug' => 'gelombang-i-2027',
@@ -255,11 +255,20 @@ test('psb fee and equipment route loads successfully with fee tables and equipme
 
     $response = $this->get(route('psb.fee'));
     $response->assertOk()
-        ->assertSeeText('Rincian Biaya & Perlengkapan Santri')
-        ->assertSeeText('RINCIAN BIAYA PENDIDIKAN')
-        ->assertSeeText('PERLENGKAPAN SANTRI BARU')
+        ->assertSeeText('Rincian Biaya')
+        ->assertSeeText('RINGKASAN BIAYA AWAL MASUK')
+        ->assertSeeText('TABEL RINCIAN BIAYA')
+        ->assertSeeText('125.000')
+        ->assertSeeText('35.000')
+        ->assertSee(route('psb.form'), false);
+
+    $responseEquip = $this->get(route('psb.perlengkapan'));
+    $responseEquip->assertOk()
+        ->assertSeeText('Perlengkapan Santri')
         ->assertSeeText('Perlengkapan Santri Putra')
         ->assertSeeText('Perlengkapan Santri Putri')
-        ->assertSeeText('Tabel Estimasi Rincian Biaya Masuk Awal (MTs)')
+        ->assertSeeText('Seragam Sekolah Formal')
+        ->assertSeeText('Seragam Pondok Formal')
+        ->assertSeeText('Catatan Penting, Larangan & Ketentuan Asrama')
         ->assertSee(route('psb.form'), false);
 });

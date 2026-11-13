@@ -161,6 +161,10 @@
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
                             Rincian Biaya
                         </a>
+                        <a href="{{ route('psb.perlengkapan') }}"
+                            class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
+                            Perlengkapan Santri
+                        </a>
                         <a href="{{ route('psb.status') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
                             Cek Status
@@ -338,6 +342,10 @@
                             <a href="{{ route('psb.fee') }}" @click="mobileMenuOpen = false"
                                 class="block py-1.5 {{ request()->routeIs('psb.fee') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">
                                 Rincian Biaya
+                            </a>
+                            <a href="{{ route('psb.perlengkapan') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('psb.perlengkapan') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">
+                                Perlengkapan Santri
                             </a>
                             <a href="{{ route('psb.status') }}" @click="mobileMenuOpen = false"
                                 class="block py-1.5 {{ request()->routeIs('psb.status') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">

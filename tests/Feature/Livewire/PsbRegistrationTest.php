@@ -35,9 +35,10 @@ test('psb registration livewire component renders active wave and closed state c
 
     Livewire::test(PsbRegistration::class)
         ->assertOk()
-        ->assertSee('Langkah 1: Pilih Jenjang Program Pendidikan')
-        ->assertSee('MTS Mukim 24 Jam')
-        ->assertSee('MDTA Sekolah Sore');
+        ->assertSee('Langkah 1')
+        ->assertSee('Data Calon Santri')
+        ->assertSee('Nama Lengkap')
+        ->assertSee('NIK');
 });
 
 test('psb registration component handles multi-step validation and real-time NIK check', function () {
@@ -74,26 +75,39 @@ test('psb registration component handles multi-step validation and real-time NIK
 
     $test = Livewire::test(PsbRegistration::class)
         ->assertSet('step', 1)
+        // Step 1 with empty fields should fail
         ->call('nextStep')
-        ->assertSet('step', 2)
-        // Step 2 with empty fields should fail
-        ->call('nextStep')
-        ->assertHasErrors(['full_name', 'nik', 'birth_place', 'birth_date', 'previous_school', 'address'])
-        ->assertSet('step', 2)
-        // Test real-time duplicate NIK validation
+        ->assertHasErrors(['full_name', 'nik', 'birth_place', 'birth_date', 'address'])
+        ->assertSet('step', 1)
+        // Test duplicate NIK validation
         ->set('nik', $existingNik)
         ->assertHasErrors(['nik'])
-        // Provide valid unique NIK
+        // Provide valid unique NIK and Step 1 data
         ->set('full_name', 'Santri Baru Unik')
         ->set('nik', '3201999988887777')
         ->set('gender', 'L')
         ->set('birth_place', 'Bogor')
         ->set('birth_date', '2014-05-15')
         ->set('child_order', 1)
-        ->set('previous_school', 'SDIT Al Fatih')
         ->set('address', 'Jl. Cibanteng No. 10')
         ->call('nextStep')
-        ->assertSet('step', 3);
+        ->assertSet('step', 2)
+        // Step 2 validation
+        ->call('nextStep')
+        ->assertHasErrors(['father_name', 'mother_name', 'parent_phone'])
+        ->set('father_name', 'Sulaiman')
+        ->set('mother_name', 'Maryam')
+        ->set('parent_phone', '081234567890')
+        ->call('nextStep')
+        ->assertSet('step', 3)
+        // Step 3 validation
+        ->call('nextStep')
+        ->assertHasErrors(['previous_school'])
+        ->set('previous_school', 'SDIT Al Fatih')
+        ->set('school_level', 'SD')
+        ->set('program_type', 'MTS')
+        ->call('nextStep')
+        ->assertSet('step', 4);
 });
 
 test('psb registration component completes submission and redirects to success', function () {
@@ -117,25 +131,34 @@ test('psb registration component completes submission and redirects to success',
     $payment = UploadedFile::fake()->image('bukti.jpg', 600, 800);
 
     Livewire::test(PsbRegistration::class)
-        ->set('program_type', 'MTS')
-        ->call('nextStep')
+        // Step 1: Data Santri
         ->set('full_name', 'Muhammad Faris')
         ->set('nik', '3201444433332222')
         ->set('gender', 'L')
         ->set('birth_place', 'Bogor')
         ->set('birth_date', '2014-06-10')
         ->set('child_order', 1)
-        ->set('previous_school', 'SDIT Nurul Fikri')
+        ->set('total_siblings', 3)
         ->set('address', 'Ciampea Bogor')
         ->call('nextStep')
+        // Step 2: Orang Tua / Wali
         ->set('father_name', 'Sulaiman')
         ->set('mother_name', 'Maryam')
         ->set('parent_phone', '081298765432')
         ->call('nextStep')
+        // Step 3: Sekolah & Program
+        ->set('previous_school', 'SDIT Nurul Fikri')
+        ->set('school_level', 'SD')
+        ->set('program_type', 'MTS')
+        ->call('nextStep')
+        // Step 4: Dokumen
         ->set('document_photo', $photo)
         ->set('document_kk', $kk)
         ->set('document_akta', $akta)
         ->set('document_payment', $payment)
+        ->call('nextStep')
+        // Step 5: Review & Persetujuan
+        ->set('agreement', true)
         ->call('submit')
         ->assertRedirect();
 

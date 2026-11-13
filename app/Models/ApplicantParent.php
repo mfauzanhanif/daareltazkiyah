@@ -32,13 +32,45 @@ class ApplicantParent extends Model
     protected $fillable = [
         'applicant_id',
         'father_name',
-        'mother_name',
+        'father_status',
+        'father_nik',
+        'father_birth',
+        'father_education',
+        'father_pesantren',
         'father_job',
+        'father_no_wa',
+        'mother_name',
+        'mother_status',
+        'mother_nik',
+        'mother_birth',
+        'mother_education',
+        'mother_pesantren',
         'mother_job',
+        'mother_no_wa',
+        'mother_phone',
         'parent_income',
         'parent_phone',
         'parent_address',
+        'guardian_type',
+        'guardian_name',
+        'guardian_relation',
+        'guardian_nik',
+        'guardian_phone',
+        'guardian_job',
     ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'father_pesantren' => 'boolean',
+            'father_no_wa' => 'boolean',
+            'mother_pesantren' => 'boolean',
+            'mother_no_wa' => 'boolean',
+        ];
+    }
 
     /**
      * @return BelongsTo<Applicant, $this>

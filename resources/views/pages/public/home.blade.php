@@ -326,8 +326,12 @@
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-5">
                             <div>
+                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                    <span class="editorial-label text-[#059669]">PROGRAM UNGGULAN MUKIM</span>
+                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-[#0D3B2E] text-white">Mukim</span>
+                                </div>
                                 <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS</h3>
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MTS (Madrasah Tsanawiyah)</h3>
                                 </div>
                             </div>
 
@@ -356,7 +360,7 @@
                         <div class="pt-5 border-t border-[#E5E0D8]">
                             <a href="{{ route('mts.index') }}"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition shadow-xs group">
-                                <span>Detail Program</span>
+                                <span>Detail Program MTs</span>
                             </a>
                         </div>
                     </div>
@@ -366,8 +370,12 @@
                         class="bg-white border border-[#E5E0D8] rounded-xl p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#0D3B2E] transition shadow-xs">
                         <div class="space-y-5">
                             <div>
+                                <div class="flex items-center justify-between gap-2 border-b border-[#E5E0D8] pb-2 mb-2">
+                                    <span class="editorial-label text-[#B89758]">SEKOLAH SORE</span>
+                                    <span class="px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-900 border border-amber-200">Non-Mukim</span>
+                                </div>
                                 <div class="flex items-center justify-between gap-2">
-                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA</h3>
+                                    <h3 class="font-sans font-bold text-2xl text-[#0D3B2E]">MDTA (Madrasah Diniyah Takmiliyah Awaliyah)</h3>
                                 </div>
                             </div>
 
@@ -396,7 +404,7 @@
                         <div class="pt-5 border-t border-[#E5E0D8]">
                             <a href="{{ route('mdta.index') }}"
                                 class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white text-xs font-semibold uppercase tracking-wider transition shadow-xs group">
-                                <span>Detail Program</span>
+                                <span>Detail Program MDTA</span>
                             </a>
                         </div>
                     </div>

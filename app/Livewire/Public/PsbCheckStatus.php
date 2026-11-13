@@ -22,7 +22,8 @@ final class PsbCheckStatus extends Component
     #[Validate('required|string|max:50')]
     public string $registration_number = '';
 
-    #[Validate('required|string|max:16')]
+    public string $nik = '';
+
     public string $access_token = '';
 
     public ?Applicant $applicant = null;
@@ -63,12 +64,15 @@ final class PsbCheckStatus extends Component
 
     public mixed $document_payment = null;
 
-    public function mount(string $reg = '', string $token = ''): void
+    public function mount(string $reg = '', string $token = '', string $nik = ''): void
     {
         if (! empty($reg)) {
             $this->registration_number = $reg;
         }
-        if (! empty($token)) {
+        if (! empty($nik)) {
+            $this->nik = $nik;
+            $this->checkStatus();
+        } elseif (! empty($token)) {
             $this->access_token = $token;
             $this->checkStatus();
         }
@@ -76,10 +80,28 @@ final class PsbCheckStatus extends Component
 
     public function checkStatus(): void
     {
-        $this->validate([
-            'registration_number' => ['required', 'string'],
-            'access_token' => ['required', 'string'],
-        ]);
+        $this->registration_number = trim($this->registration_number);
+        $this->nik = trim($this->nik);
+        $this->access_token = trim($this->access_token);
+
+        $reg = $this->registration_number;
+        $nik = $this->nik;
+        $tok = $this->access_token;
+
+        if (! empty($nik) || empty($tok)) {
+            $this->validate([
+                'registration_number' => ['required', 'string'],
+                'nik' => ['required', 'string', 'max:30'],
+            ], [
+                'registration_number.required' => 'Nomor pendaftaran wajib diisi.',
+                'nik.required' => 'NIK calon santri wajib diisi.',
+            ]);
+        } else {
+            $this->validate([
+                'registration_number' => ['required', 'string'],
+                'access_token' => ['required', 'string'],
+            ]);
+        }
 
         $ip = request()->ip() ?? '127.0.0.1';
         $rateKey = "psb-status-check:{$ip}";
@@ -93,20 +115,48 @@ final class PsbCheckStatus extends Component
 
         RateLimiter::hit($rateKey, 3600);
 
-        $reg = trim($this->registration_number);
-        $tok = trim($this->access_token);
+        $query = Applicant::query();
+
+        // Support exact match, YYNNNN shorthand (e.g. 260001 -> PSB-2026-%-0001), and full PSB format
+        if (preg_match('/^(\d{2})(\d{4})$/', $reg, $m)) {
+            $fullYear = '20'.$m[1];
+            $seq = $m[2];
+            $query->where(function ($q) use ($reg, $fullYear, $seq): void {
+                $q->where('registration_number', $reg)
+                    ->orWhere('registration_number', 'like', "PSB-{$fullYear}-%-{$seq}");
+            });
+        } elseif (preg_match('/^PSB-(\d{4})-[A-Z]+-(\d{4})$/', $reg, $m)) {
+            $shortReg = substr($m[1], -2).$m[2];
+            $query->where(function ($q) use ($reg, $shortReg): void {
+                $q->where('registration_number', $reg)
+                    ->orWhere('registration_number', $shortReg);
+            });
+        } else {
+            $query->where('registration_number', $reg);
+        }
+
+        if (! empty($nik)) {
+            $digitsNik = preg_replace('/[^0-9]/', '', $nik);
+            $query->where(function ($q) use ($nik, $digitsNik): void {
+                $q->where('nik', $nik);
+                if (! empty($digitsNik) && $digitsNik !== $nik) {
+                    $q->orWhere('nik', $digitsNik);
+                }
+            });
+        } else {
+            $query->where('access_token', $tok);
+        }
 
         /** @var Applicant|null $applicant */
-        $applicant = Applicant::query()
-            ->where('registration_number', $reg)
-            ->where('access_token', $tok)
-            ->with(['admissionWave', 'parent', 'documents'])
-            ->first();
+        $applicant = $query->with(['admissionWave', 'parent', 'documents'])->first();
 
         if (! $applicant) {
             $this->applicant = null;
             $this->hasSearched = true;
-            $this->addError('registration_number', 'Nomor registrasi atau token akses tidak valid.');
+            $msg = ! empty($nik)
+                ? 'Kombinasi Nomor Pendaftaran dan NIK tidak ditemukan.'
+                : 'Nomor registrasi atau token akses tidak valid.';
+            $this->addError('registration_number', $msg);
 
             return;
         }

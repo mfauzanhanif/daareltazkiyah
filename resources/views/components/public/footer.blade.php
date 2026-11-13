@@ -63,6 +63,10 @@
                             class="hover:text-white hover:underline transition">Informasi PSB</a></li>
                     <li><a href="{{ route('psb.fee') }}"
                             class="hover:text-white hover:underline transition">Rincian Biaya PSB</a></li>
+                    <li><a href="{{ route('psb.perlengkapan') }}"
+                            class="hover:text-white hover:underline transition">Perlengkapan Santri</a></li>
+                    <li><a href="{{ route('psb.status') }}"
+                            class="hover:text-white hover:underline transition">Cek Status PSB</a></li>
                     <li><a href="{{ route('news.index') }}" class="hover:text-white hover:underline transition">Berita
                             &amp; Warta</a></li>
                     <li><a href="{{ route('gallery.index') }}"

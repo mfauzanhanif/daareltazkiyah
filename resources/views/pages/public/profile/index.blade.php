@@ -75,11 +75,11 @@
                         <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-wider">
                             <a href="{{ route('psb.form') }}"
                                 class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#0D3B2E] hover:bg-[#059669] text-white transition shadow-xs">
-                                <span>Daftar Santri Baru &rarr;</span>
+                                <span>Daftar Santri Baru</span>
                             </a>
                             <a href="#legalitas"
                                 class="px-5 py-3 rounded-md border border-[#E5E0D8] hover:border-[#0D3B2E] bg-white text-[#0D3B2E] transition shadow-xs">
-                                Lihat Legalitas Resmi &darr;
+                                Lihat Legalitas Resmi
                             </a>
                         </div>
                     </div>

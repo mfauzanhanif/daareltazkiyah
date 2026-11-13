@@ -24,8 +24,8 @@ final class PdfService
             'school_phone' => (string) SiteSetting::get('school_phone', '0812-3456-7890'),
             'school_email' => (string) SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id'),
             'bank_name' => (string) SiteSetting::get('bank_name', 'Bank Syariah Indonesia (BSI)'),
-            'bank_account_number' => (string) SiteSetting::get('bank_account_number', '7123456789'),
-            'bank_account_name' => (string) SiteSetting::get('bank_account_name', 'PPMTQ DAAR EL TAZKIYAH'),
+            'bank_account_number' => (string) SiteSetting::get('bank_account_number', '7366764695'),
+            'bank_account_name' => (string) SiteSetting::get('bank_account_name', 'Yayasan Daar El Tazkiyah Sumardi'),
         ];
 
         /** @var \Barryvdh\DomPDF\PDF $pdf */

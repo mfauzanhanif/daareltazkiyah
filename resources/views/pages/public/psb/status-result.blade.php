@@ -107,6 +107,7 @@
                     @csrf
                     @method('PUT')
                     <input type="hidden" name="access_token" value="{{ $applicant->access_token }}">
+                    <input type="hidden" name="nik" value="{{ $applicant->nik }}">
 
                     <!-- Student Biodata Section -->
                     <div class="space-y-4">

@@ -10,6 +10,10 @@ enum DocumentType: string
     case Kk = 'kk';
     case Akta = 'akta';
     case PaymentProof = 'payment_proof';
+    case KtpFather = 'ktp_father';
+    case KtpMother = 'ktp_mother';
+    case Ijazah = 'ijazah';
+    case PrintNisn = 'print_nisn';
 
     public function label(): string
     {
@@ -18,12 +22,16 @@ enum DocumentType: string
             self::Kk => 'Kartu Keluarga (KK)',
             self::Akta => 'Akta Kelahiran',
             self::PaymentProof => 'Bukti Transfer Biaya Pendaftaran',
+            self::KtpFather => 'KTP Ayah Kandung',
+            self::KtpMother => 'KTP Ibu Kandung',
+            self::Ijazah => 'Ijazah / SKL SD/MI',
+            self::PrintNisn => 'Print Out NISN Resmi',
         };
     }
 
     public function maxSizeBytes(): int
     {
-        return 2 * 1024 * 1024; // 2MB
+        return 5 * 1024 * 1024; // 5MB
     }
 
     /**
@@ -33,7 +41,7 @@ enum DocumentType: string
     {
         return match ($this) {
             self::Photo => ['jpg', 'jpeg', 'png'],
-            self::Kk, self::Akta, self::PaymentProof => ['jpg', 'jpeg', 'png', 'pdf'],
+            self::Kk, self::Akta, self::PaymentProof, self::KtpFather, self::KtpMother, self::Ijazah, self::PrintNisn => ['jpg', 'jpeg', 'png', 'pdf'],
         };
     }
 

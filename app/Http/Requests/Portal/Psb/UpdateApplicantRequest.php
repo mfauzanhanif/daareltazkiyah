@@ -13,11 +13,19 @@ final class UpdateApplicantRequest extends FormRequest
     {
         $regNumber = (string) $this->route('registration_number');
         $token = (string) $this->input('access_token');
+        $nik = (string) $this->input('nik');
 
-        $applicant = Applicant::query()
-            ->where('registration_number', $regNumber)
-            ->where('access_token', $token)
-            ->first();
+        $query = Applicant::query()->where('registration_number', $regNumber);
+
+        if (! empty($token)) {
+            $query->where('access_token', $token);
+        } elseif (! empty($nik)) {
+            $query->where('nik', $nik);
+        } else {
+            return false;
+        }
+
+        $applicant = $query->first();
 
         if (! $applicant) {
             return false;
@@ -32,7 +40,8 @@ final class UpdateApplicantRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'access_token' => ['required', 'string'],
+            'access_token' => ['nullable', 'string'],
+            'nik' => ['nullable', 'string', 'max:30'],
             'full_name' => ['nullable', 'string', 'max:255'],
             'gender' => ['nullable', 'in:L,P'],
             'birth_place' => ['nullable', 'string', 'max:100'],
@@ -51,6 +60,10 @@ final class UpdateApplicantRequest extends FormRequest
             'document_kk' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
             'document_akta' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
             'document_payment' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
+            'document_ktp_ayah' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
+            'document_ktp_ibu' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
+            'document_ijazah' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
+            'document_nisn' => ['nullable', 'file', 'mimes:pdf,jpg,jpeg,png', 'max:2048'],
         ];
     }
 }

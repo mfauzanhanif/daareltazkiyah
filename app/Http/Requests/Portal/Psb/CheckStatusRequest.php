@@ -20,7 +20,8 @@ final class CheckStatusRequest extends FormRequest
     {
         return [
             'registration_number' => ['required', 'string', 'max:50'],
-            'access_token' => ['required', 'string', 'max:16'],
+            'nik' => ['required_without:access_token', 'nullable', 'string', 'max:30'],
+            'access_token' => ['nullable', 'string', 'max:16'],
         ];
     }
 
@@ -28,7 +29,8 @@ final class CheckStatusRequest extends FormRequest
     {
         $this->merge([
             'registration_number' => trim((string) $this->input('registration_number')),
-            'access_token' => trim((string) $this->input('access_token')),
+            'nik' => $this->filled('nik') ? trim((string) $this->input('nik')) : null,
+            'access_token' => $this->filled('access_token') ? trim((string) $this->input('access_token')) : null,
         ]);
     }
 
@@ -38,7 +40,8 @@ final class CheckStatusRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'registration_number.required' => 'Nomor registrasi wajib diisi.',
+            'registration_number.required' => 'Nomor pendaftaran wajib diisi.',
+            'nik.required_without' => 'NIK calon santri wajib diisi.',
             'access_token.required' => 'Token akses wajib diisi.',
         ];
     }

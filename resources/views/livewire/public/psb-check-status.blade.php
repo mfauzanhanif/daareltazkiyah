@@ -7,16 +7,23 @@
                     {{ $errors->first('registration_number') }}
                 </div>
             @endif
+            @if ($errors->has('nik'))
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-xl text-red-800 text-xs">
+                    {{ $errors->first('nik') }}
+                </div>
+            @endif
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1.5">Nomor Registrasi PSB *</label>
-                    <input type="text" wire:model="registration_number" placeholder="Contoh: PSB-2027-MTS-0001" required class="w-full px-4 py-3 text-sm font-mono rounded-xl border border-[#E5E0D8] focus:border-[#059669] focus:bg-white focus:outline-none uppercase bg-[#FAF8F5] transition">
+                    <label class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1.5">Nomor Pendaftaran *</label>
+                    <input type="text" wire:model.trim="registration_number" placeholder="Contoh: 260001 / No. Pendaftaran" required class="w-full px-4 py-3 text-sm font-mono rounded-xl border border-[#E5E0D8] focus:border-[#059669] focus:bg-white focus:outline-none uppercase bg-[#FAF8F5] transition">
+                    <span class="text-[10px] text-[#4B6358] mt-1 block">Format: YYNNNN (Tahun + Nomor Urut)</span>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1.5">Token Akses Rahasia (8 Karakter) *</label>
-                    <input type="text" wire:model="access_token" placeholder="Contoh: ABCD1234" maxlength="8" required class="w-full px-4 py-3 text-sm font-mono rounded-xl border border-[#E5E0D8] focus:border-[#059669] focus:bg-white focus:outline-none uppercase bg-[#FAF8F5] transition">
+                    <label class="block text-xs font-semibold text-[#0D3B2E] uppercase tracking-wider mb-1.5">NIK Calon Santri (16 Digit) *</label>
+                    <input type="text" wire:model.trim="nik" placeholder="Contoh: 3201xxxxxxxxxxxx" maxlength="25" class="w-full px-4 py-3 text-sm font-mono rounded-xl border border-[#E5E0D8] focus:border-[#059669] focus:bg-white focus:outline-none bg-[#FAF8F5] transition">
+                    <span class="text-[10px] text-[#4B6358] mt-1 block">16 digit NIK yang terdaftar pada formulir</span>
                 </div>
             </div>
 

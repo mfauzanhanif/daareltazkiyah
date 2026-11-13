@@ -42,6 +42,13 @@ final class PsbController extends Controller
         return view('public.psb.fee', compact('activeWave', 'feeMts', 'feeMdta'));
     }
 
+    public function equipment(Request $request): View
+    {
+        $activeWave = AdmissionWave::currentActive();
+
+        return view('public.psb.equipment', compact('activeWave'));
+    }
+
     public function form(Request $request): View
     {
         $activeWave = AdmissionWave::currentActive();
@@ -85,18 +92,48 @@ final class PsbController extends Controller
 
     public function checkStatus(CheckStatusRequest $request): View
     {
-        $regNumber = (string) $request->validated('registration_number');
-        $token = (string) $request->validated('access_token');
+        $regNumber = trim((string) $request->validated('registration_number'));
+        $nik = $request->validated('nik');
+        $token = $request->validated('access_token');
 
-        $applicant = Applicant::query()
-            ->where('registration_number', $regNumber)
-            ->where('access_token', $token)
-            ->with(['admissionWave', 'parent', 'documents'])
-            ->first();
+        $query = Applicant::query();
+
+        // Support exact match, YYNNNN shorthand (e.g. 260001 -> PSB-2026-%-0001), and full PSB format
+        if (preg_match('/^(\d{2})(\d{4})$/', $regNumber, $m)) {
+            $fullYear = '20'.$m[1];
+            $seq = $m[2];
+            $query->where(function ($q) use ($regNumber, $fullYear, $seq): void {
+                $q->where('registration_number', $regNumber)
+                    ->orWhere('registration_number', 'like', "PSB-{$fullYear}-%-{$seq}");
+            });
+        } elseif (preg_match('/^PSB-(\d{4})-[A-Z]+-(\d{4})$/', $regNumber, $m)) {
+            $shortReg = substr($m[1], -2).$m[2];
+            $query->where(function ($q) use ($regNumber, $shortReg): void {
+                $q->where('registration_number', $regNumber)
+                    ->orWhere('registration_number', $shortReg);
+            });
+        } else {
+            $query->where('registration_number', $regNumber);
+        }
+
+        if (! empty($nik)) {
+            $rawNik = (string) $nik;
+            $digitsNik = preg_replace('/[^0-9]/', '', $rawNik);
+            $query->where(function ($q) use ($rawNik, $digitsNik): void {
+                $q->where('nik', $rawNik);
+                if (! empty($digitsNik) && $digitsNik !== $rawNik) {
+                    $q->orWhere('nik', $digitsNik);
+                }
+            });
+        } elseif (! empty($token)) {
+            $query->where('access_token', (string) $token);
+        }
+
+        $applicant = $query->with(['admissionWave', 'parent', 'documents'])->first();
 
         if (! $applicant) {
             throw ValidationException::withMessages([
-                'registration_number' => 'Nomor registrasi atau token akses tidak valid.',
+                'registration_number' => 'Kombinasi Nomor Pendaftaran dan NIK tidak ditemukan.',
             ]);
         }
 

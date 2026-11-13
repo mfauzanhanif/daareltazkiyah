@@ -38,6 +38,8 @@ Route::get('/galeri', [GalleryController::class, 'index'])->name('gallery.index'
 Route::prefix('psb')->name('psb.')->group(function () {
     Route::get('/', [PsbController::class, 'index'])->name('index');
     Route::get('/biaya', [PsbController::class, 'fee'])->name('fee');
+    Route::get('/perlengkapan', [PsbController::class, 'equipment'])->name('perlengkapan');
+    Route::get('/equipment', [PsbController::class, 'equipment'])->name('equipment');
     Route::get('/form', [PsbController::class, 'form'])->name('form');
     Route::post('/daftar', [PsbController::class, 'store'])->name('store');
     Route::get('/sukses/{registration_number}', [PsbController::class, 'success'])->name('success');
