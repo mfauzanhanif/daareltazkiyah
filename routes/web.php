@@ -17,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 // --- Public Landing Page ---
 Route::get('/', HomeController::class)->name('home');
 
-// --- Public Profil & Program (Unified Interactive Pages) ---
+// --- Public Profil, Program, MTs & MDTA (Unified Interactive Pages) ---
 Route::get('/profil', [ProfileController::class, 'index'])->name('profile.index');
 Route::get('/program', [ProgramController::class, 'index'])->name('program.index');
+Route::get('/mts', [ProgramController::class, 'mts'])->name('mts.index');
+Route::get('/mdta', [ProgramController::class, 'mdta'])->name('mdta.index');
 
 // --- Public Contact Page ---
 Route::get('/kontak', [ContactController::class, 'index'])->name('contact.index');

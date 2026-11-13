@@ -57,11 +57,15 @@ test('adversarial challenge 1: dynamic fee sync correctly tracks wave timeline c
     $responseWave1->assertOk();
     $content1 = $responseWave1->getContent();
 
-    expect($content1)->toContain('120.000')
-        ->and($content1)->toContain('35.000')
-        ->and($content1)->toContain('Gelombang I 2027')
-        ->and($content1)->not->toContain('180.000')
-        ->and($content1)->not->toContain('80.000');
+    $feeResponse1 = $this->get(route('psb.fee'));
+    $feeResponse1->assertOk();
+    $feeContent1 = $feeResponse1->getContent();
+
+    expect($content1)->toContain('Gelombang I 2027')
+        ->and($feeContent1)->toContain('120.000')
+        ->and($feeContent1)->toContain('35.000')
+        ->and($feeContent1)->not->toContain('180.000')
+        ->and($feeContent1)->not->toContain('80.000');
 
     // Timeline Point 2: Travel to Gelombang II (2027-05-10)
     Carbon::setTestNow('2027-05-10 10:00:00');
@@ -70,10 +74,14 @@ test('adversarial challenge 1: dynamic fee sync correctly tracks wave timeline c
     $responseWave2->assertOk();
     $content2 = $responseWave2->getContent();
 
-    expect($content2)->toContain('180.000')
-        ->and($content2)->toContain('45.000')
-        ->and($content2)->toContain('Gelombang II 2027')
-        ->and($content2)->not->toContain('120.000');
+    $feeResponse2 = $this->get(route('psb.fee'));
+    $feeResponse2->assertOk();
+    $feeContent2 = $feeResponse2->getContent();
+
+    expect($content2)->toContain('Gelombang II 2027')
+        ->and($feeContent2)->toContain('180.000')
+        ->and($feeContent2)->toContain('45.000')
+        ->and($feeContent2)->not->toContain('120.000');
 
     // Timeline Point 3: Stress-test outside all waves (2028-01-01) - Graceful degradation
     Carbon::setTestNow('2028-01-01 10:00:00');
@@ -319,12 +327,15 @@ test('adversarial challenge 5: empty states render cleanly without 500 when data
     $responseProfile = $this->get('/profil');
     $responseProfile->assertOk();
 
+    $responseFee = $this->get(route('psb.fee'));
+    $responseFee->assertOk();
+
     expect($content)->toContain('Pondok Pesantren Modern Tahfidzul Quran')
         ->and($responseProfile->getContent())->toContain('Belum ada data asatidz yang dipublikasikan.')
         ->and($content)->toContain('Belum ada warta berita yang dipublikasikan.')
         ->and($content)->toContain('Belum ada dokumentasi kegiatan yang diunggah.')
-        ->and($content)->toContain('Rp 100.000') // default fallback
-        ->and($content)->toContain('Rp 25.000'); // default fallback
+        ->and($responseFee->getContent())->toContain('100.000') // default fallback
+        ->and($responseFee->getContent())->toContain('25.000'); // default fallback
 });
 
 test('adversarial challenge 6: visual identity and design tokens are properly configured and present in DOM', function () {

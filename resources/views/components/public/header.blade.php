@@ -73,7 +73,7 @@
                         </a>
                         <a href="{{ route('profile.index') }}#fasilitas"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Fasilitas Pesantren
+                            Fasilitas
                         </a>
                         <a href="{{ route('profile.index') }}#pendidik"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -89,7 +89,7 @@
                 <!-- Dropdown: Program -->
                 <div class="relative" @mouseenter="openDropdown = 'program'" @mouseleave="openDropdown = null">
                     <a href="{{ route('program.index') }}"
-                        class="inline-flex items-center gap-1.5 px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('program*') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}"
+                        class="inline-flex items-center gap-1.5 px-3 py-2 hover:text-[#059669] transition border-b-2 {{ request()->is('program*') || request()->is('mts*') || request()->is('mdta*') ? 'border-[#0D3B2E] font-bold text-[#0D3B2E]' : 'border-transparent' }}"
                         :class="{ 'text-[#059669]': openDropdown === 'program' }">
                         <span>Program</span>
                         <svg class="w-3.5 h-3.5 transition-transform duration-200"
@@ -108,19 +108,19 @@
                         x-transition:leave="transition ease-in duration-100"
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 translate-y-1"
-                        class="absolute left-0 w-56 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
+                        class="absolute left-0 w-52 bg-white border border-[#E5E0D8] rounded-md shadow-lg py-1 mt-1 z-50 text-left normal-case">
 
-                        <a href="{{ route('program.index') }}#program-unggulan"
+                        <a href="{{ route('program.index') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition">
-                            Program Unggulan
+                            Program
                         </a>
-                        <a href="{{ route('program.index') }}#program-pendidikan"
+                        <a href="{{ route('mts.index') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Program Pendidikan
+                            MTS
                         </a>
-                        <a href="{{ route('program.index') }}#kurikulum"
+                        <a href="{{ route('mdta.index') }}"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
-                            Kurikulum
+                            MDTA
                         </a>
                         <a href="{{ route('program.index') }}#ekstrakurikuler"
                             class="block px-4 py-2.5 text-xs font-semibold text-[#0D3B2E] hover:text-[#059669] hover:bg-[#FAF8F5] transition border-t border-[#E5E0D8]/40">
@@ -297,9 +297,9 @@
                     </div>
 
                     <!-- Program Accordion -->
-                    <div x-data="{ expanded: {{ request()->is('program*') ? 'true' : 'false' }} }" class="border-t border-[#E5E0D8]/60 pt-1">
+                    <div x-data="{ expanded: {{ request()->is('program*') || request()->is('mts*') || request()->is('mdta*') ? 'true' : 'false' }} }" class="border-t border-[#E5E0D8]/60 pt-1">
                         <button type="button" @click="expanded = !expanded"
-                            class="w-full flex items-center justify-between px-3 py-2.5 text-left {{ request()->is('program*') ? 'text-[#0D3B2E] font-bold' : 'text-[#18181B] hover:text-[#059669]' }}">
+                            class="w-full flex items-center justify-between px-3 py-2.5 text-left {{ request()->is('program*') || request()->is('mts*') || request()->is('mdta*') ? 'text-[#0D3B2E] font-bold' : 'text-[#18181B] hover:text-[#059669]' }}">
                             <span>Program</span>
                             <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': expanded }" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -308,12 +308,12 @@
                             </svg>
                         </button>
                         <div x-show="expanded" x-cloak class="pl-4 space-y-1 text-xs normal-case font-medium border-l border-[#E5E0D8] ml-3 mb-2">
-                            <a href="{{ route('program.index') }}#program-unggulan" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Unggulan</a>
-                            <a href="{{ route('program.index') }}#program-pendidikan" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Program Pendidikan</a>
-                            <a href="{{ route('program.index') }}#kurikulum" @click="mobileMenuOpen = false"
-                                class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Kurikulum</a>
+                            <a href="{{ route('program.index') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('program.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">Program</a>
+                            <a href="{{ route('mts.index') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('mts.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">MTS</a>
+                            <a href="{{ route('mdta.index') }}" @click="mobileMenuOpen = false"
+                                class="block py-1.5 {{ request()->routeIs('mdta.index') ? 'text-[#0D3B2E] font-bold' : 'text-[#4B6358] hover:text-[#0D3B2E]' }}">MDTA</a>
                             <a href="{{ route('program.index') }}#ekstrakurikuler" @click="mobileMenuOpen = false"
                                 class="block py-1.5 text-[#4B6358] hover:text-[#0D3B2E]">Ekstrakurikuler</a>
                         </div>

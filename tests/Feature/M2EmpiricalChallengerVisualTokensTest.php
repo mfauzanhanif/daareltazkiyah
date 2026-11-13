@@ -154,25 +154,27 @@ test('MTS Mukim and MDTA Sekolah Sore cards render strictly isolated details wit
     expect($mtsText)->toContain('Mukim')
         ->and($mtsText)->toContain('PROGRAM UNGGULAN MUKIM')
         ->and($mtsText)->not->toContain('Non-Mukim')
-        ->and($mtsText)->toContain('500.000') // Syahriah
-        ->and($mtsText)->toContain('125.000') // Dynamic fee_mts
-        ->and($mtsText)->not->toContain('35.000') // Must NOT contain fee_mdta
+        ->and($mtsText)->not->toContain('500.000') // No financial info
+        ->and($mtsText)->not->toContain('125.000')
+        ->and($mtsText)->not->toContain('35.000')
         ->and($mtsText)->toContain('Asrama mukim 24 jam')
         ->and($mtsText)->toContain('Ijazah formal Madrasah Tsanawiyah')
         ->and($mtsText)->not->toContain('Jadwal sekolah sore hari ba\'da Ashar')
-        ->and($mtsText)->toContain('program=MTS');
+        ->and($mtsText)->toContain('/mts')
+        ->and($mtsText)->not->toContain('/mdta');
 
     // MDTA Card Assertions:
     // 1. Badge: "Non-Mukim"
     expect($mdtaText)->toContain('Non-Mukim')
         ->and($mdtaText)->not->toContain('PROGRAM UNGGULAN MUKIM')
-        ->and($mdtaText)->toContain('12.000') // SPP bulanan
-        ->and($mdtaText)->toContain('35.000') // Dynamic fee_mdta
-        ->and($mdtaText)->not->toContain('125.000') // Must NOT contain fee_mts
+        ->and($mdtaText)->not->toContain('12.000') // No financial info
+        ->and($mdtaText)->not->toContain('35.000')
+        ->and($mdtaText)->not->toContain('125.000')
         ->and($mdtaText)->toContain('Jadwal sekolah sore hari ba\'da Ashar')
         ->and($mdtaText)->toContain('Madrasah Diniyah Takmiliyah Awaliyah')
         ->and($mdtaText)->not->toContain('Asrama mukim 24 jam')
-        ->and($mdtaText)->toContain('program=MDTA');
+        ->and($mdtaText)->toContain('/mdta')
+        ->and($mdtaText)->not->toContain('/mts');
 });
 
 test('mobile responsive navigation drawer and hamburger toggle structure exist in DOM', function () {

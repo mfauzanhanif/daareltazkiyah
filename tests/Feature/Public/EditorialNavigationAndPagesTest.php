@@ -23,7 +23,7 @@ test('homepage loads successfully with 200 OK and executive hub sections', funct
         ->assertSeeText('VISI & MISI')
         ->assertSeeText('Warta Pesantren & Agenda Kegiatan')
         ->assertSeeText('Potret Rutinitas & Kehidupan Santri')
-        ->assertSeeText('Informasi Biaya & Persyaratan Pendaftaran');
+        ->assertSeeText('PROGRAM PENDIDIKAN');
 });
 
 test('profile page loads with comprehensive history and vision mission anchors', function () {
@@ -72,7 +72,7 @@ test('profile page displays facilities infrastructure and amenities', function (
         ->assertSeeText('Kantin & Koperasi Santri');
 });
 
-test('program page displays 6 program unggulan and extracurriculars', function () {
+test('program page displays 6 program unggulan, cta for mts and mdta, and extracurriculars', function () {
     $response = $this->get('/program');
     $response->assertOk();
 
@@ -88,19 +88,77 @@ test('program page displays 6 program unggulan and extracurriculars', function (
         ->assertSeeText('Seni Baca Al-Qur\'an (Tilawah)')
         ->assertSeeText('Futsal & Olahraga')
         ->assertSeeText('Pramuka Santri')
-        ->assertSee('id="program-unggulan"', false)
+        ->assertDontSee('id="program-unggulan"', false)
         ->assertSee('id="program-pendidikan"', false)
-        ->assertSee('id="ekstrakurikuler"', false);
+        ->assertSee('id="ekstrakurikuler"', false)
+        ->assertDontSeeText('KEGIATAN MINGGUAN')
+        ->assertDontSeeText('AGENDA SENI & KULTUR')
+        ->assertSee(route('mts.index'), false)
+        ->assertSee(route('mdta.index'), false);
 });
 
-test('program page displays full boarding syllabus and fee structure for MTs and MDTA', function () {
+test('program page does not display fees and provides cta to mts and mdta', function () {
     $response = $this->get('/program');
     $response->assertOk();
 
     $response->assertSeeText('MTs (Madrasah Tsanawiyah)')
-        ->assertSeeText('500.000')
         ->assertSeeText('MDTA (Madrasah Diniyah Takmiliyah Awaliyah)')
-        ->assertSeeText('12.000');
+        ->assertDontSeeText('500.000')
+        ->assertDontSeeText('12.000')
+        ->assertSeeText('Pelajari Selengkapnya MTs')
+        ->assertSeeText('Pelajari Selengkapnya MDTA');
+});
+
+test('mts page loads successfully with banner, description, and curriculum', function () {
+    $response = $this->get('/mts');
+    $response->assertOk();
+
+    $response->assertSeeText('Madrasah Tsanawiyah (MTs)')
+        ->assertSeeText('Pendidikan Formal Asrama 24 Jam')
+        ->assertSeeText('DESKRIPSI PROGRAM MTS')
+        ->assertSeeText('KURIKULUM PEMBELAJARAN MTS')
+        ->assertSeeText('Kurikulum Formal Kemenag RI & Nasional')
+        ->assertSeeText('Tahfidzul Qur\'an & Ulumul Qur\'an')
+        ->assertSeeText('Kajian Kitab Kuning (Turats Salaf)')
+        ->assertSeeText('Bahasa Asing Aktif & Kepemimpinan')
+        ->assertSee(route('psb.form', ['program' => 'MTS']), false);
+});
+
+test('mdta page loads successfully with banner, description, curriculum, schedule, and hafalan targets', function () {
+    $response = $this->get('/mdta');
+    $response->assertOk();
+
+    $response->assertSeeText('Madrasah Diniyah Takmiliyah Awaliyah (MDTA)')
+        ->assertSeeText('DESKRIPSI PROGRAM MDTA')
+        ->assertSeeText('MDT Ula DAAR EL TAZKIYAH SUMARDI')
+        ->assertSeeText('311236041251')
+        ->assertSeeText('KURIKULUM PEMBELAJARAN MDTA')
+        ->assertSeeText('Baca Tulis Al-Qur\'an (BTQ)')
+        ->assertSeeText('Tahfidz Al-Qur\'an')
+        ->assertSeeText('Aqidah Akhlak')
+        ->assertSeeText('Fiqih')
+        ->assertSeeText('Sejarah Kebudayaan Islam (SKI)')
+        ->assertSeeText('Bahasa Arab')
+        ->assertSeeText('Praktik Ibadah dan Doa Harian')
+        ->assertSeeText('JADWAL PELAJARAN HARIAN')
+        ->assertSeeText('TARGET HAFALAN BERJENJANG MDTA')
+        ->assertSeeText('Kelas 1 MDTA')
+        ->assertSeeText('Kelas 2 MDTA')
+        ->assertSeeText('Kelas 3 MDTA')
+        ->assertSee(route('psb.form', ['program' => 'MDTA']), false);
+});
+
+test('navigation header includes revised program menu links', function () {
+    $response = $this->get('/program');
+    $response->assertOk();
+
+    $response->assertSee(route('program.index'), false)
+        ->assertSee(route('mts.index'), false)
+        ->assertSee(route('mdta.index'), false)
+        ->assertSee(route('program.index').'#ekstrakurikuler', false)
+        ->assertSeeText('MTS')
+        ->assertSeeText('MDTA')
+        ->assertSeeText('Ekstrakurikuler');
 });
 
 test('gallery page loads with pinterest masonry layout and category filter tabs', function () {

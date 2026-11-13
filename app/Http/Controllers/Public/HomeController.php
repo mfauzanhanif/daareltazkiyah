@@ -54,6 +54,9 @@ final class HomeController extends Controller
         $siteAddress = (string) SiteSetting::get('school_address', 'RT 006 / RW 002, Kp. Lembur Sawah, Desa Mekarbaru, Kecamatan Petir, Kabupaten Serang, Provinsi Banten');
         $sitePhone = (string) SiteSetting::get('school_phone', '0896-5332-4339');
         $siteEmail = (string) SiteSetting::get('school_email', 'sekretariat@daareltazkiyahsumardi.ponpes.id');
+        $instagramUrl = (string) SiteSetting::get('instagram_url', 'https://www.instagram.com/media_daareltazkiyah_sumardi');
+        $tiktokUrl = (string) SiteSetting::get('tiktok_url', 'https://www.tiktok.com/@media.daareltazki');
+        $facebookUrl = (string) SiteSetting::get('facebook_url', 'https://www.facebook.com/Daar-El-tazkiyah-Sumardi-61595393704791');
 
         return view('public.home', compact(
             'activeWave',
@@ -69,7 +72,10 @@ final class HomeController extends Controller
             'waMdtaNumber',
             'siteAddress',
             'sitePhone',
-            'siteEmail'
+            'siteEmail',
+            'instagramUrl',
+            'tiktokUrl',
+            'facebookUrl'
         ));
     }
 }

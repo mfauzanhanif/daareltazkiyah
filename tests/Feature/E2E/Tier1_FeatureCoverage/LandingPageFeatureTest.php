@@ -49,7 +49,7 @@ test('landing page displays Visi and Misi bento grid with 4 mission points', fun
         ->assertSee('Mempersiapkan santri berprestasi di tingkat nasional');
 });
 
-test('landing page displays program comparison for MTS Mukim 24 Jam and MDTA Sekolah Sore', function () {
+test('landing page displays program comparison for MTS Mukim 24 Jam and MDTA Sekolah Sore without financial figures', function () {
     $response = $this->get('/');
     $response->assertOk();
 
@@ -58,13 +58,16 @@ test('landing page displays program comparison for MTS Mukim 24 Jam and MDTA Sek
         test()->markTestSkipped('Landing page program comparison not yet implemented (M2 required).');
     }
 
-    $response->assertSee('Mukim 24 Jam')
-        ->assertSee('500.000')
-        ->assertSee('Sekolah Sore')
-        ->assertSee('12.000');
+    $response->assertSee('MTS (Madrasah Tsanawiyah)')
+        ->assertSee('MDTA (Madrasah Diniyah Takmiliyah Awaliyah)')
+        ->assertSee(route('mts.index'))
+        ->assertSee(route('mdta.index'))
+        ->assertSee(route('psb.form'))
+        ->assertDontSee('500.000')
+        ->assertDontSee('12.000');
 });
 
-test('landing page dynamically renders registration fee from active admission wave', function () {
+test('landing page and psb fee page dynamically render active admission wave and fees', function () {
     if (! Schema::hasTable('admission_waves')) {
         test()->markTestSkipped('Admission waves table not yet migrated (M1 required).');
     }
@@ -84,14 +87,13 @@ test('landing page dynamically renders registration fee from active admission wa
     ]);
 
     $response = $this->get('/');
-    $response->assertOk();
+    $response->assertOk()
+        ->assertSee('Gelombang I')
+        ->assertSee('2027/2028');
 
-    $content = $response->getContent();
-    if (! str_contains($content, '100.000')) {
-        test()->markTestSkipped('Landing page dynamic fee sync not yet integrated (M2 required).');
-    }
-
-    $response->assertSee('100.000')
+    $feeResponse = $this->get(route('psb.fee'));
+    $feeResponse->assertOk()
+        ->assertSee('100.000')
         ->assertSee('25.000');
 });
 

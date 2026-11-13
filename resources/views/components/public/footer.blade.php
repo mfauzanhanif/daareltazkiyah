@@ -79,15 +79,21 @@
                 <span class="editorial-label text-amber-300">PROGRAM PENDIDIKAN</span>
                 <ul class="text-xs space-y-3 text-emerald-100/80 pt-1">
                     <li>
-                        <a href="{{ route('program.index') }}#program-pendidikan"
+                        <a href="{{ route('mts.index') }}"
                             class="hover:text-white hover:underline transition block">
                             <span class="font-semibold text-white block">MTs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('program.index') }}#mdta-kurikulum"
+                        <a href="{{ route('mdta.index') }}"
                             class="hover:text-white hover:underline transition block">
                             <span class="font-semibold text-white block">MDTA</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('program.index') }}#ekstrakurikuler"
+                            class="hover:text-white hover:underline transition block">
+                            <span class="font-semibold text-white block">Ekstrakurikuler</span>
                         </a>
                     </li>
                 </ul>
