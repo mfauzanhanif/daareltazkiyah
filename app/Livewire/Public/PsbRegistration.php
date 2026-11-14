@@ -40,6 +40,14 @@ final class PsbRegistration extends Component
 
     public string $address = '';
 
+    public ?string $province_code = null;
+
+    public ?string $city_code = null;
+
+    public ?string $district_code = null;
+
+    public ?string $village_code = null;
+
     public string $province = 'Banten';
 
     public string $city = 'Serang';
@@ -140,6 +148,147 @@ final class PsbRegistration extends Component
         if ($selectedProgram && in_array($selectedProgram, ['MTS', 'MDTA'], true)) {
             $this->program_type = $selectedProgram;
         }
+
+        try {
+            if (class_exists(\Aliziodev\Wilayah\Models\Province::class) && \Aliziodev\Wilayah\Models\Province::exists()) {
+                $this->province_code = '36';
+                $this->province = 'Banten';
+
+                $this->city_code = '36.04';
+                $this->city = 'Kabupaten Serang';
+
+                $this->district_code = '36.04.19';
+                $this->district = 'Petir';
+
+                $this->village_code = '36.04.19.2012';
+                $this->village = 'Mekar Baru';
+            }
+        } catch (\Throwable) {
+            // Keep fallback string defaults
+        }
+    }
+
+    public function updatedProvinceCode(?string $value): void
+    {
+        $this->city_code = null;
+        $this->city = '';
+        $this->district_code = null;
+        $this->district = '';
+        $this->village_code = null;
+        $this->village = '';
+
+        if ($value) {
+            $this->province = \Aliziodev\Wilayah\Models\Province::where('code', $value)->value('name') ?? '';
+        } else {
+            $this->province = '';
+        }
+    }
+
+    public function updatedCityCode(?string $value): void
+    {
+        $this->district_code = null;
+        $this->district = '';
+        $this->village_code = null;
+        $this->village = '';
+
+        if ($value) {
+            $this->city = \Aliziodev\Wilayah\Models\Regency::where('code', $value)->value('name') ?? '';
+        } else {
+            $this->city = '';
+        }
+    }
+
+    public function updatedDistrictCode(?string $value): void
+    {
+        $this->village_code = null;
+        $this->village = '';
+
+        if ($value) {
+            $this->district = \Aliziodev\Wilayah\Models\District::where('code', $value)->value('name') ?? '';
+        } else {
+            $this->district = '';
+        }
+    }
+
+    public function updatedVillageCode(?string $value): void
+    {
+        if ($value) {
+            $this->village = \Aliziodev\Wilayah\Models\Village::where('code', $value)->value('name') ?? '';
+        } else {
+            $this->village = '';
+        }
+    }
+
+    /**
+     * @return array<int, array{value: string, label: string}>
+     */
+    public function getProvincesProperty(): array
+    {
+        try {
+            if (class_exists(\Aliziodev\Wilayah\Facades\Wilayah::class)) {
+                return \Aliziodev\Wilayah\Facades\Wilayah::forSelect('provinces');
+            }
+        } catch (\Throwable) {
+        }
+
+        return [];
+    }
+
+    /**
+     * @return array<int, array{value: string, label: string}>
+     */
+    public function getRegenciesProperty(): array
+    {
+        if (! $this->province_code) {
+            return [];
+        }
+
+        try {
+            if (class_exists(\Aliziodev\Wilayah\Facades\Wilayah::class)) {
+                return \Aliziodev\Wilayah\Facades\Wilayah::forSelect('regencies', province: $this->province_code);
+            }
+        } catch (\Throwable) {
+        }
+
+        return [];
+    }
+
+    /**
+     * @return array<int, array{value: string, label: string}>
+     */
+    public function getDistrictsProperty(): array
+    {
+        if (! $this->city_code) {
+            return [];
+        }
+
+        try {
+            if (class_exists(\Aliziodev\Wilayah\Facades\Wilayah::class)) {
+                return \Aliziodev\Wilayah\Facades\Wilayah::forSelect('districts', regency: $this->city_code);
+            }
+        } catch (\Throwable) {
+        }
+
+        return [];
+    }
+
+    /**
+     * @return array<int, array{value: string, label: string}>
+     */
+    public function getVillagesProperty(): array
+    {
+        if (! $this->district_code) {
+            return [];
+        }
+
+        try {
+            if (class_exists(\Aliziodev\Wilayah\Facades\Wilayah::class)) {
+                return \Aliziodev\Wilayah\Facades\Wilayah::forSelect('villages', district: $this->district_code);
+            }
+        } catch (\Throwable) {
+        }
+
+        return [];
     }
 
     public function updatedNik(): void
@@ -188,9 +337,13 @@ final class PsbRegistration extends Component
                 'child_order' => ['required', 'integer', 'min:1'],
                 'total_siblings' => ['nullable', 'integer', 'min:1'],
                 'province' => ['nullable', 'string', 'max:100'],
+                'province_code' => ['nullable', 'string', 'max:10'],
                 'city' => ['nullable', 'string', 'max:100'],
+                'city_code' => ['nullable', 'string', 'max:10'],
                 'district' => ['nullable', 'string', 'max:100'],
+                'district_code' => ['nullable', 'string', 'max:10'],
                 'village' => ['nullable', 'string', 'max:100'],
+                'village_code' => ['nullable', 'string', 'max:20'],
                 'address' => ['required', 'string'],
             ], [
                 'full_name.required' => 'Nama lengkap santri wajib diisi.',
@@ -297,6 +450,19 @@ final class PsbRegistration extends Component
             'agreement.accepted' => 'Anda harus menyetujui pernyataan kebenaran data sebelum mengirim pendaftaran.',
         ]);
 
+        if ($this->province_code && empty($this->province)) {
+            $this->province = \Aliziodev\Wilayah\Models\Province::where('code', $this->province_code)->value('name') ?? $this->province_code;
+        }
+        if ($this->city_code && empty($this->city)) {
+            $this->city = \Aliziodev\Wilayah\Models\Regency::where('code', $this->city_code)->value('name') ?? $this->city_code;
+        }
+        if ($this->district_code && empty($this->district)) {
+            $this->district = \Aliziodev\Wilayah\Models\District::where('code', $this->district_code)->value('name') ?? $this->district_code;
+        }
+        if ($this->village_code && empty($this->village)) {
+            $this->village = \Aliziodev\Wilayah\Models\Village::where('code', $this->village_code)->value('name') ?? $this->village_code;
+        }
+
         $fullAddress = trim(sprintf(
             '%s, Desa/Kel. %s, Kec. %s, %s, %s',
             $this->address,
@@ -318,9 +484,13 @@ final class PsbRegistration extends Component
             'child_order' => $this->child_order,
             'total_siblings' => $this->total_siblings,
             'province' => $this->province,
+            'province_code' => $this->province_code,
             'city' => $this->city,
+            'city_code' => $this->city_code,
             'district' => $this->district,
+            'district_code' => $this->district_code,
             'village' => $this->village,
+            'village_code' => $this->village_code,
             'address' => $fullAddress,
             'previous_school' => $this->previous_school,
             'school_level' => $this->school_level,

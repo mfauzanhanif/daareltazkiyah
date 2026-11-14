@@ -248,8 +248,8 @@
                             class="bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#0D3B2E] hover:shadow-md transition group">
                             <div>
                                 <div class="aspect-16/10 relative overflow-hidden bg-gray-100 border-b border-[#E5E0D8]">
-                                    @if ($post->featured_image)
-                                        <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}"
+                                    @if ($post->featured_image_url || $post->featured_image)
+                                        <img src="{{ $post->featured_image_url ?: asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}"
                                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                     @else
                                         <x-public.image-placeholder :title="$post->title" aspect="aspect-16/10" />
@@ -454,14 +454,18 @@
                             <div class="flex gap-6 pr-6 shrink-0">
                                 @foreach ($galleryItems as $gallery)
                                     @php
-                                        if (!empty($gallery->cover_image)) {
+                                        if (!empty($gallery->cover_image_url)) {
+                                            $coverSrc = $gallery->cover_image_url;
+                                        } elseif (!empty($gallery->cover_image)) {
                                             $coverSrc = str_starts_with($gallery->cover_image, 'http')
                                                 ? $gallery->cover_image
                                                 : asset('storage/' . $gallery->cover_image);
                                         } elseif ($firstPhoto = $gallery->photos?->first()) {
-                                            $coverSrc = str_starts_with($firstPhoto->file_path, 'http')
-                                                ? $firstPhoto->file_path
-                                                : asset('storage/' . $firstPhoto->file_path);
+                                            $coverSrc = !empty($firstPhoto->url)
+                                                ? $firstPhoto->url
+                                                : (str_starts_with($firstPhoto->file_path, 'http')
+                                                    ? $firstPhoto->file_path
+                                                    : asset('storage/' . $firstPhoto->file_path));
                                         } else {
                                             $coverSrc = asset('images/foto-santri-1.webp');
                                         }
@@ -499,14 +503,18 @@
                             <div class="flex gap-6 pr-6 shrink-0" aria-hidden="true">
                                 @foreach ($galleryItems as $gallery)
                                     @php
-                                        if (!empty($gallery->cover_image)) {
+                                        if (!empty($gallery->cover_image_url)) {
+                                            $coverSrc = $gallery->cover_image_url;
+                                        } elseif (!empty($gallery->cover_image)) {
                                             $coverSrc = str_starts_with($gallery->cover_image, 'http')
                                                 ? $gallery->cover_image
                                                 : asset('storage/' . $gallery->cover_image);
                                         } elseif ($firstPhoto = $gallery->photos?->first()) {
-                                            $coverSrc = str_starts_with($firstPhoto->file_path, 'http')
-                                                ? $firstPhoto->file_path
-                                                : asset('storage/' . $firstPhoto->file_path);
+                                            $coverSrc = !empty($firstPhoto->url)
+                                                ? $firstPhoto->url
+                                                : (str_starts_with($firstPhoto->file_path, 'http')
+                                                    ? $firstPhoto->file_path
+                                                    : asset('storage/' . $firstPhoto->file_path));
                                         } else {
                                             $coverSrc = asset('images/foto-santri-1.webp');
                                         }

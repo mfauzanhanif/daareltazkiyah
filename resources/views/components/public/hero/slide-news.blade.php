@@ -12,8 +12,8 @@
      @endif>
     <div class="relative w-full rounded-2xl overflow-hidden h-[390px] sm:h-[420px] md:h-[450px] flex items-end p-6 sm:p-10 lg:p-12 text-white shadow-md">
         <!-- Full News Background Image -->
-        @if($featuredPost && $featuredPost->featured_image)
-            <img src="{{ asset('storage/' . $featuredPost->featured_image) }}"
+        @if($featuredPost && ($featuredPost->featured_image_url || $featuredPost->featured_image))
+            <img src="{{ $featuredPost->featured_image_url ?: asset('storage/' . $featuredPost->featured_image) }}"
                  alt="{{ $featuredPost->title }}"
                  class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none">
         @elseif(file_exists(public_path('images/foto-santri-3.webp')))

@@ -88,9 +88,13 @@ final class RegistrationService
                 'school_address' => isset($data['school_address']) && $data['school_address'] !== '' ? (string) $data['school_address'] : null,
                 'address' => (string) $data['address'],
                 'province' => isset($data['province']) && $data['province'] !== '' ? (string) $data['province'] : null,
+                'province_code' => isset($data['province_code']) && $data['province_code'] !== '' ? (string) $data['province_code'] : null,
                 'city' => isset($data['city']) && $data['city'] !== '' ? (string) $data['city'] : null,
+                'city_code' => isset($data['city_code']) && $data['city_code'] !== '' ? (string) $data['city_code'] : null,
                 'district' => isset($data['district']) && $data['district'] !== '' ? (string) $data['district'] : null,
+                'district_code' => isset($data['district_code']) && $data['district_code'] !== '' ? (string) $data['district_code'] : null,
                 'village' => isset($data['village']) && $data['village'] !== '' ? (string) $data['village'] : null,
+                'village_code' => isset($data['village_code']) && $data['village_code'] !== '' ? (string) $data['village_code'] : null,
                 'registration_fee' => $fee,
                 'payment_status' => PaymentStatus::PendingVerification,
                 'application_status' => ApplicationStatus::Pending,
@@ -150,12 +154,20 @@ final class RegistrationService
                 $file = $files[$fileKey];
                 $path = $file->store("applicants/{$applicant->id}", $disk);
 
-                ApplicantDocument::create([
+                $doc = ApplicantDocument::create([
                     'applicant_id' => $applicant->id,
                     'document_type' => $docType,
                     'file_path' => $path,
                     'original_name' => $file->getClientOriginalName(),
                 ]);
+
+                try {
+                    $doc->addMediaFromDisk($path, $disk)
+                        ->preservingOriginal()
+                        ->toMediaCollection('document');
+                } catch (\Throwable) {
+                    // Fallback if media-library background conversion or disk mock
+                }
             }
         }
 

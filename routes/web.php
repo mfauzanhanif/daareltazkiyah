@@ -103,6 +103,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/applicants/{id}', [PortalPsbController::class, 'showApplicant'])->name('applicants.show');
         Route::patch('/applicants/{id}/status', [PortalPsbController::class, 'updateStatus'])->name('applicants.update-status');
         Route::get('/export', [PortalPsbController::class, 'export'])->name('export');
+        Route::get('/documents/{document}/download', [PortalPsbController::class, 'downloadDocument'])->name('document.download')->middleware('signed');
     });
 });
 

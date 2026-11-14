@@ -5,7 +5,7 @@
 @section('meta')
     <meta property="og:title" content="{{ $post->ogTitle() }}">
     <meta property="og:description" content="{{ $post->ogDescription() }}">
-    <meta property="og:image" content="{{ $post->featured_image ? (Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image)) : asset('favicon.svg') }}">
+    <meta property="og:image" content="{{ $post->featured_image_url ?: ($post->featured_image ? (Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image)) : asset('favicon.svg')) }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{ url()->current() }}">
 @endsection
@@ -51,9 +51,9 @@
         </header>
 
         <!-- Featured Image -->
-        @if($post->featured_image)
+        @if($post->featured_image_url || $post->featured_image)
             <div class="border border-[#E5E0D8] rounded-2xl overflow-hidden max-h-[480px] bg-white shadow-sm">
-                <img src="{{ Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                <img src="{{ $post->featured_image_url ?: (Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image)) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
             </div>
         @endif
 

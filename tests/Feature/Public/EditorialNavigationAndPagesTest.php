@@ -226,7 +226,7 @@ test('psb information landing page loads with wave details and direct cta to for
 test('psb registration form route loads standalone wizard view with breadcrumbs', function () {
     $response = $this->get(route('psb.form'));
     $response->assertOk()
-        ->assertSeeText('FORMULIR PENDAFTARAN RESMI')
+        ->assertSeeText('FORMULIR PENDAFTARAN')
         ->assertSee(route('psb.index'), false);
 });
 

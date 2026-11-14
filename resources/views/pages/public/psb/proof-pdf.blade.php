@@ -194,7 +194,8 @@
                         {{ $applicant->admissionWave?->academic_year ?? '2027/2028' }}</h2>
                     <p>{{ $settings['school_address'] ?? 'Kp. Lembur Sawah, Kel./Desa Mekar Baru, Kecamatan Petir, Kab. Serang, Provinsi Banten' }}
                     </p>
-                    <p>Website: {{ $settings['school_website'] ?? 'www.daareltazkiyahsumardi.ponpes.id' }} &bull; Telp/WA:
+                    <p>Website: {{ $settings['school_website'] ?? 'www.daareltazkiyahsumardi.ponpes.id' }} &bull;
+                        Telp/WA:
                         {{ $settings['school_phone'] ?? '0896-5332-4339' }}</p>
                 </td>
             </tr>
@@ -247,7 +248,7 @@
                 <td class="label">Jenis Kelamin</td>
                 <td class="colon">:</td>
                 <td class="value">
-                    {{ ($applicant->gender->value ?? $applicant->gender) === 'L' ? 'Laki-laki (Ikhwan)' : 'Perempuan (Akhwat)' }}
+                    {{ ($applicant->gender->value ?? $applicant->gender) === 'L' ? 'Laki-laki' : 'Perempuan' }}
                 </td>
             </tr>
             <tr>
@@ -313,7 +314,8 @@
                 <td class="colon">:</td>
                 <td class="value">{{ $settings['bank_name'] ?? 'Bank Syariah Indonesia (BSI)' }} No.
                     <strong>{{ $settings['bank_account_number'] ?? '7366764695' }}</strong> a.n.
-                    {{ $settings['bank_account_name'] ?? 'Yayasan Daar El Tazkiyah Sumardi' }}</td>
+                    {{ $settings['bank_account_name'] ?? 'Yayasan Daar El Tazkiyah Sumardi' }}
+                </td>
             </tr>
             <tr>
                 <td class="label">Status Verifikasi Berkas</td>

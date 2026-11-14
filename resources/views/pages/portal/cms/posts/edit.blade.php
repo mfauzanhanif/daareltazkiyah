@@ -68,9 +68,9 @@
 
                 <div class="md:col-span-2 space-y-2">
                     <label class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Gambar Utama (Featured Image)</label>
-                    @if($post->featured_image)
+                    @if($post->featured_image_url || $post->featured_image)
                         <div class="w-32 h-20 rounded-xl overflow-hidden border border-zinc-200">
-                            <img src="{{ Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image) }}" alt="Preview" class="w-full h-full object-cover">
+                            <img src="{{ $post->featured_image_url ?: (Illuminate\Support\Str::startsWith($post->featured_image, ['http://', 'https://']) ? $post->featured_image : asset('storage/' . $post->featured_image)) }}" alt="Preview" class="w-full h-full object-cover">
                         </div>
                     @endif
                     <input type="file" name="featured_image" accept="image/*" class="w-full px-3.5 py-2 text-xs rounded-xl border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-[#084C27]/10 file:text-[#084C27]">

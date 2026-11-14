@@ -36,6 +36,14 @@ use Spatie\Activitylog\Support\LogOptions;
  * @property int $child_order
  * @property string $previous_school
  * @property string $address
+ * @property string|null $province
+ * @property string|null $province_code
+ * @property string|null $city
+ * @property string|null $city_code
+ * @property string|null $district
+ * @property string|null $district_code
+ * @property string|null $village
+ * @property string|null $village_code
  * @property int $registration_fee
  * @property PaymentStatus $payment_status
  * @property ApplicationStatus $application_status
@@ -69,9 +77,13 @@ class Applicant extends Model
         'school_address',
         'address',
         'province',
+        'province_code',
         'city',
+        'city_code',
         'district',
+        'district_code',
         'village',
+        'village_code',
         'registration_fee',
         'payment_status',
         'application_status',

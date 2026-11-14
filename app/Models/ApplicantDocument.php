@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * @property string $id
@@ -20,9 +22,9 @@ use Illuminate\Support\Facades\URL;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
-class ApplicantDocument extends Model
+class ApplicantDocument extends Model implements HasMedia
 {
-    use HasUlids;
+    use HasUlids, InteractsWithMedia;
 
     /**
      * @var list<string>
@@ -59,5 +61,14 @@ class ApplicantDocument extends Model
             now()->addMinutes($minutes),
             ['document' => $this->id]
         );
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $disk = config('filesystems.disks.private') ? 'private' : (config('filesystems.default') ?: 'local');
+
+        $this->addMediaCollection('document')
+            ->useDisk($disk)
+            ->singleFile();
     }
 }

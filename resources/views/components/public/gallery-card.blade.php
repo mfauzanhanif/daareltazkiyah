@@ -3,8 +3,8 @@
 ])
 
 <a href="{{ route('gallery.index') }}" class="group aspect-square border border-[#E5E0D8] rounded-2xl bg-[#FAF8F5] relative overflow-hidden block hover:border-[#059669]/50 hover:shadow-md transition-all duration-300 shadow-2xs">
-    @if(!empty($gallery->cover_image))
-        <img src="{{ asset('storage/' . $gallery->cover_image) }}"
+    @if(!empty($gallery->cover_image_url) || !empty($gallery->cover_image))
+        <img src="{{ $gallery->cover_image_url ?: asset('storage/' . $gallery->cover_image) }}"
              alt="{{ $gallery->title }}"
              loading="lazy"
              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">

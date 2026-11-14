@@ -8,11 +8,14 @@ use App\Exports\ApplicantsExport;
 use App\Http\Controllers\Controller;
 use App\Models\AdmissionWave;
 use App\Models\Applicant;
+use App\Models\ApplicantDocument;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 final class PortalPsbController extends Controller
 {
@@ -111,5 +114,24 @@ final class PortalPsbController extends Controller
         $fileName = 'Pendaftar-PSB-'.now()->format('Ymd_His').'.xlsx';
 
         return Excel::download(new ApplicantsExport($search, $program, $status), $fileName);
+    }
+
+    public function downloadDocument(string $document): BinaryFileResponse|StreamedResponse
+    {
+        $doc = ApplicantDocument::findOrFail($document);
+
+        if ($doc->hasMedia('document')) {
+            $media = $doc->getFirstMedia('document');
+            if ($media) {
+                return response()->download($media->getPath(), $doc->original_name ?: $media->file_name);
+            }
+        }
+
+        $disk = config('filesystems.disks.private') ? 'private' : 'local';
+        if (! Storage::disk($disk)->exists($doc->file_path)) {
+            abort(404, 'File dokumen tidak ditemukan.');
+        }
+
+        return Storage::disk($disk)->download($doc->file_path, $doc->original_name);
     }
 }

@@ -6,8 +6,8 @@
     <div>
         <!-- 16:9 Thumbnail Frame with Slow Zoom -->
         <div class="aspect-video bg-[#FAF8F5] border-b border-[#E5E0D8] relative overflow-hidden">
-            @if(!empty($post->featured_image))
-                <img src="{{ asset('storage/' . $post->featured_image) }}"
+            @if(!empty($post->featured_image_url) || !empty($post->featured_image))
+                <img src="{{ $post->featured_image_url ?: asset('storage/' . $post->featured_image) }}"
                      alt="{{ $post->title }}"
                      loading="lazy"
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">

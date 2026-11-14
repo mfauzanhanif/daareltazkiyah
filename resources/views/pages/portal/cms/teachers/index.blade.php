@@ -93,8 +93,8 @@
                                     <td class="p-4">
                                         <div class="flex items-center gap-3">
                                             <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden shrink-0 border border-zinc-300">
-                                                @if($teacher->photo_path)
-                                                    <img src="{{ asset('storage/' . $teacher->photo_path) }}" alt="{{ $teacher->full_name }}" class="w-full h-full object-cover">
+                                                @if($teacher->photo_url || $teacher->photo_path)
+                                                    <img src="{{ $teacher->photo_url ?: asset('storage/' . $teacher->photo_path) }}" alt="{{ $teacher->full_name }}" class="w-full h-full object-cover">
                                                 @else
                                                     <div class="w-full h-full flex items-center justify-center font-bold text-zinc-400 text-xs">DT</div>
                                                 @endif

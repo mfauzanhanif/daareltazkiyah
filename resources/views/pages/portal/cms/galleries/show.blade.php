@@ -56,7 +56,7 @@
                     <div class="bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden group flex flex-col justify-between">
                         <div>
                             <div class="aspect-square bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative">
-                                <img src="{{ asset('storage/' . $photo->file_path) }}" alt="{{ $photo->caption ?? 'Foto' }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <img src="{{ $photo->url ?: asset('storage/' . $photo->file_path) }}" alt="{{ $photo->caption ?? 'Foto' }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                             </div>
                             <div class="p-2.5">
                                 <p class="text-[11px] text-zinc-600 dark:text-zinc-300 line-clamp-2 leading-tight">

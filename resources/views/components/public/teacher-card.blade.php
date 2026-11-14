@@ -6,8 +6,8 @@
     <div class="space-y-4">
         <!-- 3:4 Portrait Photo Container -->
         <div class="aspect-3/4 w-full border border-[#E5E0D8] rounded-xl bg-[#FAF8F5] relative overflow-hidden">
-            @if(!empty($teacher->photo_path))
-                <img src="{{ asset('storage/' . $teacher->photo_path) }}"
+            @if(!empty($teacher->photo_url) || !empty($teacher->photo_path))
+                <img src="{{ $teacher->photo_url ?: asset('storage/' . $teacher->photo_path) }}"
                      alt="{{ $teacher->full_name }}"
                      loading="lazy"
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">

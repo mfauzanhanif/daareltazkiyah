@@ -30,7 +30,7 @@
             <div class="flex items-center justify-center gap-3 sm:gap-4">
                 <span class="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#B89758]"></span>
                 <h1 class="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0D3B2E] tracking-tight">
-                    FORMULIR PENDAFTARAN RESMI
+                    FORMULIR PENDAFTARAN
                 </h1>
                 <span class="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#B89758]"></span>
             </div>

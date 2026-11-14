@@ -71,8 +71,8 @@
                         <div class="bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden flex flex-col justify-between">
                             <div>
                                 <div class="aspect-video bg-zinc-200 dark:bg-zinc-800 relative overflow-hidden">
-                                    @if($gallery->cover_image)
-                                        <img src="{{ asset('storage/' . $gallery->cover_image) }}" alt="{{ $gallery->title }}" class="w-full h-full object-cover">
+                                    @if($gallery->cover_image_url || $gallery->cover_image)
+                                        <img src="{{ $gallery->cover_image_url ?: asset('storage/' . $gallery->cover_image) }}" alt="{{ $gallery->title }}" class="w-full h-full object-cover">
                                     @else
                                         <div class="w-full h-full flex items-center justify-center text-zinc-400 font-bold text-lg">Tanpa Sampul</div>
                                     @endif

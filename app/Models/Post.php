@@ -13,6 +13,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Spatie\Image\Enums\Fit;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
  * @property string $id
@@ -23,6 +27,8 @@ use Illuminate\Support\Str;
  * @property string|null $excerpt
  * @property string $content
  * @property string|null $featured_image
+ * @property-read string|null $featured_image_url
+ * @property-read string|null $featured_image_thumb_url
  * @property PostStatus $status
  * @property bool $is_featured
  * @property Carbon|null $published_at
@@ -32,9 +38,9 @@ use Illuminate\Support\Str;
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
  */
-class Post extends Model
+class Post extends Model implements HasMedia
 {
-    use HasUlids, SoftDeletes;
+    use HasUlids, InteractsWithMedia, SoftDeletes;
 
     /**
      * @var list<string>
@@ -165,5 +171,43 @@ class Post extends Model
         }
 
         return Str::limit(strip_tags((string) $this->content), 160);
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('featured_image')
+            ->useDisk('public')
+            ->singleFile();
+    }
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->fit(Fit::Crop, 400, 260)
+            ->nonQueued();
+    }
+
+    public function getFeaturedImageUrlAttribute(): ?string
+    {
+        if ($this->hasMedia('featured_image')) {
+            return $this->getFirstMediaUrl('featured_image');
+        }
+
+        if (! empty($this->featured_image)) {
+            return Str::startsWith($this->featured_image, ['http://', 'https://'])
+                ? $this->featured_image
+                : asset('storage/'.$this->featured_image);
+        }
+
+        return null;
+    }
+
+    public function getFeaturedImageThumbUrlAttribute(): ?string
+    {
+        if ($this->hasMedia('featured_image')) {
+            return $this->getFirstMediaUrl('featured_image', 'thumb');
+        }
+
+        return $this->featured_image_url;
     }
 }

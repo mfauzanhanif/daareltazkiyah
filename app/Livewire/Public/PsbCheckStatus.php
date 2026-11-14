@@ -11,6 +11,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\RateLimiter;
+use Livewire\Attributes\Locked;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -26,8 +27,10 @@ final class PsbCheckStatus extends Component
 
     public string $access_token = '';
 
+    #[Locked]
     public ?Applicant $applicant = null;
 
+    #[Locked]
     public bool $hasSearched = false;
 
     // Editable fields
@@ -107,13 +110,17 @@ final class PsbCheckStatus extends Component
         $rateKey = "psb-status-check:{$ip}";
 
         if (RateLimiter::tooManyAttempts($rateKey, 10)) {
-            $seconds = RateLimiter::availableIn($rateKey);
-            $this->addError('registration_number', "Terlalu banyak percobaan. Silakan coba lagi dalam {$seconds} detik.");
+            $totalSeconds = RateLimiter::availableIn($rateKey);
+            $minutes = intdiv($totalSeconds, 60);
+            $seconds = $totalSeconds % 60;
+
+            $this->addError(
+                'registration_number',
+                "Terlalu banyak percobaan gagal. Silakan coba lagi dalam {$minutes} menit {$seconds} detik."
+            );
 
             return;
         }
-
-        RateLimiter::hit($rateKey, 3600);
 
         $query = Applicant::query();
 
@@ -151,6 +158,8 @@ final class PsbCheckStatus extends Component
         $applicant = $query->with(['admissionWave', 'parent', 'documents'])->first();
 
         if (! $applicant) {
+            RateLimiter::hit($rateKey, 900);
+
             $this->applicant = null;
             $this->hasSearched = true;
             $msg = ! empty($nik)
@@ -160,6 +169,8 @@ final class PsbCheckStatus extends Component
 
             return;
         }
+
+        RateLimiter::clear($rateKey);
 
         $this->applicant = $applicant;
         $this->hasSearched = true;
@@ -249,13 +260,22 @@ final class PsbCheckStatus extends Component
             foreach ($files as $property => $docType) {
                 if ($this->{$property} && $this->{$property} instanceof UploadedFile) {
                     $path = $this->{$property}->store("applicants/{$this->applicant->id}", $disk);
-                    ApplicantDocument::updateOrCreate(
+                    $doc = ApplicantDocument::updateOrCreate(
                         ['applicant_id' => $this->applicant->id, 'document_type' => $docType],
                         [
                             'file_path' => $path,
                             'original_name' => $this->{$property}->getClientOriginalName(),
                         ]
                     );
+
+                    try {
+                        $doc->clearMediaCollection('document');
+                        $doc->addMediaFromDisk($path, $disk)
+                            ->preservingOriginal()
+                            ->toMediaCollection('document');
+                    } catch (\Throwable) {
+                        // Fallback
+                    }
                 }
             }
 

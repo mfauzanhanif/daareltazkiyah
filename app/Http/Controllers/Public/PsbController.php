@@ -205,13 +205,22 @@ final class PsbController extends Controller
                     if ($file !== null) {
                         $path = $file->store("applicants/{$applicant->id}", $disk);
 
-                        ApplicantDocument::updateOrCreate(
+                        $doc = ApplicantDocument::updateOrCreate(
                             ['applicant_id' => $applicant->id, 'document_type' => $docType],
                             [
                                 'file_path' => $path,
                                 'original_name' => $file->getClientOriginalName(),
                             ]
                         );
+
+                        try {
+                            $doc->clearMediaCollection('document');
+                            $doc->addMediaFromDisk($path, $disk)
+                                ->preservingOriginal()
+                                ->toMediaCollection('document');
+                        } catch (\Throwable) {
+                            // Fallback if media library disk mock
+                        }
                     }
                 }
             }

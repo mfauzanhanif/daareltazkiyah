@@ -67,15 +67,28 @@ final class PortalCmsController extends Controller
         $validated['author_id'] = (string) $request->user()?->id;
         $validated['slug'] = ! empty($validated['slug']) ? Str::slug($validated['slug']) : Str::slug($validated['title']);
 
+        $storedPath = null;
         if ($request->hasFile('featured_image')) {
-            $validated['featured_image'] = $request->file('featured_image')?->store('posts', 'public');
+            $storedPath = $request->file('featured_image')?->store('posts', 'public');
+            $validated['featured_image'] = $storedPath;
         }
 
         if ($validated['status'] === 'published' && empty($validated['published_at'])) {
             $validated['published_at'] = now();
         }
 
-        Post::create($validated);
+        $post = Post::create($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $post->clearMediaCollection('featured_image');
+                $post->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('featured_image');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return redirect()->route('admin.cms.posts.index')->with('success', 'Artikel berhasil diterbitkan.');
     }
@@ -97,11 +110,24 @@ final class PortalCmsController extends Controller
             $validated['slug'] = Str::slug($validated['slug']);
         }
 
+        $storedPath = null;
         if ($request->hasFile('featured_image')) {
-            $validated['featured_image'] = $request->file('featured_image')?->store('posts', 'public');
+            $storedPath = $request->file('featured_image')?->store('posts', 'public');
+            $validated['featured_image'] = $storedPath;
         }
 
         $post->update($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $post->clearMediaCollection('featured_image');
+                $post->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('featured_image');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return back()->with('success', 'Artikel berhasil diperbarui.');
     }
@@ -168,11 +194,24 @@ final class PortalCmsController extends Controller
         $validated['slug'] = ! empty($validated['slug']) ? Str::slug($validated['slug']) : Str::slug($validated['title']);
         $validated['is_published'] = (bool) ($request->input('is_published') ?? true);
 
+        $storedPath = null;
         if ($request->hasFile('cover_image')) {
-            $validated['cover_image'] = $request->file('cover_image')?->store('galleries', 'public');
+            $storedPath = $request->file('cover_image')?->store('galleries', 'public');
+            $validated['cover_image'] = $storedPath;
         }
 
-        Gallery::create($validated);
+        $gallery = Gallery::create($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $gallery->clearMediaCollection('cover_image');
+                $gallery->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('cover_image');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return back()->with('success', 'Album galeri berhasil dibuat.');
     }
@@ -194,11 +233,24 @@ final class PortalCmsController extends Controller
         }
         $validated['is_published'] = (bool) ($request->input('is_published') ?? false);
 
+        $storedPath = null;
         if ($request->hasFile('cover_image')) {
-            $validated['cover_image'] = $request->file('cover_image')?->store('galleries', 'public');
+            $storedPath = $request->file('cover_image')?->store('galleries', 'public');
+            $validated['cover_image'] = $storedPath;
         }
 
         $gallery->update($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $gallery->clearMediaCollection('cover_image');
+                $gallery->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('cover_image');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return back()->with('success', 'Album galeri berhasil diperbarui.');
     }
@@ -223,11 +275,20 @@ final class PortalCmsController extends Controller
         foreach ($photos as $photo) {
             $path = $photo->store('galleries/photos', 'public');
             $currentSort++;
-            $gallery->photos()->create([
+            $galleryPhoto = $gallery->photos()->create([
                 'file_path' => $path,
                 'caption' => $caption !== '' ? $caption : null,
                 'sort_order' => $currentSort,
             ]);
+
+            try {
+                $galleryPhoto->clearMediaCollection('photo');
+                $galleryPhoto->addMediaFromDisk($path, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('photo');
+            } catch (\Throwable) {
+                // Fallback
+            }
         }
 
         return back()->with('success', 'Foto dokumentasi berhasil ditambahkan.');
@@ -254,12 +315,25 @@ final class PortalCmsController extends Controller
         $validated = $request->validated();
         $validated['is_active'] = (bool) ($request->input('is_active') ?? true);
 
+        $storedPath = null;
         if ($request->hasFile('photo')) {
-            $validated['photo_path'] = $request->file('photo')?->store('teachers', 'public');
+            $storedPath = $request->file('photo')?->store('teachers', 'public');
+            $validated['photo_path'] = $storedPath;
             unset($validated['photo']);
         }
 
-        Teacher::create($validated);
+        $teacher = Teacher::create($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $teacher->clearMediaCollection('photo');
+                $teacher->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('photo');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return back()->with('success', 'Data pengajar berhasil disimpan.');
     }
@@ -270,12 +344,25 @@ final class PortalCmsController extends Controller
         $validated = $request->validated();
         $validated['is_active'] = (bool) ($request->input('is_active') ?? false);
 
+        $storedPath = null;
         if ($request->hasFile('photo')) {
-            $validated['photo_path'] = $request->file('photo')?->store('teachers', 'public');
+            $storedPath = $request->file('photo')?->store('teachers', 'public');
+            $validated['photo_path'] = $storedPath;
             unset($validated['photo']);
         }
 
         $teacher->update($validated);
+
+        if ($storedPath !== null) {
+            try {
+                $teacher->clearMediaCollection('photo');
+                $teacher->addMediaFromDisk($storedPath, 'public')
+                    ->preservingOriginal()
+                    ->toMediaCollection('photo');
+            } catch (\Throwable) {
+                // Fallback
+            }
+        }
 
         return back()->with('success', 'Data pengajar berhasil diperbarui.');
     }

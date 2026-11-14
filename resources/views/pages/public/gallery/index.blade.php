@@ -109,15 +109,15 @@
                         if ($gallery->photos->isNotEmpty()) {
                             foreach ($gallery->photos as $p) {
                                 $albumPhotos[] = [
-                                    'src' => asset('storage/' . $p->file_path),
+                                    'src' => $p->url ?: asset('storage/' . $p->file_path),
                                     'caption' => $p->caption ?: $gallery->title,
                                     'alt' => $p->caption ?: $gallery->title,
                                     'time' => $p->created_at ? $p->created_at->format('d M Y') : null,
                                 ];
                             }
-                        } elseif ($gallery->cover_image) {
+                        } elseif ($gallery->cover_image_url || $gallery->cover_image) {
                             $albumPhotos[] = [
-                                'src' => asset('storage/' . $gallery->cover_image),
+                                'src' => $gallery->cover_image_url ?: asset('storage/' . $gallery->cover_image),
                                 'caption' => $gallery->title,
                                 'alt' => $gallery->title,
                                 'time' => $gallery->created_at ? $gallery->created_at->format('d M Y') : null,
@@ -142,12 +142,12 @@
                             <!-- Image Pin (Clickable to Lightbox index 0) -->
                             <div class="relative overflow-hidden bg-[#FAF8F5] cursor-pointer"
                                 @click="openLightbox({{ Js::from($albumPhotos) }}, 0)">
-                                @if ($gallery->cover_image)
-                                    <img src="{{ asset('storage/' . $gallery->cover_image) }}" alt="{{ $gallery->title }}"
+                                @if ($gallery->cover_image_url || $gallery->cover_image)
+                                    <img src="{{ $gallery->cover_image_url ?: asset('storage/' . $gallery->cover_image) }}" alt="{{ $gallery->title }}"
                                         loading="lazy"
                                         class="w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
                                 @elseif ($gallery->photos->isNotEmpty())
-                                    <img src="{{ asset('storage/' . $gallery->photos->first()->file_path) }}" alt="{{ $gallery->title }}"
+                                    <img src="{{ $gallery->photos->first()->url ?: asset('storage/' . $gallery->photos->first()->file_path) }}" alt="{{ $gallery->title }}"
                                         loading="lazy"
                                         class="w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
                                 @else
